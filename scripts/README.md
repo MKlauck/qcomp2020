@@ -83,7 +83,7 @@ This will run all specified commands, measures their time, saves the output, and
 For this to work, the method `get_result` in `tool.py` needs to extract the result for the given benchmark from the given execution.
 There are (at least) two ways to achieve this:
 - Find the result in the output of the tool (the output of each command line is stored in `execution.logs`)
-- Read the result from a file that the tool has produced (the method is called exactly ones, right after executing the command lines for the given invocation)
+- Read the result from a file that the tool has produced (the method is called exactly once, right after executing the command lines for the given invocation)
 
 The returned result should be either ``"true"``, ``"false"``, or a decimal number.
 
