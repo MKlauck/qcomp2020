@@ -106,6 +106,9 @@ class Benchmark(object):
     def is_pddl(self):
         return self.get_original_format() == "PDDL"
 
+    def is_pgcl(self):
+        return self.get_original_format() == "PGCL"
+
     def is_prism(self):
         return self.get_original_format() == "PRISM"
 
@@ -297,6 +300,21 @@ class Benchmark(object):
                     return self.get_original_filenames()[i]
         raise AssertionError("Unable to find PDDL problem file.")
 
+    def get_pgcl_program_filename(self):
+        if not self.is_pgcl():
+            raise AssertionError("Invalid operation: Not a PGCL model.")
+        for f in self.get_original_filenames():
+            if os.path.splitext(f)[1].lower() in [".pgcl"]:
+                return f
+        raise AssertionError("Unable to find pgcl program file.")
+
+    def get_pgcl_property_filename(self):
+        if not self.is_pgcl():
+            raise AssertionError("Invalid operation: Not a PGCL model.")
+        for f in self.get_original_filenames():
+            if os.path.splitext(f)[1].lower() in [".props"]:
+                return f
+        raise AssertionError("Unable to find pgcl property file.")
 
     def get_prism_program_filename(self):
         if not (self.is_prism() or self.is_prism_ma() or self.is_prism_inf()):
@@ -386,6 +404,9 @@ class Benchmark(object):
         elif self.is_pddl():
             self.get_pddl_domain_filename()
             self.get_pddl_problem_filename()
+        elif self.is_pgcl():
+            self.get_pgcl_program_filename()
+            self.get_pgcl_property_filename()
         elif self.is_prism() or self.is_prism_ma() or self.is_prism_inf():
             self.get_prism_program_filename()
             self.get_prism_property_filename()
@@ -398,7 +419,7 @@ class Benchmark(object):
 
         for f in self.get_all_filenames():
             if not os.path.isfile(os.path.join(self.get_directory(), f)):
-                raise AssertionError("Can not find file {}".format(os.path.join(self.get_directory(), self.get_janifilename())))
+                raise AssertionError("Can not find file {}".format(os.path.join(self.get_directory(), f)))
 
         self.get_max_num_states()
 
