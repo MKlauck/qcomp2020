@@ -103,8 +103,8 @@ class Benchmark(object):
     def is_modest(self):
         return self.get_original_format() == "Modest"
 
-    def is_pddl(self):
-        return self.get_original_format() == "PDDL"
+    def is_ppddl(self):
+        return self.get_original_format() == "PPDDL"
 
     def is_pgcl(self):
         return self.get_original_format() == "PGCL"
@@ -278,27 +278,27 @@ class Benchmark(object):
                 return f
         raise AssertionError("Unable to find Modest file.")
 
-    def get_pddl_domain_filename(self):
-        if not self.is_pddl():
-            raise AssertionError("Invalid operation: Not a pddl model.")
+    def get_ppddl_domain_filename(self):
+        if not self.is_ppddl():
+            raise AssertionError("Invalid operation: Not a ppddl model.")
         if len(self.get_original_filenames()) == 2:
             for i in [0,1]:
                 if "domain" in self.get_original_filenames()[i].lower():
                     return self.get_original_filenames()[i]
                 elif "problem" in self.get_original_filenames()[i].lower():
                     return self.get_original_filenames()[1-i]
-        raise AssertionError("Unable to find PDDL domain file.")
+        raise AssertionError("Unable to find PPDDL domain file.")
 
-    def get_pddl_problem_filename(self):
-        if not self.is_pddl():
-            raise AssertionError("Invalid operation: Not a pddl model.")
+    def get_ppddl_problem_filename(self):
+        if not self.is_ppddl():
+            raise AssertionError("Invalid operation: Not a ppddl model.")
         if len(self.get_original_filenames()) == 2:
             for i in [0,1]:
                 if "domain" in self.get_original_filenames()[i].lower():
                     return self.get_original_filenames()[1-i]
                 elif "problem" in self.get_original_filenames()[i].lower():
                     return self.get_original_filenames()[i]
-        raise AssertionError("Unable to find PDDL problem file.")
+        raise AssertionError("Unable to find PPDDL problem file.")
 
     def get_pgcl_program_filename(self):
         if not self.is_pgcl():
@@ -401,9 +401,9 @@ class Benchmark(object):
             self.get_greatspn_capacities_filename()
         elif self.is_modest():
             self.get_modest_filename()
-        elif self.is_pddl():
-            self.get_pddl_domain_filename()
-            self.get_pddl_problem_filename()
+        elif self.is_ppddl():
+            self.get_ppddl_domain_filename()
+            self.get_ppddl_problem_filename()
         elif self.is_pgcl():
             self.get_pgcl_program_filename()
             self.get_pgcl_property_filename()
