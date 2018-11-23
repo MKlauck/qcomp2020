@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>QComp - Quantitative Formal Models Repository - qcomp.org</title>
+	<title>QComp - Quantitative Verification Benchmark Set - qcomp.org</title>
 	<link rel="stylesheet" type="text/css" href="../libraries/taucharts.css">
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script type="text/javascript" src="../libraries/knockout.js"></script>
@@ -14,29 +14,23 @@
 </head>
 <body onload="init()">
 
-<h1>Quantitative Formal Model Results Browser</h1>
+<h1>Quantitative Verification Benchmark Results</h1>
 <div class="belowh1">
 	<a href="index.html">⮌</a> &nbsp;|&nbsp; License: <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> &nbsp;|&nbsp; <a href="contributing.html">Contributing</a> &nbsp;|&nbsp;&thinsp; <a href="conversions.html">JANI Converters</a>
 </div>
 <p>
-	The models and results in this repository on <a href="../index.html">qcomp.org</a> are provided as a benchmark set under the terms of the
+	The models and results in this benchmark set on <a href="../index.html">qcomp.org</a> are provided under the terms of the
 	<a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
 	Please cite the publication linked as "first presented in" for each model.
 	To contribute a new model, update an existing model, or add new results for an existing model, please consider our
 	<a href="contributing.html">information for contributors</a>.
-	For general questions or comments concerning the model repository, contact
+	For general questions or comments concerning the benchmark set, contact
 	<script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
 	If you have questions concerning a specific model, please contact the submitter listed for that model.
 </p>
 
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabel">Select data</div></div>
-	<div>
-		<!-- TO-DO:
-				 Options: [x] weigh runtimes by CPU score
-				 Add tags to results, e.g. "official", "QComp 2019"
-		-->
-	</div>
 	<div class="box" style="display: inline-block;">
 		<div class="boxlabelo" style="pointer-events: auto;"><div class="boxlabel">Tools</div></div>
 		<!-- ko foreach: tools -->
@@ -50,7 +44,7 @@
 					<div data-bind="if: tool === $parent">
 						<label>
 							<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
-							<span data-bind="text: 'v' + version"></span>
+							<span data-bind="text: $data.toString()"></span>
 						</label>
 					</div>
 				<!-- /ko -->
@@ -60,7 +54,7 @@
 	<div class="box" style="column-width: 200px;">
 		<div class="boxlabelo" style="pointer-events: auto;"><div class="boxlabel">Models</div></div>
 		<!-- ko foreach: models -->
-			<div class="box" style="display: inline-block; width:100%;">
+			<div class="box" style="display: inline-block;">
 				<div class="boxlabelo" style="pointer-events: auto; white-space: nowrap;"><div class="boxlabel" style="background: none;">
 					<table style="width: 100%; table-layout: fixed; margin-left: -0.5ex;">
 						<tr>
@@ -124,6 +118,7 @@
 	<div class="boxlabelo"><div class="boxlabel">Configure display</div></div>
 	<fieldset>
 		Show&nbsp;
+		<select data-bind="options: scaleOptions, value: scaleConfig"></select>
 		<select data-bind="options: aggregateOptions, value: aggregateConfig"></select>
 		<select data-bind="options: valueOptions, value: valueConfig"></select>
 		&nbsp;per&nbsp;
@@ -135,7 +130,13 @@
 	</fieldset>
 </div>
 
-<!-- ko if: data() !== null -->
+<!-- ko if: errorMessage() !== null -->
+	<div class="box" style="margin-bottom: 64px;">
+		<div class="boxlabelo"><div class="boxlabel">Results</div></div>
+		<div data-bind="text: errorMessage()" style="font-style: italic; text-align: center; padding: 24px;"></div>
+	</div>
+<!-- /ko -->
+<!-- ko if: errorMessage() === null && data() !== null -->
 	<div class="box" data-bind="with: data()" style="margin-bottom: 64px;">
 		<div class="boxlabelo"><div class="boxlabel">Results</div></div>
 		<!-- ko if: display === "table" -->

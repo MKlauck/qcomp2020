@@ -1,13 +1,16 @@
+'use strict';
 // View model
 var qmcc = {};
 qmcc.params = [];
 qmcc.modelTypes = [ "CTMC", "DTMC", "MA", "MDP", "PTA" ];
 qmcc.originals = ko.observableArray();
+qmcc.propertyTypes = [ "P", "Pb", "E", "Eb", "Ei", "S" ];
 qmcc.models = ko.observableArray();
 qmcc.filter = {
 	name: ko.observable(""),
 	type: ko.observable(undefined),
 	original: ko.observable(undefined),
+	propertyType: ko.observable(undefined),
 	minStates: ko.observable(""),
 	maxStates: ko.observable("")
 };
@@ -15,16 +18,18 @@ qmcc.sortBy = ko.observable("");
 qmcc.sortAsc = ko.observable(true);
 qmcc.filteredModels = ko.computed(function()
 {
-	return this.models().filter(m =>
+	return qmcc.models().filter(m =>
 	{
 		var modelText = m.name.toUpperCase() + " "
 			+ m.short.toUpperCase() + " "
-			+ m.notes.toUpperCase();
-		return (modelText.includes(this.filter.name().toUpperCase())) // name (via .name and .short)
-		&& (this.filter.type() === undefined || m.type === this.filter.type().toLowerCase()) // model type
-		&& (this.filter.original() === undefined || m.original.split("-")[0] === this.filter.original()) // original formalism
-		&& (this.filter.minStates() === "" || isNaN(Number(this.filter.minStates())) || m.maxStates >= Number(this.filter.minStates())) // min. number of states
-		&& (this.filter.maxStates() === "" || isNaN(Number(this.filter.maxStates())) || m.minStates <= Number(this.filter.maxStates())) // max. number of states
+			+ m.notes.toUpperCase() + " "
+			+ m.description.toUpperCase();
+		return (modelText.includes(qmcc.filter.name().toUpperCase())) // name (via .name and .short)
+		&& (qmcc.filter.type() === undefined || m.type === qmcc.filter.type().toLowerCase()) // model type
+		&& (qmcc.filter.original() === undefined || m.original.split("-")[0] === qmcc.filter.original()) // original formalism
+		&& (qmcc.filter.propertyType() === undefined || m.properties.find(p => propertyTypeToShortString(p.type) === qmcc.filter.propertyType()) !== undefined) // property type
+		&& (qmcc.filter.minStates() === "" || isNaN(Number(qmcc.filter.minStates())) || m.maxStates >= Number(qmcc.filter.minStates())) // min. number of states
+		&& (qmcc.filter.maxStates() === "" || isNaN(Number(qmcc.filter.maxStates())) || m.minStates <= Number(qmcc.filter.maxStates())) // max. number of states
 	});
 }, qmcc);
 qmcc.selectedModel = ko.observable(null);
@@ -192,7 +197,7 @@ function compareResultParameterValues(r1, r2)
 	var file2 = r2.file.substr(r2.file.lastIndexOf('/') + 1);
 	for(var i = 0; i < r2.model.files.length; ++i)
 	{
-		if(file1 === r2.model.files[i].file.substr(r2.model.files[i].file.lastIndexOf('/') + 1))
+		if(file2 === r2.model.files[i].file.substr(r2.model.files[i].file.lastIndexOf('/') + 1))
 		{
 			file2 = r2.model.files[i];
 			break;
@@ -218,8 +223,8 @@ function compareResultParameterValues(r1, r2)
 	}
 	
 	// The results are for the same parameter values: compare the tool
-	var t1 = (r1.tool.name + "-" + r1.tool.version).toUpperCase();
-	var t2 = (r2.tool.name + "-" + r2.tool.version).toUpperCase();
+	var t1 = (r1.tool.name + "-" + r1.tool.version + (r1.tool.variant === undefined || r1.tool.variant.length === 0 ? "" : (r1.tool.variant.join("-") + "-"))).toUpperCase();
+	var t2 = (r2.tool.name + "-" + r2.tool.version + (r2.tool.variant === undefined || r2.tool.variant.length === 0 ? "" : (r2.tool.variant.join("-") + "-"))).toUpperCase();
 	return t1 < t2 ? -1 : t1 > t2 ? 1 : 0;
 }
 function sortModels(sortBy)
@@ -255,7 +260,7 @@ function getStateCount(files, isMin)
 		{
 			for(var j = 0; j < openParamValues.length; ++j)
 			{
-				if(openParamValues[j].states !== undefined)
+				if(openParamValues[j].states !== undefined && openParamValues[j].states.length !== 0)
 				{
 					if(result === null) result = isMin ? Number.POSITIVE_INFINITY : 0;
 					var params = openParamValues[j].states.map(s => s.number !== undefined ? (s.number === "∞" ? Number.POSITIVE_INFINITY : s.number) : s.order !== undefined ? Math.pow(10, s.order) : states);
