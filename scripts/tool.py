@@ -126,7 +126,7 @@ def get_result(benchmark : Benchmark, execution : Execution):
     read the result from a file that the tool has produced.
     The returned value should be either 'true', 'false', or a decimal number.
     """
-    invocation : Invocation = execution.invocation
+    invocation = execution.invocation
     log = execution.concatenate_logs()
     pos = log.find("Model checking property \"{}\":".format(benchmark.get_property_name()))
     if pos < 0:
