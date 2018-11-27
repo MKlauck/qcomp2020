@@ -29,6 +29,8 @@ The scripts only require Python 3.
 - `generate_invocations.py` generates a list of invocations (see below).
 - `generate_result_table.py` generates a table from the execution data (see below). 
 - `invocation.py` provides access to the data associated with an invocation.
+- `qcomp_2019_benchmarks.csv` contains the benchmarks for QCOMP 2019
+- `qcomp_2019_generate_invocations.py` generates a list of invocations for the QCOMP 2019 benchmarks.
 - `tool.py` implements methods specific for the tool that is to be benchmarked.
    Users should replace the example implementations in this file with their own one. 
 - `utility.py` provides various utility functions.
@@ -70,6 +72,7 @@ After implementing `get_invocations`, run
 python3 /path/to/qcomp/scripts/generate_invocations.py
 ```
 to create a .json file containing the invocations for all selected benchmarks.
+Alternatively, you can run `qcomp_2019_generate_invocations.py` instead, to generate invocations for the QCOMP 2019 benchmarks.
 You can, of course, also tweak the commands later on by manually editing the generated file.
 
 
