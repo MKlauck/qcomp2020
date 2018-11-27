@@ -16,7 +16,9 @@ class CommandExecution(object):
         self.proc.kill()
 
     def run(self, command_line_str, time_limit):
-        self.proc = subprocess.Popen(command_line_str.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        command_line_list = command_line_str.split()
+        command_line_list[0] = os.path.expanduser(command_line_list[0])
+        self.proc = subprocess.Popen(command_line_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         start_time = time.time()
         timer = threading.Timer(time_limit, self.stop)
         self.timeout = False

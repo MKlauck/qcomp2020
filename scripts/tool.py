@@ -48,7 +48,7 @@ def get_invocations(benchmark : Benchmark):
     the second entry (if present) corresponds to an optimized setting (e.g., the fastest engine and/or solution technique for this benchmark).
     Please only provide two invocations if there is actually a difference between them.
     If this benchmark is not supported, an empty list has to be returned.
-    For testing purposes, the script also allows to return more then two invocations.
+    For testing purposes, the script also allows to return more than two invocations.
     """
 
     if not is_benchmark_supported(benchmark):
@@ -96,7 +96,7 @@ def get_invocations(benchmark : Benchmark):
     # default settings
     default_inv = Invocation()
     default_inv.identifier = "default"
-    default_inv.note = "Default settings (using the sparse engine)."
+    default_inv.note = "Default settings."
     if len(preprocessing_steps) != 0:
         for prep in preprocessing_steps:
             default_inv.add_command(prep)
@@ -104,17 +104,16 @@ def get_invocations(benchmark : Benchmark):
     default_inv.add_command("./storm {}".format(benchmark_settings))
     invocations.append(default_inv)
 
-    # hybrid engine (not implemented for Markov automata)
-    if not benchmark.is_ma():
-        hybrid_inv = Invocation()
-        hybrid_inv.identifier = "hybrid"
-        hybrid_inv.note = "Hybrid engine."
-        if len(preprocessing_steps) != 0:
-            for prep in preprocessing_steps:
-                hybrid_inv.add_command(prep)
-            hybrid_inv.note += " " + " ".join(preprocessing_notes)
-        hybrid_inv.add_command("./storm {} --engine hybrid".format(benchmark_settings))
-        invocations.append(hybrid_inv)
+    # specific settings
+    specific_inv = Invocation()
+    specific_inv.identifier = "specific"
+    specific_inv.note = "Settings specific for this benchmark. Explain here."
+    if len(preprocessing_steps) != 0:
+        for prep in preprocessing_steps:
+            specific_inv.add_command(prep)
+        specific_inv.note += " " + " ".join(preprocessing_notes)
+    specific_inv.add_command("~/storm/build/bin/storm {} --engine hybrid".format(benchmark_settings))
+    invocations.append(specific_inv)
 
     return invocations
 

@@ -12,14 +12,18 @@ if __name__ == "__main__":
     # Do some sanity checks
     if not is_valid_filename(settings.results_filename()):
         raise AssertionError("Unable to write to result file {}".format(settings.results_filename()))
-    invocations = load_json(settings.invocations_filename())
+    loaded_invocations = load_json(settings.invocations_filename())
     invocation_number = 0
-    progressbar = Progressbar(len(invocations), "Checking input")
+    progressbar = Progressbar(len(loaded_invocations), "Checking input")
+    invocations = []
     benchmark_to_invocations = dict()
-    for invocation_json in invocations:
+    for invocation_json in loaded_invocations:
         invocation_number = invocation_number + 1
         progressbar.print_progress(invocation_number)
         try:
+            # check whether there are no commands
+            if not "commands" in invocation_json or len(invocation_json["commands"]) == 0 or (len(invocation_json["commands"]) == 1 and invocation_json["commands"][0] == ""):
+                continue
             benchmark_id = invocation_json["benchmark-id"]
             benchmark = get_benchmark_from_id(benchmark_id)
             # ensure that no files in the current directory will be overriden and that the actual benchmark files exist
@@ -39,6 +43,7 @@ if __name__ == "__main__":
             if invocation.identifier in benchmark_to_invocations[benchmark_id]:
                 raise AssertionError("Invocation identifier '{}' already exists for benchmark '{}'.".format(invocation.identifier, benchmark_id))
             benchmark_to_invocations[benchmark_id].add(invocation.identifier)
+            invocations.append(invocation_json)
         except Exception:
             if "benchmark-id" in invocation_json:
                 raise AssertionError("Error when checking invocation #{}: {}".format(invocation_number, invocation_json["benchmark-id"]))
@@ -47,7 +52,7 @@ if __name__ == "__main__":
     print("")
 
     # Then invoke the benchmarks
-    progressbar = Progressbar(len(invocations), "Executing invocatins")
+    progressbar = Progressbar(len(invocations), "Executing invocations")
     invocation_number = 0
     tool_results = []
     for invocation_json in invocations:
@@ -78,13 +83,14 @@ if __name__ == "__main__":
                     if is_number(result) and is_number_or_interval(benchmark.get_reference_result()):
                         tool_result["absolute-error"] = str(get_absolute_error(benchmark.get_reference_result(), result))
                         tool_result["relative-error"] = str(get_relative_error(benchmark.get_reference_result(), result))
-                        if settings.is_relative_precision():
-                            error_kind = "a relative"
-                            error_value = tool_result["relative-error"]
-                        else:
-                            error_kind = "an absolute"
-                            error_value = tool_result["absolute-error"]
                         if not tool_result["result-correct"]:
+                            # Prepare a message
+                            if settings.is_relative_precision():
+                                error_kind = "a relative"
+                                error_value = tool_result["relative-error"]
+                            else:
+                                error_kind = "an absolute"
+                                error_value = tool_result["absolute-error"]
                             notes.append("The tool result '{}' is tagged as incorrect. The reference result is '{}' which means {} error of '{}' which is larger than the goal precision '{}'.".format(result, benchmark.get_reference_result(), error_kind, error_value, settings.goal_precision()))
                     elif not tool_result["result-correct"]:
                         notes.append("Result '{}' is tagged as incorrect because it is different from the reference result '{}'.".format(result, benchmark.get_reference_result()))
