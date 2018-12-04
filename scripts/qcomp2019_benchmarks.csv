@@ -44,11 +44,11 @@ csma	MDP	PRISM	3-4	all_before_max	P
 csma	MDP	PRISM	3-4	time_max	E
 csma	MDP	PRISM	4-2	all_before_max	P
 csma	MDP	PRISM	4-2	time_max	E
-csma	MDP	PRISM	3-4	some_before	P
 eajs	MDP	PRISM	5-250-11	ExpUtil	E
 eajs	MDP	PRISM	6-300-13	ExpUtil	E
 echoring	MDP	Modest	100	MaxOffline1	P
 elevators	MDP	PPDDL	b-11-9	goal	P
+exploding-blocksworld	MDP	PPDDL	10	goal	P
 firewire	MDP	PRISM	false-36-800	deadline	Pb
 pacman	MDP	PRISM	100	crash	P
 pacman	MDP	PRISM	60	crash	P
@@ -71,8 +71,8 @@ zenotravel	MDP	PPDDL	4-2-2	goal	P
 zeroconf	MDP	PRISM	1000-8-false	correct_max	P
 zeroconf	MDP	PRISM	1000-8-false	correct_min	P
 bitcoin-attack	MA	Modest	20-6	P_MWinMax	Pb
-cabinets	MA	Galileo	2-2-true	Unavailability	S
-cabinets	MA	Galileo	2-2-true	Unreliability	Pb
+cabinets	MA	Galileo	3-2-true	Unavailability	S
+cabinets	MA	Galileo	3-2-true	Unreliability	Pb
 dpm	MA	Modest	4-8-5	PmaxQueuesFullBound	Pb
 dpm	MA	Modest	6-6-5	PminQueue1Full	P
 ftpp	MA	Galileo	2-2-true	Unavailability	S
@@ -83,8 +83,8 @@ hecs	MA	Galileo	false-2-2	Unreliability	Pb
 hecs	MA	Galileo	false-3-2	Unreliability	Pb
 readers-writers	MA	GreatSPN	40	exp_time_many_requests	E
 readers-writers	MA	GreatSPN	40	prtb_many_requests	Pb
-sms	MA	Galileo	1-true	Unreliability	Pb
-sms	MA	Galileo	1-true	Unavailability	S
+sms	MA	Galileo	3-true	Unreliability	Pb
+sms	MA	Galileo	3-true	Unavailability	S
 stream	MA	PRISM-MA	1000	exp_buffertime	E
 stream	MA	PRISM-MA	1000	pr_underrun	P
 stream	MA	PRISM-MA	1000	pr_underrun_tb	Pb
