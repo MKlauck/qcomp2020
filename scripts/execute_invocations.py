@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
             logfile_name = tool.get_name() + "." + invocation.identifier + "." + benchmark.get_identifier() + ".log"
             tool_result["log"] = logfile_name
-            with open(os.path.join(settings.logs_dir(), logfile_name), 'w') as logfile:
+            with open(os.path.join(settings.logs_dir(), logfile_name), 'w', encoding="utf-8") as logfile:
                 logfile.write(execution.concatenate_logs())
                 if len(notes) > 0:
                     logfile.write("\n" + "#"*30 + " Notes " + "#"*30 + "\n")
