@@ -75,7 +75,13 @@ if __name__ == "__main__":
             tool_result["wallclock-time"] = execution.wall_time
             tool_result["timeout"] = execution.timeout
             tool_result["execution-error"] = execution.error
-            result = try_to_bool_or_decimal(tool.get_result(benchmark, execution))
+            try:
+                result = try_to_bool_or_decimal(tool.get_result(benchmark, execution))
+            except Exception:
+                print("ERROR while getting result for invocation #{}: {}/{}".format(invocation_number,
+                                                                            invocation_json["benchmark-id"],
+                                                                            invocation_json["invocation-id"]))
+                result = None
             if result is not None:
                 tool_result["result"] = str(result) # convert to str to not lose precision
                 if benchmark.has_reference_result():
