@@ -115,7 +115,12 @@ function compareProperties(p1, p2)
 }
 function loadResults(model, rs)
 {
-	rs.forEach(mr =>
+	if(rs.length === 0)
+	{
+		--vm.modelsToLoadCount;
+		if(vm.modelsToLoadCount === 0) onEndInit();
+	}
+	else rs.forEach(mr =>
 	{
 		if(typeof mr !== "string") mr = mr.file;
 		loadJson(model.path + "/" + mr, r =>
@@ -152,14 +157,14 @@ function loadResults(model, rs)
 				if(overhead < 0.0) overhead = 0.0;
 				
 				// Evenly distribute overhead over property times
-				for(var i = 0; i < model.properties.length; ++i)
+				for(var i = 0; i < r["property-times"].length; ++i)
 				{
-					var pt = 0.0;
-					var ptt = r["property-times"].find(pttt => pttt.name === model.properties[i].name);
-					if(ptt !== undefined) pt = ptt.time;
+					var pt = r["property-times"][i];
+					var ptProp = model.properties.find(p => p.name === pt.name);
+					if(ptProp === undefined) { alert("Could not find a property named \"" + pt.name + "\"."); continue; }
 					result.propertyTimes.push({
-						property: model.properties[i],
-						time: pt + overhead / model.properties.length
+						property: ptProp,
+						time: pt.time + overhead / r["property-times"].length
 					});
 				}
 			}
