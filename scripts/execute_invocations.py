@@ -76,19 +76,20 @@ if __name__ == "__main__":
             tool_result["timeout"] = execution.timeout
             tool_result["execution-error"] = execution.error
             try:
-                result = try_to_bool_or_decimal(tool.get_result(benchmark, execution))
+                result = tool.get_result(benchmark, execution)
             except Exception:
                 print("ERROR while getting result for invocation #{}: {}/{}".format(invocation_number,
                                                                             invocation_json["benchmark-id"],
                                                                             invocation_json["invocation-id"]))
                 result = None
             if result is not None:
-                tool_result["result"] = str(result) # convert to str to not lose precision
+                tool_result["result"] = str(result)  # convert to str to not lose precision
+                result = try_to_bool_or_number(result)
                 if benchmark.has_reference_result():
                     tool_result["result-correct"] = is_result_correct(benchmark.get_reference_result(), result)
                     if is_number(result) and is_number_or_interval(benchmark.get_reference_result()):
-                        tool_result["absolute-error"] = str(get_absolute_error(benchmark.get_reference_result(), result))
-                        tool_result["relative-error"] = str(get_relative_error(benchmark.get_reference_result(), result))
+                        tool_result["absolute-error"] = try_to_float(get_absolute_error(benchmark.get_reference_result(), result))
+                        tool_result["relative-error"] = try_to_float(get_relative_error(benchmark.get_reference_result(), result))
                         if not tool_result["result-correct"]:
                             # Prepare a message
                             if settings.is_relative_precision():
@@ -97,7 +98,7 @@ if __name__ == "__main__":
                             else:
                                 error_kind = "an absolute"
                                 error_value = tool_result["absolute-error"]
-                            notes.append("The tool result '{}' is tagged as incorrect. The reference result is '{}' which means {} error of '{}' which is larger than the goal precision '{}'.".format(result, benchmark.get_reference_result(), error_kind, error_value, settings.goal_precision()))
+                            notes.append("The tool result '{}' is tagged as incorrect. The reference result is '{}' (approx. {}) which means {} error of '{}' which is larger than the goal precision '{}'.".format(result, benchmark.get_reference_result(), try_to_float(benchmark.get_reference_result()), error_kind, error_value, try_to_float(settings.goal_precision())))
                     elif not tool_result["result-correct"]:
                         notes.append("Result '{}' is tagged as incorrect because it is different from the reference result '{}'.".format(result, benchmark.get_reference_result()))
                 else:

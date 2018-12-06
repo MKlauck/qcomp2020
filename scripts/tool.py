@@ -1,4 +1,3 @@
-from decimal import Decimal
 from benchmark import Benchmark
 from invocation import Invocation
 from execution import Execution
@@ -124,7 +123,7 @@ def get_result(benchmark : Benchmark, execution : Execution):
     This method is called after executing the commands of the associated invocation.
     One can either find the result in the tooloutput (as done here) or
     read the result from a file that the tool has produced.
-    The returned value should be either 'true', 'false', or a decimal number.
+    The returned value should be either 'true', 'false', a decimal number, or a fraction.
     """
     invocation = execution.invocation
     log = execution.concatenate_logs()

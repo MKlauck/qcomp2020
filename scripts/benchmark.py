@@ -345,7 +345,7 @@ class Benchmark(object):
                         elif is_interval(r["value"]):
                             return r["value"]
                         else:
-                            return get_decimal_representation(r["value"])
+                            return try_to_number(r["value"])
         return None
 
     def has_reference_result(self):

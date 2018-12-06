@@ -88,7 +88,7 @@ There are (at least) two ways to achieve this:
 - Find the result in the output of the tool (the output of each command line is stored in `execution.logs`)
 - Read the result from a file that the tool has produced (the method is called exactly once, right after executing the command lines for the given invocation)
 
-The returned result should be either ``"true"``, ``"false"``, or a decimal number.
+The returned result should be either ``"true"``, ``"false"``, a decimal number, or a fraction.
 
 See also the file `settings.json` (which will be created in the current working directory) to adapt the time-limit, goal precision, etc.
 

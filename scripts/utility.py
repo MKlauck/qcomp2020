@@ -5,6 +5,7 @@ import math
 import csv
 import json
 from decimal import *
+from fractions import *
 
 from collections import OrderedDict
 
@@ -51,12 +52,20 @@ def is_bool(expr):
     except:
         return False
 
+def is_inf(expr):
+    try:
+        return math.isinf(Decimal(expr))
+    except Exception:
+        return False
+
 def is_number(expr):
     if is_bool(expr):
         return False
+    if is_inf(expr):
+        return True
     try:
-        Decimal(expr)
-    except (TypeError, InvalidOperation):
+        Fraction(expr)
+    except Exception:
         return False
     return True
 
@@ -71,12 +80,26 @@ def is_interval(expr):
 def is_number_or_interval(expr):
     return is_number(expr) or is_interval(expr)
 
-def try_to_bool_or_decimal(expr):
-    if is_bool(expr):
-        return bool(expr)
+def try_to_number(expr):
     if is_number(expr):
-        return Decimal(expr)
-    return expr
+        if is_inf(expr):
+            return Decimal(expr)
+        else:
+            return Fraction(expr)
+    try:
+        return try_to_number(expr["num"]) / try_to_number(expr["den"])
+    except Exception:
+        return expr
+
+def try_to_bool_or_number(expr):
+    if is_bool(expr):
+        if (isinstance(expr, str)):
+            if expr.lower() == "true":
+                return True
+            elif expr.lower() == "false":
+                return False
+        return bool(expr)
+    return try_to_number(expr)
 
 def get_decimal_representation(number):
     if is_number(number):
@@ -84,54 +107,54 @@ def get_decimal_representation(number):
     else:
         return Decimal(number["num"]) / Decimal(number["den"])
 
-def get_absolute_error(reference_value, result_value : Decimal):
-    if is_interval(reference_value):
-        u = Decimal(reference_value["upper"])
-        l = Decimal(reference_value["lower"])
-        if result_value.is_infinite() and not u.is_infinite():
-            return Decimal(math.inf)
-        elif result_value < l:
-            return get_absolute_error(l, result_value)
-        elif result_value > u:
-            return get_absolute_error(u, result_value)
-        else:
-            return Decimal(0)
-    if result_value.is_infinite() and reference_value.is_infinite():
-        return Decimal(0)
-    return abs(Decimal(reference_value) - Decimal(result_value))
+def try_to_float(expr):
+    # expr might be too large for float
+    try:
+        return float(expr)
+    except Exception:
+        return expr
 
-def get_relative_error(reference_value : Decimal, result_value : Decimal):
+def get_absolute_error(reference_value, result_value):
+    return get_error(False, reference_value, result_value)
+
+def get_relative_error(reference_value, result_value):
+    return get_error(True, reference_value, result_value)
+
+def get_error(relative : bool, reference_value, result_value):
+    result_value = try_to_number(result_value)
     if is_interval(reference_value):
-        u = Decimal(reference_value["upper"])
-        l = Decimal(reference_value["lower"])
-        if result_value.is_infinite() and not u.is_infinite():
-            return Decimal(math.inf)
+        u = try_to_number(reference_value["upper"])
+        l = try_to_number(reference_value["lower"])
+        if is_inf(result_value) and not is_inf(u):
+            return math.inf
         elif result_value < l:
-            return get_relative_error(l, result_value)
+            return get_error(relative, l, result_value)
         elif result_value > u:
-            return get_relative_error(u, result_value)
+            return get_error(relative, u, result_value)
         else:
-            return Decimal(0)
-    if reference_value == 0:
+            return Fraction(0)
+    reference_value = try_to_number(reference_value)
+    if relative and reference_value == 0:
         if result_value == 0:
-            return Decimal(0)
+            return Fraction(0)
         else:
-            return Decimal(math.inf)
-    elif reference_value.is_infinite():
-        if result_value.is_infinite():
-            return Decimal(0)
-        else:
-            return Decimal(math.inf)
-    return get_absolute_error(reference_value, result_value) / reference_value
+            return math.inf
+    elif is_inf(reference_value) and is_inf(result_value):
+        return Fraction(0)
+    elif is_inf(reference_value) or is_inf(result_value):
+        return math.inf
+
+    diff = abs(reference_value - result_value)
+    if relative:
+        return diff / reference_value
+    else:
+        return diff
 
 def is_result_correct(reference, result):
     if is_number_or_interval(reference) != is_number(result):
         return False
     if is_number_or_interval(reference):
-        if settings.is_relative_precision():
-            return get_relative_error(reference, result) <= settings.goal_precision()
-        else:
-            return get_absolute_error(reference, result) <= settings.goal_precision()
+        return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision()
     else:
         return reference == result
 
@@ -226,7 +249,7 @@ class Settings(object):
 
     def goal_precision(self):
         """ Retrieves the precision the tools have to achieved for numerical results. """
-        return Decimal(self.json_data["goal-precision"])
+        return Fraction(self.json_data["goal-precision"])
 
     def is_relative_precision(self):
         """ Retrieves whether the precision is with respect to the relative error. """
