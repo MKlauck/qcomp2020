@@ -29,7 +29,7 @@ def get_invocations(benchmark : Benchmark):
     For testing purposes, the script also allows to return more than two invocations.
     """
     assert_loaded()
-    return tmptool.get_name(benchmark)
+    return tmptool.get_invocations(benchmark)
 
 
 def get_result(benchmark : Benchmark, execution : Execution):
