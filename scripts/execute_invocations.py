@@ -74,11 +74,9 @@ if __name__ == "__main__":
             for filename in benchmark.get_all_filenames():
                 copyfile(os.path.join(benchmark.get_directory(), filename), os.path.join(os.path.curdir, filename))
             # execute the invocation
-            tool_result = OrderedDict()
             notes = []
             execution = invocation.execute()
-            tool_result["benchmark-id"] = benchmark.get_identifier()
-            tool_result["invocation-id"] = invocation.identifier
+            tool_result = OrderedDict(invocation_json)
             tool_result["wallclock-time"] = execution.wall_time
             tool_result["timeout"] = execution.timeout
             tool_result["execution-error"] = execution.error
