@@ -4,6 +4,7 @@ import time
 import math
 import csv
 import json
+import shutil
 from decimal import *
 from fractions import *
 
@@ -43,6 +44,20 @@ def is_valid_filename(name : str, invalid_chars = None):
     except IOError:
         return False
     return True
+
+def remove_directory_contents(directory, exluded = []):
+    for name in os.listdir(directory):
+        if name not in exluded:
+            try:
+                remove_file_or_dir(name)
+            except Exception:
+                print("Unable to remove '{}'".format(name))
+
+def remove_file_or_dir(name):
+    if os.path.isdir(name):
+        shutil.rmtree(name)
+    else:
+        os.remove(name)
 
 def is_bool(expr):
     if isinstance(expr, bool):
@@ -217,6 +232,9 @@ class Settings(object):
         if not "relative-precision" in self.json_data:
             self.json_data["relative-precision"] = True
             set_an_option = True
+        if not "clean-up-dirs" in self.json_data:
+            self.json_data["clean-up-dirs"] = [os.path.realpath(os.curdir)]
+            set_an_option = True
         return set_an_option
 
     def benchmark_dir(self):
@@ -254,6 +272,10 @@ class Settings(object):
     def is_relative_precision(self):
         """ Retrieves whether the precision is with respect to the relative error. """
         return bool(self.json_data["relative-precision"])
+
+    def clean_up_dirs(self):
+        """ Retrieves the directories in which clean-up operations will be performed durinc executions. """
+        return self.json_data["clean-up-dirs"]
 
     def save(self):
         save_json(self.json_data, self.settings_filename)

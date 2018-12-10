@@ -9,6 +9,10 @@ import traceback
 if __name__ == "__main__":
     ensure_directory(settings.logs_dir())
 
+    if len(settings.clean_up_dirs()) > 0:
+        print("WARNING: This script potentially removes files in the following directories:\n\t" + "\n\t".join(settings.clean_up_dirs()) + "\nMake sure that these directories do not contain important data.")
+        input("Press Enter to continue...")
+
     # Do some sanity checks
     if not is_valid_filename(settings.results_filename()):
         raise AssertionError("Unable to write to result file {}".format(settings.results_filename()))
@@ -60,8 +64,11 @@ if __name__ == "__main__":
         progressbar.print_progress(invocation_number)
         benchmark = get_benchmark_from_id(invocation_json["benchmark-id"])
         invocation = Invocation(invocation_json)
-        # save the contents of the current directory so that all files that are created during the execution can be deleted later.
-        old_dir_contents = os.listdir(os.curdir)
+        # save the contents of the directories that are to be cleaned up.
+        # All files that are created during the execution will be deleted later.
+        old_dir_contents = []
+        for dir in settings.clean_up_dirs():
+            old_dir_contents.append(os.listdir(dir))
         try:
             # copy all referenced files into the current directory
             for filename in benchmark.get_all_filenames():
@@ -124,9 +131,9 @@ if __name__ == "__main__":
             traceback.print_exc()
         finally:
             # remove files that were created during the execution
-            for filename in os.listdir(os.curdir):
-                if filename not in old_dir_contents:
-                    os.remove(os.path.join(os.path.curdir, filename))
+            for dir, old_contents in zip(settings.clean_up_dirs(), old_dir_contents):
+                remove_directory_contents(dir, old_contents)
+
 
     save_json(tool_results, settings.results_filename())
     print("\nSaved {} tool execution results to file '{}'".format(len(tool_results), settings.results_filename()))
