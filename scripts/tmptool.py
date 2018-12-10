@@ -1,21 +1,11 @@
 from benchmark import Benchmark
 from invocation import Invocation
 from execution import Execution
-from utility import *
-from shutil import copyfile
-import sys, importlib
-import tmptool
-
-loaded = False
-def assert_loaded():
-    if not loaded:
-        copyfile("tool.py", os.path.join(sys.path[0], "tmptool.py"))
-        importlib.reload(sys.modules["tmptool"])
 
 def get_name():
     """ should return the name of the tool as listed on http://qcomp.org/competition/2019/"""
-    assert_loaded()
-    return tmptool.get_name()
+    raise AssertionError("tmptool not initialized.")
+
 
 def get_invocations(benchmark : Benchmark):
     """
@@ -28,8 +18,8 @@ def get_invocations(benchmark : Benchmark):
     If this benchmark is not supported, an empty list has to be returned.
     For testing purposes, the script also allows to return more than two invocations.
     """
-    assert_loaded()
-    return tmptool.get_name(benchmark)
+    raise AssertionError("tmptool not initialized.")
+
 
 
 def get_result(benchmark : Benchmark, execution : Execution):
@@ -40,5 +30,5 @@ def get_result(benchmark : Benchmark, execution : Execution):
     read the result from a file that the tool has produced.
     The returned value should be either 'true', 'false', a decimal number, or a fraction.
     """
-    assert_loaded()
-    return tmptool.get_result(benchmark, execution)
+    raise AssertionError("tmptool not initialized.")
+
