@@ -233,7 +233,7 @@ class Settings(object):
             self.json_data["relative-precision"] = True
             set_an_option = True
         if not "clean-up-dirs" in self.json_data:
-            self.json_data["clean-up-dirs"] = [os.path.realpath(os.curdir)]
+            self.json_data["clean-up-dirs"] = [os.path.realpath(os.curdir), "/tmp/"]
             set_an_option = True
         return set_an_option
 
