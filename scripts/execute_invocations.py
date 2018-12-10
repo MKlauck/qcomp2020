@@ -21,6 +21,7 @@ if __name__ == "__main__":
     progressbar = Progressbar(len(loaded_invocations), "Checking input")
     invocations = []
     benchmark_to_invocations = dict()
+    qcomp_benchmarks = load_csv(os.path.join(sys.path[0], "qcomp2019_benchmarks.csv"))
     for invocation_json in loaded_invocations:
         invocation_number = invocation_number + 1
         progressbar.print_progress(invocation_number)
@@ -30,6 +31,14 @@ if __name__ == "__main__":
                 continue
             benchmark_id = invocation_json["benchmark-id"]
             benchmark = get_benchmark_from_id(benchmark_id)
+            #ensure that this benchmark is actually on the list of selected benchmarks.
+            on_list = False
+            for qcomp_benchmark in qcomp_benchmarks:
+                if benchmark_id == "{}.{}.{}".format(qcomp_benchmark[0], qcomp_benchmark[3], qcomp_benchmark[4]):
+                    on_list = True
+                    break
+            if not on_list:
+                raise AssertionError("Benchmark with identifier {} is not part of QComp 2019".format(benchmark_id))
             # ensure that no files in the current directory will be overriden and that the actual benchmark files exist
             for filename in benchmark.get_all_filenames():
                 if not os.path.isfile(os.path.join(benchmark.get_directory(), filename)):
@@ -47,12 +56,21 @@ if __name__ == "__main__":
             if invocation.identifier in benchmark_to_invocations[benchmark_id]:
                 raise AssertionError("Invocation identifier '{}' already exists for benchmark '{}'.".format(invocation.identifier, benchmark_id))
             benchmark_to_invocations[benchmark_id].add(invocation.identifier)
+            if len(benchmark_to_invocations[benchmark_id]) > 2:
+                raise AssertionError("Found more than two invocations for benchmark {}.".format(benchmark_id))
             invocations.append(invocation_json)
         except Exception:
             if "benchmark-id" in invocation_json:
                 raise AssertionError("Error when checking invocation #{}: {}".format(invocation_number, invocation_json["benchmark-id"]))
             else:
                 raise  AssertionError("Error when checking invocation #{}".format(invocation_number))
+
+    for bench_id in benchmark_to_invocations:
+        if not "default" in benchmark_to_invocations[bench_id]:
+            raise AssertionError("No default invocation for {}. Only found invocations: {}.".format(bench_id, benchmark_to_invocations[bench_id]))
+        for inv_id in benchmark_to_invocations[bench_id]:
+            if inv_id not in ["default", "specific"]:
+                raise AssertionError("Invalid invocation identifier {} for benchmark {}.".format(inv_id, bench_id))
     print("")
 
     # Then invoke the benchmarks
