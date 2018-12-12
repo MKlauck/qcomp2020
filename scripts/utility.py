@@ -49,9 +49,10 @@ def remove_directory_contents(directory, exluded = []):
     for name in os.listdir(directory):
         if name not in exluded:
             try:
-                remove_file_or_dir(name)
+                path = os.path.join(directory, name)
+                remove_file_or_dir(path)
             except Exception:
-                print("Unable to remove '{}'".format(name))
+                print("Unable to remove '{}'".format(path))
 
 def remove_file_or_dir(name):
     if os.path.isdir(name):
