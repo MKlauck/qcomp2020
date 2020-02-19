@@ -6,11 +6,11 @@ class Invocation(object):
     def __init__(self, invocation_json = None):
         """ Creates either an empty invocation that can be filled using 'add command' or an invocation from an existing json representation."""
         self.commands = []
-        self.note = ""
+        self.track_id = ""
         self.identifier = ""
         if invocation_json != None:
             self.identifier = invocation_json["invocation-id"]
-            self.note = invocation_json["invocation-note"]
+            self.track_id = invocation_json["invocation-track-id"]
             for c in invocation_json["commands"]:
                 self.add_command(c)
             if len(self.commands) == 0:
@@ -23,7 +23,7 @@ class Invocation(object):
         self.commands.append(command)
 
     def to_json(self):
-        return OrderedDict([("invocation-id", self.identifier), ("invocation-note", self.note), ("commands", self.commands)])
+        return OrderedDict([("invocation-id", self.identifier), ("invocation-track-id", self.track_id), ("commands", self.commands)])
 
     def execute(self):
         execution = Execution(self)

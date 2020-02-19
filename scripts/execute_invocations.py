@@ -21,7 +21,7 @@ if __name__ == "__main__":
     progressbar = Progressbar(len(loaded_invocations), "Checking input")
     invocations = []
     benchmark_to_invocations = dict()
-    qcomp_benchmarks = load_csv(os.path.join(sys.path[0], "qcomp2019_benchmarks.csv"))
+    qcomp_benchmarks = load_csv(os.path.join(sys.path[0], "qcomp2020_benchmarks.csv"))
     for invocation_json in loaded_invocations:
         invocation_number = invocation_number + 1
         progressbar.print_progress(invocation_number)
@@ -38,15 +38,15 @@ if __name__ == "__main__":
                     on_list = True
                     break
             if not on_list:
-                raise AssertionError("Benchmark with identifier {} is not part of QComp 2019".format(benchmark_id))
-            # ensure that no files in the current directory will be overriden and that the actual benchmark files exist
+                raise AssertionError("Benchmark with identifier {} is not part of QComp 2020".format(benchmark_id))
+            # ensure that no files in the current directory will be overwritten and that the actual benchmark files exist
             for filename in benchmark.get_all_filenames():
                 if not os.path.isfile(os.path.join(benchmark.get_directory(), filename)):
                     raise AssertionError(
                         "The file '{}' does not exist.".format(
                             os.path.join(benchmark.get_directory(), filename)))
                 if os.path.isfile(os.path.join(os.path.curdir, filename)):
-                    raise AssertionError("The file '{}' would be overriden since one of the benchmark files has the same name.".format(os.path.join(os.path.curdir, filename)))
+                    raise AssertionError("The file '{}' would be overwritten since one of the benchmark files has the same name.".format(os.path.join(os.path.curdir, filename)))
             # ensure that the invocation id can be part of a filename and is unique
             invocation = Invocation(invocation_json)
             if not is_valid_filename(invocation.identifier, "./"):
@@ -56,8 +56,8 @@ if __name__ == "__main__":
             if invocation.identifier in benchmark_to_invocations[benchmark_id]:
                 raise AssertionError("Invocation identifier '{}' already exists for benchmark '{}'.".format(invocation.identifier, benchmark_id))
             benchmark_to_invocations[benchmark_id].add(invocation.identifier)
-            if len(benchmark_to_invocations[benchmark_id]) > 2:
-                raise AssertionError("Found more than two invocations for benchmark {}.".format(benchmark_id))
+            # if len(benchmark_to_invocations[benchmark_id]) > 2:
+            #     raise AssertionError("Found more than two invocations for benchmark {}.".format(benchmark_id))
             invocations.append(invocation_json)
         except Exception:
             if "benchmark-id" in invocation_json:
@@ -103,7 +103,8 @@ if __name__ == "__main__":
             except Exception:
                 print("ERROR while getting result for invocation #{}: {}/{}".format(invocation_number,
                                                                             invocation_json["benchmark-id"],
-                                                                            invocation_json["invocation-id"]))
+                                                                            invocation_json["invocation-id"],
+                                                                            invocation_json["invocation-track-id"]))
                 result = None
             if result is not None:
                 tool_result["result"] = str(result)  # convert to str to not lose precision
@@ -130,7 +131,7 @@ if __name__ == "__main__":
                 notes.append("Unable to obtain tool result.")
             tool_result["notes"] = notes
 
-            logfile_name = tool.get_name() + "." + invocation.identifier + "." + benchmark.get_identifier() + ".log"
+            logfile_name = tool.get_name() + "." + invocation.identifier + "." + benchmark.get_identifier() + "." + invocation.track_id + ".log"
             tool_result["log"] = logfile_name
             with open(os.path.join(settings.logs_dir(), logfile_name), 'w', encoding="utf-8") as logfile:
                 logfile.write(execution.concatenate_logs())
@@ -140,10 +141,10 @@ if __name__ == "__main__":
                     logfile.write(note + "\n")
             tool_results.append(tool_result)
         except KeyboardInterrupt as e:
-            print("\nInterrupt while processing invocation #{}: {}/{}".format(invocation_number, invocation_json["benchmark-id"], invocation_json["invocation-id"]))
+            print("\nInterrupt while processing invocation #{}: {}/{}".format(invocation_number, invocation_json["benchmark-id"], invocation_json["invocation-track-id"], invocation_json["invocation-id"]))
             break
         except Exception:
-            print("ERROR while processing invocation #{}: {}/{}".format(invocation_number, invocation_json["benchmark-id"], invocation_json["invocation-id"]))
+            print("ERROR while processing invocation #{}: {}/{}".format(invocation_number, invocation_json["benchmark-id"], invocation_json["invocation-track-id"], invocation_json["invocation-id"]))
             traceback.print_exc()
         finally:
             # remove files that were created during the execution

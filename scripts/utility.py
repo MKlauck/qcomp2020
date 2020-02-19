@@ -45,9 +45,9 @@ def is_valid_filename(name : str, invalid_chars = None):
         return False
     return True
 
-def remove_directory_contents(directory, exluded = []):
+def remove_directory_contents(directory, excluded = []):
     for name in os.listdir(directory):
-        if name not in exluded:
+        if name not in excluded:
             try:
                 path = os.path.join(directory, name)
                 remove_file_or_dir(path)

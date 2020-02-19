@@ -10,7 +10,7 @@ class Benchmark(object):
         """
         :param index_json: The json structure of the 'index.json' file of the model
         :param model_file_index: The index of the model file entry within the "files" entry in the json structure
-        :param open_parameter_index: The index of the open parameter instantiation within the "open-parameter-vaules" entry of the file entry
+        :param open_parameter_index: The index of the open parameter instantiation within the "open-parameter-values" entry of the file entry
         :param property_index: The index of the property within the "properties" entry of the json structure
         """
         self.index_json = index_json

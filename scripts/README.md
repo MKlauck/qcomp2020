@@ -1,8 +1,8 @@
 QComp Benchmarking Scripts
 ==============
 
-This is a collection of simple scripts used to execute the benchmarks from the QComp website.
-For bug reports and other kinds of feedback, please contact <tim.quatmann@cs.rwth-aachen.de>.
+This is a collection of simple scripts, initially written for QComp2019 by Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>, used to execute the benchmarks from the QComp website.
+For bug reports and other kinds of feedback, please contact Michaela Klauck <klauck@depend.uni-saarland.de>, who adapted the scripts for the 2020 edition of QComp.
 
 
 #Requirements
@@ -15,7 +15,7 @@ The scripts only require Python 3.
 - Benchmark: A benchmark is a combination of a model, a parameter assignment, and a single property.
   Each benchmark has a unique identifier (e.g. `consensus.4-2.disagree`) consisting of the short model name,
   the parameter values (in the order they appear on the website), and the name of the property.
-- Invocation: An invocation is a sequence of command lines that produce the result of a single given benchmark by invocing the tool.
+- Invocation: An invocation is a sequence of command lines that produce the result of a single given benchmark by invoking the tool.
   We consider *sequences* of command lines to allow for, e.g., conversions to other formalisms before executing the actual tool.
 - Execution: An execution is the result of executing an invocation.
 
@@ -29,8 +29,8 @@ The scripts only require Python 3.
 - `generate_invocations.py` generates a list of invocations (see below).
 - `generate_result_table.py` generates a table from the execution data (see below). 
 - `invocation.py` provides access to the data associated with an invocation.
-- `qcomp_2019_benchmarks.csv` contains the benchmarks for QCOMP 2019
-- `qcomp_2019_generate_invocations.py` generates a list of invocations for the QCOMP 2019 benchmarks.
+- `qcomp_2020_benchmarks.csv` contains the benchmarks for QCOMP 2020
+- `qcomp_2020_generate_invocations.py` generates a list of invocations for the QCOMP 2020 benchmarks.
 - `tool.py` implements methods specific for the tool that is to be benchmarked.
    Users should replace the example implementations in this file with their own one. 
 - `utility.py` provides various utility functions.
@@ -48,7 +48,6 @@ Afterwards, execute
 python3 /path/to/qcomp/scripts/generate_benchmark_list.py
 ```
 This will create a .csv file that lists all selected benchmarks.
-Note that the format of this file coincides with the format of the benchmark wishlist for participants of **QComp 2019**.
 
 
 # Creating a List of Invocations
@@ -56,24 +55,24 @@ Note that the format of this file coincides with the format of the benchmark wis
 After specifying a set of benchmarks, we need to create tool invocations for them.
 This requires the method `get_invocations` in the file `tool.py` to return a list of `Invocation` objects for the given benchmark.
 Each invocation consists of
- * a short identifier (that should be unique among all returned invocations for the given benchmark)
- * an optional note that explains the commands
+ * the benchmark identifier (that should be unique among all returned invocations for the given benchmark)
+ * the invocation identifier, `default` or `specific`
+ * a track identifier, specifying to which of the five tracks in QComp 2020 the call belongs (`correct`, `probably-epsilon-correct`, `often-epsilon-correct`, `often-epsilon-correct-10-min`)
  * a sequence of command lines that invoke the tool as well as potential pre- or postprocessing steps such as conversion to a compatible modeling language.
 
 For the command lines, it can be assumed that all files related to the model (i.e., the .jani file and the file(s) of the original formalism) are copied
 to the current working directory before executing the command.
 
 If the benchmark is not supported, the returned list should be empty.
-For **QComp 2019** up to two invocations per benchmark are allowed.
-However, the first invocation should call the tool with its default settings while the second one can also set benchmark-specific options, e.g., the fastest engine for this benchmark.
+For **QComp 2020** up to two invocations per benchmark and track are allowed.
+However, the first invocation should call the tool with its default settings while the second one can also set benchmark-specific options, e.g., the fastest engine for this benchmark. For tweaking the parameters only the usage of the information about the type of the model, the type of the property and the expected size of the state space is allowed.
 
 After implementing `get_invocations`, run
 ```commandline
 python3 /path/to/qcomp/scripts/generate_invocations.py
 ```
 to create a .json file containing the invocations for all selected benchmarks.
-Alternatively, you can run `qcomp_2019_generate_invocations.py` instead, to generate invocations for the QCOMP 2019 benchmarks.
-You can, of course, also tweak the commands later on by manually editing the generated file.
+Alternatively, you can run `qcomp_2020_generate_invocations.py` instead, to generate invocations for the QCOMP 2020 benchmarks.
 
 
 # Executing the Commands
