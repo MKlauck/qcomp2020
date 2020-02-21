@@ -368,6 +368,53 @@ class Benchmark(object):
                     return max_val
         return None
 
+
+    def categorize(state_num):
+        if state_num > 100000000:
+            return 100000000
+        else:
+            if state_num >= 50000000:
+                return 50000000
+            else:
+                if state_num >= 20000000:
+                    return 20000000
+                else:
+                    if state_num >= 10000000:
+                        return 10000000
+                    else:
+                        if state_num >= 5000000:
+                            return 5000000
+                        else:
+                            if state_num >= 1000000:
+                                return 1000000
+                            else:
+                                if state_num >= 500000:
+                                    return 500000
+                                else:
+                                    if state_num >= 100000:
+                                        return 100000
+                                    else:
+                                        return 999999
+
+
+    def get_num_states_tweak(self):
+        """ Returns the number of states storm produced for this benchmark without cutting off after goal states, allowed for tweaking in QComp2020 (or None, if there is no states number)"""
+        file_json = self.index_json["files"][self.model_file_index]
+        if not file_json["type"] == "pta":
+            if "open-parameter-values" in file_json:
+                open_par_json = file_json["open-parameter-values"]
+                if len(open_par_json) > 0 and "states" in open_par_json[self.open_parameter_index]:
+                    states = open_par_json[self.open_parameter_index]["states"]
+                    for s in states:
+                        if s["note"] == "Storm":
+                            if s["number"] == "∞":
+                                state_num = math.inf
+                            else:
+                                state_num = s["number"]
+                    return categorize(state_num)           
+        return None
+
+
     def load_jani_file(self):
         """ Returns the contens of the jani file """
         try:

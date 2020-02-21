@@ -106,7 +106,7 @@ def get_invocations(benchmark : Benchmark):
     default_inv.add_command("./storm {}".format(benchmark_settings))
     invocations.append(default_inv)
 
-    # specific settings                     !!!!only information about model type, property type and state space size may be used for tweaking
+    # specific settings                     !!!!only information about model type, property type and state space size via benchmark.get_num_states_tweak() may be used for tweaking
     specific_inv = Invocation()
     specific_inv.identifier = "specific"
     specific_inv.track_id = "epsilon-correct"
