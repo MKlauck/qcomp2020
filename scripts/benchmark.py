@@ -400,18 +400,20 @@ class Benchmark(object):
     def get_num_states_tweak(self):
         """ Returns the number of states Storm produced for this benchmark without cutting off after goal states, allowed for tweaking in QComp2020 (or None, if there is no states number)"""
         file_json = self.index_json["files"][self.model_file_index]
-        if not file_json["type"] == "pta":
+        if not self.is_pta():
             if "open-parameter-values" in file_json:
                 open_par_json = file_json["open-parameter-values"]
                 if len(open_par_json) > 0 and "states" in open_par_json[self.open_parameter_index]:
                     states = open_par_json[self.open_parameter_index]["states"]
+                    state_num = None
                     for s in states:
                         if s["note"] == "Storm":
                             if s["number"] == "∞":
                                 state_num = math.inf
                             else:
                                 state_num = s["number"]
-                    return categorize(state_num)           
+                    if states is not None and state_num is not None:
+                        return self.categorize(state_num)           
         return None
 
 

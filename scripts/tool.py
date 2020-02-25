@@ -29,7 +29,7 @@ def is_benchmark_supported(benchmark : Benchmark):
         return False
 
     # do not include models with state space largern than 50 Mio
-    if benchmark.get_num_states_tweak() is not None and benchmark.get_num_states() > 50000000:
+    if benchmark.get_num_states_tweak() is not None and benchmark.get_num_states_tweak() > 50000000:
         return False
 
     # do not select dfts with a file parameter "R" that is set to true
