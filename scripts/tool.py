@@ -17,7 +17,7 @@ def get_name():
     return "Storm"
 
 def is_benchmark_supported(benchmark : Benchmark):
-    """ Auxiliary function that returns True if the provided benchmark is supported by the tool"""
+    """returns True if the provided benchmark is supported by the tool and if the given benchmark should appear on the generated benchmark list"""
 
     if benchmark.is_pta() and benchmark.is_prism():
         # The PTAs from Prism are not supported because either
@@ -27,17 +27,9 @@ def is_benchmark_supported(benchmark : Benchmark):
     if benchmark.is_prism_inf() and benchmark.is_ctmc():
         # Storm does not support the CTMCs with infinite state-spaces
         return False
-    return True
 
-def is_on_benchmark_list(benchmark : Benchmark):
-    """ Returns true, if the given benchmark should appear on the generated benchmark list."""
-
-    # do not include for models that storm does not support
-    if not is_benchmark_supported(benchmark):
-        return False
-
-    # do not include models with small state spaces, except it's the haddad-monmege one (because we like that)
-    if benchmark.get_max_num_states() is not None and benchmark.get_max_num_states() < 10000 and benchmark.get_model_short_name() != "haddad-monmege":
+    # do not include models with state space largern than 50 Mio
+    if benchmark.get_num_states_tweak() is not None and benchmark.get_num_states() > 50000000:
         return False
 
     # do not select dfts with a file parameter "R" that is set to true

@@ -369,7 +369,7 @@ class Benchmark(object):
         return None
 
 
-    def categorize(state_num):
+    def categorize(self, state_num):
         if state_num > 100000000:
             return 100000000
         else:
@@ -398,7 +398,7 @@ class Benchmark(object):
 
 
     def get_num_states_tweak(self):
-        """ Returns the number of states storm produced for this benchmark without cutting off after goal states, allowed for tweaking in QComp2020 (or None, if there is no states number)"""
+        """ Returns the number of states Storm produced for this benchmark without cutting off after goal states, allowed for tweaking in QComp2020 (or None, if there is no states number)"""
         file_json = self.index_json["files"][self.model_file_index]
         if not file_json["type"] == "pta":
             if "open-parameter-values" in file_json:
