@@ -9,6 +9,9 @@ import traceback
 if __name__ == "__main__":
     ensure_directory(settings.logs_dir())
 
+    for dir in settings.clean_up_dirs():
+        ensure_directory(dir)
+
     if len(settings.clean_up_dirs()) > 0:
         print("WARNING: This script potentially removes files in the following directories:\n\t" + "\n\t".join(settings.clean_up_dirs()) + "\nMake sure that these directories do not contain important data.")
         input("Press Enter to continue...")
@@ -53,8 +56,8 @@ if __name__ == "__main__":
                 raise AssertionError("Invocation identifier '{}' is either not a valid filename or contains a '.'.".format(invocation.identifier))
             if not benchmark_id in benchmark_to_invocations:
                 benchmark_to_invocations[benchmark_id] = set()
-            if invocation.identifier in benchmark_to_invocations[benchmark_id]:
-                raise AssertionError("Invocation identifier '{}' already exists for benchmark '{}'.".format(invocation.identifier, benchmark_id))
+            # if invocation.identifier in benchmark_to_invocations[benchmark_id]:
+            #     raise AssertionError("Invocation identifier '{}' already exists for benchmark '{}'.".format(invocation.identifier, benchmark_id))
             benchmark_to_invocations[benchmark_id].add(invocation.identifier)
             # if len(benchmark_to_invocations[benchmark_id]) > 2:
             #     raise AssertionError("Found more than two invocations for benchmark {}.".format(benchmark_id))
