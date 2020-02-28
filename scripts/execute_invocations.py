@@ -113,7 +113,7 @@ if __name__ == "__main__":
                 tool_result["result"] = str(result)  # convert to str to not lose precision
                 result = try_to_bool_or_number(result)
                 if benchmark.has_reference_result():
-                    tool_result["result-correct"] = is_result_correct(benchmark.get_reference_result(), result)
+                    tool_result["result-correct"] = is_result_correct(benchmark.get_reference_result(), result, invocation.track_id)
                     if is_number(result) and is_number_or_interval(benchmark.get_reference_result()):
                         tool_result["absolute-error"] = try_to_float(get_absolute_error(benchmark.get_reference_result(), result))
                         tool_result["relative-error"] = try_to_float(get_relative_error(benchmark.get_reference_result(), result))

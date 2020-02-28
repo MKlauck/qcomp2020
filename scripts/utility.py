@@ -166,11 +166,22 @@ def get_error(relative : bool, reference_value, result_value):
     else:
         return diff
 
-def is_result_correct(reference, result):
+def is_result_correct(reference, result, track_id):
     if is_number_or_interval(reference) != is_number(result):
         return False
     if is_number_or_interval(reference):
-        return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision()
+        if(track_id == "correct"):
+            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_correct()
+        if(track_id == "epsilon-correct"):
+            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_epsilon_correct()
+        if(track_id == "probably-epsilon-correct"):
+            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_probably_epsilon_correct()
+        if(track_id == "often-epsilon-correct"):
+            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_often_epsilon_correct()
+        if(track_id == "often-epsilon-correct-10-min"):
+            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_often_epsilon_correct()
+        else:
+            return reference == result
     else:
         return reference == result
 
@@ -227,8 +238,20 @@ class Settings(object):
         if not "time-limit" in self.json_data:
             self.json_data["time-limit"] = 1800
             set_an_option = True
-        if not "goal-precision" in self.json_data:
-            self.json_data["goal-precision"] = 1E-3
+        if not "time-limit-short" in self.json_data:
+            self.json_data["time-limit-short"] = 600
+            set_an_option = True
+        if not "goal-precision-correct" in self.json_data:
+            self.json_data["goal-precision-correct"] = 0.0
+            set_an_option = True
+        if not "goal-precision-epsilon-correct" in self.json_data:
+            self.json_data["goal--epsilon-precision-correct"] = 1E-6
+            set_an_option = True
+        if not "goal-precision-probably-epsilon-correct" in self.json_data:
+            self.json_data["goal-precision-probably-epsilon-correct"] = 5E-2
+            set_an_option = True
+        if not "goal-precision-often-epsilon-correct" in self.json_data:
+            self.json_data["goal-precision-often-epsilon-correct"] = 1E-3
             set_an_option = True
         if not "relative-precision" in self.json_data:
             self.json_data["relative-precision"] = True
@@ -266,9 +289,25 @@ class Settings(object):
         """ Retrieves the time limit for tool executions (in seconds). """
         return int(self.json_data["time-limit"])
 
-    def goal_precision(self):
+    def time_limit_short(self):
+        """ Retrieves the short time limit for tool executions (in seconds). """
+        return int(self.json_data["time-limit-short"])
+
+    def goal_precision_correct(self):
         """ Retrieves the precision the tools have to achieved for numerical results. """
-        return Fraction(self.json_data["goal-precision"])
+        return Fraction(self.json_data["goal-precision-correct"])
+
+    def goal_precision_epsilon_correct(self):
+        """ Retrieves the precision the tools have to achieved for numerical results. """
+        return Fraction(self.json_data["goal-precision-epsilon-correct"])
+
+    def goal_precision_probably_epsilon_correct(self):
+        """ Retrieves the precision the tools have to achieved for numerical results. """
+        return Fraction(self.json_data["goal-precision-probably-epsilon-correct"])
+
+    def goal_precision_often_epsilon_correct(self):
+        """ Retrieves the precision the tools have to achieved for numerical results. """
+        return Fraction(self.json_data["goal-precision-often-epsilon-correct"])
 
     def is_relative_precision(self):
         """ Retrieves whether the precision is with respect to the relative error. """

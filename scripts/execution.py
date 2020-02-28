@@ -54,7 +54,10 @@ def execute_command_line(command_line_str : str, time_limit : int):
 class Execution(object):
     def __init__(self, invocation):
         self.invocation = invocation
-        self.time_limit = settings.time_limit()
+        if(invocation.track_id == "often-epsilon-corret-10-min"):
+            self.time_limit = settings.time_limit_short()
+        else:
+            self.time_limit = settings.time_limit()
         self.wall_time = None
         self.logs = None
         self.timeout = None
