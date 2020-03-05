@@ -294,19 +294,19 @@ class Settings(object):
         return int(self.json_data["time-limit-short"])
 
     def goal_precision_correct(self):
-        """ Retrieves the precision the tools have to achieved for numerical results. """
+        """ Retrieves the precision the tools have to achieve for numerical results. """
         return Fraction(self.json_data["goal-precision-correct"])
 
     def goal_precision_epsilon_correct(self):
-        """ Retrieves the precision the tools have to achieved for numerical results. """
+        """ Retrieves the precision the tools have to achieve for numerical results. """
         return Fraction(self.json_data["goal-precision-epsilon-correct"])
 
     def goal_precision_probably_epsilon_correct(self):
-        """ Retrieves the precision the tools have to achieved for numerical results. """
+        """ Retrieves the precision the tools have to achieve for numerical results. """
         return Fraction(self.json_data["goal-precision-probably-epsilon-correct"])
 
     def goal_precision_often_epsilon_correct(self):
-        """ Retrieves the precision the tools have to achieved for numerical results. """
+        """ Retrieves the precision the tools have to achieve for numerical results. """
         return Fraction(self.json_data["goal-precision-often-epsilon-correct"])
 
     def is_relative_precision(self):
