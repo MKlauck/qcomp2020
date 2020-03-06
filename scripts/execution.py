@@ -1,5 +1,5 @@
 from utility import *
-import subprocess, threading, time
+import subprocess, threading, time, signal
 
 
 class CommandExecution(object):
@@ -15,12 +15,21 @@ class CommandExecution(object):
         self.timeout = True
         self.proc.kill()
 
-    def run(self, command_line_str, time_limit):
+    def stop_after_timeout(self):
+        self.timeout = False
+        self.proc.send_signal(signal.SIGINT)
+        time.sleep(20)
+        self.proc.kill()
+
+    def run(self, command_line_str, time_limit, short_track):
         command_line_list = command_line_str.split()
         command_line_list[0] = os.path.expanduser(command_line_list[0])
-        self.proc = subprocess.Popen(command_line_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        self.proc = subprocess.Popen(command_line_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, encoding='utf-8')
         start_time = time.time()
-        timer = threading.Timer(time_limit, self.stop)
+        if(short_track):
+            timer = threading.Timer(time_limit, self.stop_after_timeout)
+        else:
+            timer = threading.Timer(time_limit, self.stop)
         self.timeout = False
         self.output = ""
         timer.start()
@@ -32,20 +41,20 @@ class CommandExecution(object):
             timer.cancel()
             self.wall_time = time.time() - start_time
             self.return_code = self.proc.returncode
-        self.output = self.output + stdout.decode('utf8')
+        self.output = self.output + stdout
         if len(stderr) > 0:
-            self.output = self.output + "\n" + "#"*30 + "Output to stderr" + "#"*30 + "\n" + stderr.decode('utf8')
+            self.output = self.output + "\n" + "#"*30 + "Output to stderr" + "#"*30 + "\n" + stderr
         if self.timeout and self.wall_time <= time_limit:
             print("WARN: A timeout was triggered although the measured time is {} seconds which is still below the time limit of {} seconds".format(self.wall_time, time_limit))
 
 
-def execute_command_line(command_line_str : str, time_limit : int):
+def execute_command_line(command_line_str : str, time_limit : int, short_track : bool):
     """
     Executes the given command line with the given time limit (in seconds).
     :returns the output of the command (including the output to stderr, if present), the runtime of the command and either the return code or None (in case of a timeout)
     """
     execution = CommandExecution()
-    execution.run(command_line_str, time_limit)
+    execution.run(command_line_str, time_limit, short_track)
     if execution.timeout:
         return execution.output, execution.wall_time, None
     else:
@@ -54,7 +63,7 @@ def execute_command_line(command_line_str : str, time_limit : int):
 class Execution(object):
     def __init__(self, invocation):
         self.invocation = invocation
-        if(invocation.track_id == "often-epsilon-corret-10-min"):
+        if(invocation.track_id == "often-epsilon-correct-10-min"):
             self.time_limit = settings.time_limit_short()
         else:
             self.time_limit = settings.time_limit()
@@ -69,7 +78,7 @@ class Execution(object):
         self.wall_time = 0.0
         self.logs = []
         for command in self.invocation.commands:
-            log, wall_time, return_code = execute_command_line(command, self.time_limit - self.wall_time)
+            log, wall_time, return_code = execute_command_line(command, self.time_limit - self.wall_time, self.invocation.track_id == "often-epsilon-correct-10-min")
             self.wall_time = self.wall_time + wall_time
             self.logs.append("Command:\t{}\nWallclock time:\t{}\nReturn code:\t{}\nOutput:\n{}\n".format(command, wall_time, return_code, log))
             if return_code is None:
