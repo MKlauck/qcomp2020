@@ -70,9 +70,15 @@ def is_bool(expr):
 
 def is_inf(expr):
     try:
-        return math.isinf(Decimal(expr))
+        Fraction(expr)
+    except OverflowError:
+        return True
     except Exception:
-        return False
+        try:
+            return math.isinf(Decimal(expr))
+        except Exception:
+            return False
+    return False
 
 def is_number(expr):
     if is_bool(expr):
