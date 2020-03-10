@@ -248,7 +248,7 @@ class Settings(object):
             self.json_data["time-limit-short"] = 600
             set_an_option = True
         if not "goal-precision-correct" in self.json_data:
-            self.json_data["goal-precision-correct"] = 0.0
+            self.json_data["goal-precision-correct"] = 1E-14
             set_an_option = True
         if not "goal-precision-epsilon-correct" in self.json_data:
             self.json_data["goal-precision-epsilon-correct"] = 1E-6
