@@ -108,7 +108,7 @@ def get_invocations(benchmark : Benchmark):
     specific_inv.add_command("~/storm/build/bin/storm {} --engine hybrid".format(benchmark_settings))
     invocations.append(specific_inv)
 
-    #### TODO: add default and specific invocations for other track_ids 'correct', 'probably-epsilon-correct', 'often-epsilon-correct', 'often-epsilon-correct-10-min'
+    #### TODO: add default and specific invocations for other track_ids 'correct', 'floating-point-correct', 'probably-epsilon-correct', 'often-epsilon-correct', 'often-epsilon-correct-10-min'
     ### remember that different tracks have different precisions
 
     return invocations

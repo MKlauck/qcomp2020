@@ -178,6 +178,8 @@ def is_result_correct(reference, result, track_id):
     if is_number_or_interval(reference):
         if(track_id == "correct"):
             return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_correct()
+        if(track_id == "floating-point-correct"):
+            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_floating_point_correct()
         if(track_id == "epsilon-correct"):
             return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_epsilon_correct()
         if(track_id == "probably-epsilon-correct"):
@@ -189,7 +191,10 @@ def is_result_correct(reference, result, track_id):
         else:
             return reference == result
     else:
-        return reference == result
+        if(track_id == "often-epsilon-correct-10-min"):
+            return True
+        else:
+            return reference == result
 
 class Progressbar(object):
     def __init__(self, max_value, label="Progress", width=50, delay=0.5):
@@ -248,7 +253,10 @@ class Settings(object):
             self.json_data["time-limit-short"] = 600
             set_an_option = True
         if not "goal-precision-correct" in self.json_data:
-            self.json_data["goal-precision-correct"] = 1E-14
+            self.json_data["goal-precision-correct"] = 0
+            set_an_option = True
+        if not "goal-precision-floating-point-correct" in self.json_data:
+            self.json_data["goal-precision-floating-point-correct"] = 1E-14
             set_an_option = True
         if not "goal-precision-epsilon-correct" in self.json_data:
             self.json_data["goal-precision-epsilon-correct"] = 1E-6
@@ -302,6 +310,10 @@ class Settings(object):
     def goal_precision_correct(self):
         """ Retrieves the precision the tools have to achieve for numerical results. """
         return Fraction(self.json_data["goal-precision-correct"])
+
+    def goal_precision_floating_point_correct(self):
+        """ Retrieves the precision the tools have to achieve for numerical results. """
+        return Fraction(self.json_data["goal-precision-floating-point-correct"])
 
     def goal_precision_epsilon_correct(self):
         """ Retrieves the precision the tools have to achieve for numerical results. """
