@@ -127,6 +127,8 @@ if __name__ == "__main__":
                                 error_value = tool_result["absolute-error"]
                             if(invocation.track_id == "correct"):
                                 goal_prec = settings.goal_precision_correct()
+                            if(invocation.track_id == "floating-point-correct"):
+                                goal_prec = settings.goal_precision_floating_point_correct()
                             if(invocation.track_id == "epsilon-correct"):
                                 goal_prec = settings.goal_precision_epsilon_correct()
                             if(invocation.track_id == "probably-epsilon-correct"):
