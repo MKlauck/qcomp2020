@@ -78,7 +78,10 @@
 					"results": [
 						{
 							"property": "target",
-							"value": 0.7,
+							"value": {
+								"num":7, 
+								"den":10
+							},
 							"note": "Storm/exact"
 						},
 						{
@@ -108,7 +111,10 @@
 					"results": [
 						{
 							"property": "target",
-							"value": 0.7,
+							"value": {
+								"num":7, 
+								"den":10
+							},
 							"note": "Storm/exact"
 						},
 						{
@@ -138,7 +144,10 @@
 					"results": [
 						{
 							"property": "target",
-							"value": 0.7,
+							"value": {
+								"num":7, 
+								"den":10
+							},
 							"note": "Storm/exact"
 						},
 						{
