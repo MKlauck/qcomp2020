@@ -26,11 +26,11 @@ The scripts only require Python 3.
 - `execute_invocations.py` executes a list of invocations (see below).
 - `execution.py` provides access to the data associated with an execution. 
 - `generate_benchmark_list.py` generates a list of benchmarks (see below).
-- `generate_invocations.py` generates a list of invocations (see below).
+- `QVBS_all_generate_invocations.py` generates a list of invocations for all benchmarks available in the QVBS, this is not the script to generate invocations for one QComp iteration only (see below).
 - `generate_result_table.py` generates a table from the execution data (see below). 
 - `invocation.py` provides access to the data associated with an invocation.
-- `qcomp_2020_benchmarks.csv` contains the benchmarks for QCOMP 2020
-- `qcomp_2020_generate_invocations.py` generates a list of invocations for the QCOMP 2020 benchmarks.
+- `qcomp_2020_benchmarks.csv` contains the benchmarks for QComp 2020
+- `qcomp_2020_generate_invocations.py` generates a list of invocations for the QComp 2020 benchmarks.
 - `tool.py` implements methods specific for the tool that is to be benchmarked.
    Users should replace the example implementations in this file with their own one. 
 - `utility.py` provides various utility functions.
