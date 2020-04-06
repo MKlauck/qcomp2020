@@ -1,0 +1,33 @@
+Command:	~/storm/build/bin/storm --prism wlan.4.prism --prop wlan.props sent --constants COL=0 --sound --precision 5e-2  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	2.199981689453125
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 16:30:54 2020
+Command line arguments: --prism wlan.4.prism --prop wlan.props sent --constants COL=0 --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.015s.
+
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=false
+Time for model construction: 0.776s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	345000 (2867 nodes)
+Transitions: 	762252 (14414 nodes)
+Choices: 	440206
+Reward Models:  none
+Variables: 	rows: 13 meta variables (43 DD variables), columns: 13 meta variables (43 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (44 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "sent": P>=1 [F ((s1 = 12) & (s2 = 12))] ...
+Result (for initial states): true
+
+Time for model checking: 1.126s.
+

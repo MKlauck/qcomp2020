@@ -1,0 +1,6 @@
+Command:	./pet.sh reachability --precision 0.000001 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=60
+Wallclock time:	248.33732914924622
+Return code:	0
+Output:
+0.5511077619
+

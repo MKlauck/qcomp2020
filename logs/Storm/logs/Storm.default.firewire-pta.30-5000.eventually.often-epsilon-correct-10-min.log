@@ -1,0 +1,47 @@
+Command:	~/modest/modest convert firewire-pta.jani --digital-clocks --output converted_firewire-pta.jani --overwrite --experiment delay=30,T=5000
+Wallclock time:	0.34202075004577637
+Return code:	0
+Output:
+
+
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.36-g691a5469c.
+
+
+########################################
+Command:	~/storm/build/bin/storm --jani converted_firewire-pta.jani --janiproperty eventually --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	56.747406005859375
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Thu Mar 19 02:33:25 2020
+Command line arguments: --jani converted_firewire-pta.jani --janiproperty eventually --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.005s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 55.457s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	4432272
+Transitions: 	5533832
+Choices: 	5529800
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * done -> 1054 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "eventually": Pmin=? [F "done"] ...
+Result (for initial states): 1
+Time for model checking: 1.247s.
+

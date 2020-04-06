@@ -1,0 +1,18 @@
+Command:	mcsta/modest mcsta coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --epsilon 0
+Wallclock time:	601.8944621086121
+Return code:	0
+Output:
+
+
+
+
+coupon.15-4.jani:model: info: coupon.15-4 is a DTMC model.
+coupon.15-4.jani: info: Need 24 bytes per state.
+coupon.15-4.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

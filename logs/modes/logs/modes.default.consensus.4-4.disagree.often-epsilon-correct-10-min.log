@@ -1,0 +1,39 @@
+Command:	modes/modest modes consensus.4.jani --props disagree -E K=4 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	339.13086462020874
+Return code:	0
+Output:
+
+
+
+
+consensus.4.jani:model: info: consensus.4 is an MDP model and will be simulated as an MDP.
+consensus.4.jani:variables[6]: info: Expanding variable "pc1" into 4 locations in automaton "process1".
+consensus.4.jani:variables[8]: info: Expanding variable "pc2" into 4 locations in automaton "process2".
+consensus.4.jani:variables[10]: info: Expanding variable "pc3" into 4 locations in automaton "process3".
+consensus.4.jani:variables[12]: info: Expanding variable "pc4" into 4 locations in automaton "process4".
+consensus.4.jani: info: Using default value of 0.95 for the confidence parameter.
+consensus.4.jani:model: error: Run length exceeded.
+
+Peak memory usage: 58 MB
+Analysis results for consensus.4.jani
+Experiment K=4
+Status:          Finished
+Simulation time: 338.1 s
+
++ Property Property "disagree"
+  Estimated max. probability: 0.02591668913453761
+  Runs used (best scheduler): 296720
+  Total runs used:            1296720
+  Schedulers sampled:         0
+  Best scheduler:             527340501
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

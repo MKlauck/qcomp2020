@@ -1,0 +1,36 @@
+Command:	modes/modest modes bitcoin-attack.jani --props P_MWinMax -E MALICIOUS=20,CD=6 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5478899478912
+Return code:	0
+Output:
+
+
+
+
+bitcoin-attack.jani:model: info: bitcoin-attack is an MA model and will be simulated as an MA.
+bitcoin-attack.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for bitcoin-attack.jani
+Experiment MALICIOUS=20, CD=6
+Status:          Finished
+Simulation time: 599.6 s
+
++ Property Property "P_MWinMax"
+  Estimated max. probability: 0.4219847328244275
+  Runs used (best scheduler): 26200
+  Total runs used:            3987420
+  Schedulers sampled:         3000
+  Best scheduler:             1749459586
+  Run type:                   MA
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Adaptive: P(error > εp̂) < δ
+    ε:                  0.02
+    δ:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

@@ -1,0 +1,6 @@
+Command:	./pet.sh reachability --precision 0.05 --relative-error --only-result -m pnueli-zuck.5.prism -p pnueli-zuck.props --property live
+Wallclock time:	0.6389865875244141
+Return code:	0
+Output:
+1.000000000
+

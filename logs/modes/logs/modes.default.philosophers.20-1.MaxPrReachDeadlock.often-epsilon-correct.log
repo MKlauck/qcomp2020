@@ -1,0 +1,32 @@
+Command:	modes/modest modes philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width
+Wallclock time:	2.0624003410339355
+Return code:	0
+Output:
+
+
+
+
+philosophers.20.jani:model: info: Philosophers20 is a CTMC model and will be simulated as an MA.
+philosophers.20.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 69 MB
+Analysis results for philosophers.20.jani
+Experiment TIME_BOUND=1.0
+Status:          Finished
+Simulation time: 0.9 s
+
++ Property Property "MaxPrReachDeadlock"
+  Estimated probability: 1
+  Runs used:             4930
+  Run type:              MA
+  Status:                Finished
+
+  + Error bounds
+    Statement: Adaptive: P(error > εp̂) < δ
+    ε:         0.001
+    δ:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

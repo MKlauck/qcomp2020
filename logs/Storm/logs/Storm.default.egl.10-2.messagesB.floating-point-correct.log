@@ -1,0 +1,109 @@
+Command:	~/storm/build/bin/storm --prism egl.prism --prop egl.props messagesB --constants N=10,L=2 --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	3.7198030948638916
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 11:47:44 2020
+Command line arguments: --prism egl.prism --prop egl.props messagesB --constants 'N=10,L=2' --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.019s.
+
+ WARN (InformationCollector.cpp:17): Truncating the domain size as it does not fit in an unsigned 64 bit number.
+Portfolio engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=false
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 1) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 2) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard '((phase = 3) & (n = 19))' is unsatisfiable.
+Time for model construction: 1.311s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	66060286 (7063 nodes)
+Transitions: 	67108861 (18729 nodes)
+Reward Models:  messages_B_needs
+Variables: 	rows: 84 meta variables (169 DD variables), columns: 84 meta variables (169 DD variables)
+Labels: 	4
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (170 nodes)
+   * knowA
+   * knowB
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 2.111s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	851
+Transitions: 	924
+Reward Models:  messages_B_needs
+State Labels: 	3 labels
+   * (phase = 4) -> 1 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "messagesB": R[exp]{"messages_B_needs"}=? [F (phase = 4)] ...
+Result (for initial states): 4.0107326507568359375
+Time for model checking: 0.000s.
+

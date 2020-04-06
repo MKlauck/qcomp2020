@@ -1,0 +1,11 @@
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches sms.3-true.jani
+Wallclock time:	0.880587100982666
+Return code:	0
+Output:
+Total time: 0.69 s.
+Property Unavailability:
+point estimate: 1.0,
+var: 0.0,
+CI: [1.0, 1.0] = 1.0 +/- 0.0
+
+

@@ -1,0 +1,39 @@
+Command:	mcsta/modest mcsta philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
+Wallclock time:	51.384244441986084
+Return code:	0
+Output:
+
+
+
+
+philosophers.16.jani:model: info: Philosophers16 is a CTMC model.
+philosophers.16.jani: info: Need 72 bytes per state.
+philosophers.16.jani: info: Explored 1331714 states for TIME_BOUND=1.0.
+
+Peak memory usage: 437 MB
+Analysis results for philosophers.16.jani
+Experiment TIME_BOUND=1.0
+
++ State space exploration
+  State size:  72 bytes
+  States:      1331714
+  Transitions: 1331714
+  Branches:    13774113
+  Rate:        33567 states/s
+  Time:        42.2 s
+
++ Property MaxPrReachDeadlock
+  Probability: 0.999999568148059
+  Bounds:      [0.999999568148059, 1]
+  Time:        7.6 s
+
+  + Value iteration
+    Final error: 9.414706897741936E-07
+    Iterations:  70
+    Time:        7.5 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

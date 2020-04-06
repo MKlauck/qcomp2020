@@ -1,0 +1,37 @@
+Command:	modes/modest modes pacman.jani --props crash -E MAXSTEPS=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5552845001221
+Return code:	0
+Output:
+
+
+
+
+pacman.jani:model: info: pacman is an MDP model and will be simulated as an MDP.
+pacman.jani:variables[1]: info: Expanding variable "pMove" into 3 locations in automaton "arbiter".
+pacman.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 78 MB
+Analysis results for pacman.jani
+Experiment MAXSTEPS=100
+Status:          Finished
+Simulation time: 599.0 s
+
++ Property Property "crash"
+  Estimated min. probability: 1
+  Runs used (best scheduler): 250
+  Total runs used:            4813050
+  Schedulers sampled:         4000
+  Best scheduler:             1329524871
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. probability.
+    Statement:          Adaptive: P(error > εp̂) < δ
+    ε:                  0.02
+    δ:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

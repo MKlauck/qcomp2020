@@ -1,0 +1,32 @@
+Command:	modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	1.7614624500274658
+Return code:	0
+Output:
+
+
+
+
+nand.jani:model: info: nand is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+nand.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 57 MB
+Analysis results for nand.jani
+Experiment N=60, K=4
+Status:          Finished
+Simulation time: 0.8 s
+
++ Property Property "reliable"
+  Estimated probability: 0.7107142857142857
+  Runs used:             1400
+  Run type:              MDP
+  Status:                Finished
+
+  + Error bounds
+    Statement: Adaptive: P(error > εp̂) < δ
+    ε:         0.05
+    δ:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

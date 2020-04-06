@@ -1,0 +1,38 @@
+Command:	modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	26.813102960586548
+Return code:	0
+Output:
+
+
+
+
+majority.jani:model: info: majority is a CTMC model and will be simulated as an MA.
+majority.jani:variables[0]: info: Expanding variable "D" into 6 locations in automaton "D_def".
+majority.jani:variables[1]: info: Expanding variable "Y" into 5 locations in automaton "Y_def".
+majority.jani:variables[2]: info: Expanding variable "Z" into 5 locations in automaton "Z_def".
+majority.jani:variables[3]: info: Expanding variable "CC" into 16 locations in automaton "CC_def".
+majority.jani:variables[4]: info: Expanding variable "XX" into 5 locations in automaton "XX_def".
+majority.jani:variables[5]: info: Expanding variable "EE" into 16 locations in automaton "EE_def".
+majority.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 61 MB
+Analysis results for majority.jani
+Experiment T=2100
+Status:          Finished
+Simulation time: 25.6 s
+
++ Property Property "change_state"
+  Estimated probability: 0.05407461064831583
+  Runs used:             55220
+  Run type:              MA
+  Status:                Finished
+
+  + Error bounds
+    Statement: Adaptive: P(error > εp̂) < δ
+    ε:         0.05
+    δ:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

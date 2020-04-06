@@ -1,0 +1,47 @@
+Command:	modes/modest modes consensus.4.jani --props steps_min -E K=4 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.551097869873
+Return code:	0
+Output:
+
+
+
+
+consensus.4.jani:model: info: consensus.4 is an MDP model and will be simulated as an MDP.
+consensus.4.jani:variables[6]: info: Expanding variable "pc1" into 4 locations in automaton "process1".
+consensus.4.jani:variables[8]: info: Expanding variable "pc2" into 4 locations in automaton "process2".
+consensus.4.jani:variables[10]: info: Expanding variable "pc3" into 4 locations in automaton "process3".
+consensus.4.jani:variables[12]: info: Expanding variable "pc4" into 4 locations in automaton "process4".
+consensus.4.jani: info: Using default value of 0.95 for the confidence parameter.
+consensus.4.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 59 MB
+Analysis results for consensus.4.jani
+Experiment K=4
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "steps_min"
+  Estimated min. value:       845.6947619047621
+  Min. confidence interval:   [828.7959507658743, 862.5935730436499]
+  Runs used (best scheduler): 6300
+  Total runs used:            1253300
+  Schedulers sampled:         1000
+  Best scheduler:             527637754
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Min. sample data
+    Mean:     845.6947619047621
+    Variance: 468335.0614426337
+    Skewness: 1.9438893100770884
+    Kurtosis: 9.09828452606217
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

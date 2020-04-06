@@ -1,0 +1,20 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pacman.jani --epsilon 1e-3 --props crash -E MAXSTEPS=60 --timeout 580
+Wallclock time:	581.7833731174469
+Return code:	0
+Output:
+
+
+
+
+pacman.jani:model: info: pacman is an MDP model.
+pacman.jani: info: Need 15 bytes per state.
+
+Peak memory usage: 200 MB
+Analysis results for pacman.jani
+Experiment MAXSTEPS=60
+
++ Property crash
+  Probability: 0.5511
+  Time:        580.4 s
+
+

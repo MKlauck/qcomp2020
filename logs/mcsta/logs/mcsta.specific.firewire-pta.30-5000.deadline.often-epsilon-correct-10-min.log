@@ -1,0 +1,48 @@
+Command:	mcsta/modest mcsta firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --unsafe --epsilon 0 -S Memory
+Wallclock time:	600.2501428127289
+Return code:	0
+Output:
+
+
+
+
+firewire-pta.jani:model: info: firewire-pta is a PTA model.
+firewire-pta.jani:variables[3]: info: Expanding variable "w12" into 10 locations in automaton "wire12".
+firewire-pta.jani:variables[6]: info: Expanding variable "s1" into 9 locations in automaton "node1".
+firewire-pta.jani:variables[8]: info: Expanding variable "w21" into 10 locations in automaton "wire21".
+firewire-pta.jani:variables[11]: info: Expanding variable "s2" into 9 locations in automaton "node2".
+firewire-pta.jani: info: Need 24 bytes per state.
+firewire-pta.jani: info: Explored 4432272 states for delay=30, T=5000.
+firewire-pta.jani: warning: Value iteration for property "deadline" was aborted before convergence.
+
+Peak memory usage: 1209 MB
+Analysis results for firewire-pta.jani
+Experiment delay=30, T=5000
+
++ State space exploration
+  State size:  24 bytes
+  States:      4432272
+  Transitions: 5529800
+  Branches:    5533832
+  Rate:        355777 states/s
+  Time:        12.9 s
+
++ Property deadline
+  Probability: NaN
+  CDF:         { (0, 0), ..., (1699, 0), (1700, 0.5), ..., (1713, 0.5) }
+  Time:        586.7 s
+
+  + Value iteration
+    Status:      Cancelled
+    Final error: 1
+    Iterations:  3623
+    Time:        586.7 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+
+
+############################## Notes ##############################
+Correctness of result is not checked because no reference result is available.

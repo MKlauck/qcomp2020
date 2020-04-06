@@ -1,0 +1,11 @@
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.05  cabinets.3-2-true.jani
+Wallclock time:	126.89976143836975
+Return code:	0
+Output:
+Total time: 126.7 s.
+Property Unreliability:
+point estimate: 6.798710089302074E-8,
+var: 1.4395084553868077E-12,
+CI: [6.571615387519894E-8, 7.025804791084254E-8] = 6.798710089302074E-8 +/- 2.270947017821799E-9
+
+

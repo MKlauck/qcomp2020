@@ -1,0 +1,32 @@
+Command:	modes/modest modes crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --unsafe --width 1e-3 --relative-width
+Wallclock time:	1218.88431930542
+Return code:	0
+Output:
+
+
+
+
+crowds.jani:model: info: crowds is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+crowds.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for crowds.jani
+Experiment TotalRuns=6, CrowdSize=20
+Status:          Finished
+Simulation time: 1217.9 s
+
++ Property Property "positive"
+  Estimated probability: 0.12051967172887641
+  Runs used:             53915190
+  Run type:              MDP
+  Status:                Finished
+
+  + Error bounds
+    Statement: Adaptive: P(error > εp̂) < δ
+    ε:         0.001
+    δ:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

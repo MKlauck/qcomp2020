@@ -1,0 +1,38 @@
+Command:	mcsta/modest mcsta csma.4-2.jani --props all_before_max -O out.txt Minimal --epsilon 0
+Wallclock time:	5.854652166366577
+Return code:	0
+Output:
+
+
+
+
+csma.4-2.jani:model: info: csma.4-2 is an MDP model.
+csma.4-2.jani: info: Need 24 bytes per state.
+csma.4-2.jani: info: Explored 561286 states.
+
+Peak memory usage: 115 MB
+Analysis results for csma.4-2.jani
+
++ State space exploration
+  State size:  24 bytes
+  States:      561286
+  Transitions: 609147
+  Branches:    982107
+  Rate:        160551 states/s
+  Time:        3.8 s
+
++ Property all_before_max
+  Probability: 0.7764601493129574
+  Bounds:      [0.7764601493129574, 0.7764601493129574]
+  Time:        1.3 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  52
+    Time:        1.3 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

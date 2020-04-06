@@ -1,0 +1,55 @@
+Command:	~/storm/build/bin/storm --jani cabinets.3-2-true.jani --janiproperty Unavailability --sound --precision 1e-6  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	56.999635219573975
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 18:07:33 2020
+Command line arguments: --jani cabinets.3-2-true.jani --janiproperty Unavailability --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.050s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 44.851s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4427421
+Transitions: 	7983998
+Choices: 	5385842
+Markovian St.: 	354294
+Max. Rate.: 	4.1865
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 2617147 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.001s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4427421
+Transitions: 	7983998
+Choices: 	5385842
+Markovian St.: 	354294
+Max. Rate.: 	4.1865
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 2617147 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "Unavailability": LRAmax=? [marked] ...
+Result (for initial states): 6.722750262e-08
+Time for model checking: 11.794s.
+
+
+############################## Notes ##############################
+Correctness of result is not checked because no reference result is available.

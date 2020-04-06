@@ -1,0 +1,53 @@
+Command:	~/storm/build/bin/storm --jani dpm.jani --janiproperty PminQueue1Full --constants N=6,C=6,TIME_BOUND=5 --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1800.472493171692
+Return code:	None
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 18:54:27 2020
+Command line arguments: --jani dpm.jani --janiproperty PminQueue1Full --constants 'N=6,C=6,TIME_BOUND=5' --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.005s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=true
+Time for model construction: 162.417s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	9191028
+Transitions: 	17865498
+Choices: 	10604874
+Markovian St.: 	2276148
+Max. Rate.: 	6
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (items1 = 6) -> 201684 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	9191028
+Transitions: 	17865498
+Choices: 	10604874
+Markovian St.: 	2276148
+Max. Rate.: 	6
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (items1 = 6) -> 201684 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "PminQueue1Full": Pmin=? [F (items1 = 6)] ...
+
+
+----------
+Computation aborted after 1800.472493171692 seconds since the total time limit of 1800 seconds was exceeded.

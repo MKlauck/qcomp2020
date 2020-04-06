@@ -1,0 +1,41 @@
+Command:	mcsta/modest mcsta rectangle-tireworld.11.jani --props goal -O out.txt Minimal --unsafe --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6 -S Memory
+Wallclock time:	7.3971734046936035
+Return code:	0
+Output:
+
+
+
+
+rectangle-tireworld.11.jani:model: info: jani_from_ppddl is an MDP model.
+rectangle-tireworld.11.jani:variables[2]: info: Expanding variable "var2" into 11 locations in automaton "aut".
+rectangle-tireworld.11.jani: info: Need 4 bytes per state.
+rectangle-tireworld.11.jani: info: Explored 242 states.
+
+Peak memory usage: 362 MB
+Analysis results for rectangle-tireworld.11.jani
+
++ State space exploration
+  State size:  4 bytes
+  States:      242
+  Transitions: 15367
+  Branches:    16084
+  Rate:        913 states/s
+  Time:        0.3 s
+
++ Property goal
+  Probability: 0.999999991257027
+  Bounds:      [0.999999982514054, 1]
+  Time:        0.0 s
+
+  + Optimistic value iteration
+    Total iterations:  24
+    Verif. attempts:   1
+    Verif. iterations: 1
+    Final epsilon:     1E-06
+    Time:              0.0 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

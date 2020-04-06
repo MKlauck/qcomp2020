@@ -1,0 +1,30 @@
+Command:	modes/modest modes coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5447728633881
+Return code:	0
+Output:
+
+
+
+
+coupon.9-4.jani:model: info: coupon.9-4 is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+coupon.9-4.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 57 MB
+Analysis results for coupon.9-4.jani
+Experiment B=5
+Status:          Cancelled (2% done)
+Simulation time: 599.5 s
+
++ Property Property "collect_all_bounded"
+  Estimated probability: 0.3584293202110217
+  Runs used:             39923860
+  Run type:              MDP
+  Status:                Cancelled (2% done)
+
+  + Error bounds
+    Statement: Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

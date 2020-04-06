@@ -1,0 +1,20 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe echoring.jani --epsilon 1e-3 -E ITERATIONS=100 --props MaxOffline1 --timeout 580
+Wallclock time:	580.8216004371643
+Return code:	0
+Output:
+
+
+
+
+echoring.jani:model: info: echoring is an MDP model.
+echoring.jani: info: Need 43 bytes per state.
+
+Peak memory usage: 241 MB
+Analysis results for echoring.jani
+Experiment ITERATIONS=100
+
++ Property MaxOffline1
+  Probability: 0.740142788783143
+  Time:        579.0 s
+
+

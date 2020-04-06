@@ -1,0 +1,35 @@
+Command:	modes/modest modes sms.3-true.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5489330291748
+Return code:	0
+Output:
+
+
+
+
+sms.3-true.jani:model: info: sms.3-true.jani is an MA model and will be simulated as an MA.
+sms.3-true.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 70 MB
+Analysis results for sms.3-true.jani
+Status:          Finished
+Simulation time: 599.4 s
+
++ Property Property "Unreliability"
+  Estimated max. probability: 0.023731732946236095
+  Runs used (best scheduler): 923110
+  Total runs used:            37080760
+  Schedulers sampled:         13000
+  Best scheduler:             486145574
+  Run type:                   MA
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Adaptive: P(error > εp̂) < δ
+    ε:                  0.02
+    δ:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

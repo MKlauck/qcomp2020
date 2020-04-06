@@ -1,0 +1,42 @@
+Command:	modes/modest modes csma.3-4.jani --props time_max -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5441901683807
+Return code:	0
+Output:
+
+
+
+
+csma.3-4.jani:model: info: csma.3-4 is an MDP model and will be simulated as an MDP.
+csma.3-4.jani: info: Using default value of 0.95 for the confidence parameter.
+csma.3-4.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 59 MB
+Analysis results for csma.3-4.jani
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "time_max"
+  Estimated max. value:       109.1416666666667
+  Max. confidence interval:   [106.98487113355588, 111.2984621997775]
+  Runs used (best scheduler): 120
+  Total runs used:            8062670
+  Schedulers sampled:         8000
+  Best scheduler:             934936958
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Max. sample data
+    Mean:     109.1416666666667
+    Variance: 111.6016106442577
+    Skewness: 0.7802762452795705
+    Kurtosis: 3.3100917892310546
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

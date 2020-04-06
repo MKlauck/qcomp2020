@@ -1,0 +1,34 @@
+Command:	~/storm/build/bin/storm --prism pacman.nm --prop pacman.props crash --constants MAXSTEPS=60 --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	31.746829986572266
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Thu Apr  2 14:02:22 2020
+Command line arguments: --prism pacman.nm --prop pacman.props crash --constants MAXSTEPS=60 --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.076s.
+
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=false
+Time for model construction: 8.527s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	7253118 (327534 nodes)
+Transitions: 	9952883 (1720719 nodes)
+Choices: 	9097907
+Reward Models:  none
+Variables: 	rows: 11 meta variables (35 DD variables), columns: 11 meta variables (35 DD variables), nondeterminism: 9 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (36 nodes)
+   * Crash
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.551107497067899521070444
+Time for model checking: 22.470s.
+

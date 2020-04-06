@@ -1,0 +1,41 @@
+Command:	mcsta/modest mcsta embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
+Wallclock time:	54.405839681625366
+Return code:	0
+Output:
+
+
+
+
+embedded.jani:model: info: embedded is a CTMC model.
+embedded.jani: info: Need 16 bytes per state.
+embedded.jani: info: Explored 5820 states for MAX_COUNT=8, T=12.0.
+
+Peak memory usage: 53 MB
+Analysis results for embedded.jani
+Experiment MAX_COUNT=8, T=12.0
+
++ State space exploration
+  State size:  16 bytes
+  States:      5820
+  Transitions: 5820
+  Branches:    16788
+  Rate:        48500 states/s
+  Time:        0.1 s
+
++ Property actuators
+  Probability: 0.10530370932920669
+  Bounds:      [0.10530361780229393, 0.10530380085611944]
+  Time:        53.7 s
+
+  + Optimistic value iteration
+    Total iterations:  269666
+    Verif. attempts:   13
+    Verif. iterations: 31526
+    Final epsilon:     3.922519137516E-11
+    Time:              53.7 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

@@ -1,0 +1,19 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe rabin.10.jani --epsilon 1e-3
+Wallclock time:	1.0410223007202148
+Return code:	0
+Output:
+
+
+
+
+rabin.10.jani:model: info: rabin.10 is an MDP model.
+rabin.10.jani: info: Need 53 bytes per state.
+
+Peak memory usage: 48 MB
+Analysis results for rabin.10.jani
+
++ Property live
+  Probability: 1
+  Time:        0.1 s
+
+

@@ -1,0 +1,48 @@
+Command:	mcsta/modest mcsta philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --no-partial-results --epsilon 0 --absolute-epsilon -S Disk --store-compress None
+Wallclock time:	44.9878625869751
+Return code:	0
+Output:
+
+
+
+
+philosophers.16.jani:model: info: Philosophers16 is a CTMC model.
+philosophers.16.jani: info: Need 72 bytes per state.
+philosophers.16.jani: info: Explored 1331714 states for TIME_BOUND=1.0.
+
+Peak memory usage: 598 MB
+Analysis results for philosophers.16.jani
+Experiment TIME_BOUND=1.0
+
++ State space exploration
+  State size:  72 bytes
+  States:      1331714
+  Transitions: 1331714
+  Branches:    13774113
+  Rate:        76290 states/s
+  Time:        21.3 s
+
++ Property MinExpTimeDeadlock
+  Value:  10.78297345256119
+  Bounds: [10.78297345256119, 10.78297345256119]
+  Time:   21.8 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.6 s
+    Min. prob. 1 states:          1331714
+    Time for min. prob. 1 states: 0.2 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  185
+    Time:        20.9 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+
+
+############################## Notes ##############################
+The tool result '1078297345256119/100000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 10.782973448921704), ('upper', 10.782973451078297)])' (approx. OrderedDict([('lower', 10.782973448921704), ('upper', 10.782973451078297)])) which means a relative error of '1.3752174878464596e-10' which is larger than the goal precision '0.001'.

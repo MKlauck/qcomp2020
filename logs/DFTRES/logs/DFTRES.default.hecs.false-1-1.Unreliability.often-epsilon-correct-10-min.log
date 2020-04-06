@@ -1,0 +1,11 @@
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 1e-99  hecs.false-1-1.jani
+Wallclock time:	600.3189473152161
+Return code:	130
+Output:
+Total time: 599.929 s.
+Property Unreliability:
+point estimate: 1.0995272876079205E-4,
+var: 1.924598768519538E-8,
+CI: [1.0991495940157218E-4, 1.0999049812001192E-4] = 1.0995272876079205E-4 +/- 3.776935921987303E-8
+
+

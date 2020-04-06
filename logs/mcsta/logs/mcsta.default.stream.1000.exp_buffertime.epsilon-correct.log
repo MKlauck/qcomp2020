@@ -1,0 +1,47 @@
+Command:	mcsta/modest mcsta stream.jani --props exp_buffertime -E N=1000 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
+Wallclock time:	181.84178352355957
+Return code:	0
+Output:
+
+
+
+
+stream.jani:model: info: stream is an MA model.
+stream.jani:variables[5]: info: Expanding variable "s" into 4 locations in automaton "streamingclient".
+stream.jani: info: Need 8 bytes per state.
+stream.jani: info: Explored 1502501 states for N=1000.
+stream.jani:properties[0]: warning: Computing minimum expected reward in property "exp_buffertime" without checking for zero-reward end components.
+
+Peak memory usage: 232 MB
+Analysis results for stream.jani
+Experiment N=1000
+
++ State space exploration
+  State size:  8 bytes
+  States:      1502501
+  Transitions: 2002001
+  Branches:    3001001
+  Rate:        185609 states/s
+  Time:        9.0 s
+
++ Property exp_buffertime
+  Value:  8.9195056433443
+  Bounds: [8.919505572925196, 8.919505713763403]
+  Time:   172.3 s
+
+  + Precomputations
+    Max. prob. 1 states:          1502501
+    Time for max. prob. 1 states: 150.8 s
+
+  + Optimistic value iteration
+    Total iterations:  291
+    Verif. attempts:   2
+    Verif. iterations: 104
+    Final epsilon:     2.982933349708086E-07
+    Time:              21.4 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

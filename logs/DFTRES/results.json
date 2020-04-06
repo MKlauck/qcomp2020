@@ -1,0 +1,1139 @@
+[
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.05  crowds.jani"
+		],
+		"wallclock-time": 13.622997045516968,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.08471724348447467",
+		"result-correct": true,
+		"absolute-error": 0.001351810952035772,
+		"relative-error": 0.015706120636342608,
+		"notes": [],
+		"log": "DFTRES.default.crowds.5-20.positive.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.05 --unsafe-scheduling --fixed-batches crowds.jani"
+		],
+		"wallclock-time": 16.31352424621582,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.08602576613343352",
+		"result-correct": true,
+		"absolute-error": 4.32883030769219e-05,
+		"relative-error": 0.0005029485145425163,
+		"notes": [],
+		"log": "DFTRES.specific.crowds.5-20.positive.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.001  crowds.jani"
+		],
+		"wallclock-time": 1800.104065656662,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.crowds.5-20.positive.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.001 --unsafe-scheduling --fixed-batches crowds.jani"
+		],
+		"wallclock-time": 1800.1036636829376,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.specific.crowds.5-20.positive.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 1e-99  crowds.jani"
+		],
+		"wallclock-time": 600.3345265388489,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.08559931806069006",
+		"result-correct": true,
+		"absolute-error": 0.00046973637582038187,
+		"relative-error": 0.005457668599890183,
+		"notes": [],
+		"log": "DFTRES.default.crowds.5-20.positive.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 1e-99 --unsafe-scheduling --fixed-batches crowds.jani"
+		],
+		"wallclock-time": 600.3228652477264,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.08559692314246792",
+		"result-correct": true,
+		"absolute-error": 0.0004721312940425219,
+		"relative-error": 0.005485494143435647,
+		"notes": [],
+		"log": "DFTRES.specific.crowds.5-20.positive.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.05  crowds.jani"
+		],
+		"wallclock-time": 72.05869269371033,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.11873604713053497",
+		"result-correct": true,
+		"absolute-error": 0.001740323754063285,
+		"relative-error": 0.014445353402372187,
+		"notes": [],
+		"log": "DFTRES.default.crowds.6-20.positive.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.05 --unsafe-scheduling --fixed-batches crowds.jani"
+		],
+		"wallclock-time": 36.73474931716919,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.11925806112023303",
+		"result-correct": true,
+		"absolute-error": 0.0012183097643652249,
+		"relative-error": 0.010112437446611151,
+		"notes": [],
+		"log": "DFTRES.specific.crowds.6-20.positive.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.001  crowds.jani"
+		],
+		"wallclock-time": 1800.1776056289673,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.crowds.6-20.positive.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.001 --unsafe-scheduling --fixed-batches crowds.jani"
+		],
+		"wallclock-time": 1800.165902376175,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.specific.crowds.6-20.positive.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 1e-99  crowds.jani"
+		],
+		"wallclock-time": 600.4050216674805,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.12036177465890488",
+		"result-correct": true,
+		"absolute-error": 0.00011459622569337482,
+		"relative-error": 0.0009511925438320523,
+		"notes": [],
+		"log": "DFTRES.default.crowds.6-20.positive.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 1e-99 --unsafe-scheduling --fixed-batches crowds.jani"
+		],
+		"wallclock-time": 600.4300229549408,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.1204087582855947",
+		"result-correct": true,
+		"absolute-error": 6.761259900355482e-05,
+		"relative-error": 0.0005612104556861153,
+		"notes": [],
+		"log": "DFTRES.specific.crowds.6-20.positive.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.05  haddad-monmege.jani"
+		],
+		"wallclock-time": 1800.0030868053436,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.haddad-monmege.100-0.7.target.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.05 --unsafe-scheduling --fixed-batches haddad-monmege.jani"
+		],
+		"wallclock-time": 1800.0030064582825,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.specific.haddad-monmege.100-0.7.target.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.001  haddad-monmege.jani"
+		],
+		"wallclock-time": 1800.0031549930573,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.haddad-monmege.100-0.7.target.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.001 --unsafe-scheduling --fixed-batches haddad-monmege.jani"
+		],
+		"wallclock-time": 1800.0030634403229,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.specific.haddad-monmege.100-0.7.target.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 1e-99  haddad-monmege.jani"
+		],
+		"wallclock-time": 600.1963603496552,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.0",
+		"result-correct": true,
+		"absolute-error": 0.7,
+		"relative-error": 1.0,
+		"notes": [],
+		"log": "DFTRES.default.haddad-monmege.100-0.7.target.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 1e-99 --unsafe-scheduling --fixed-batches haddad-monmege.jani"
+		],
+		"wallclock-time": 600.1766040325165,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.0",
+		"result-correct": true,
+		"absolute-error": 0.7,
+		"relative-error": 1.0,
+		"notes": [],
+		"log": "DFTRES.specific.haddad-monmege.100-0.7.target.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.05  cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 5.268000841140747,
+		"timeout": false,
+		"execution-error": false,
+		"result": "6.822710802082943E-8",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.default.cabinets.3-2-true.Unavailability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 3.5649993419647217,
+		"timeout": false,
+		"execution-error": false,
+		"result": "6.687837257894126E-8",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.specific.cabinets.3-2-true.Unavailability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.001  cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 1800.0827765464783,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.cabinets.3-2-true.Unavailability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 1212.1613109111786,
+		"timeout": false,
+		"execution-error": false,
+		"result": "6.859954671970732E-8",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.specific.cabinets.3-2-true.Unavailability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 1e-99  cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 600.3904330730438,
+		"timeout": false,
+		"execution-error": true,
+		"result": "6.85798235820082E-8",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.default.cabinets.3-2-true.Unavailability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 600.3951215744019,
+		"timeout": false,
+		"execution-error": true,
+		"result": "6.856880308523754E-8",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.specific.cabinets.3-2-true.Unavailability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.05  cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 126.89976143836975,
+		"timeout": false,
+		"execution-error": false,
+		"result": "6.798710089302074E-8",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.default.cabinets.3-2-true.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 145.7768063545227,
+		"timeout": false,
+		"execution-error": false,
+		"result": "6.74659888567048E-8",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.cabinets.3-2-true.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.001  cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 1800.0850517749786,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.cabinets.3-2-true.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 1800.0534410476685,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.specific.cabinets.3-2-true.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 1e-99  cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 600.3813722133636,
+		"timeout": false,
+		"execution-error": true,
+		"result": "6.702855363539751E-8",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.default.cabinets.3-2-true.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "cabinets.3-2-true.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+		],
+		"wallclock-time": 600.417219877243,
+		"timeout": false,
+		"execution-error": true,
+		"result": "6.698697384732845E-8",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.cabinets.3-2-true.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "ftpp.2-2-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.05  ftpp.2-2-true.jani"
+		],
+		"wallclock-time": 24.776935338974,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.762112450435784E-20",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.default.ftpp.2-2-true.Unavailability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "ftpp.2-2-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches ftpp.2-2-true.jani"
+		],
+		"wallclock-time": 4.984069585800171,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.793797905320145E-20",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.specific.ftpp.2-2-true.Unavailability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "ftpp.2-2-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.001  ftpp.2-2-true.jani"
+		],
+		"wallclock-time": 45.34713387489319,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.7617374214103815E-20",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.default.ftpp.2-2-true.Unavailability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "ftpp.2-2-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches ftpp.2-2-true.jani"
+		],
+		"wallclock-time": 28.200142860412598,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.7615094788505613E-20",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.specific.ftpp.2-2-true.Unavailability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "ftpp.2-2-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 1e-99  ftpp.2-2-true.jani"
+		],
+		"wallclock-time": 600.2659296989441,
+		"timeout": false,
+		"execution-error": true,
+		"result": "1.761399689770404E-20",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.default.ftpp.2-2-true.Unavailability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "ftpp.2-2-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches ftpp.2-2-true.jani"
+		],
+		"wallclock-time": 600.3063406944275,
+		"timeout": false,
+		"execution-error": true,
+		"result": "1.761405234493443E-20",
+		"notes": [
+			"Correctness of result is not checked because no reference result is available."
+		],
+		"log": "DFTRES.specific.ftpp.2-2-true.Unavailability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "hecs.false-1-1.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.05  hecs.false-1-1.jani"
+		],
+		"wallclock-time": 4.577887296676636,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.1006257838934536E-4",
+		"result-correct": true,
+		"absolute-error": 6.852438934535462e-08,
+		"relative-error": 0.0006229826690936823,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-1-1.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-1-1.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.05 --unsafe-scheduling --fixed-batches hecs.false-1-1.jani"
+		],
+		"wallclock-time": 1.237718105316162,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0889072762785033E-4",
+		"result-correct": true,
+		"absolute-error": 1.103126372149675e-06,
+		"relative-error": 0.010028981911568213,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-1-1.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-1-1.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.001  hecs.false-1-1.jani"
+		],
+		"wallclock-time": 124.24011540412903,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0999636654423539E-4",
+		"result-correct": true,
+		"absolute-error": 2.3125442353846207e-09,
+		"relative-error": 2.102426586972256e-05,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-1-1.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-1-1.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-1-1.jani"
+		],
+		"wallclock-time": 394.78051590919495,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0995708583139275E-4",
+		"result-correct": true,
+		"absolute-error": 3.676816860725494e-08,
+		"relative-error": 0.0003342747550899975,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-1-1.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-1-1.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 1e-99  hecs.false-1-1.jani"
+		],
+		"wallclock-time": 600.3189473152161,
+		"timeout": false,
+		"execution-error": true,
+		"result": "1.0995272876079205E-4",
+		"result-correct": true,
+		"absolute-error": 4.112523920795494e-08,
+		"relative-error": 0.0003738867010510873,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-1-1.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "hecs.false-1-1.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-1-1.jani"
+		],
+		"wallclock-time": 600.3125960826874,
+		"timeout": false,
+		"execution-error": true,
+		"result": "1.0995225691071534E-4",
+		"result-correct": true,
+		"absolute-error": 4.159708928466494e-08,
+		"relative-error": 0.0003781764868850303,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-1-1.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "hecs.false-2-2.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.05  hecs.false-2-2.jani"
+		],
+		"wallclock-time": 6.955989599227905,
+		"timeout": false,
+		"execution-error": false,
+		"result": "2.205569606799616E-4",
+		"result-correct": true,
+		"absolute-error": 5.810512799616134e-07,
+		"relative-error": 0.0026414314255887037,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-2-2.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-2-2.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.05 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani"
+		],
+		"wallclock-time": 2.1601192951202393,
+		"timeout": false,
+		"execution-error": false,
+		"result": "2.2416222005863307E-4",
+		"result-correct": true,
+		"absolute-error": 4.186310658633084e-06,
+		"relative-error": 0.01903076873304693,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-2-2.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-2-2.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.001  hecs.false-2-2.jani"
+		],
+		"wallclock-time": 131.2821810245514,
+		"timeout": false,
+		"execution-error": false,
+		"result": "2.1998832026982299E-4",
+		"result-correct": true,
+		"absolute-error": 1.2410869823003455e-08,
+		"relative-error": 5.641922270877292e-05,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-2-2.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-2-2.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani"
+		],
+		"wallclock-time": 258.26403999328613,
+		"timeout": false,
+		"execution-error": false,
+		"result": "2.2002458464921864E-4",
+		"result-correct": true,
+		"absolute-error": 4.8675249218653456e-08,
+		"relative-error": 0.00022127536306779536,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-2-2.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-2-2.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 1e-99  hecs.false-2-2.jani"
+		],
+		"wallclock-time": 600.4921998977661,
+		"timeout": false,
+		"execution-error": true,
+		"result": "2.1996922858119603E-4",
+		"result-correct": true,
+		"absolute-error": 6.480818803969659e-09,
+		"relative-error": 2.9461520190781842e-05,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-2-2.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "hecs.false-2-2.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani"
+		],
+		"wallclock-time": 600.300760269165,
+		"timeout": false,
+		"execution-error": true,
+		"result": "2.199727596856933E-4",
+		"result-correct": true,
+		"absolute-error": 2.949714306699659e-09,
+		"relative-error": 1.3409272845375623e-05,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-2-2.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "hecs.false-3-2.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.05  hecs.false-3-2.jani"
+		],
+		"wallclock-time": 380.3131067752838,
+		"timeout": false,
+		"execution-error": false,
+		"result": "3.6617545120892626E-8",
+		"result-correct": true,
+		"absolute-error": 2.2419690089262746e-10,
+		"relative-error": 0.0061603812745489525,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-3-2.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-3-2.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.05 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani"
+		],
+		"wallclock-time": 125.46026563644409,
+		"timeout": false,
+		"execution-error": false,
+		"result": "3.696636630345426E-8",
+		"result-correct": true,
+		"absolute-error": 5.730180834542614e-10,
+		"relative-error": 0.01574513232446579,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-3-2.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-3-2.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.001  hecs.false-3-2.jani"
+		],
+		"wallclock-time": 1800.2690052986145,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-3-2.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-3-2.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani"
+		],
+		"wallclock-time": 1800.271267414093,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-3-2.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "hecs.false-3-2.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 1e-99  hecs.false-3-2.jani"
+		],
+		"wallclock-time": 602.3116970062256,
+		"timeout": false,
+		"execution-error": true,
+		"result": "3.647026370850145E-8",
+		"result-correct": true,
+		"absolute-error": 7.691548850145145e-11,
+		"relative-error": 0.002113449085159537,
+		"notes": [],
+		"log": "DFTRES.default.hecs.false-3-2.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "hecs.false-3-2.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani"
+		],
+		"wallclock-time": 603.2810821533203,
+		"timeout": false,
+		"execution-error": true,
+		"result": "3.626925907175459E-8",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.hecs.false-3-2.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 0.05  sms.3-true.jani"
+		],
+		"wallclock-time": 3.283508062362671,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.02383491265217865",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.default.sms.3-true.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches sms.3-true.jani"
+		],
+		"wallclock-time": 0.6864850521087646,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.02383491265218248",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.sms.3-true.Unreliability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 0.001  sms.3-true.jani"
+		],
+		"wallclock-time": 2.961824417114258,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.02383491265217865",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.default.sms.3-true.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches sms.3-true.jani"
+		],
+		"wallclock-time": 0.735368013381958,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.02383491265218248",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.sms.3-true.Unreliability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unreliability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 1e-99  sms.3-true.jani"
+		],
+		"wallclock-time": 600.3065133094788,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.023834911707271058",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.default.sms.3-true.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unreliability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches sms.3-true.jani"
+		],
+		"wallclock-time": 0.6557841300964355,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.02383491265218248",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.sms.3-true.Unreliability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.05  sms.3-true.jani"
+		],
+		"wallclock-time": 3.327085256576538,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.default.sms.3-true.Unavailability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches sms.3-true.jani"
+		],
+		"wallclock-time": 0.880587100982666,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.sms.3-true.Unavailability.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.001  sms.3-true.jani"
+		],
+		"wallclock-time": 3.079716205596924,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.default.sms.3-true.Unavailability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches sms.3-true.jani"
+		],
+		"wallclock-time": 0.8678011894226074,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.sms.3-true.Unavailability.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unavailability",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 1e-99  sms.3-true.jani"
+		],
+		"wallclock-time": 3.190520763397217,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.default.sms.3-true.Unavailability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "sms.3-true.Unavailability",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches sms.3-true.jani"
+		],
+		"wallclock-time": 0.8440699577331543,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "DFTRES.specific.sms.3-true.Unavailability.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "vgs.5-10000.MaxPrReachFailedTB",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.05  vgs.5.jani"
+		],
+		"wallclock-time": 1800.0279896259308,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.vgs.5-10000.MaxPrReachFailedTB.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "vgs.5-10000.MaxPrReachFailedTB",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.05 --unsafe-scheduling --fixed-batches vgs.5.jani"
+		],
+		"wallclock-time": 1800.0334694385529,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.specific.vgs.5-10000.MaxPrReachFailedTB.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "vgs.5-10000.MaxPrReachFailedTB",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.001  vgs.5.jani"
+		],
+		"wallclock-time": 1800.0255649089813,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.default.vgs.5-10000.MaxPrReachFailedTB.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "vgs.5-10000.MaxPrReachFailedTB",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.001 --unsafe-scheduling --fixed-batches vgs.5.jani"
+		],
+		"wallclock-time": 1800.0282022953033,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "DFTRES.specific.vgs.5-10000.MaxPrReachFailedTB.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "vgs.5-10000.MaxPrReachFailedTB",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 1e-99  vgs.5.jani"
+		],
+		"wallclock-time": 600.0548830032349,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "DFTRES.default.vgs.5-10000.MaxPrReachFailedTB.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "vgs.5-10000.MaxPrReachFailedTB",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 1e-99 --unsafe-scheduling --fixed-batches vgs.5.jani"
+		],
+		"wallclock-time": 600.0420453548431,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "DFTRES.specific.vgs.5-10000.MaxPrReachFailedTB.often-epsilon-correct-10-min.log"
+	}
+]

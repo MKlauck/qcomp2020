@@ -1,0 +1,6 @@
+Command:	./pet.sh reachability --precision 0.000001 --relative-error --only-result -m csma.4-2.prism -p csma.props --property all_before_max
+Wallclock time:	37.16520047187805
+Return code:	0
+Output:
+0.7764601493
+

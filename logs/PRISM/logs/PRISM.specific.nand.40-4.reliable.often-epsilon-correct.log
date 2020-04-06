@@ -1,0 +1,79 @@
+Command:	./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 nand.prism nand.props --property reliable -const N=40,K=4
+Wallclock time:	16.01056933403015
+Return code:	0
+Output:
+PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:16:29 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 nand.prism nand.props --property reliable -const 'N=40,K=4'
+
+Parsing model file "nand.prism"...
+
+Type:        DTMC
+Modules:     multiplex 
+Variables:   u c s z zx zy x y 
+
+Parsing properties file "nand.props"...
+
+1 property:
+(1) "reliable": P=? [ F s=4&z/N<0.1 ]
+
+---------------------------------------------------------------------
+
+Model checking: "reliable": P=? [ F s=4&z/N<0.1 ]
+Model constants: N=40,K=4
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: N=40,K=4
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 4.61 seconds (average 0.003200, setup 0.00)
+
+Time for model construction: 4.821 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Prob0: 1442 iterations in 4.09 seconds (average 0.002838, setup 0.00)
+
+Prob1: 1297 iterations in 3.72 seconds (average 0.002867, setup 0.00)
+
+yes = 141, no = 375263, maybe = 3624118
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=3999522, nnz=5699366, compact] [25.6 MB]
+Creating vector for diagonals... [dist=1, compact] [7.6 MB]
+Creating vector for RHS... [dist=2, compact] [7.6 MB]
+Allocating iteration vector... [30.5 MB]
+TOTAL: [71.3 MB]
+
+Starting iterations...
+
+Backwards Gauss-Seidel: 2 iterations in 2.38 seconds (average 0.053500, setup 2.27)
+
+Value in the initial state: 0.6186822208151961
+
+Time for model checking: 10.403 seconds.
+
+Result: 0.6186822208151961 (value in the initial state)
+
+
+Overall running time: 15.841 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+

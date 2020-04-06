@@ -1,0 +1,14 @@
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 1e-99  haddad-monmege.jani
+Wallclock time:	600.1963603496552
+Return code:	130
+Output:
+Total time: 599.942 s.
+Property target:
+point estimate: 0.0,
+var: 0.0,
+CI: [0.0, 1.0]
+
+
+##############################Output to stderr##############################
+Only time-accumulating or time-instant reward queries currently supported.
+

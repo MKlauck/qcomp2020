@@ -1,0 +1,39 @@
+Command:	modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --unsafe --width 5e-2 --relative-width
+Wallclock time:	1.614624261856079
+Return code:	0
+Output:
+
+
+
+
+mapk_cascade.jani:model: info: mapk_cascade is a CTMC model and will be simulated as an MA.
+mapk_cascade.jani: info: Using default value of 0.95 for the confidence parameter.
+mapk_cascade.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 58 MB
+Analysis results for mapk_cascade.jani
+Experiment N=4, T=30.0
+Status:          Finished
+Simulation time: 0.6 s
+
++ Property Property "activated_time"
+  Estimated value:     40.80106991224824
+  Confidence interval: [38.770248515583305, 42.83189130891317]
+  Runs used:           560
+  Run type:            MA
+  Status:              Finished
+
+  + Sample data
+    Mean:     40.80106991224824
+    Variance: 601.2226117961784
+    Skewness: 1.7285103047040438
+    Kurtosis: 7.553101416762498
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

@@ -1,0 +1,19 @@
+Command:	modes/modest modes rectangle-tireworld.11.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	31.919300317764282
+Return code:	0
+Output:
+
+
+
+
+rectangle-tireworld.11.jani:model: info: jani_from_ppddl is an MDP model and will be simulated as an MDP.
+rectangle-tireworld.11.jani:variables[2]: info: Expanding variable "var2" into 11 locations in automaton "aut".
+rectangle-tireworld.11.jani: info: Using default value of 0.95 for the confidence parameter.
+rectangle-tireworld.11.jani:model: error: Run length exceeded.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

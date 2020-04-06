@@ -1,0 +1,47 @@
+Command:	./smc.sh zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false
+Wallclock time:	18.756184101104736
+Return code:	0
+Output:
+PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Fri Mar 20 15:26:49 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams 'S:1000000;Av:10;e:0.05;d:0.05;p:0.05;post:64' -const 'N=1000,K=8,reset=false' -javamaxmem 10g
+
+Parsing the model file "zeroconf.prism"...
+
+Parsing properties file "zeroconf.props"...
+
+2 properties:
+(1) "correct_max": Pmax=? [ F (l=4&ip=1) ]
+(2) "correct_min": Pmin=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: "correct_min": Pmin=? [ F (l=4&ip=1) ]
+Model constants: reset=false,N=1000,K=8
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:1000000 Av: 10 eps: 0.05 delta: 0.05 pmin: 0.05
+TransDelta: 7.8125E-11
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {"Trials":100000,"Precision":0.047811582089790416,"PartialTransDelta":2.631578947368421E-4,"Value":{"Upper":0.047811582089790416,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.047811582089790416]"},"GlobalTimerSecs":17.903,"AvgConf":0.6168426707379404,"StateInfos":{"num00":224,"num11":0,"numStates":356,"num01":127,"avgDist":0.36399122321002064,"numWorking":5,"numUnset":0,"numClose":224}}
+
+Model checking completed in 17.991 secs.
+
+Result (minimum probability): 0.0
+
+
+
+############################## Notes ##############################
+The tool result '0' is tagged as incorrect. The reference result is '322687697779/64024000322687697779' (approx. 5.040105212929839e-09) which means a relative error of '1.0' which is larger than the goal precision '0.05'.

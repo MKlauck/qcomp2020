@@ -1,0 +1,43 @@
+Command:	mcsta/modest mcsta firewire.false.jani --props deadline -E delay=36,deadline=800 -O out.txt Minimal --unsafe --no-partial-results --width 1e-3 --relative-width -S Memory
+Wallclock time:	24.60421395301819
+Return code:	0
+Output:
+
+
+
+
+firewire.false.jani:model: info: firewire.false is an MDP model.
+firewire.false.jani:variables[7]: info: Expanding variable "s1" into 9 locations in automaton "node1".
+firewire.false.jani:variables[8]: info: Expanding variable "w21" into 10 locations in automaton "wire21".
+firewire.false.jani:variables[12]: info: Expanding variable "s2" into 9 locations in automaton "node2".
+firewire.false.jani: info: Need 16 bytes per state.
+firewire.false.jani: info: Explored 212268 states for delay=36, deadline=800.
+
+Peak memory usage: 142 MB
+Analysis results for firewire.false.jani
+Experiment delay=36, deadline=800
+
++ State space exploration
+  State size:  16 bytes
+  States:      212268
+  Transitions: 478752
+  Branches:    481788
+  Rate:        240122 states/s
+  Time:        0.9 s
+
++ Property deadline
+  Probability: 0.939453125
+  Bounds:      [0.939453125, 1]
+  CDF:         { (0, 0), ..., (202, 0), (203, 0.5), ..., (323, 0.5), (324, 0.625), ..., (405, 0.625), (406, 0.75), ..., (444, 0.75), (445, 0.78125), ..., (526, 0.78125), (527, 0.84375), ..., (565, 0.84375), (566, 0.8515625), ..., (608, 0.8515625), (609, 0.8828125), ..., (647, 0.8828125), (648, 0.90625), ..., (686, 0.90625), (687, 0.908203125), ..., (729, 0.908203125), (730, 0.931640625), ..., (768, 0.931640625), (769, 0.939453125), ..., (800, 0.939453125) }
+  Time:        23.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2374
+    Time:        23.1 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

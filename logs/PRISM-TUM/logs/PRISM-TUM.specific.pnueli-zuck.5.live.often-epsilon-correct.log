@@ -1,0 +1,42 @@
+Command:	./smc.sh pnueli-zuck.5.prism pnueli-zuck.props -prop live -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:100000,Av:10,e:0.001,d:0.05,p:0.05,post:64
+Wallclock time:	1.7829954624176025
+Return code:	0
+Output:
+PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Fri Mar 20 08:04:07 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism pnueli-zuck.5.prism pnueli-zuck.props -prop live -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams 'S:100000;Av:10;e:0.001;d:0.05;p:0.05;post:64' -javamaxmem 10g
+
+Parsing the model file "pnueli-zuck.5.prism"...
+
+Parsing properties file "pnueli-zuck.props"...
+
+1 property:
+(1) "live": Pmax=? [ F (p1=10) ]
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 
+Variables:   p0 p1 p2 p3 p4 
+
+---------------------------------------------------------------------
+
+Model checking: "live": Pmax=? [ F (p1=10) ]
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:100000 Av: 10 eps: 0.001 delta: 0.05 pmin: 0.05
+TransDelta: 7.812500000000001E-10
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {"Trials":100000,"Precision":0,"PartialTransDelta":0.004166666666666667,"Value":{"Upper":1,"Lower":1},"ActionsOfs0":{"Action0":"[0.0;1.0]","Action1":"[0.0;1.0]","Action2":"[0.0;1.0]","Action3":"[1.0;1.0]","Action4":"[0.0;1.0]"},"GlobalTimerSecs":0.213,"AvgConf":0.99757256010906,"StateInfos":{"num00":0,"num11":11,"numStates":154,"num01":143,"avgDist":0.9285714285714286,"numWorking":0,"numUnset":0,"numClose":11}}
+
+Model checking completed in 0.304 secs.
+
+Result (maximum probability): 1.0
+
+

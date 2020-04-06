@@ -1,0 +1,39 @@
+Command:	mcsta/modest mcsta echoring.jani --props MaxOffline1 -E ITERATIONS=100 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
+Wallclock time:	20.790508031845093
+Return code:	0
+Output:
+
+
+
+
+echoring.jani:model: info: echoring is an MDP model.
+echoring.jani: info: Need 48 bytes per state.
+echoring.jani: info: Explored 836418 states for ITERATIONS=100.
+
+Peak memory usage: 181 MB
+Analysis results for echoring.jani
+Experiment ITERATIONS=100
+
++ State space exploration
+  State size:  48 bytes
+  States:      836418
+  Transitions: 1339820
+  Branches:    1489542
+  Rate:        131574 states/s
+  Time:        6.8 s
+
++ Property MaxOffline1
+  Probability: 1.050082649785224E-06
+  Bounds:      [1.050082649785224E-06, 1]
+  Time:        12.4 s
+
+  + Value iteration
+    Final error: 6.098072517439799E-07
+    Iterations:  292
+    Time:        12.3 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

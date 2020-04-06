@@ -1,0 +1,19 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe tireworld.45.jani --epsilon 1e-3 --timeout 580
+Wallclock time:	1.0409936904907227
+Return code:	0
+Output:
+
+
+
+
+tireworld.45.jani:model: info: jani_from_ppddl is an MDP model.
+tireworld.45.jani: info: Need 23 bytes per state.
+
+Peak memory usage: 49 MB
+Analysis results for tireworld.45.jani
+
++ Property goal
+  Probability: 0.936000543139962
+  Time:        0.1 s
+
+

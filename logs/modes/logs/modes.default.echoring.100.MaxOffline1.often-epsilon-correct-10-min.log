@@ -1,0 +1,18 @@
+Command:	modes/modest modes echoring.jani --props MaxOffline1 -E ITERATIONS=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	2.3261971473693848
+Return code:	0
+Output:
+
+
+
+
+echoring.jani:model: info: echoring is an MDP model and will be simulated as an MDP.
+echoring.jani: info: Using default value of 0.95 for the confidence parameter.
+echoring.jani:model: error: Run length exceeded.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

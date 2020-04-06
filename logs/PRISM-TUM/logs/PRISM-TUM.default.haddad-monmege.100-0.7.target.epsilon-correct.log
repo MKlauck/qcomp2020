@@ -1,0 +1,8 @@
+Command:	./fix-syntax ./pet.sh reachability --precision 0.000001 --relative-error --only-result -m haddad-monmege.pm -p haddad-monmege.prctl --property target --const N=100,p=0.7
+Wallclock time:	1800.0163733959198
+Return code:	None
+Output:
+
+
+----------
+Computation aborted after 1800.0163733959198 seconds since the total time limit of 1800 seconds was exceeded.

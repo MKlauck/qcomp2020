@@ -1,0 +1,47 @@
+Command:	mcsta/modest mcsta ftwc.jani --props TimeMax -E N=8,TIME_BOUND=5 -O out.txt Minimal --unsafe --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2 -S Memory
+Wallclock time:	128.637934923172
+Return code:	0
+Output:
+
+
+
+
+ftwc.jani:model: info: ftwc is an MA model.
+ftwc.jani: info: Need at least 40 bytes per state.
+ftwc.jani: info: Explored 10299 states for N=8, TIME_BOUND=5.
+
+Peak memory usage: 58 MB
+Analysis results for ftwc.jani
+Experiment N=8, TIME_BOUND=5
+
++ State space exploration
+  Min. state size: 40 bytes
+  States:          10299
+  Transitions:     12635
+  Branches:        26983
+  Rate:            73564 states/s
+  Time:            0.1 s
+
++ Property TimeMax
+  Value:  2052166.8428343371
+  Bounds: [1954474.186711059, 2149859.4989576153]
+  Time:   128.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          10299
+    Time for min. prob. 1 states: 0.0 s
+
+  + Optimistic value iteration
+    Total iterations:  252954
+    Verif. attempts:   14
+    Verif. iterations: 104289
+    Final epsilon:     3.235778603463719E-07
+    Time:              127.9 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

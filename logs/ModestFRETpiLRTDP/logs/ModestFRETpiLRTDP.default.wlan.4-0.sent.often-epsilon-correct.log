@@ -1,0 +1,14 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.4.jani --epsilon 1e-3 --props sent -E COL=0
+Wallclock time:	1800.0053746700287
+Return code:	None
+Output:
+
+
+
+
+wlan.4.jani:model: info: wlan.4 is an MDP model.
+wlan.4.jani: info: Need 15 bytes per state.
+
+
+----------
+Computation aborted after 1800.0053746700287 seconds since the total time limit of 1800 seconds was exceeded.

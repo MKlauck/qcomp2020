@@ -1,0 +1,38 @@
+Command:	modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe -N 2147483647
+Wallclock time:	600.5412464141846
+Return code:	0
+Output:
+
+
+
+
+coupon.9-4.jani:model: info: coupon.9-4 is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+coupon.9-4.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 57 MB
+Analysis results for coupon.9-4.jani
+Experiment B=5
+Status:          Cancelled (2% done)
+Simulation time: 599.5 s
+
++ Property Property "exp_draws"
+  Estimated value:     6.740829369840581
+  Confidence interval: [6.740010286688001, 6.741648452993161]
+  Runs used:           35999380
+  Run type:            MDP
+  Status:              Cancelled (2% done)
+
+  + Sample data
+    Mean:     6.740829369840581
+    Variance: 6.287164528190835
+    Skewness: 1.3853977702381406
+    Kurtosis: 6.265887026502945
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

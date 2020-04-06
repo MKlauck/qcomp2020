@@ -1,0 +1,39 @@
+Command:	modes/modest modes wlan.4.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5478775501251
+Return code:	0
+Output:
+
+
+
+
+wlan.4.jani:model: info: wlan.4 is an MDP model and will be simulated as an MDP.
+wlan.4.jani:variables[7]: info: Expanding variable "s1" into 12 locations in automaton "station1".
+wlan.4.jani:variables[12]: info: Expanding variable "s2" into 12 locations in automaton "station2".
+wlan.4.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 71 MB
+Analysis results for wlan.4.jani
+Experiment COL=0
+Status:          Finished
+Simulation time: 599.3 s
+
++ Property Property "sent"
+  Decision:                   undecided
+  Estimated min. probability: 1
+  Runs used (best scheduler): 250
+  Total runs used:            17894850
+  Schedulers sampled:         17000
+  Best scheduler:             1287644185
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. probability.
+    Statement:          Adaptive: P(error > εp̂) < δ
+    ε:                  0.02
+    δ:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

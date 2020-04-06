@@ -1,0 +1,49 @@
+Command:	./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -exact -e 1e-6 -maxiters 1000000 haddad-monmege.pm haddad-monmege.prctl --property target -const N=100,p=0.7
+Wallclock time:	4.573534250259399
+Return code:	0
+Output:
+PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:14:21 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -exact -e 1e-6 -maxiters 1000000 haddad-monmege.pm_fixed haddad-monmege.prctl_fixed --property target -const 'N=100,p=0.7'
+
+Parsing model file "haddad-monmege.pm_fixed"...
+
+Type:        DTMC
+Modules:     main 
+Variables:   x 
+
+Parsing properties file "haddad-monmege.prctl_fixed"...
+
+2 properties:
+(1) "target": P=? [ F "Target" ]
+(2) "exp_steps": R{"time_reward"}=? [ F "Done" ]
+
+---------------------------------------------------------------------
+
+Model checking: "target": P=? [ F "Target" ]
+Model constants: N=100,p=7/10
+
+Building model (exact engine)...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.19 secs.
+
+States:      201 (1 initial)
+Transitions: 400
+
+Time for model construction: 0.192 seconds.
+
+Time for model checking: 3.631 seconds.
+
+Result (probability): 7/10
+ As floating point: 0.7
+
+
+Overall running time: 4.423 seconds.
+
+

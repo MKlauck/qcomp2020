@@ -1,0 +1,35 @@
+Command:	~/storm/build/bin/storm --prism resource-gathering.pm --prop resource-gathering.prctl expsteps --constants B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1800.0155799388885
+Return code:	None
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 10:04:04 2020
+Command line arguments: --prism resource-gathering.pm --prop resource-gathering.prctl expsteps --constants 'B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100' --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.005s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 12.825s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	958801
+Transitions: 	3325201
+Choices: 	3080401
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * success -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "expsteps": T[exp]min=? [F "success"] ...
+
+
+----------
+Computation aborted after 1800.0155799388885 seconds since the total time limit of 1800 seconds was exceeded.

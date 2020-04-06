@@ -1,0 +1,42 @@
+Command:	mcsta/modest mcsta crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
+Wallclock time:	14.435960292816162
+Return code:	0
+Output:
+
+
+
+
+crowds.jani:model: info: crowds is a DTMC model.
+crowds.jani: info: Need 40 bytes per state.
+crowds.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+crowds.jani: info: Explored 2018094 states for TotalRuns=5, CrowdSize=20.
+
+Peak memory usage: 363 MB
+Analysis results for crowds.jani
+Experiment TotalRuns=5, CrowdSize=20
+
++ State space exploration
+  State size:  40 bytes
+  States:      2018094
+  Transitions: 2018094
+  Branches:    7224834
+  Rate:        218432 states/s
+  Time:        10.7 s
+
++ Property positive
+  Probability: 0.08759324776122866
+  Bounds:      [0.08527397438027368, 0.08991252114218365]
+  Time:        2.5 s
+
+  + Optimistic value iteration
+    Total iterations:  25
+    Verif. attempts:   2
+    Verif. iterations: 7
+    Final epsilon:     0.01278391874944362
+    Time:              2.4 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

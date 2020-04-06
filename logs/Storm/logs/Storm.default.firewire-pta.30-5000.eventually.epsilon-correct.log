@@ -1,0 +1,46 @@
+Command:	~/modest/modest convert firewire-pta.jani --digital-clocks --output converted_firewire-pta.jani --overwrite --experiment delay=30,T=5000
+Wallclock time:	0.36284303665161133
+Return code:	0
+Output:
+
+
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.36-g691a5469c.
+
+
+########################################
+Command:	~/storm/build/bin/storm --jani converted_firewire-pta.jani --janiproperty eventually --sound --precision 1e-6  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	57.13212275505066
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Thu Mar 19 02:30:33 2020
+Command line arguments: --jani converted_firewire-pta.jani --janiproperty eventually --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.005s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 55.841s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	4432272
+Transitions: 	5533832
+Choices: 	5529800
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * done -> 1054 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "eventually": Pmin=? [F "done"] ...
+Result (for initial states): 1
+Time for model checking: 1.249s.
+

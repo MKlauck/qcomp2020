@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - readers-writers exp_time_many_requests 40</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#readers-writers">readers-writers</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 40</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_time_many_requests</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">23.299763917922974s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.015830832921355207</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">readers-writers.40.jani:model: info: ReadersWriters is an MA model.
+readers-writers.40.jani: info: Need 16 bytes per state.
+readers-writers.40.jani: info: Explored 1884366 states.
+readers-writers.40.jani:properties[1]: warning: Computing minimum expected reward in property "exp_time_many_requests" without checking for zero-reward end components.
+
+Peak memory usage: 283 MB
+Analysis results for readers-writers.40.jani
+
++ State space exploration
+  State size:  16 bytes
+  States:      1884366
+  Transitions: 1884366
+  Branches:    3815040
+  Rate:        204002 states/s
+  Time:        10.4 s
+
++ Property exp_time_many_requests
+  Value:  3.7883047455099446
+  Bounds: [3.6294679553796043, 3.9471415356402852]
+  Time:   11.9 s
+
+  + Precomputations
+    Max. prob. 1 states:          1884366
+    Time for max. prob. 1 states: 6.5 s
+
+  + Optimistic value iteration
+    Total iterations:  57
+    Verif. attempts:   3
+    Verif. iterations: 16
+    Final epsilon:     0.0027871717137682456
+    Time:              5.2 s
+
+Exported results to file "/out.txt".	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+Command:	mcsta/modest mcsta coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe --epsilon 0 -S Disk --store-compress None
+Wallclock time:	245.6863522529602
+Return code:	0
+Output:
+
+
+
+
+coupon.9-4.jani:model: info: coupon.9-4 is a DTMC model.
+coupon.9-4.jani: info: Need 16 bytes per state.
+coupon.9-4.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+coupon.9-4.jani: info: Explored 21077063 states for B=5.
+
+Peak memory usage: 2079 MB
+Analysis results for coupon.9-4.jani
+Experiment B=5
+
++ State space exploration
+  State size:  16 bytes
+  States:      21077063
+  Transitions: 21077063
+  Branches:    24429223
+  Rate:        673755 states/s
+  Time:        36.9 s
+
++ Property exp_draws
+  Value:  6.74007249230143
+  Bounds: [6.74007249230143, 6.74007249230143]
+  Time:   208.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 2.6 s
+    Min. prob. 1 states:          21077063
+    Time for min. prob. 1 states: 0.9 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  255
+    Time:        203.8 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

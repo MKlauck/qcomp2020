@@ -1,0 +1,30 @@
+Command:	~/storm/build/bin/storm-dft --dftfile vgs.5.dft --expectedtime --min --sound --precision 5e-2 
+Wallclock time:	0.1654069423675537
+Return code:	0
+Output:
+Storm-dft 1.5.1
+
+Date: Thu Mar 19 02:25:12 2020
+Command line arguments: --dftfile vgs.5.dft --expectedtime --min --sound --precision 5e-2
+Current working directory: /
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	193
+Transitions: 	897
+Reward Models:  none
+State Labels: 	4 labels
+   * A0_0_dc -> 0 item(s)
+   * A0_0_failed -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.018s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.020s
+Result: [69176.89268]
+

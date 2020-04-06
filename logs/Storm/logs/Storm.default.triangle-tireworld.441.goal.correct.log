@@ -1,0 +1,19 @@
+Command:	~/storm/build/bin/storm --jani triangle-tireworld.441.jani --janiproperty goal --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1800.7259657382965
+Return code:	None
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 13:50:43 2020
+Command line arguments: --jani triangle-tireworld.441.jani --janiproperty goal --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.050s.
+
+ WARN (InformationCollector.cpp:17): Truncating the domain size as it does not fit in an unsigned 64 bit number.
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=true
+
+
+----------
+Computation aborted after 1800.7259657382965 seconds since the total time limit of 1800 seconds was exceeded.

@@ -1,0 +1,150 @@
+Command:	./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 consensus.6.prism consensus.props --property disagree -const K=2
+Wallclock time:	310.6887845993042
+Return code:	0
+Output:
+PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 15:34:23 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 consensus.6.prism consensus.props --property disagree -const K=2
+
+Parsing model file "consensus.6.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4 process5 process6 
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 pc5 coin5 pc6 coin6 
+
+Parsing properties file "consensus.props"...
+
+5 properties:
+(1) "c1": P>=1 [ F "finished" ]
+(2) "c2": Pmin=? [ F "finished"&"all_coins_equal_1" ]
+(3) "disagree": Pmax=? [ F "finished"&!"agree" ]
+(4) "steps_max": R{"steps"}max=? [ F "finished" ]
+(5) "steps_min": R{"steps"}min=? [ F "finished" ]
+
+---------------------------------------------------------------------
+
+Model checking: "disagree": Pmax=? [ F "finished"&!"agree" ]
+Model constants: K=2
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: K=2
+
+Computing reachable states...
+
+Reachability (BFS): 149 iterations in 0.16 seconds (average 0.001087, setup 0.00)
+
+Time for model construction: 0.159 seconds.
+
+Type:        MDP
+States:      1258240 (1 initial)
+Transitions: 6236736
+Choices:     5008128
+
+Transition matrix: 7075 nodes (3 terminal), 6236736 minterms, vars: 24r/24c/6nd
+
+Prob0A: 115 iterations in 1.30 seconds (average 0.011270, setup 0.00)
+
+Prob1E: 1925 iterations in 28.45 seconds (average 0.014777, setup 0.00)
+
+yes = 583956, no = 27270, maybe = 647014
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building quotient MDP, collapsing maximal end components as well as yes and no states...
+Time for computing maximal end components: 2.07 seconds, found 0 MECs.
+Time for building MEC quotient: 2.653 seconds.
+
+Quotient MDP:
+States:      647016 (1 initial)
+Transitions: 3890724
+Choices:     3131172
+
+Transition matrix: 431336 nodes (3 terminal), 3890724 minterms, vars: 24r/24c/31nd
+Note: Interval iteration is configured to enforce monotonicity from below.
+
+Building sparse matrix... [n=647016, nc=2997228, nnz=3756780, k=6] [46.5 MB]
+Creating vector for yes... [4.9 MB]
+Creating vector for maybe... [4.9 MB]
+Allocating iteration vectors... [4 x 4.9 MB]
+TOTAL: [76.1 MB]
+
+Starting iterations (interval iteration)...
+Iteration 102: max relative diff=1.000000, 5.01 sec so far
+Iteration 202: max relative diff=0.989950, 10.06 sec so far
+Iteration 302: max relative diff=0.943836, 15.10 sec so far
+Iteration 401: max relative diff=0.865529, 20.11 sec so far
+Iteration 500: max relative diff=0.762395, 25.11 sec so far
+Iteration 597: max relative diff=0.651505, 30.12 sec so far
+Iteration 697: max relative diff=0.540102, 35.17 sec so far
+Iteration 797: max relative diff=0.436429, 40.21 sec so far
+Iteration 897: max relative diff=0.347894, 45.26 sec so far
+Iteration 997: max relative diff=0.274452, 50.31 sec so far
+Iteration 1097: max relative diff=0.212583, 55.35 sec so far
+Iteration 1197: max relative diff=0.164328, 60.40 sec so far
+Iteration 1297: max relative diff=0.126431, 65.45 sec so far
+Iteration 1396: max relative diff=0.096705, 70.45 sec so far
+Iteration 1496: max relative diff=0.073137, 75.50 sec so far
+Iteration 1596: max relative diff=0.055584, 80.55 sec so far
+Iteration 1695: max relative diff=0.042144, 85.55 sec so far
+Iteration 1794: max relative diff=0.031911, 90.56 sec so far
+Iteration 1893: max relative diff=0.024126, 95.56 sec so far
+Iteration 1992: max relative diff=0.018225, 100.56 sec so far
+Iteration 2092: max relative diff=0.013756, 105.61 sec so far
+Iteration 2192: max relative diff=0.010293, 110.65 sec so far
+Iteration 2291: max relative diff=0.007762, 115.66 sec so far
+Iteration 2390: max relative diff=0.005851, 120.66 sec so far
+Iteration 2490: max relative diff=0.004408, 125.71 sec so far
+Iteration 2590: max relative diff=0.003322, 130.75 sec so far
+Iteration 2689: max relative diff=0.002503, 135.75 sec so far
+Iteration 2789: max relative diff=0.001870, 140.80 sec so far
+Iteration 2888: max relative diff=0.001409, 145.81 sec so far
+Iteration 2987: max relative diff=0.001061, 150.81 sec so far
+Iteration 3086: max relative diff=0.000799, 155.83 sec so far
+Iteration 3185: max relative diff=0.000602, 160.83 sec so far
+Iteration 3285: max relative diff=0.000453, 165.88 sec so far
+Iteration 3384: max relative diff=0.000341, 170.88 sec so far
+Iteration 3484: max relative diff=0.000257, 175.94 sec so far
+Iteration 3584: max relative diff=0.000192, 180.98 sec so far
+Iteration 3684: max relative diff=0.000145, 186.03 sec so far
+Iteration 3784: max relative diff=0.000109, 191.09 sec so far
+Iteration 3884: max relative diff=0.000081, 196.13 sec so far
+Iteration 3984: max relative diff=0.000061, 201.18 sec so far
+Iteration 4084: max relative diff=0.000046, 206.23 sec so far
+Iteration 4183: max relative diff=0.000035, 211.25 sec so far
+Iteration 4283: max relative diff=0.000026, 216.29 sec so far
+Iteration 4383: max relative diff=0.000020, 221.34 sec so far
+Iteration 4483: max relative diff=0.000015, 226.39 sec so far
+Iteration 4583: max relative diff=0.000011, 231.43 sec so far
+Iteration 4683: max relative diff=0.000008, 236.48 sec so far
+Iteration 4782: max relative diff=0.000006, 241.51 sec so far
+Iteration 4882: max relative diff=0.000005, 246.56 sec so far
+Iteration 4982: max relative diff=0.000004, 251.61 sec so far
+Iteration 5082: max relative diff=0.000003, 256.65 sec so far
+Iteration 5181: max relative diff=0.000002, 261.66 sec so far
+Iteration 5281: max relative diff=0.000001, 266.71 sec so far
+Iteration 5380: max relative diff=0.000001, 271.71 sec so far
+Max relative diff between upper and lower bound on convergence: 9.99477E-07
+Iterative method (interval iteration): 5420 iterations in 274.93 seconds (average 0.050504, setup 1.20)
+
+Value in the initial state: 0.36364475108589966
+
+Time for model checking: 309.71 seconds.
+
+Result: 0.36364475108589966 (value in the initial state)
+
+
+Overall running time: 310.435 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+

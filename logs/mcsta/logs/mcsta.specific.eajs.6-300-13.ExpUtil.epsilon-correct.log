@@ -1,0 +1,55 @@
+Command:	mcsta/modest mcsta eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --unsafe --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6 -S Memory
+Wallclock time:	55.676513671875
+Return code:	0
+Output:
+
+
+
+
+eajs.6.jani:model: info: eajs.6 is an MDP model.
+eajs.6.jani:variables[12]: info: Expanding variable "loc_1" into 3 locations in automaton "Process_1".
+eajs.6.jani:variables[16]: info: Expanding variable "loc_2" into 3 locations in automaton "Process_2".
+eajs.6.jani:variables[18]: info: Expanding variable "user_1" into 7 locations in automaton "Resources".
+eajs.6.jani:variables[20]: info: Expanding variable "loc_3" into 3 locations in automaton "Process_3".
+eajs.6.jani:variables[22]: info: Expanding variable "loc_4" into 3 locations in automaton "Process_4".
+eajs.6.jani:variables[23]: info: Expanding variable "loc_6" into 3 locations in automaton "Process_6".
+eajs.6.jani:variables[26]: info: Expanding variable "loc_5" into 3 locations in automaton "Process_5".
+eajs.6.jani: info: Need 32 bytes per state.
+eajs.6.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+eajs.6.jani: info: Explored 7901694 states for energy_capacity=300, B=13.
+
+Peak memory usage: 2589 MB
+Analysis results for eajs.6.jani
+Experiment energy_capacity=300, B=13
+
++ State space exploration
+  State size:  32 bytes
+  States:      7901694
+  Transitions: 11882922
+  Branches:    19679927
+  Rate:        219968 states/s
+  Time:        37.0 s
+
++ Property ExpUtil
+  Value:  12.051118090531272
+  Bounds: [12.051110823281457, 12.051125357781086]
+  Time:   17.9 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 5.7 s
+    Min. prob. 1 states:          7901694
+    Time for min. prob. 1 states: 0.5 s
+
+  + Optimistic value iteration
+    Total iterations:  29
+    Verif. attempts:   1
+    Verif. iterations: 5
+    Final epsilon:     1E-06
+    Time:              11.7 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

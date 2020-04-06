@@ -1,0 +1,32 @@
+Command:	~/storm/build/bin/storm --jani coupon.15-4.jani --janiproperty exp_draws --constants B=5 --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	620.2694771289825
+Return code:	-9
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 11:36:43 2020
+Command line arguments: --jani coupon.15-4.jani --janiproperty exp_draws --constants B=5 --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.004s.
+
+Portfolio engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=false
+Time for model construction: 8.718s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	17486977236 (339931 nodes)
+Transitions: 	40823774300 (1268396 nodes)
+Reward Models:  numberDraws
+Variables: 	rows: 20 meta variables (37 DD variables), columns: 20 meta variables (37 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (38 nodes)
+   * _ret0_
+-------------------------------------------------------------- 
+
+##############################Output to stderr##############################
+ERROR: The program received signal 2 and will be aborted in 60s.
+

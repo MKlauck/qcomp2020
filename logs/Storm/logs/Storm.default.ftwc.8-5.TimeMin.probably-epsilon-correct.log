@@ -1,0 +1,52 @@
+Command:	~/storm/build/bin/storm --jani ftwc.jani --janiproperty TimeMin --constants N=8,TIME_BOUND=5 --sound --precision 5e-2  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	23.343345642089844
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Thu Mar 19 00:42:24 2020
+Command line arguments: --jani ftwc.jani --janiproperty TimeMin --constants 'N=8,TIME_BOUND=5' --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.003s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 0.096s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	10299
+Transitions: 	26983
+Choices: 	12635
+Markovian St.: 	4951
+Max. Rate.: 	2.0307
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1])) -> 1059 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	10299
+Transitions: 	26983
+Choices: 	12635
+Markovian St.: 	4951
+Max. Rate.: 	2.0307
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1])) -> 1059 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "TimeMin": T[exp]min=? [F (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1]))] ...
+Result (for initial states): 1994365.22
+Time for model checking: 23.213s.
+

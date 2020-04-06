@@ -1,0 +1,33 @@
+Command:	modes/modest modes hecs.false-3-2.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5481612682343
+Return code:	0
+Output:
+
+
+
+
+hecs.false-3-2.jani:model: info: hecs-false-3-2.jani is an MA model and will be simulated as an MA.
+hecs.false-3-2.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 171 MB
+Analysis results for hecs.false-3-2.jani
+Status:          Finished
+Simulation time: 598.1 s
+
++ Property Property "Unreliability"
+  Estimated max. probability: 0
+  Runs used (best scheduler): 7112560
+  Total runs used:            8112560
+  Schedulers sampled:         0
+  Best scheduler:             1497039896
+  Run type:                   MA
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

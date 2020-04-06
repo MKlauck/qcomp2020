@@ -1,0 +1,47 @@
+Command:	mcsta/modest mcsta wlan-large.jani --props E_or -E K=2 -O out.txt Minimal --unsafe --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6 -S Memory
+Wallclock time:	100.2504711151123
+Return code:	0
+Output:
+
+
+
+
+wlan-large.jani:model: info: wlan-large is an STA model.
+wlan-large.jani: info: Need 16 bytes per state.
+wlan-large.jani: info: Explored 3189783 states for K=2.
+
+Peak memory usage: 1033 MB
+Analysis results for wlan-large.jani
+Experiment K=2
+
++ State space exploration
+  State size:  16 bytes
+  States:      3189783
+  Transitions: 6045235
+  Branches:    6065855
+  Rate:        225315 states/s
+  Time:        14.6 s
+
++ Property E_or
+  Value:  33692.45734923108
+  Bounds: [33692.45734126748, 33692.45735719468]
+  Time:   84.6 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 3.3 s
+    Min. prob. 1 states:          3189783
+    Time for min. prob. 1 states: 0.2 s
+
+  + Optimistic value iteration
+    Total iterations:  562
+    Verif. attempts:   4
+    Verif. iterations: 166
+    Final epsilon:     1.135737073903232E-08
+    Time:              81.1 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

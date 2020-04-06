@@ -1,0 +1,5 @@
+Command:	./pet.sh reachability --precision 0.001 --relative-error --only-result -m wlan.5.prism -p wlan.props --property sent --const COL=0
+Wallclock time:	601.1421699523926
+Return code:	130
+Output:
+

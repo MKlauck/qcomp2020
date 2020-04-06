@@ -1,0 +1,45 @@
+Command:	mcsta/modest mcsta firewire-pta.jani --props eventually -E delay=30,T=5000 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
+Wallclock time:	118.39078450202942
+Return code:	0
+Output:
+
+
+
+
+firewire-pta.jani:model: info: firewire-pta is a PTA model.
+firewire-pta.jani:variables[3]: info: Expanding variable "w12" into 10 locations in automaton "wire12".
+firewire-pta.jani:variables[6]: info: Expanding variable "s1" into 9 locations in automaton "node1".
+firewire-pta.jani:variables[8]: info: Expanding variable "w21" into 10 locations in automaton "wire21".
+firewire-pta.jani:variables[11]: info: Expanding variable "s2" into 9 locations in automaton "node2".
+firewire-pta.jani: info: Need 24 bytes per state.
+firewire-pta.jani: info: Explored 4432272 states for delay=30, T=5000.
+
+Peak memory usage: 553 MB
+Analysis results for firewire-pta.jani
+Experiment delay=30, T=5000
+
++ State space exploration
+  State size:  24 bytes
+  States:      4432272
+  Transitions: 5529800
+  Branches:    5533832
+  Rate:        236111 states/s
+  Time:        20.4 s
+
++ Property eventually
+  Probability: 0.9999997615814209
+  Bounds:      [0.9999995231628418, 1]
+  Time:        97.3 s
+
+  + Optimistic value iteration
+    Total iterations:  642
+    Verif. attempts:   1
+    Verif. iterations: 1
+    Final epsilon:     1E-06
+    Time:              97.0 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

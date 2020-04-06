@@ -1,0 +1,21 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.6.jani --epsilon 1e-3 --props sent -E COL=0 --timeout 580
+Wallclock time:	581.8206033706665
+Return code:	0
+Output:
+
+
+
+
+wlan.6.jani:model: info: wlan.6 is an MDP model.
+wlan.6.jani: info: Need 15 bytes per state.
+
+Peak memory usage: 1265 MB
+Analysis results for wlan.6.jani
+Experiment COL=0
+
++ Property sent
+  Result:           False
+  Time:             580.3 s
+  Min. probability: 0
+
+

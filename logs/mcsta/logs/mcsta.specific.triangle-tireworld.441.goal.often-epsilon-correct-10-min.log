@@ -1,0 +1,17 @@
+Command:	mcsta/modest mcsta triangle-tireworld.441.jani --props goal -O out.txt Minimal --unsafe --epsilon 0 -S Disk --store-compress None
+Wallclock time:	600.6397309303284
+Return code:	0
+Output:
+
+
+
+
+triangle-tireworld.441.jani:model: info: jani_from_ppddl is an MDP model.
+triangle-tireworld.441.jani: info: Need 136 bytes per state.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

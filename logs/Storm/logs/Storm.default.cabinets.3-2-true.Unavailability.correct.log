@@ -1,0 +1,54 @@
+Command:	~/storm/build/bin/storm --jani cabinets.3-2-true.jani --janiproperty Unavailability --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	684.38121509552
+Return code:	11
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 17:45:13 2020
+Command line arguments: --jani cabinets.3-2-true.jani --janiproperty Unavailability --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.010s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=true
+Time for model construction: 122.632s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4427421
+Transitions: 	7983998
+Choices: 	5385842
+Markovian St.: 	354294
+Max. Rate.: 	8373/2000
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 2617147 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4427421
+Transitions: 	7983998
+Choices: 	5385842
+Markovian St.: 	354294
+Max. Rate.: 	8373/2000
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 2617147 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "Unavailability": LRAmax=? [marked] ...
+
+##############################Output to stderr##############################
+ERROR: The program received signal 11 and will be aborted in 3s.
+Received signal 11
+

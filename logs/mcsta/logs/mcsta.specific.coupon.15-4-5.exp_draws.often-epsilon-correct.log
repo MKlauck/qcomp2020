@@ -1,0 +1,18 @@
+Command:	mcsta/modest mcsta coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe --no-partial-results --width 1e-3 --relative-width -S Disk --store-compress None
+Wallclock time:	1801.3834476470947
+Return code:	None
+Output:
+
+
+
+
+coupon.15-4.jani:model: info: coupon.15-4 is a DTMC model.
+coupon.15-4.jani: info: Need 24 bytes per state.
+coupon.15-4.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+
+
+----------
+Computation aborted after 1801.3834476470947 seconds since the total time limit of 1800 seconds was exceeded.

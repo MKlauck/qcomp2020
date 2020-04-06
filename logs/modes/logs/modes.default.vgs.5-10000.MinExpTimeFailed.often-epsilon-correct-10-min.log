@@ -1,0 +1,18 @@
+Command:	modes/modest modes vgs.5.jani --props MinExpTimeFailed -E TIME_BOUND=10000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.7889738082886
+Return code:	0
+Output:
+
+
+
+
+vgs.5.jani:model: info: DftToGspnTransformation is an MA model and will be simulated as an MA.
+vgs.5.jani: info: Using default value of 0.95 for the confidence parameter.
+vgs.5.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

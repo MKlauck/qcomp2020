@@ -1,0 +1,30 @@
+Command:	~/storm/build/bin/storm --jani philosophers.20.jani --janiproperty MinExpTimeDeadlock --constants TIME_BOUND=1 --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	247.29744815826416
+Return code:	-9
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 21:32:20 2020
+Command line arguments: --jani philosophers.20.jani --janiproperty MinExpTimeDeadlock --constants TIME_BOUND=1 --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.010s.
+
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=true
+Time for model construction: 1.709s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	45239074 (342 nodes)
+Transitions: 	584892921 (2861 nodes)
+Reward Models:  none
+Variables: 	rows: 81 meta variables (81 DD variables), columns: 81 meta variables (81 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (82 nodes)
+   * deadl
+-------------------------------------------------------------- 
+
+Model checking property "MinExpTimeDeadlock": T[exp]min=? [F "deadl"] ...
+

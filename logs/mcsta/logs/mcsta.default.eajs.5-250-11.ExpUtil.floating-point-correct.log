@@ -1,0 +1,52 @@
+Command:	mcsta/modest mcsta eajs.5.jani --props ExpUtil -E energy_capacity=250,B=11 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon
+Wallclock time:	28.84848117828369
+Return code:	0
+Output:
+
+
+
+
+eajs.5.jani:model: info: eajs.5 is an MDP model.
+eajs.5.jani:variables[11]: info: Expanding variable "loc_1" into 3 locations in automaton "Process_1".
+eajs.5.jani:variables[15]: info: Expanding variable "loc_2" into 3 locations in automaton "Process_2".
+eajs.5.jani:variables[17]: info: Expanding variable "user_1" into 6 locations in automaton "Resources".
+eajs.5.jani:variables[19]: info: Expanding variable "loc_3" into 3 locations in automaton "Process_3".
+eajs.5.jani:variables[20]: info: Expanding variable "loc_5" into 3 locations in automaton "Process_5".
+eajs.5.jani:variables[23]: info: Expanding variable "loc_4" into 3 locations in automaton "Process_4".
+eajs.5.jani: info: Need 24 bytes per state.
+eajs.5.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+eajs.5.jani: info: Explored 3049471 states for energy_capacity=250, B=11.
+
+Peak memory usage: 464 MB
+Analysis results for eajs.5.jani
+Experiment energy_capacity=250, B=11
+
++ State space exploration
+  State size:  24 bytes
+  States:      3049471
+  Transitions: 4250853
+  Branches:    6960278
+  Rate:        165086 states/s
+  Time:        20.3 s
+
++ Property ExpUtil
+  Value:  10.032940688435431
+  Bounds: [10.032940688435431, 10.032940688435431]
+  Time:   6.9 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 1.9 s
+    Min. prob. 1 states:          3049471
+    Time for min. prob. 1 states: 0.2 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  26
+    Time:        4.7 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

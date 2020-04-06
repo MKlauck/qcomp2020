@@ -1,0 +1,51 @@
+Command:	mcsta/modest mcsta consensus.4.jani --props steps_min -E K=4 -O out.txt Minimal --unsafe --no-partial-results --epsilon 0 --absolute-epsilon -S Memory
+Wallclock time:	9.863100051879883
+Return code:	0
+Output:
+
+
+
+
+consensus.4.jani:model: info: consensus.4 is an MDP model.
+consensus.4.jani:variables[6]: info: Expanding variable "pc1" into 4 locations in automaton "process1".
+consensus.4.jani:variables[8]: info: Expanding variable "pc2" into 4 locations in automaton "process2".
+consensus.4.jani:variables[10]: info: Expanding variable "pc3" into 4 locations in automaton "process3".
+consensus.4.jani:variables[12]: info: Expanding variable "pc4" into 4 locations in automaton "process4".
+consensus.4.jani: info: Need 16 bytes per state.
+consensus.4.jani: info: Explored 43136 states for K=4.
+consensus.4.jani:properties[4]: warning: Computing minimum expected reward in property "steps_min" without checking for zero-reward end components.
+
+Peak memory usage: 75 MB
+Analysis results for consensus.4.jani
+Experiment K=4
+
++ State space exploration
+  State size:  16 bytes
+  States:      43136
+  Transitions: 115840
+  Branches:    144352
+  Rate:        102950 states/s
+  Time:        0.4 s
+
++ Property steps_min
+  Value:  767.9999999999918
+  Bounds: [767.9999999999918, infinity)
+  Time:   8.9 s
+
+  + Precomputations
+    Max. prob. 1 states:          43136
+    Time for max. prob. 1 states: 0.2 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  3352
+    Time:        8.7 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+
+
+############################## Notes ##############################
+The tool result '3839999999999959/5000000000000' is tagged as incorrect. The reference result is '768' (approx. 768.0) which means a relative error of '1.0677083333333333e-14' which is larger than the goal precision '0.001'.

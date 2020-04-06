@@ -1,0 +1,33 @@
+Command:	modes/modest modes cabinets.3-2-true.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5494253635406
+Return code:	0
+Output:
+
+
+
+
+cabinets.3-2-true.jani:model: info: cabinets.3-2-true.jani is an MA model and will be simulated as an MA.
+cabinets.3-2-true.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 64 MB
+Analysis results for cabinets.3-2-true.jani
+Status:          Finished
+Simulation time: 599.4 s
+
++ Property Property "Unreliability"
+  Estimated max. probability: 2.995758305814797E-08
+  Runs used (best scheduler): 33380530
+  Total runs used:            34380530
+  Schedulers sampled:         0
+  Best scheduler:             514099564
+  Run type:                   MA
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

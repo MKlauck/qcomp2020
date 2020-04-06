@@ -1,0 +1,40 @@
+Command:	mcsta/modest mcsta zeroconf.jani --props correct_min -E N=1000,K=8,reset=false -O out.txt Minimal --epsilon 0
+Wallclock time:	23.397165775299072
+Return code:	0
+Output:
+
+
+
+
+zeroconf.jani:model: info: zeroconf is an MDP model.
+zeroconf.jani:variables[21]: info: Expanding variable "l" into 5 locations in automaton "host0".
+zeroconf.jani: info: Need 24 bytes per state.
+zeroconf.jani: info: Explored 1868787 states for N=1000, K=8, reset=False.
+
+Peak memory usage: 271 MB
+Analysis results for zeroconf.jani
+Experiment N=1000, K=8, reset=False
+
++ State space exploration
+  State size:  24 bytes
+  States:      1868787
+  Transitions: 3430379
+  Branches:    4224736
+  Rate:        188082 states/s
+  Time:        11.1 s
+
++ Property correct_min
+  Probability: 5.040105212929842E-09
+  Bounds:      [5.040105212929842E-09, 5.040105212929842E-09]
+  Time:        11.7 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  99
+    Time:        11.7 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

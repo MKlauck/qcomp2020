@@ -1,0 +1,19 @@
+Command:	~/storm/build/bin/storm --jani ftpp.2-2-true.jani --janiproperty Unavailability --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1800.6787910461426
+Return code:	None
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 20:28:23 2020
+Command line arguments: --jani ftpp.2-2-true.jani --janiproperty Unavailability --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.078s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+
+
+----------
+Computation aborted after 1800.6787910461426 seconds since the total time limit of 1800 seconds was exceeded.

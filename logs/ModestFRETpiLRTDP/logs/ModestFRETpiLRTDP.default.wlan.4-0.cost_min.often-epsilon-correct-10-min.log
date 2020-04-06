@@ -1,0 +1,22 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.4.jani --epsilon 1e-3 --props cost_min -E COL=0 --timeout 580
+Wallclock time:	3.0421435832977295
+Return code:	0
+Output:
+
+
+
+
+wlan.4.jani:model: info: wlan.4 is an MDP model.
+wlan.4.jani: info: Need 15 bytes per state.
+Throw exception
+wlan.4.jani:properties[2]: warning: Computing minimum expected reward in property "cost_min" without checking for zero-reward end components.
+
+Peak memory usage: 62 MB
+Analysis results for wlan.4.jani
+Experiment COL=0
+
++ Property cost_min
+  Value: 7625
+  Time:  2.1 s
+
+

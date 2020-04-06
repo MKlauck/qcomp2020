@@ -1,0 +1,35 @@
+Command:	~/storm/build/bin/storm --prism haddad-monmege.pm --prop haddad-monmege.prctl target --constants N=100,p=0.7 --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	0.05789446830749512
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 11:52:49 2020
+Command line arguments: --prism haddad-monmege.pm --prop haddad-monmege.prctl target --constants 'N=100,p=0.7' --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.001s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=true
+Time for model construction: 0.021s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Target -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "target": P=? [F "Target"] ...
+Result (for initial states): 7/10 (approx. 0.7)
+Time for model checking: 0.006s.
+
+
+############################## Notes ##############################
+The tool result '7/10' is tagged as incorrect. The reference result is '3152519739159347/4503599627370496' (approx. 0.7) which means a relative error of '6.34413156928661e-17' which is larger than the goal precision '0.0'.

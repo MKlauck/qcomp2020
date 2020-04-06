@@ -1,0 +1,8 @@
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.001 --unsafe-scheduling --fixed-batches crowds.jani
+Wallclock time:	1800.1036636829376
+Return code:	None
+Output:
+
+
+----------
+Computation aborted after 1800.1036636829376 seconds since the total time limit of 1800 seconds was exceeded.

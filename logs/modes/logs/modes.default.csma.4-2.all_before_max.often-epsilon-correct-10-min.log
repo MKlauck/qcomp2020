@@ -1,0 +1,35 @@
+Command:	modes/modest modes csma.4-2.jani --props all_before_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5466153621674
+Return code:	0
+Output:
+
+
+
+
+csma.4-2.jani:model: info: csma.4-2 is an MDP model and will be simulated as an MDP.
+csma.4-2.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 59 MB
+Analysis results for csma.4-2.jani
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "all_before_max"
+  Estimated max. probability: 0.6686514886164624
+  Runs used (best scheduler): 11420
+  Total runs used:            6361400
+  Schedulers sampled:         6000
+  Best scheduler:             755838001
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Adaptive: P(error > εp̂) < δ
+    ε:                  0.02
+    δ:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

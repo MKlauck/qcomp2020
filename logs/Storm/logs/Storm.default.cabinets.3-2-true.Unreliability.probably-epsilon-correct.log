@@ -1,0 +1,52 @@
+Command:	~/storm/build/bin/storm --jani cabinets.3-2-true.jani --janiproperty Unreliability --sound --precision 5e-2  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	28.241543531417847
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 18:11:55 2020
+Command line arguments: --jani cabinets.3-2-true.jani --janiproperty Unreliability --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.010s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 17.869s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1960162
+Transitions: 	3068096
+Choices: 	2040512
+Markovian St.: 	267648
+Max. Rate.: 	4.1865
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 149888 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1960162
+Transitions: 	3068096
+Choices: 	2040512
+Markovian St.: 	267648
+Max. Rate.: 	4.1865
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 149888 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "Unreliability": Pmax=? [true U<=1 marked] ...
+Result (for initial states): 6.67352732e-08
+Time for model checking: 10.310s.
+

@@ -1,0 +1,39 @@
+Command:	modes/modest modes philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 5e-2 --relative-width
+Wallclock time:	1.320009708404541
+Return code:	0
+Output:
+
+
+
+
+philosophers.20.jani:model: info: Philosophers20 is a CTMC model and will be simulated as an MA.
+philosophers.20.jani: info: Using default value of 0.95 for the confidence parameter.
+philosophers.20.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 60 MB
+Analysis results for philosophers.20.jani
+Experiment TIME_BOUND=1.0
+Status:          Finished
+Simulation time: 0.2 s
+
++ Property Property "MinExpTimeDeadlock"
+  Estimated value:     11.490661706368337
+  Confidence interval: [10.920448527385746, 12.060874885350929]
+  Runs used:           400
+  Run type:            MA
+  Status:              Finished
+
+  + Sample data
+    Mean:     11.490661706368337
+    Variance: 33.85620772336509
+    Skewness: 1.6482275335926362
+    Kurtosis: 7.598045289915772
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

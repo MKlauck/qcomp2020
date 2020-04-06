@@ -1,0 +1,22 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.4.jani --epsilon 1e-3 -E K=4 --props steps_min --timeout 580
+Wallclock time:	580.7747139930725
+Return code:	0
+Output:
+
+
+
+
+consensus.4.jani:model: info: consensus.4 is an MDP model.
+consensus.4.jani: info: Need 13 bytes per state.
+Throw exception
+consensus.4.jani:properties[4]: warning: Computing minimum expected reward in property "steps_min" without checking for zero-reward end components.
+
+Peak memory usage: 62 MB
+Analysis results for consensus.4.jani
+Experiment K=4
+
++ Property steps_min
+  Value: 61.8988871734217
+  Time:  579.5 s
+
+

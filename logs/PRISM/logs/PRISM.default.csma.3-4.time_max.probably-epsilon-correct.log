@@ -1,0 +1,91 @@
+Command:	./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 csma.3-4.prism csma.props --property time_max
+Wallclock time:	59.02464556694031
+Return code:	0
+Output:
+PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 16:55:50 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 csma.3-4.prism csma.props --property time_max
+
+Parsing model file "csma.3-4.prism"...
+
+Type:        MDP
+Modules:     bus station1 station2 station3 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 
+
+Parsing properties file "csma.props"...
+
+5 properties:
+(1) "all_before_max": Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+(2) "all_before_min": Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+(3) "some_before": Pmin=? [ F min_backoff_after_success<K ]
+(4) "time_max": R{"time"}max=? [ F "all_delivered" ]
+(5) "time_min": R{"time"}min=? [ F "all_delivered" ]
+
+---------------------------------------------------------------------
+
+Model checking: "time_max": R{"time"}max=? [ F "all_delivered" ]
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 135 iterations in 2.38 seconds (average 0.017607, setup 0.00)
+
+Time for model construction: 2.472 seconds.
+
+Type:        MDP
+States:      1460287 (1 initial)
+Transitions: 2396727
+Choices:     1471059
+
+Transition matrix: 75002 nodes (6 terminal), 2396727 minterms, vars: 51r/51c/13nd
+
+Prob0E: 149 iterations in 3.06 seconds (average 0.020510, setup 0.00)
+
+Prob1A: 1 iterations in 0.02 seconds (average 0.021000, setup 0.00)
+
+goal = 13, inf = 0, maybe = 1460274
+Time for computing an upper bound for expected reward: 30.969 seconds.
+Upper bound for max expectation (variant 2): 1305456.8823529412
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=1460287, nc=1471046, nnz=2396714, k=3] [38.6 MB]
+Building sparse matrix (transition rewards)... [n=1460287, nc=1471046, nnz=1261384, k=3] [25.6 MB]
+Creating vector for state rewards... [11.1 MB]
+Creating vector for inf... [11.1 MB]
+Creating vector for lower bounds... [11.1 MB]
+Creating vector for upper bounds... [11.1 MB]
+Allocating iteration vectors... [4 x 11.1 MB]
+TOTAL: [153.4 MB]
+
+Starting iterations (interval iteration)...
+Iteration 77: max relative diff=0.999959, 5.05 sec so far
+Iteration 154: max relative diff=0.999896, 10.07 sec so far
+Iteration 234: max relative diff=0.953536, 15.13 sec so far
+Max relative diff between upper and lower bound on convergence: 0.0489631
+Iterative method: 293 iterations in 21.52 seconds (average 0.064253, setup 2.69)
+Maximum finite value in solution vector at end of interval iteration: 157.37084045798505
+
+Value in the initial state: 117.0207778134377
+
+Time for model checking: 55.758 seconds.
+
+Result: 117.0207778134377 (value in the initial state)
+
+
+Overall running time: 58.82 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+

@@ -1,0 +1,45 @@
+Command:	mcsta/modest mcsta mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --epsilon 0
+Wallclock time:	25.23279881477356
+Return code:	0
+Output:
+
+
+
+
+mapk_cascade.jani:model: info: mapk_cascade is a CTMC model.
+mapk_cascade.jani: info: Need 32 bytes per state.
+mapk_cascade.jani: info: Explored 99535 states for N=4, T=30.0.
+
+Peak memory usage: 81 MB
+Analysis results for mapk_cascade.jani
+Experiment N=4, T=30.0
+
++ State space exploration
+  State size:  32 bytes
+  States:      99535
+  Transitions: 99535
+  Branches:    901842
+  Rate:        27850 states/s
+  Time:        3.9 s
+
++ Property activated_time
+  Value:  40.67650299679535
+  Bounds: [40.67650299679535, 40.67650299679535]
+  Time:   20.6 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          99535
+    Time for min. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2556
+    Time:        20.6 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

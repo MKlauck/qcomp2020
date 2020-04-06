@@ -1,0 +1,40 @@
+Command:	mcsta/modest mcsta elevators.b-11-9.jani --props goal -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
+Wallclock time:	13.710598468780518
+Return code:	0
+Output:
+
+
+
+
+elevators.b-11-9.jani:model: info: jani_from_ppddl is an MDP model.
+elevators.b-11-9.jani: info: Need 64 bytes per state.
+elevators.b-11-9.jani: info: Explored 538326 states.
+
+Peak memory usage: 200 MB
+Analysis results for elevators.b-11-9.jani
+
++ State space exploration
+  State size:  64 bytes
+  States:      538326
+  Transitions: 3208167
+  Branches:    3456513
+  Rate:        58476 states/s
+  Time:        10.0 s
+
++ Property goal
+  Probability: 0.9999998509883596
+  Bounds:      [0.9999997019767193, 1]
+  Time:        2.8 s
+
+  + Optimistic value iteration
+    Total iterations:  47
+    Verif. attempts:   2
+    Verif. iterations: 7
+    Final epsilon:     0.012096774193548387
+    Time:              2.7 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

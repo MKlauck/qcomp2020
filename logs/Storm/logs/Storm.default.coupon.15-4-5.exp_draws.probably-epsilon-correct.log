@@ -1,0 +1,47 @@
+Command:	~/storm/build/bin/storm --jani coupon.15-4.jani --janiproperty exp_draws --constants B=5 --sound --precision 5e-2  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1396.6023995876312
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 10:49:58 2020
+Command line arguments: --jani coupon.15-4.jani --janiproperty exp_draws --constants B=5 --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.004s.
+
+Portfolio engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=false
+Time for model construction: 8.692s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	17486977236 (339931 nodes)
+Transitions: 	40823774300 (1268396 nodes)
+Reward Models:  numberDraws
+Variables: 	rows: 20 meta variables (37 DD variables), columns: 20 meta variables (37 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (38 nodes)
+   * _ret0_
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 1387.263s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10689
+Transitions: 	25756
+Reward Models:  numberDraws
+State Labels: 	4 labels
+   * (_loc_main = 35) -> 1 item(s)
+   * _ret0_ -> 1 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "exp_draws": R[exp]{"numberDraws"}min=? [F "_ret0_"] ...
+Result (for initial states): 12.73671499
+Time for model checking: 0.119s.
+

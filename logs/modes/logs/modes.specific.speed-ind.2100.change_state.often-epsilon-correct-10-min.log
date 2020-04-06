@@ -1,0 +1,38 @@
+Command:	modes/modest modes speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --unsafe -N 2147483647
+Wallclock time:	600.5541923046112
+Return code:	0
+Output:
+
+
+
+
+speed-ind.jani:model: info: speed-ind is a CTMC model and will be simulated as an MA.
+speed-ind.jani:variables[0]: info: Expanding variable "S1" into 6 locations in automaton "S1_def".
+speed-ind.jani:variables[1]: info: Expanding variable "S2" into 11 locations in automaton "S2_def".
+speed-ind.jani:variables[2]: info: Expanding variable "S3" into 11 locations in automaton "S3_def".
+speed-ind.jani:variables[3]: info: Expanding variable "S4" into 4 locations in automaton "S4_def".
+speed-ind.jani:variables[4]: info: Expanding variable "Y" into 4 locations in automaton "Y_def".
+speed-ind.jani:variables[5]: info: Expanding variable "Z" into 4 locations in automaton "Z_def".
+speed-ind.jani:variables[6]: info: Expanding variable "CC" into 4 locations in automaton "CC_def".
+speed-ind.jani:variables[7]: info: Expanding variable "XX" into 4 locations in automaton "XX_def".
+speed-ind.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 60 MB
+Analysis results for speed-ind.jani
+Experiment T=2100
+Status:          Cancelled
+Simulation time: 599.4 s
+
++ Property Property "change_state"
+  Estimated probability: 0.04234027783585772
+  Runs used:             1195670
+  Run type:              MA
+  Status:                Cancelled
+
+  + Error bounds
+    Statement: Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

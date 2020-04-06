@@ -1,0 +1,18 @@
+Command:	mcsta/modest mcsta egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --unsafe --no-partial-results --width 1e-3 --relative-width -S Disk --store-compress None
+Wallclock time:	1800.7169058322906
+Return code:	None
+Output:
+
+
+
+
+egl.jani:model: info: egl is a DTMC model.
+egl.jani: info: Need 88 bytes per state.
+egl.jani: info: Explored 317718526 states for N=10, L=8.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+
+
+----------
+Computation aborted after 1800.7169058322906 seconds since the total time limit of 1800 seconds was exceeded.

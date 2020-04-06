@@ -1,0 +1,39 @@
+Command:	modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	2.0175094604492188
+Return code:	0
+Output:
+
+
+
+
+egl.jani:model: info: egl is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+egl.jani: info: Using default value of 0.95 for the confidence parameter.
+egl.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 59 MB
+Analysis results for egl.jani
+Experiment N=10, L=8
+Status:          Finished
+Simulation time: 0.9 s
+
++ Property Property "messagesB"
+  Estimated value:     4.007423580786026
+  Confidence interval: [3.8071280542277557, 4.207719107344295]
+  Runs used:           2290
+  Run type:            MDP
+  Status:              Finished
+
+  + Sample data
+    Mean:     4.007423580786026
+    Variance: 23.915628571047026
+    Skewness: 4.431878775893201
+    Kurtosis: 65.97257476120926
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

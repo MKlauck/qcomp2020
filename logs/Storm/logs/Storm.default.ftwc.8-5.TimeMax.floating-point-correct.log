@@ -1,0 +1,54 @@
+Command:	~/storm/build/bin/storm --jani ftwc.jani --janiproperty TimeMax --constants N=8,TIME_BOUND=5 --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1800.0030100345612
+Return code:	None
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 23:08:27 2020
+Command line arguments: --jani ftwc.jani --janiproperty TimeMax --constants 'N=8,TIME_BOUND=5' --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.003s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 0.104s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	10299
+Transitions: 	26983
+Choices: 	12635
+Markovian St.: 	4951
+Max. Rate.: 	2.03069999999999994955147
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1])) -> 1059 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	10299
+Transitions: 	26983
+Choices: 	12635
+Markovian St.: 	4951
+Max. Rate.: 	2.03069999999999994955147
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1])) -> 1059 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "TimeMax": T[exp]max=? [F (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1]))] ...
+
+
+----------
+Computation aborted after 1800.0030100345612 seconds since the total time limit of 1800 seconds was exceeded.

@@ -1,0 +1,35 @@
+Command:	modes/modest modes readers-writers.40.jani --props prtb_many_requests -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5481314659119
+Return code:	0
+Output:
+
+
+
+
+readers-writers.40.jani:model: info: ReadersWriters is an MA model and will be simulated as an MA.
+readers-writers.40.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for readers-writers.40.jani
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "prtb_many_requests"
+  Estimated max. probability: 0.8318840579710145
+  Runs used (best scheduler): 4830
+  Total runs used:            4546700
+  Schedulers sampled:         4000
+  Best scheduler:             140332232
+  Run type:                   MA
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Adaptive: P(error > εp̂) < δ
+    ε:                  0.02
+    δ:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

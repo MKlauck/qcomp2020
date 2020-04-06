@@ -1,0 +1,30 @@
+Command:	modes/modest modes cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal --unsafe -N 2147483647
+Wallclock time:	600.5530698299408
+Return code:	0
+Output:
+
+
+
+
+cluster.jani:model: info: cluster is a CTMC model and will be simulated as an MA.
+cluster.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for cluster.jani
+Experiment N=128, T=2000.0, t=20.0
+Status:          Cancelled
+Simulation time: 599.5 s
+
++ Property Property "qos1"
+  Estimated probability: 0.0010319433369294995
+  Runs used:             213190
+  Run type:              MA
+  Status:                Cancelled
+
+  + Error bounds
+    Statement: Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

@@ -1,0 +1,45 @@
+Command:	mcsta/modest mcsta readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --unsafe --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2 -S Disk --store-compress None
+Wallclock time:	15.740122556686401
+Return code:	0
+Output:
+
+
+
+
+readers-writers.40.jani:model: info: ReadersWriters is an MA model.
+readers-writers.40.jani: info: Need 16 bytes per state.
+readers-writers.40.jani: info: Explored 1884366 states.
+readers-writers.40.jani:properties[1]: warning: Computing minimum expected reward in property "exp_time_many_requests" without checking for zero-reward end components.
+
+Peak memory usage: 285 MB
+Analysis results for readers-writers.40.jani
+
++ State space exploration
+  State size:  16 bytes
+  States:      1884366
+  Transitions: 1884366
+  Branches:    3815040
+  Rate:        408402 states/s
+  Time:        5.6 s
+
++ Property exp_time_many_requests
+  Value:  3.7883047455099446
+  Bounds: [3.6294679553796043, 3.9471415356402852]
+  Time:   9.1 s
+
+  + Precomputations
+    Max. prob. 1 states:          1884366
+    Time for max. prob. 1 states: 3.8 s
+
+  + Optimistic value iteration
+    Total iterations:  57
+    Verif. attempts:   3
+    Verif. iterations: 16
+    Final epsilon:     0.0027871717137682456
+    Time:              5.1 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

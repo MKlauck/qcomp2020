@@ -1,0 +1,32 @@
+Command:	~/storm/build/bin/storm --prism pnueli-zuck.10.prism --prop pnueli-zuck.props live --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	2.27908992767334
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 09:25:22 2020
+Command line arguments: --prism pnueli-zuck.10.prism --prop pnueli-zuck.props live --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.029s.
+
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=true
+Time for model construction: 1.306s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	57728647140 (369 nodes)
+Transitions: 	729794328830 (22815 nodes)
+Choices: 	676422586366
+Reward Models:  none
+Variables: 	rows: 10 meta variables (40 DD variables), columns: 10 meta variables (40 DD variables), nondeterminism: 10 meta variables (10 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (41 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "live": Pmax=? [F (p1 = 10)] ...
+Result (for initial states): 1 (approx. 1)
+Time for model checking: 0.629s.
+

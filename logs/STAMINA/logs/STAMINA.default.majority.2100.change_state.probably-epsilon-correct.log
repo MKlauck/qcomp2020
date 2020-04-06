@@ -1,0 +1,212 @@
+Command:	./stamina/stamina/bin/stamina majority.prism majority.props -const T=2100
+Wallclock time:	898.7671537399292
+Return code:	0
+Output:
+PRISM
+=====
+
+Version: 4.5
+Date: Wed Apr 01 07:45:02 UTC 2020
+Hostname: cb4ac6bf600d
+Memory limits: cudd=1g, java(heap)=2g
+
+Type:        CTMC
+Modules:     D_def Y_def Z_def CC_def XX_def EE_def 
+Variables:   D Y Z CC XX EE 
+
+Generator:   stamina.InfCTMCModelGenerator
+Type:        CTMC
+
+========================================================================
+Approximation<1> : kappa = 1.0E-6
+========================================================================
+
+---------------------------------------------------------------------
+
+Building model...
+
+Computing reachable states... 22 5168 states
+ 5168 states
+Reachable states exploration and model construction done in 2.005 secs.
+Sorting reachable states list...
+
+Time for model construction: 2.039 seconds.
+
+Type:        CTMC
+States:      5168 (1 initial)
+Transitions: 42949
+
+---------------------------------------------------------------------
+
+Verifying Lower Bound for change_state_min .....
+
+---------------------------------------------------------------------
+
+Model checking: "change_state_min": P=? [ F<=T ((EE>40&(!EE=-1))&(CC<20&(!CC=-1))) ]
+Property constants: T=2100
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 3.2872265951801265 x 2100.0 = 6903.175849878266
+Fox-Glynn (1.25E-7): left = 6319, right = 7610
+Backwards transient probability computation took 7611 iters and 8.613 seconds.
+
+Value in the initial state: 0.0
+
+Time for model checking: 8.635 seconds.
+
+Result: 0.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Verifying Upper Bound for change_state_max .....
+
+---------------------------------------------------------------------
+
+Model checking: "change_state_max": P=? [ F<=T ((EE>40|(EE=-1))&(CC<20|(CC=-1))) ]
+Property constants: T=2100
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 3.2872265951801265 x 2100.0 = 6903.175849878266
+Fox-Glynn (1.25E-7): left = 6319, right = 7610
+Backwards transient probability computation took 7611 iters and 8.879 seconds.
+
+Value in the initial state: 0.0830190021399403
+
+Time for model checking: 8.886 seconds.
+
+Result: 0.0830190021399403 (value in the initial state)
+
+========================================================================
+Approximation<2> : kappa = 9.999999999999999E-10
+========================================================================
+
+---------------------------------------------------------------------
+
+Building model...
+
+Computing reachable states... 35688 37940 38729 39204 39626 39671 states
+ 1 39671 states
+Reachable states exploration and model construction done in 16.4 secs.
+Sorting reachable states list...
+
+Time for model construction: 16.477 seconds.
+
+Type:        CTMC
+States:      39671 (1 initial)
+Transitions: 361885
+
+---------------------------------------------------------------------
+
+Verifying Lower Bound for change_state_min .....
+
+---------------------------------------------------------------------
+
+Model checking: "change_state_min": P=? [ F<=T ((EE>40&(!EE=-1))&(CC<20&(!CC=-1))) ]
+Property constants: T=2100
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 3.287226595180127 x 2100.0 = 6903.1758498782665
+Fox-Glynn (1.25E-7): left = 6319, right = 7610
+Backwards transient probability computation took 7611 iters and 136.633 seconds.
+
+Value in the initial state: 0.05007058777924607
+
+Time for model checking: 136.673 seconds.
+
+Result: 0.05007058777924607 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Verifying Upper Bound for change_state_max .....
+
+---------------------------------------------------------------------
+
+Model checking: "change_state_max": P=? [ F<=T ((EE>40|(EE=-1))&(CC<20|(CC=-1))) ]
+Property constants: T=2100
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 3.287226595180127 x 2100.0 = 6903.1758498782665
+Fox-Glynn (1.25E-7): left = 6319, right = 7610
+Backwards transient probability computation took 7611 iters and 136.755 seconds.
+
+Value in the initial state: 0.055952025386081815
+
+Time for model checking: 136.773 seconds.
+
+Result: 0.055952025386081815 (value in the initial state)
+
+========================================================================
+Approximation<3> : kappa = 9.999999999999998E-13
+========================================================================
+
+---------------------------------------------------------------------
+
+Building model...
+
+Computing reachable states... 99026 116524 119185 119267 states
+ 1 119267 states
+Reachable states exploration and model construction done in 11.982 secs.
+Sorting reachable states list...
+
+Time for model construction: 12.244 seconds.
+
+Type:        CTMC
+States:      119267 (1 initial)
+Transitions: 1178621
+
+---------------------------------------------------------------------
+
+Verifying Lower Bound for change_state_min .....
+
+---------------------------------------------------------------------
+
+Model checking: "change_state_min": P=? [ F<=T ((EE>40&(!EE=-1))&(CC<20&(!CC=-1))) ]
+Property constants: T=2100
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 3.2872265951801265 x 2100.0 = 6903.175849878266
+Fox-Glynn (1.25E-7): left = 6319, right = 7610
+Backwards transient probability computation took 7611 iters and 286.844 seconds.
+
+Value in the initial state: 0.05427187832831769
+
+Time for model checking: 287.145 seconds.
+
+Result: 0.05427187832831769 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Verifying Upper Bound for change_state_max .....
+
+---------------------------------------------------------------------
+
+Model checking: "change_state_max": P=? [ F<=T ((EE>40|(EE=-1))&(CC<20|(CC=-1))) ]
+Property constants: T=2100
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 3.2872265951801265 x 2100.0 = 6903.175849878266
+Fox-Glynn (1.25E-7): left = 6319, right = 7610
+Backwards transient probability computation took 7611 iters and 289.122 seconds.
+
+Value in the initial state: 0.054320821709538454
+
+Time for model checking: 289.149 seconds.
+
+Result: 0.054320821709538454 (value in the initial state)
+
+========================================================================
+
+Property: "change_state": P=? [ F<=T ((EE>40)&(CC<20)) ]
+
+ProbMin: 0.05427187832831769 (value in the initial state)
+
+ProbMax: 0.054320821709538454 (value in the initial state)
+
+========================================================================
+

@@ -1,0 +1,45 @@
+Command:	mcsta/modest mcsta consensus.6.jani --props disagree -E K=2 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
+Wallclock time:	95.18318510055542
+Return code:	0
+Output:
+
+
+
+
+consensus.6.jani:model: info: consensus.6 is an MDP model.
+consensus.6.jani:variables[6]: info: Expanding variable "pc1" into 4 locations in automaton "process1".
+consensus.6.jani:variables[8]: info: Expanding variable "pc2" into 4 locations in automaton "process2".
+consensus.6.jani:variables[10]: info: Expanding variable "pc3" into 4 locations in automaton "process3".
+consensus.6.jani:variables[12]: info: Expanding variable "pc4" into 4 locations in automaton "process4".
+consensus.6.jani:variables[14]: info: Expanding variable "pc5" into 4 locations in automaton "process5".
+consensus.6.jani:variables[16]: info: Expanding variable "pc6" into 4 locations in automaton "process6".
+consensus.6.jani: info: Need 24 bytes per state.
+consensus.6.jani: info: Explored 1258240 states for K=2.
+
+Peak memory usage: 279 MB
+Analysis results for consensus.6.jani
+Experiment K=2
+
++ State space exploration
+  State size:  24 bytes
+  States:      1258240
+  Transitions: 5008128
+  Branches:    6236736
+  Rate:        74176 states/s
+  Time:        18.4 s
+
++ Property disagree
+  Probability: 0.36362422496221386
+  Bounds:      [0.36362422496221386, 1]
+  Time:        76.2 s
+
+  + Value iteration
+    Final error: 9.857326206509403E-07
+    Iterations:  736
+    Time:        76.1 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

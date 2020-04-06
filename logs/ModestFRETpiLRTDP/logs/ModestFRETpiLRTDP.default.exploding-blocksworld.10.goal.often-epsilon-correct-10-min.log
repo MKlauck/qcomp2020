@@ -1,0 +1,11 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe exploding-blocksworld.10.jani --epsilon 1e-3 --timeout 580
+Wallclock time:	600.041761636734
+Return code:	-2
+Output:
+
+
+
+
+exploding-blocksworld.10.jani:model: info: jani_from_ppddl is an MDP model.
+exploding-blocksworld.10.jani: info: Need 43 bytes per state.
+

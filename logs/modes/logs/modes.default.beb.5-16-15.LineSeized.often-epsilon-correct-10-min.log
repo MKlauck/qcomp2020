@@ -1,0 +1,39 @@
+Command:	modes/modest modes beb.5-16.jani --props LineSeized -E N=15 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.545923948288
+Return code:	0
+Output:
+
+
+
+
+beb.5-16.jani:model: info: beb-5-16 is an MDP model and will be simulated as an MDP.
+beb.5-16.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 88 MB
+Analysis results for beb.5-16.jani
+Experiment N=15
+Status:          Finished
+Simulation time: 598.9 s
+
++ Property Property "LineSeized"
+  Estimated max. probability: 1
+  Runs used (best scheduler): 250
+  Total runs used:            21854250
+  Schedulers sampled:         21000
+  Best scheduler:             1437980452
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Adaptive: P(error > εp̂) < δ
+    ε:                  0.02
+    δ:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+Correctness of result is not checked because no reference result is available.

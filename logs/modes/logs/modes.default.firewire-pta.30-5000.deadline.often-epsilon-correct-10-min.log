@@ -1,0 +1,23 @@
+Command:	modes/modest modes firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks
+Wallclock time:	1.2636046409606934
+Return code:	0
+Output:
+
+
+
+
+firewire-pta.jani:model: info: firewire-pta is a PTA model and will be simulated as an SHA.
+firewire-pta.jani:variables[3]: info: Expanding variable "w12" into 10 locations in automaton "wire12".
+firewire-pta.jani:variables[6]: info: Expanding variable "s1" into 9 locations in automaton "node1".
+firewire-pta.jani:variables[8]: info: Expanding variable "w21" into 10 locations in automaton "wire21".
+firewire-pta.jani:variables[11]: info: Expanding variable "s2" into 9 locations in automaton "node2".
+firewire-pta.jani: info: Using default value of 0.95 for the confidence parameter.
+firewire-pta.jani:constants[7]: warning: Cannot determine whether the rewards used in a reward bound are non-negative, simulation runs may not terminate.
+firewire-pta.jani:model: error: Encountered temporal nondeterminism for snd_idle12.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

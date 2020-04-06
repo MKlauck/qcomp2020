@@ -1,0 +1,17 @@
+Command:	mcsta/modest mcsta exploding-blocksworld.10.jani --props goal -O out.txt Minimal --unsafe --epsilon 0 -S Disk --store-compress None
+Wallclock time:	601.13250041008
+Return code:	0
+Output:
+
+
+
+
+exploding-blocksworld.10.jani:model: info: jani_from_ppddl is an MDP model.
+exploding-blocksworld.10.jani: info: Need 48 bytes per state.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

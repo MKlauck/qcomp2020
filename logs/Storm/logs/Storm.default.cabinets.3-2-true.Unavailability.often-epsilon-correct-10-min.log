@@ -1,0 +1,56 @@
+Command:	~/storm/build/bin/storm --jani cabinets.3-2-true.jani --janiproperty Unavailability --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	62.84202861785889
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 18:10:22 2020
+Command line arguments: --jani cabinets.3-2-true.jani --janiproperty Unavailability --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.010s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 44.700s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4427421
+Transitions: 	7983998
+Choices: 	5385842
+Markovian St.: 	354294
+Max. Rate.: 	4.186499999999997
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 2617147 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4427421
+Transitions: 	7983998
+Choices: 	5385842
+Markovian St.: 	354294
+Max. Rate.: 	4.186499999999997
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 2617147 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "Unavailability": LRAmax=? [marked] ...
+Result (for initial states): 6.861285664640941e-08
+Time for model checking: 18.054s.
+
+
+############################## Notes ##############################
+Correctness of result is not checked because no reference result is available.

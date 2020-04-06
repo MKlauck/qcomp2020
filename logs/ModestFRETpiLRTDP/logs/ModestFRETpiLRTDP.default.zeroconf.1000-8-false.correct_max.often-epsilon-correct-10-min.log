@@ -1,0 +1,20 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe zeroconf.jani --epsilon 1e-3 -E N=1000,K=8,reset=false --props correct_max --timeout 580
+Wallclock time:	580.7775976657867
+Return code:	0
+Output:
+
+
+
+
+zeroconf.jani:model: info: zeroconf is an MDP model.
+zeroconf.jani: info: Need 24 bytes per state.
+
+Peak memory usage: 70 MB
+Analysis results for zeroconf.jani
+Experiment N=1000, K=8, reset=False
+
++ Property correct_max
+  Probability: 4.8027662628494E-08
+  Time:        579.5 s
+
+

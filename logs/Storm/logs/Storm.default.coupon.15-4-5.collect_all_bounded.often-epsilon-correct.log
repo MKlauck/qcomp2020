@@ -1,0 +1,31 @@
+Command:	~/storm/build/bin/storm --jani coupon.15-4.jani --janiproperty collect_all_bounded --constants B=5 --timebounded:precision 1e-3  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1800.2827320098877
+Return code:	None
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 09:12:38 2020
+Command line arguments: --jani coupon.15-4.jani --janiproperty collect_all_bounded --constants B=5 '--timebounded:precision' 1e-3 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.004s.
+
+Portfolio engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=false
+Time for model construction: 9.145s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	17486977236 (339931 nodes)
+Transitions: 	40823774300 (1268396 nodes)
+Reward Models:  numberDraws
+Variables: 	rows: 20 meta variables (37 DD variables), columns: 20 meta variables (37 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (38 nodes)
+   * _ret0_
+-------------------------------------------------------------- 
+
+
+----------
+Computation aborted after 1800.2827320098877 seconds since the total time limit of 1800 seconds was exceeded.

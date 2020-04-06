@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM-TUM - crowds positive 6-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM-TUM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 6, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:10000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const TotalRuns=6,CrowdSize=20</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="color: red;">&gt 1800s (Timeout)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Thu Mar 19 10:27:39 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams 'S:10000000;Av:10;e:0.05;d:0.05;p:0.05;post:64' -const 'TotalRuns=6,CrowdSize=20' -javamaxmem 10g
+
+Parsing the model file "crowds.prism"...
+
+Parsing properties file "crowds.props"...
+
+1 property:
+(1) "positive": P=? [ F observe0>1 ]
+
+Type:        DTMC
+Modules:     crowds 
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19 
+
+---------------------------------------------------------------------
+
+Model checking: "positive": P=? [ F observe0>1 ]
+Model constants: TotalRuns=6,CrowdSize=20
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:10000000 Av: 10 eps: 0.05 delta: 0.05 pmin: 0.05
+TransDelta: 2.37526000926207E-11
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {"Trials":100000,"Precision":0.9948952825286621,"PartialTransDelta":3.553301656833497E-8,"Value":{"Upper":1,"Lower":0.0051047174713379495},"ActionsOfs0":{"Action0":"[0.0053994747093629065;1.0]"},"GlobalTimerSecs":290.08,"AvgConf":0.9335169999147499,"StateInfos":{"num00":52404,"num11":1512,"numStates":482666,"num01":427744,"avgDist":0.8880640921196101,"numWorking":1006,"numUnset":0,"numClose":53916}}
+JSON: {"Trials":200000,"Precision":0.9939917565134826,"PartialTransDelta":2.590780965014094E-8,"Value":{"Upper":1,"Lower":0.006008243486517429},"ActionsOfs0":{"Action0":"[0.006424685975769276;1.0]"},"GlobalTimerSecs":581.213,"AvgConf":0.9174039547947987,"StateInfos":{"num00":78595,"num11":2044,"numStates":654492,"num01":566821,"avgDist":0.8764749729439197,"numWorking":7032,"numUnset":0,"numClose":80639}}
+JSON: {"Trials":300000,"Precision":0.9938016956990837,"PartialTransDelta":2.1260672857774604E-8,"Value":{"Upper":1,"Lower":0.006198304300916317},"ActionsOfs0":{"Action0":"[0.006666255438735183;1.0]"},"GlobalTimerSecs":896.195,"AvgConf":0.9131449027492494,"StateInfos":{"num00":103894,"num11":2484,"numStates":785595,"num01":668638,"avgDist":0.8640095499637852,"numWorking":10579,"numUnset":0,"numClose":106378}}
+JSON: {"Trials":400000,"Precision":0.9934945943688793,"PartialTransDelta":1.8602187021923794E-8,"Value":{"Upper":1,"Lower":0.006505405631120713},"ActionsOfs0":{"Action0":"[0.007016701467032258;1.0]"},"GlobalTimerSecs":1227.378,"AvgConf":0.9121174822329334,"StateInfos":{"num00":125557,"num11":2856,"numStates":889492,"num01":748459,"avgDist":0.8547847477189893,"numWorking":12620,"numUnset":0,"numClose":128413}}
+JSON: {"Trials":500000,"Precision":0.9933601933745075,"PartialTransDelta":1.685870985013956E-8,"Value":{"Upper":1,"Lower":0.006639806625492484},"ActionsOfs0":{"Action0":"[0.007175888295513569;1.0]"},"GlobalTimerSecs":1571.672,"AvgConf":0.9112176002112651,"StateInfos":{"num00":142961,"num11":3148,"numStates":975599,"num01":815943,"avgDist":0.8491165769047229,"numWorking":13547,"numUnset":0,"numClose":146109}}
+
+
+----------
+Computation aborted after 1800.2031733989716 seconds since the total time limit of 1800 seconds was exceeded.	</pre>
+</div>
+</body>
+</html>

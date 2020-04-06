@@ -1,0 +1,39 @@
+Command:	modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	1.1719343662261963
+Return code:	0
+Output:
+
+
+
+
+coupon.9-4.jani:model: info: coupon.9-4 is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+coupon.9-4.jani: info: Using default value of 0.95 for the confidence parameter.
+coupon.9-4.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 58 MB
+Analysis results for coupon.9-4.jani
+Experiment B=5
+Status:          Finished
+Simulation time: 0.1 s
+
++ Property Property "exp_draws"
+  Estimated value:     6.450000000000001
+  Confidence interval: [6.127886589040866, 6.772113410959136]
+  Runs used:           120
+  Run type:            MDP
+  Status:              Finished
+
+  + Sample data
+    Mean:     6.450000000000001
+    Variance: 3.2411764705882344
+    Skewness: 0.6194913020289274
+    Kurtosis: 3.2857742462599795
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

@@ -1,0 +1,11 @@
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.001 --unsafe-scheduling --fixed-batches haddad-monmege.jani
+Wallclock time:	1800.0030634403229
+Return code:	None
+Output:
+
+##############################Output to stderr##############################
+Only time-accumulating or time-instant reward queries currently supported.
+
+
+----------
+Computation aborted after 1800.0030634403229 seconds since the total time limit of 1800 seconds was exceeded.

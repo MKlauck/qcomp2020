@@ -1,0 +1,19 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe elevators.b-11-9.jani --epsilon 1e-3 --timeout 580
+Wallclock time:	3.0403501987457275
+Return code:	0
+Output:
+
+
+
+
+elevators.b-11-9.jani:model: info: jani_from_ppddl is an MDP model.
+elevators.b-11-9.jani: info: Need 61 bytes per state.
+
+Peak memory usage: 69 MB
+Analysis results for elevators.b-11-9.jani
+
++ Property goal
+  Probability: 1
+  Time:        1.9 s
+
+

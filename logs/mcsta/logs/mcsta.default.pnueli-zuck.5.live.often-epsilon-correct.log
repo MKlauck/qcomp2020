@@ -1,0 +1,43 @@
+Command:	mcsta/modest mcsta pnueli-zuck.5.jani --props live -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
+Wallclock time:	6.52552604675293
+Return code:	0
+Output:
+
+
+
+
+pnueli-zuck.5.jani:model: info: pnueli-zuck.5 is an MDP model.
+pnueli-zuck.5.jani:variables[0]: info: Expanding variable "p0" into 16 locations in automaton "process0".
+pnueli-zuck.5.jani:variables[1]: info: Expanding variable "p1" into 16 locations in automaton "process1".
+pnueli-zuck.5.jani:variables[2]: info: Expanding variable "p2" into 16 locations in automaton "process2".
+pnueli-zuck.5.jani:variables[3]: info: Expanding variable "p3" into 16 locations in automaton "process3".
+pnueli-zuck.5.jani:variables[4]: info: Expanding variable "p4" into 16 locations in automaton "process4".
+pnueli-zuck.5.jani: info: Need 16 bytes per state.
+pnueli-zuck.5.jani: info: Explored 307523 states.
+
+Peak memory usage: 118 MB
+Analysis results for pnueli-zuck.5.jani
+
++ State space exploration
+  State size:  16 bytes
+  States:      307523
+  Transitions: 1753715
+  Branches:    1886851
+  Rate:        77462 states/s
+  Time:        4.4 s
+
++ Property live
+  Probability: 1
+  Bounds:      [1, 1]
+  Time:        1.2 s
+
+  + Value iteration
+    Final error: 5.774204007950579E-07
+    Iterations:  36
+    Time:        1.1 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

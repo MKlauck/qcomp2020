@@ -1,0 +1,19 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe csma.4-2.jani --epsilon 1e-3 --props time_max  --timeout 580
+Wallclock time:	580.4796793460846
+Return code:	0
+Output:
+
+
+
+
+csma.4-2.jani:model: info: csma.4-2 is an MDP model.
+csma.4-2.jani: info: Need 24 bytes per state.
+
+Peak memory usage: 85 MB
+Analysis results for csma.4-2.jani
+
++ Property time_max
+  Value: 13.3922198839112
+  Time:  579.5 s
+
+

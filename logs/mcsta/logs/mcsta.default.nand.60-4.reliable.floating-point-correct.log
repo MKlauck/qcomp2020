@@ -1,0 +1,45 @@
+Command:	mcsta/modest mcsta nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1
+Wallclock time:	82.34877943992615
+Return code:	0
+Output:
+
+
+
+
+nand.jani:model: info: nand is a DTMC model.
+nand.jani: info: Need 16 bytes per state.
+nand.jani: info: Explored 18826082 states for N=60, K=4.
+
+Peak memory usage: 1871 MB
+Analysis results for nand.jani
+Experiment N=60, K=4
+
++ State space exploration
+  State size:  16 bytes
+  States:      18826082
+  Transitions: 18826082
+  Branches:    29772212
+  Rate:        285326 states/s
+  Time:        74.1 s
+
++ Property reliable
+  Probability: 0.6867214589192275
+  Bounds:      [0.6867214589192275, 0.6867214589192275]
+  Time:        4.2 s
+
+  + Precomputations
+    Min. prob. 0 states:          1757695
+    Time for min. prob. 0 states: 1.0 s
+    Min. prob. 1 states:          547
+    Time for min. prob. 1 states: 0.8 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        1.8 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

@@ -1,0 +1,34 @@
+Command:	modes/modest modes dpm.jani --props PmaxQueuesFullBound -E N=4,C=8,TIME_BOUND=5 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5479457378387
+Return code:	0
+Output:
+
+
+
+
+dpm.jani:model: info: dpm is an MA model and will be simulated as an MA.
+dpm.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for dpm.jani
+Experiment N=4, C=8, TIME_BOUND=5.0
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "PmaxQueuesFullBound"
+  Estimated max. probability: 2.1117232527549015E-08
+  Runs used (best scheduler): 47354690
+  Total runs used:            48354690
+  Schedulers sampled:         0
+  Best scheduler:             1481901317
+  Run type:                   MA
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

@@ -1,0 +1,49 @@
+Command:	modes/modest modes consensus.6.jani --props steps_min -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5498843193054
+Return code:	0
+Output:
+
+
+
+
+consensus.6.jani:model: info: consensus.6 is an MDP model and will be simulated as an MDP.
+consensus.6.jani:variables[6]: info: Expanding variable "pc1" into 4 locations in automaton "process1".
+consensus.6.jani:variables[8]: info: Expanding variable "pc2" into 4 locations in automaton "process2".
+consensus.6.jani:variables[10]: info: Expanding variable "pc3" into 4 locations in automaton "process3".
+consensus.6.jani:variables[12]: info: Expanding variable "pc4" into 4 locations in automaton "process4".
+consensus.6.jani:variables[14]: info: Expanding variable "pc5" into 4 locations in automaton "process5".
+consensus.6.jani:variables[16]: info: Expanding variable "pc6" into 4 locations in automaton "process6".
+consensus.6.jani: info: Using default value of 0.95 for the confidence parameter.
+consensus.6.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 59 MB
+Analysis results for consensus.6.jani
+Experiment K=2
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "steps_min"
+  Estimated min. value:       520.9292527821913
+  Min. confidence interval:   [510.5125982937623, 531.3459072706203]
+  Runs used (best scheduler): 6290
+  Total runs used:            1261290
+  Schedulers sampled:         1000
+  Best scheduler:             1673309019
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Min. sample data
+    Mean:     520.9292527821913
+    Variance: 177668.72340872794
+    Skewness: 1.8813844955233405
+    Kurtosis: 8.14621889288712
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

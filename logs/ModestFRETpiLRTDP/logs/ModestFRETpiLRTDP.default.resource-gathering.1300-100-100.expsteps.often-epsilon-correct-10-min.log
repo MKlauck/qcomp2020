@@ -1,0 +1,22 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe resource-gathering.jani --epsilon 1e-3 --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 --timeout 580
+Wallclock time:	580.7732443809509
+Return code:	0
+Output:
+
+
+
+
+resource-gathering.jani:model: info: resource-gathering is an MDP model.
+resource-gathering.jani: info: Need 10 bytes per state.
+Throw exception
+resource-gathering.jani:properties[1]: warning: Computing minimum expected reward in property "expsteps" without checking for zero-reward end components.
+
+Peak memory usage: 81 MB
+Analysis results for resource-gathering.jani
+Experiment B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100
+
++ Property expsteps
+  Value: 71.3441784941334
+  Time:  579.5 s
+
+

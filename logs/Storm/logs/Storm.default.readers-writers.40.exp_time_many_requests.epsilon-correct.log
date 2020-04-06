@@ -1,0 +1,52 @@
+Command:	~/storm/build/bin/storm --jani readers-writers.40.jani --janiproperty exp_time_many_requests --sound --precision 1e-6  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	24.895341396331787
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Thu Mar 19 01:43:36 2020
+Command line arguments: --jani readers-writers.40.jani --janiproperty exp_time_many_requests --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.003s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 10.841s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1884366
+Transitions: 	3815040
+Choices: 	1884366
+Markovian St.: 	372594
+Max. Rate.: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((p_lan_w + p_w) + (p_lan_r + p_r)) > (320 / 10)) -> 56038 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1884366
+Transitions: 	3815040
+Choices: 	1884366
+Markovian St.: 	372594
+Max. Rate.: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((p_lan_w + p_w) + (p_lan_r + p_r)) > (320 / 10)) -> 56038 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "exp_time_many_requests": T[exp]min=? [F (((p_lan_w + p_w) + (p_lan_r + p_r)) > (320 / 10))] ...
+Result (for initial states): 3.729267364
+Time for model checking: 13.985s.
+

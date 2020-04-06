@@ -1,0 +1,44 @@
+Command:	mcsta/modest mcsta csma.3-4.jani --props time_max -O out.txt Minimal --epsilon 0
+Wallclock time:	20.86677074432373
+Return code:	0
+Output:
+
+
+
+
+csma.3-4.jani:model: info: csma.3-4 is an MDP model.
+csma.3-4.jani: info: Need 24 bytes per state.
+csma.3-4.jani: info: Explored 1460287 states.
+
+Peak memory usage: 224 MB
+Analysis results for csma.3-4.jani
+
++ State space exploration
+  State size:  24 bytes
+  States:      1460287
+  Transitions: 1471059
+  Branches:    2396727
+  Rate:        196434 states/s
+  Time:        8.2 s
+
++ Property time_max
+  Value:  116.81825582998482
+  Bounds: [116.81825582998482, 116.81825582998482]
+  Time:   11.7 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.5 s
+    Min. prob. 1 states:          1460287
+    Time for min. prob. 1 states: 0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  189
+    Time:        11.1 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

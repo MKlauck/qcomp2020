@@ -1,0 +1,36 @@
+Command:	modes/modest modes triangle-tireworld.441.jani --props goal -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5497362613678
+Return code:	0
+Output:
+
+
+
+
+triangle-tireworld.441.jani:model: info: jani_from_ppddl is an MDP model and will be simulated as an MDP.
+triangle-tireworld.441.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 71 MB
+Analysis results for triangle-tireworld.441.jani
+Status:          Finished
+Simulation time: 599.2 s
+
++ Property Property "goal"
+  Estimated max. probability: 0.00030197682344921606
+  Runs used (best scheduler): 2934000
+  Total runs used:            3934000
+  Schedulers sampled:         0
+  Best scheduler:             893457138
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+Correctness of result is not checked because no reference result is available.

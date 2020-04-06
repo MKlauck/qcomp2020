@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - haddad-monmege target 100-0.7</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#haddad-monmege">haddad-monmege</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 100, <span class="tt">p</span> = 0.7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">target</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --epsilon 0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.0362594127655s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">haddad-monmege.jani:model: info: haddad-monmege is a DTMC model.
+haddad-monmege.jani: info: Need 2 bytes per state.
+haddad-monmege.jani: info: Explored 201 states for N=100, p=0.7.
+haddad-monmege.jani: warning: Value iteration for property "target" was aborted before convergence.
+
+Peak memory usage: 51 MB
+Analysis results for haddad-monmege.jani
+Experiment N=100, p=0.7
+
++ State space exploration
+  State size:  2 bytes
+  States:      201
+  Transitions: 201
+  Branches:    400
+  Rate:        3466 states/s
+  Time:        0.1 s
+
++ Property target
+  Probability: 8.735972224654956E-23
+  Bounds:      [8.735972224654956E-23, 1]
+  Time:        599.5 s
+
+  + Value iteration
+    Status:      Cancelled
+    Final error: 1.2642042183846132E-08
+    Iterations:  79101146
+    Time:        599.4 s
+
+Exported results to file "/out.txt".	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+</div>
+</body>
+</html>

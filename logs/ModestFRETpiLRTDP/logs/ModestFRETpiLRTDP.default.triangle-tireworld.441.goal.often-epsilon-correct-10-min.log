@@ -1,0 +1,22 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe triangle-tireworld.441.jani --epsilon 1e-3 --timeout 580
+Wallclock time:	2.042018413543701
+Return code:	0
+Output:
+
+
+
+
+triangle-tireworld.441.jani:model: info: jani_from_ppddl is an MDP model.
+triangle-tireworld.441.jani: info: Need 133 bytes per state.
+
+Peak memory usage: 87 MB
+Analysis results for triangle-tireworld.441.jani
+
++ Property goal
+  Probability: 1
+  Time:        0.6 s
+
+
+
+############################## Notes ##############################
+Correctness of result is not checked because no reference result is available.

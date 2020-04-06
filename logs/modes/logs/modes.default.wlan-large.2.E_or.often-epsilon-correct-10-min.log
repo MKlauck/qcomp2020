@@ -1,0 +1,19 @@
+Command:	modes/modest modes wlan-large.jani --props E_or -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks
+Wallclock time:	1.2270185947418213
+Return code:	0
+Output:
+
+
+
+
+wlan-large.jani:model: info: wlan-large is an STA model and will be simulated as an SHA.
+wlan-large.jani: info: Using default value of 0.95 for the confidence parameter.
+wlan-large.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+wlan-large.jani:model: error: Encountered temporal nondeterminism for tick.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

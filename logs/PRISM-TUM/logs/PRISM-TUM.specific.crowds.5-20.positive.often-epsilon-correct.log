@@ -1,0 +1,44 @@
+Command:	./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const TotalRuns=5,CrowdSize=20
+Wallclock time:	1800.1311569213867
+Return code:	None
+Output:
+PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Thu Mar 19 08:37:38 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams 'S:1000000;Av:10;e:0.001;d:0.05;p:0.05;post:64' -const 'TotalRuns=5,CrowdSize=20' -javamaxmem 10g
+
+Parsing the model file "crowds.prism"...
+
+Parsing properties file "crowds.props"...
+
+1 property:
+(1) "positive": P=? [ F observe0>1 ]
+
+Type:        DTMC
+Modules:     crowds 
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19 
+
+---------------------------------------------------------------------
+
+Model checking: "positive": P=? [ F observe0>1 ]
+Model constants: TotalRuns=5,CrowdSize=20
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:1000000 Av: 10 eps: 0.001 delta: 0.05 pmin: 0.05
+TransDelta: 7.8125E-11
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {"Trials":100000,"Precision":0.8370389295589451,"PartialTransDelta":6.469393300296298E-8,"Value":{"Upper":0.8527566448023234,"Lower":0.015717715243378238},"ActionsOfs0":{"Action0":"[0.0157177548593742;0.8527275138759606]"},"GlobalTimerSecs":304.084,"AvgConf":0.9143778150592115,"StateInfos":{"num00":38123,"num11":816,"numStates":258917,"num01":219101,"avgDist":0.8484954416920417,"numWorking":877,"numUnset":0,"numClose":38939}}
+JSON: {"Trials":200000,"Precision":0.7692199415564223,"PartialTransDelta":4.8705220420345535E-8,"Value":{"Upper":0.7919317027152876,"Lower":0.02271176115886536},"ActionsOfs0":{"Action0":"[0.022711853102849094;0.791912325871154]"},"GlobalTimerSecs":652.99,"AvgConf":0.8938843256857211,"StateInfos":{"num00":54745,"num11":1084,"numStates":342672,"num01":281041,"avgDist":0.8355212451977116,"numWorking":5802,"numUnset":0,"numClose":55829}}
+JSON: {"Trials":300000,"Precision":0.7186071273791559,"PartialTransDelta":4.1070662896927425E-8,"Value":{"Upper":0.7458134439232716,"Lower":0.027206316544115733},"ActionsOfs0":{"Action0":"[0.02720642274412728;0.7457899432316198]"},"GlobalTimerSecs":1039.251,"AvgConf":0.8867628819820417,"StateInfos":{"num00":70843,"num11":1218,"numStates":402499,"num01":322504,"avgDist":0.81874202900878,"numWorking":7934,"numUnset":0,"numClose":72061}}
+JSON: {"Trials":400000,"Precision":0.6779232506216439,"PartialTransDelta":3.6325329652366596E-8,"Value":{"Upper":0.7088425176094126,"Lower":0.030919266987768732},"ActionsOfs0":{"Action0":"[0.030919361990614902;0.7088119250606529]"},"GlobalTimerSecs":1450.318,"AvgConf":0.8860308280531312,"StateInfos":{"num00":86575,"num11":1354,"numStates":449870,"num01":352983,"avgDist":0.8014255337751541,"numWorking":8958,"numUnset":0,"numClose":87929}}
+
+
+----------
+Computation aborted after 1800.1311569213867 seconds since the total time limit of 1800 seconds was exceeded.

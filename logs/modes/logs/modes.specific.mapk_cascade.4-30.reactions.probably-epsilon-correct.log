@@ -1,0 +1,42 @@
+Command:	modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --unsafe --width 5e-2 --relative-width
+Wallclock time:	1.2892584800720215
+Return code:	0
+Output:
+
+
+
+
+mapk_cascade.jani:model: info: mapk_cascade is a CTMC model and will be simulated as an MA.
+mapk_cascade.jani: info: Using default value of 0.95 for the confidence parameter.
+mapk_cascade.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 58 MB
+Analysis results for mapk_cascade.jani
+Experiment N=4, T=30.0
+Status:          Finished
+Simulation time: 0.2 s
+
++ Property Property "reactions"
+  Estimated value:     51.171428571428585
+  Confidence interval: [48.620978597671886, 53.721878545185284]
+  Runs used:           140
+  Run type:            MA
+  Status:              Finished
+
+  + Sample data
+    Mean:     51.171428571428585
+    Variance: 237.06392600205555
+    Skewness: -0.27701687260600716
+    Kurtosis: 3.8556373954711747
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+The tool result '10234285714285717/200000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 48.4910276), ('upper', 48.49102762)])' (approx. OrderedDict([('lower', 48.4910276), ('upper', 48.49102762)])) which means a relative error of '0.055276224963379895' which is larger than the goal precision '0.05'.

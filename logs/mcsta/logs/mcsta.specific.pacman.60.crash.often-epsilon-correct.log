@@ -1,0 +1,40 @@
+Command:	mcsta/modest mcsta pacman.jani --props crash -E MAXSTEPS=60 -O out.txt Minimal --unsafe --no-partial-results --width 1e-3 --relative-width -S Memory
+Wallclock time:	134.57772064208984
+Return code:	0
+Output:
+
+
+
+
+pacman.jani:model: info: pacman is an MDP model.
+pacman.jani:variables[1]: info: Expanding variable "pMove" into 3 locations in automaton "arbiter".
+pacman.jani: info: Need 16 bytes per state.
+pacman.jani: info: Explored 7253118 states for MAXSTEPS=60.
+
+Peak memory usage: 1619 MB
+Analysis results for pacman.jani
+Experiment MAXSTEPS=60
+
++ State space exploration
+  State size:  16 bytes
+  States:      7253118
+  Transitions: 9097907
+  Branches:    9952883
+  Rate:        55002 states/s
+  Time:        132.5 s
+
++ Property crash
+  Probability: 0.5511074970678997
+  Bounds:      [0.5511074970678997, 0.5511074970678997]
+  Time:        0.9 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.8 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

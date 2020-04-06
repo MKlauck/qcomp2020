@@ -1,0 +1,47 @@
+Command:	~/modest/modest convert wlan-large.jani --digital-clocks  --unroll-distrs --output converted_wlan-large.jani --overwrite --experiment K=2
+Wallclock time:	0.43038439750671387
+Return code:	0
+Output:
+
+
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.36-g691a5469c.
+
+
+########################################
+Command:	~/storm/build/bin/storm --jani converted_wlan-large.jani --janiproperty E_or --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	46.29132914543152
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Thu Mar 19 02:39:59 2020
+Command line arguments: --jani converted_wlan-large.jani --janiproperty E_or --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.041s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 38.911s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3189783
+Transitions: 	6065855
+Choices: 	6045235
+Reward Models:  E_and_rate_reward
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (success1_seen | success2_seen) -> 166 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "E_or": R[exp]{"E_and_rate_reward"}max=? [F (success1_seen | success2_seen)] ...
+Result (for initial states): 33692.45734126979
+Time for model checking: 7.254s.
+

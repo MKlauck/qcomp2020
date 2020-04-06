@@ -1,0 +1,132 @@
+Command:	~/storm/build/bin/storm --jani sms.3-true.jani --janiproperty Unavailability --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	13.680826425552368
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Thu Mar 19 02:22:41 2020
+Command line arguments: --jani sms.3-true.jani --janiproperty Unavailability --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.010s.
+
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=false
+ WARN (model-handling.h:297): Dd-based model builder for Markov Automata is only available for JANI models, automatically converting the PRISM input model.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !5 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !5 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionREPAIRED !0 !FALSE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionINSPECT !0 that is mentioned in parallel composition.
+Time for model construction: 2.499s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (symbolic)
+States: 	1486857 (9169 nodes)
+Transitions: 	2437116 (5311703 nodes)
+Choices: 	1486857
+Reward Models:  none
+Variables: 	rows: 33 meta variables (67 DD variables), columns: 33 meta variables (67 DD variables), nondeterminism: 11 meta variables (11 DD variables)
+Labels: 	2
+   * deadlock -> 1 state(s) (68 nodes)
+   * init -> 1 state(s) (68 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "Unavailability": LRAmax=? [marked] ...
+Result (for initial states): 0.999999999938655
+Time for model checking: 10.026s.
+

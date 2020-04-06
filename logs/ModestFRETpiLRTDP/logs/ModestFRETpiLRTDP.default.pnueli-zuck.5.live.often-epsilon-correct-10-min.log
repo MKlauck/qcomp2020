@@ -1,0 +1,19 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pnueli-zuck.5.jani --epsilon 1e-3 --timeout 580
+Wallclock time:	1.040846824645996
+Return code:	0
+Output:
+
+
+
+
+pnueli-zuck.5.jani:model: info: pnueli-zuck.5 is an MDP model.
+pnueli-zuck.5.jani: info: Need 10 bytes per state.
+
+Peak memory usage: 48 MB
+Analysis results for pnueli-zuck.5.jani
+
++ Property live
+  Probability: 1
+  Time:        0.1 s
+
+

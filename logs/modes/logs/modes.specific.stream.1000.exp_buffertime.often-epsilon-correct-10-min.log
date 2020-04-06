@@ -1,0 +1,44 @@
+Command:	modes/modest modes stream.jani --props exp_buffertime -E N=1000 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5481998920441
+Return code:	0
+Output:
+
+
+
+
+stream.jani:model: info: stream is an MA model and will be simulated as an MA.
+stream.jani:variables[5]: info: Expanding variable "s" into 4 locations in automaton "streamingclient".
+stream.jani: info: Using default value of 0.95 for the confidence parameter.
+stream.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 58 MB
+Analysis results for stream.jani
+Experiment N=1000
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "exp_buffertime"
+  Estimated min. value:       9.248888828991129
+  Min. confidence interval:   [9.0640619330132, 9.433715724969058]
+  Runs used (best scheduler): 5120
+  Total runs used:            1117120
+  Schedulers sampled:         1000
+  Best scheduler:             787537390
+  Run type:                   MA
+  Status:                     Finished
+
+  + Min. sample data
+    Mean:     9.248888828991129
+    Variance: 45.53067814216461
+    Skewness: 0.9817726730717646
+    Kurtosis: 3.9615842092456917
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

@@ -1,0 +1,33 @@
+Command:	~/storm/build/bin/storm --jani beb.4-8.jani --janiproperty LineSeized --constants N=7 --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	32.44777822494507
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 00:56:31 2020
+Command line arguments: --jani beb.4-8.jani --janiproperty LineSeized --constants N=7 --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.009s.
+
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=false
+Time for model construction: 1.423s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	20186888 (14639 nodes)
+Transitions: 	35508778 (69450 nodes)
+Choices: 	20949082
+Reward Models:  none
+Variables: 	rows: 20 meta variables (62 DD variables), columns: 20 meta variables (62 DD variables), nondeterminism: 6 meta variables (6 DD variables)
+Labels: 	2
+   * deadlock -> 240263 state(s) (1069 nodes)
+   * init -> 1 state(s) (63 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "LineSeized": Pmax=? [F line_seized] ...
+Result (for initial states): 0.999885498452204979358271
+Time for model checking: 30.688s.
+

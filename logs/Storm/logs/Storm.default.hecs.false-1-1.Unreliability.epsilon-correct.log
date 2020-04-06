@@ -1,0 +1,30 @@
+Command:	~/storm/build/bin/storm-dft --dftfile hecs.false-1-1.dft --timebound 1 --max --sound --precision 1e-6 
+Wallclock time:	0.1541273593902588
+Return code:	0
+Output:
+Storm-dft 1.5.1
+
+Date: Thu Mar 19 00:43:32 2020
+Command line arguments: --dftfile hecs.false-1-1.dft --timebound 1 --max --sound --precision 1e-6
+Current working directory: /
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	25
+Transitions: 	71
+Reward Models:  none
+State Labels: 	4 labels
+   * System_1_dc -> 0 item(s)
+   * System_1_failed -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.001s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.002s
+Result: [0.000109993954]
+

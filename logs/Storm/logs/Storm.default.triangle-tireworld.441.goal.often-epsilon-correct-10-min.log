@@ -1,0 +1,23 @@
+Command:	~/storm/build/bin/storm --jani triangle-tireworld.441.jani --janiproperty goal --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	600.717280626297
+Return code:	1
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 16:20:46 2020
+Command line arguments: --jani triangle-tireworld.441.jani --janiproperty goal --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.073s.
+
+ WARN (InformationCollector.cpp:17): Truncating the domain size as it does not fit in an unsigned 64 bit number.
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Explored 12017509 states in 599 seconds before abort.
+ERROR (ExplicitModelBuilder.cpp:263): Aborted in state space exploration.
+ERROR (storm.cpp:23): An exception caused Storm to terminate. The message of the exception is: AbortException: Aborted in state space exploration.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 2 and will be aborted in 60s.
+

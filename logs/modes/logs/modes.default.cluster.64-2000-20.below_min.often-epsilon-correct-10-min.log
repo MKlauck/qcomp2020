@@ -1,0 +1,38 @@
+Command:	modes/modest modes cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5580930709839
+Return code:	0
+Output:
+
+
+
+
+cluster.jani:model: info: cluster is a CTMC model and will be simulated as an MA.
+cluster.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for cluster.jani
+Experiment N=64, T=2000.0, t=20.0
+Status:          Cancelled
+Simulation time: 599.5 s
+
++ Property Property "below_min"
+  Estimated value:     0.0041945171255219635
+  Confidence interval: [0.003627445628311451, 0.004761588622732476]
+  Runs used:           422300
+  Run type:            MA
+  Status:              Cancelled
+
+  + Sample data
+    Mean:     0.0041945171255219635
+    Variance: 0.035350905051389846
+    Skewness: 79.38832210038963
+    Kurtosis: 10393.548991929612
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

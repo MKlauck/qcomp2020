@@ -1,0 +1,32 @@
+Command:	~/storm/build/bin/storm --prism haddad-monmege.pm --prop haddad-monmege.prctl exp_steps --constants N=100,p=0.7 --sound --precision 5e-2  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	0.05856442451477051
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 11:52:49 2020
+Command line arguments: --prism haddad-monmege.pm --prop haddad-monmege.prctl exp_steps --constants 'N=100,p=0.7' --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.001s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=true
+Time for model construction: 0.022s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Done -> 2 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "exp_steps": T[exp]=? [F "Done"] ...
+Result (for initial states): 1901475900342344102245054808062 (approx. 1.9014759e+30)
+Time for model checking: 0.006s.
+

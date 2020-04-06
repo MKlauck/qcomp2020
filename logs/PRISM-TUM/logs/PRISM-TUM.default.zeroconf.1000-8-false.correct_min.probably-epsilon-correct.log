@@ -1,0 +1,6 @@
+Command:	./pet.sh reachability --precision 0.05 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_min --const N=1000,K=8,reset=false
+Wallclock time:	1.0402235984802246
+Return code:	0
+Output:
+4.964357877e-09
+

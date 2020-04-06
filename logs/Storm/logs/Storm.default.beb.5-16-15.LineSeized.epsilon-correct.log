@@ -1,0 +1,34 @@
+Command:	~/storm/build/bin/storm --jani beb.5-16.jani --janiproperty LineSeized --constants N=15 --sound --precision 1e-6  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1800.2723343372345
+Return code:	None
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 01:59:24 2020
+Command line arguments: --jani beb.5-16.jani --janiproperty LineSeized --constants N=15 --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.035s.
+
+ WARN (InformationCollector.cpp:17): Truncating the domain size as it does not fit in an unsigned 64 bit number.
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=false
+Time for model construction: 9.527s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	1842013522945 (327500 nodes)
+Transitions: 	3543644735688 (1546588 nodes)
+Choices: 	1869419233708
+Reward Models:  none
+Variables: 	rows: 24 meta variables (91 DD variables), columns: 24 meta variables (91 DD variables), nondeterminism: 6 meta variables (6 DD variables)
+Labels: 	2
+   * deadlock -> 6703888276 state(s) (8504 nodes)
+   * init -> 1 state(s) (92 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "LineSeized": Pmax=? [F line_seized] ...
+
+
+----------
+Computation aborted after 1800.2723343372345 seconds since the total time limit of 1800 seconds was exceeded.

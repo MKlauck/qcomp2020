@@ -1,0 +1,20 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.6.jani --epsilon 1e-3 -E K=2 --props disagree --timeout 580
+Wallclock time:	580.7640550136566
+Return code:	0
+Output:
+
+
+
+
+consensus.6.jani:model: info: consensus.6 is an MDP model.
+consensus.6.jani: info: Need 19 bytes per state.
+
+Peak memory usage: 193 MB
+Analysis results for consensus.6.jani
+Experiment K=2
+
++ Property disagree
+  Probability: 0.999823068925207
+  Time:        579.9 s
+
+

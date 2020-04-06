@@ -1,0 +1,61 @@
+Command:	mcsta/modest mcsta polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --epsilon 0
+Wallclock time:	600.6911873817444
+Return code:	0
+Output:
+
+
+
+
+polling.18.jani:model: info: polling.18 is a CTMC model.
+polling.18.jani:variables[3]: info: Expanding variable "a" into 2 locations in automaton "server".
+polling.18.jani:variables[4]: info: Expanding variable "s1" into 2 locations in automaton "station1".
+polling.18.jani:variables[5]: info: Expanding variable "s2" into 2 locations in automaton "station2".
+polling.18.jani:variables[6]: info: Expanding variable "s3" into 2 locations in automaton "station3".
+polling.18.jani:variables[7]: info: Expanding variable "s4" into 2 locations in automaton "station4".
+polling.18.jani:variables[8]: info: Expanding variable "s5" into 2 locations in automaton "station5".
+polling.18.jani:variables[9]: info: Expanding variable "s6" into 2 locations in automaton "station6".
+polling.18.jani:variables[10]: info: Expanding variable "s7" into 2 locations in automaton "station7".
+polling.18.jani:variables[11]: info: Expanding variable "s8" into 2 locations in automaton "station8".
+polling.18.jani:variables[12]: info: Expanding variable "s9" into 2 locations in automaton "station9".
+polling.18.jani:variables[13]: info: Expanding variable "s10" into 2 locations in automaton "station10".
+polling.18.jani:variables[14]: info: Expanding variable "s11" into 2 locations in automaton "station11".
+polling.18.jani:variables[15]: info: Expanding variable "s12" into 2 locations in automaton "station12".
+polling.18.jani:variables[16]: info: Expanding variable "s13" into 2 locations in automaton "station13".
+polling.18.jani:variables[17]: info: Expanding variable "s14" into 2 locations in automaton "station14".
+polling.18.jani:variables[18]: info: Expanding variable "s15" into 2 locations in automaton "station15".
+polling.18.jani:variables[19]: info: Expanding variable "s16" into 2 locations in automaton "station16".
+polling.18.jani:variables[20]: info: Expanding variable "s17" into 2 locations in automaton "station17".
+polling.18.jani:variables[21]: info: Expanding variable "s18" into 2 locations in automaton "station18".
+polling.18.jani: info: Need 40 bytes per state.
+polling.18.jani: info: Explored 7077888 states for T=16.0.
+polling.18.jani: warning: Encountered a value greater than 1 during value iteration. The final result for property "s1_before_s2" is likely affected by floating-point errors.
+polling.18.jani: warning: Value iteration for property "s1_before_s2" was aborted before convergence.
+
+Peak memory usage: 1726 MB
+Analysis results for polling.18.jani
+Experiment T=16.0
+
++ State space exploration
+  State size:  40 bytes
+  States:      7077888
+  Transitions: 7077888
+  Branches:    67371008
+  Rate:        35686 states/s
+  Time:        210.9 s
+
++ Property s1_before_s2
+  Probability: 0.5390072187897893
+  Bounds:      [0.5390072187897893, 1]
+  Time:        388.9 s
+
+  + Value iteration
+    Status:      Cancelled
+    Final error: 2.0548035558942478E-09
+    Iterations:  668
+    Time:        388.7 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

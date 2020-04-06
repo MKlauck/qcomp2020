@@ -1,0 +1,56 @@
+Command:	~/storm/build/bin/storm --prism eajs.6.prism --prop eajs.props ExpUtil --constants energy_capacity=300,B=13 --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	46.49849843978882
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 06:16:27 2020
+Command line arguments: --prism eajs.6.prism --prop eajs.props ExpUtil --constants 'energy_capacity=300,B=13' --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.016s.
+
+Portfolio engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=true
+Time for model construction: 1.241s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	7901694 (4889 nodes)
+Transitions: 	19679927 (45618 nodes)
+Choices: 	11882922
+Reward Models:  utilityLocal
+Variables: 	rows: 16 meta variables (50 DD variables), columns: 16 meta variables (50 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	11
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (51 nodes)
+   * emptyBattery
+   * localFailure
+   * noLocalFailure
+   * process_1_finishes
+   * process_2_finishes
+   * process_3_finishes
+   * process_4_finishes
+   * process_5_finishes
+   * process_6_finishes
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 44.720s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	20855
+Transitions: 	62388
+Choices: 	47173
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * (battery_load = 0) -> 1 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R[exp]{"utilityLocal"}max=? [F (battery_load = 0)] ...
+Result (for initial states): 2102306774904922316278224079/174449211009120179071170507 (approx. 12.05111082)
+Time for model checking: 0.143s.
+

@@ -1,0 +1,34 @@
+Command:	modes/modest modes resource-gathering.jani --props prgoldgem -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5566539764404
+Return code:	0
+Output:
+
+
+
+
+resource-gathering.jani:model: info: resource-gathering is an MDP model and will be simulated as an MDP.
+resource-gathering.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for resource-gathering.jani
+Experiment B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "prgoldgem"
+  Estimated max. probability: 0
+  Runs used (best scheduler): 118480
+  Total runs used:            1118480
+  Schedulers sampled:         0
+  Best scheduler:             746808629
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Aborted: no error bounds
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

@@ -1,0 +1,38 @@
+Command:	modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5507113933563
+Return code:	0
+Output:
+
+
+
+
+mapk_cascade.jani:model: info: mapk_cascade is a CTMC model and will be simulated as an MA.
+mapk_cascade.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 59 MB
+Analysis results for mapk_cascade.jani
+Experiment N=4, T=30.0
+Status:          Cancelled
+Simulation time: 599.5 s
+
++ Property Property "activated_time"
+  Estimated value:     40.673597119915115
+  Confidence interval: [40.6254617272593, 40.72173251257093]
+  Runs used:           959380
+  Run type:            MA
+  Status:              Cancelled
+
+  + Sample data
+    Mean:     40.673597119915115
+    Variance: 578.6600713179561
+    Skewness: 1.8216731255481264
+    Kurtosis: 8.21859241941763
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

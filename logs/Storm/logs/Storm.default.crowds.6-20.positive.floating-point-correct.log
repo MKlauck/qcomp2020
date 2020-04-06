@@ -1,0 +1,79 @@
+Command:	~/storm/build/bin/storm --prism crowds.prism --prop crowds.props positive --constants TotalRuns=6,CrowdSize=20 --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	2.9586479663848877
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 11:47:23 2020
+Command line arguments: --prism crowds.prism --prop crowds.props positive --constants 'TotalRuns=6,CrowdSize=20' --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.009s.
+
+ WARN (InformationCollector.cpp:17): Truncating the domain size as it does not fit in an unsigned 64 bit number.
+Portfolio engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=false
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+Time for model construction: 1.241s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	10291282 (5401 nodes)
+Transitions: 	37068802 (28651 nodes)
+Reward Models:  none
+Variables: 	rows: 32 meta variables (78 DD variables), columns: 32 meta variables (78 DD variables)
+Labels: 	2
+   * deadlock -> 219604 state(s) (403 nodes)
+   * init -> 1 state(s) (79 nodes)
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 1.427s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	101
+Transitions: 	151
+Reward Models:  none
+State Labels: 	3 labels
+   * (observe0 > 1) -> 1 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "positive": P=? [F (observe0 > 1)] ...
+Result (for initial states): 0.120476370884598643629104
+Time for model checking: 0.000s.
+

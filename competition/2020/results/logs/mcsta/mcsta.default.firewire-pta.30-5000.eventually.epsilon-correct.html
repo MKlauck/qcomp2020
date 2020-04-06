@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - firewire-pta eventually 30-5000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#firewire-pta">firewire-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">delay</span> = 30, <span class="tt">T</span> = 5000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">eventually</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta firewire-pta.jani --props eventually -E delay=30,T=5000 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">118.39078450202942s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.384185791e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">firewire-pta.jani:model: info: firewire-pta is a PTA model.
+firewire-pta.jani:variables[3]: info: Expanding variable "w12" into 10 locations in automaton "wire12".
+firewire-pta.jani:variables[6]: info: Expanding variable "s1" into 9 locations in automaton "node1".
+firewire-pta.jani:variables[8]: info: Expanding variable "w21" into 10 locations in automaton "wire21".
+firewire-pta.jani:variables[11]: info: Expanding variable "s2" into 9 locations in automaton "node2".
+firewire-pta.jani: info: Need 24 bytes per state.
+firewire-pta.jani: info: Explored 4432272 states for delay=30, T=5000.
+
+Peak memory usage: 553 MB
+Analysis results for firewire-pta.jani
+Experiment delay=30, T=5000
+
++ State space exploration
+  State size:  24 bytes
+  States:      4432272
+  Transitions: 5529800
+  Branches:    5533832
+  Rate:        236111 states/s
+  Time:        20.4 s
+
++ Property eventually
+  Probability: 0.9999997615814209
+  Bounds:      [0.9999995231628418, 1]
+  Time:        97.3 s
+
+  + Optimistic value iteration
+    Total iterations:  642
+    Verif. attempts:   1
+    Verif. iterations: 1
+    Final epsilon:     1E-06
+    Time:              97.0 s
+
+Exported results to file "/out.txt".	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+</div>
+</body>
+</html>

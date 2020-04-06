@@ -1,0 +1,46 @@
+Command:	~/modest/modest convert wlan-large.jani --digital-clocks  --unroll-distrs --output converted_wlan-large.jani --overwrite --experiment K=2
+Wallclock time:	0.42456626892089844
+Return code:	0
+Output:
+
+
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.36-g691a5469c.
+
+
+########################################
+Command:	~/storm/build/bin/storm --jani converted_wlan-large.jani --janiproperty P_max --timebounded:precision 1e-3  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	8.751976251602173
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Thu Mar 19 02:41:38 2020
+Command line arguments: --jani converted_wlan-large.jani --janiproperty P_max '--timebounded:precision' 1e-3 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.041s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 8.393s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	761958
+Transitions: 	1507007
+Choices: 	1505953
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * ((bc1 = 2) | (bc2 = 2)) -> 128 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "P_max": Pmax=? [F ((bc1 = 2) | (bc2 = 2))] ...
+Result (for initial states): 0.0625
+Time for model checking: 0.271s.
+

@@ -1,0 +1,50 @@
+Command:	modes/modest modes eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5438995361328
+Return code:	0
+Output:
+
+
+
+
+eajs.6.jani:model: info: eajs.6 is an MDP model and will be simulated as an MDP.
+eajs.6.jani:variables[12]: info: Expanding variable "loc_1" into 3 locations in automaton "Process_1".
+eajs.6.jani:variables[16]: info: Expanding variable "loc_2" into 3 locations in automaton "Process_2".
+eajs.6.jani:variables[18]: info: Expanding variable "user_1" into 7 locations in automaton "Resources".
+eajs.6.jani:variables[20]: info: Expanding variable "loc_3" into 3 locations in automaton "Process_3".
+eajs.6.jani:variables[22]: info: Expanding variable "loc_4" into 3 locations in automaton "Process_4".
+eajs.6.jani:variables[23]: info: Expanding variable "loc_6" into 3 locations in automaton "Process_6".
+eajs.6.jani:variables[26]: info: Expanding variable "loc_5" into 3 locations in automaton "Process_5".
+eajs.6.jani: info: Using default value of 0.95 for the confidence parameter.
+eajs.6.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 61 MB
+Analysis results for eajs.6.jani
+Experiment energy_capacity=300, B=13
+Status:          Finished
+Simulation time: 599.4 s
+
++ Property Property "ExpUtil"
+  Estimated max. value:       1.7082352941176469
+  Max. confidence interval:   [1.6740873120201702, 1.7423832762151235]
+  Runs used (best scheduler): 5100
+  Total runs used:            5572420
+  Schedulers sampled:         5000
+  Best scheduler:             1544264648
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Max. sample data
+    Mean:     1.7082352941176469
+    Variance: 1.5481180854377405
+    Skewness: 0.6327476730183286
+    Kurtosis: 3.1333047673812593
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

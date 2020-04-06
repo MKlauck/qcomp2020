@@ -1,0 +1,78 @@
+Command:	./smc.sh zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false
+Wallclock time:	79.18959665298462
+Return code:	0
+Output:
+PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Fri Mar 20 15:27:09 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams 'S:1000000;Av:10;e:0.001;d:0.05;p:0.05;post:64' -const 'N=1000,K=8,reset=false' -javamaxmem 10g
+
+Parsing the model file "zeroconf.prism"...
+
+Parsing properties file "zeroconf.props"...
+
+2 properties:
+(1) "correct_max": Pmax=? [ F (l=4&ip=1) ]
+(2) "correct_min": Pmin=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: "correct_min": Pmin=? [ F (l=4&ip=1) ]
+Model constants: reset=false,N=1000,K=8
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:1000000 Av: 10 eps: 0.001 delta: 0.05 pmin: 0.05
+TransDelta: 7.8125E-11
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {"Trials":100000,"Precision":0.020306124714318072,"PartialTransDelta":2.0833333333333335E-4,"Value":{"Upper":0.020306124714318072,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.020306124714318072]"},"GlobalTimerSecs":32.149,"AvgConf":0.7171562585191185,"StateInfos":{"num00":232,"num11":0,"numStates":417,"num01":132,"avgDist":0.37188088275540965,"numWorking":53,"numUnset":0,"numClose":232}}
+JSON: {"Trials":200000,"Precision":0.011564982433620745,"PartialTransDelta":1.984126984126984E-4,"Value":{"Upper":0.011564982433620745,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.011564982433620745]"},"GlobalTimerSecs":33.67,"AvgConf":0.6703448695300454,"StateInfos":{"num00":241,"num11":0,"numStates":431,"num01":131,"avgDist":0.3589158174473315,"numWorking":59,"numUnset":0,"numClose":241}}
+JSON: {"Trials":300000,"Precision":0.0081882580763625,"PartialTransDelta":1.893939393939394E-4,"Value":{"Upper":0.0081882580763625,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0081882580763625]"},"GlobalTimerSecs":35.159,"AvgConf":0.6708525283889123,"StateInfos":{"num00":242,"num11":0,"numStates":443,"num01":141,"avgDist":0.363998206528904,"numWorking":60,"numUnset":0,"numClose":242}}
+JSON: {"Trials":400000,"Precision":0.006461464402844569,"PartialTransDelta":1.8796992481203009E-4,"Value":{"Upper":0.006461464402844569,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.006461464402844569]"},"GlobalTimerSecs":36.64,"AvgConf":0.6559273483911285,"StateInfos":{"num00":242,"num11":0,"numStates":444,"num01":140,"avgDist":0.3603604545559689,"numWorking":62,"numUnset":0,"numClose":242}}
+JSON: {"Trials":500000,"Precision":0.005390629031154212,"PartialTransDelta":1.8656716417910448E-4,"Value":{"Upper":0.005390629031154212,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.005390629031154212]"},"GlobalTimerSecs":38.132,"AvgConf":0.637952481418501,"StateInfos":{"num00":243,"num11":0,"numStates":444,"num01":85,"avgDist":0.353383054448202,"numWorking":116,"numUnset":0,"numClose":243}}
+JSON: {"Trials":600000,"Precision":0.004643535522491931,"PartialTransDelta":1.7985611510791367E-4,"Value":{"Upper":0.004643535522491931,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.004643535522491931]"},"GlobalTimerSecs":39.604,"AvgConf":0.6605857918243767,"StateInfos":{"num00":243,"num11":0,"numStates":466,"num01":101,"avgDist":0.36847695039272543,"numWorking":122,"numUnset":0,"numClose":243}}
+JSON: {"Trials":700000,"Precision":0.004038754255194296,"PartialTransDelta":1.7857142857142857E-4,"Value":{"Upper":0.004038754255194296,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.004038754255194312]"},"GlobalTimerSecs":41.081,"AvgConf":0.6545343685828482,"StateInfos":{"num00":243,"num11":0,"numStates":470,"num01":104,"avgDist":0.36450071942010415,"numWorking":123,"numUnset":0,"numClose":243}}
+JSON: {"Trials":800000,"Precision":0.0035817569319676838,"PartialTransDelta":1.6025641025641026E-4,"Value":{"Upper":0.0035817569319676838,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.003581756931967714]"},"GlobalTimerSecs":42.57,"AvgConf":0.7220313162423545,"StateInfos":{"num00":247,"num11":0,"numStates":546,"num01":149,"avgDist":0.4399043102871965,"numWorking":150,"numUnset":0,"numClose":247}}
+JSON: {"Trials":900000,"Precision":0.0032521789952343096,"PartialTransDelta":1.6025641025641026E-4,"Value":{"Upper":0.0032521789952343096,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0032521789952343096]"},"GlobalTimerSecs":44.073,"AvgConf":0.7206399231420533,"StateInfos":{"num00":247,"num11":0,"numStates":547,"num01":149,"avgDist":0.43589886019080276,"numWorking":151,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1000000,"Precision":0.0029535949744046,"PartialTransDelta":1.524390243902439E-4,"Value":{"Upper":0.0029535949744046,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.002953594974404587]"},"GlobalTimerSecs":45.558,"AvgConf":0.7221067994884791,"StateInfos":{"num00":247,"num11":0,"numStates":566,"num01":161,"avgDist":0.4478741784525625,"numWorking":158,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1100000,"Precision":0.002713406508866983,"PartialTransDelta":1.524390243902439E-4,"Value":{"Upper":0.002713406508866983,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.002713406508866983]"},"GlobalTimerSecs":47.053,"AvgConf":0.7185252324999405,"StateInfos":{"num00":247,"num11":0,"numStates":566,"num01":160,"avgDist":0.4414200802178572,"numWorking":159,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1200000,"Precision":0.002512225115250381,"PartialTransDelta":1.524390243902439E-4,"Value":{"Upper":0.002512225115250381,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.002512225115250381]"},"GlobalTimerSecs":48.537,"AvgConf":0.7115941902440578,"StateInfos":{"num00":247,"num11":0,"numStates":566,"num01":159,"avgDist":0.436497782694989,"numWorking":160,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1300000,"Precision":0.002334597473612214,"PartialTransDelta":1.5060240963855423E-4,"Value":{"Upper":0.002334597473612214,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.002334597473612214]"},"GlobalTimerSecs":50.023,"AvgConf":0.7162120581797187,"StateInfos":{"num00":247,"num11":0,"numStates":577,"num01":166,"avgDist":0.4395193544760492,"numWorking":164,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1400000,"Precision":0.002185162747180167,"PartialTransDelta":1.497005988023952E-4,"Value":{"Upper":0.002185162747180167,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.002185162747180147]"},"GlobalTimerSecs":51.515,"AvgConf":0.7200246357347464,"StateInfos":{"num00":247,"num11":0,"numStates":583,"num01":172,"avgDist":0.44115608865962663,"numWorking":164,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1500000,"Precision":0.0020668408524259054,"PartialTransDelta":1.4792899408284024E-4,"Value":{"Upper":0.0020668408524259054,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.002066840852425886]"},"GlobalTimerSecs":53.011,"AvgConf":0.7220555729435847,"StateInfos":{"num00":247,"num11":0,"numStates":589,"num01":174,"avgDist":0.4377336697091557,"numWorking":168,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1600000,"Precision":0.0019400679263437302,"PartialTransDelta":1.4792899408284024E-4,"Value":{"Upper":0.0019400679263437302,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.001940066048137039]"},"GlobalTimerSecs":54.502,"AvgConf":0.7170724351266865,"StateInfos":{"num00":247,"num11":0,"numStates":589,"num01":167,"avgDist":0.4336600900202347,"numWorking":175,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1700000,"Precision":0.0018382522522470007,"PartialTransDelta":1.4705882352941178E-4,"Value":{"Upper":0.0018382522522470007,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0018382491454696935]"},"GlobalTimerSecs":56.002,"AvgConf":0.7173920488989335,"StateInfos":{"num00":247,"num11":0,"numStates":595,"num01":168,"avgDist":0.43485677867313105,"numWorking":180,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1800000,"Precision":0.0017413840721606437,"PartialTransDelta":1.4705882352941178E-4,"Value":{"Upper":0.0017413840721606437,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0017413811282381022]"},"GlobalTimerSecs":57.481,"AvgConf":0.7149844810086282,"StateInfos":{"num00":247,"num11":0,"numStates":595,"num01":168,"avgDist":0.4321560690665489,"numWorking":180,"numUnset":0,"numClose":247}}
+JSON: {"Trials":1900000,"Precision":0.0016560114691883587,"PartialTransDelta":1.4705882352941178E-4,"Value":{"Upper":0.0016560114691883587,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0016560050941233464]"},"GlobalTimerSecs":58.985,"AvgConf":0.7109439851033865,"StateInfos":{"num00":247,"num11":0,"numStates":595,"num01":168,"avgDist":0.4292485663421564,"numWorking":180,"numUnset":0,"numClose":247}}
+JSON: {"Trials":2000000,"Precision":0.001582619275719053,"PartialTransDelta":1.4705882352941178E-4,"Value":{"Upper":0.001582619275719053,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0015826128490782061]"},"GlobalTimerSecs":60.472,"AvgConf":0.7041019427283444,"StateInfos":{"num00":247,"num11":0,"numStates":595,"num01":168,"avgDist":0.42718729982101983,"numWorking":180,"numUnset":0,"numClose":247}}
+JSON: {"Trials":2100000,"Precision":0.0014988579479292504,"PartialTransDelta":1.4705882352941178E-4,"Value":{"Upper":0.0014988579479292504,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0014988506768039947]"},"GlobalTimerSecs":61.961,"AvgConf":0.700829317862441,"StateInfos":{"num00":247,"num11":0,"numStates":595,"num01":167,"avgDist":0.4236393855014083,"numWorking":181,"numUnset":0,"numClose":247}}
+JSON: {"Trials":2200000,"Precision":0.0014318026558484914,"PartialTransDelta":1.4124293785310735E-4,"Value":{"Upper":0.0014318026558484914,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.001431786075283389]"},"GlobalTimerSecs":63.452,"AvgConf":0.7040582636819273,"StateInfos":{"num00":251,"num11":0,"numStates":613,"num01":176,"avgDist":0.428013795611046,"numWorking":186,"numUnset":0,"numClose":251}}
+JSON: {"Trials":2300000,"Precision":0.001383194654484368,"PartialTransDelta":1.404494382022472E-4,"Value":{"Upper":0.001383194654484368,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0013831797563543915]"},"GlobalTimerSecs":64.951,"AvgConf":0.6999024260551969,"StateInfos":{"num00":254,"num11":0,"numStates":615,"num01":175,"avgDist":0.4235107376390185,"numWorking":186,"numUnset":0,"numClose":254}}
+JSON: {"Trials":2400000,"Precision":0.0013247197725132194,"PartialTransDelta":1.404494382022472E-4,"Value":{"Upper":0.0013247197725132194,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0013247013474505147]"},"GlobalTimerSecs":66.448,"AvgConf":0.69752736833497,"StateInfos":{"num00":254,"num11":0,"numStates":615,"num01":167,"avgDist":0.4200122048359434,"numWorking":194,"numUnset":0,"numClose":254}}
+JSON: {"Trials":2500000,"Precision":0.0012738744564836722,"PartialTransDelta":1.404494382022472E-4,"Value":{"Upper":0.0012738744564836722,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0012738433692523]"},"GlobalTimerSecs":67.941,"AvgConf":0.6940127590985387,"StateInfos":{"num00":254,"num11":0,"numStates":615,"num01":167,"avgDist":0.41663385819949245,"numWorking":194,"numUnset":0,"numClose":254}}
+JSON: {"Trials":2600000,"Precision":0.001220839692077487,"PartialTransDelta":1.404494382022472E-4,"Value":{"Upper":0.001220839692077487,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.001220820343239126]"},"GlobalTimerSecs":69.434,"AvgConf":0.6897464680077875,"StateInfos":{"num00":254,"num11":0,"numStates":615,"num01":167,"avgDist":0.41420206685788263,"numWorking":194,"numUnset":0,"numClose":254}}
+JSON: {"Trials":2700000,"Precision":0.0011757480527728869,"PartialTransDelta":1.404494382022472E-4,"Value":{"Upper":0.0011757480527728869,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.001175723299573456]"},"GlobalTimerSecs":70.919,"AvgConf":0.6870951776904173,"StateInfos":{"num00":254,"num11":0,"numStates":615,"num01":167,"avgDist":0.41160734486705286,"numWorking":194,"numUnset":0,"numClose":254}}
+JSON: {"Trials":2800000,"Precision":0.0011345115273072928,"PartialTransDelta":1.388888888888889E-4,"Value":{"Upper":0.0011345115273072928,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0011344867686383065]"},"GlobalTimerSecs":72.399,"AvgConf":0.6885329291071026,"StateInfos":{"num00":254,"num11":0,"numStates":623,"num01":171,"avgDist":0.4152705107704586,"numWorking":198,"numUnset":0,"numClose":254}}
+JSON: {"Trials":2900000,"Precision":0.0010929096360872644,"PartialTransDelta":1.3812154696132598E-4,"Value":{"Upper":0.0010929096360872644,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.001092883110718227]"},"GlobalTimerSecs":73.883,"AvgConf":0.6849568321636538,"StateInfos":{"num00":257,"num11":0,"numStates":627,"num01":172,"avgDist":0.4120974697328033,"numWorking":198,"numUnset":0,"numClose":257}}
+JSON: {"Trials":3000000,"Precision":0.0010576585304021037,"PartialTransDelta":1.3812154696132598E-4,"Value":{"Upper":0.0010576585304021037,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0010576265645208336]"},"GlobalTimerSecs":75.373,"AvgConf":0.6829048465499288,"StateInfos":{"num00":257,"num11":0,"numStates":627,"num01":172,"avgDist":0.4100813704131025,"numWorking":198,"numUnset":0,"numClose":257}}
+JSON: {"Trials":3100000,"Precision":0.0010226830464186757,"PartialTransDelta":1.3736263736263736E-4,"Value":{"Upper":0.0010226830464186757,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.0010226479304152251]"},"GlobalTimerSecs":76.858,"AvgConf":0.6358391296414087,"StateInfos":{"num00":304,"num11":0,"numStates":629,"num01":125,"avgDist":0.3339317847153921,"numWorking":200,"numUnset":0,"numClose":304}}
+JSON: {"Trials":3200000,"Precision":9.960478298269876E-4,"PartialTransDelta":1.3020833333333333E-4,"Value":{"Upper":9.960478298269876E-4,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;9.929319927711308E-4]"},"GlobalTimerSecs":78.339,"AvgConf":0.64113786965993,"StateInfos":{"num00":309,"num11":0,"numStates":654,"num01":145,"avgDist":0.34961567721163345,"numWorking":200,"numUnset":0,"numClose":310}}
+
+Model checking completed in 78.418 secs.
+
+Result (minimum probability): 0.0
+
+
+
+############################## Notes ##############################
+The tool result '0' is tagged as incorrect. The reference result is '322687697779/64024000322687697779' (approx. 5.040105212929839e-09) which means a relative error of '1.0' which is larger than the goal precision '0.001'.

@@ -1,0 +1,39 @@
+Command:	mcsta/modest mcsta dpm.jani --props PminQueue1Full -E N=6,C=6,TIME_BOUND=5 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
+Wallclock time:	59.566484689712524
+Return code:	0
+Output:
+
+
+
+
+dpm.jani:model: info: dpm is an MA model.
+dpm.jani: info: Need 16 bytes per state.
+dpm.jani: info: Explored 9191028 states for N=6, C=6, TIME_BOUND=5.0.
+
+Peak memory usage: 1033 MB
+Analysis results for dpm.jani
+Experiment N=6, C=6, TIME_BOUND=5.0
+
++ State space exploration
+  State size:  16 bytes
+  States:      9191028
+  Transitions: 10604874
+  Branches:    17865498
+  Rate:        209501 states/s
+  Time:        48.2 s
+
++ Property PminQueue1Full
+  Probability: 0.026966106256541608
+  Bounds:      [0.026966106256541608, 1]
+  Time:        8.9 s
+
+  + Value iteration
+    Final error: 4.608825513635347E-07
+    Iterations:  21
+    Time:        8.6 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

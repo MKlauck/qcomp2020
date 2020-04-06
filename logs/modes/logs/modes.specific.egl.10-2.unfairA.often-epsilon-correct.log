@@ -1,0 +1,32 @@
+Command:	modes/modest modes egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --unsafe --width 1e-3 --relative-width
+Wallclock time:	409.1404433250427
+Return code:	0
+Output:
+
+
+
+
+egl.jani:model: info: egl is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+egl.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 61 MB
+Analysis results for egl.jani
+Experiment N=10, L=2
+Status:          Finished
+Simulation time: 408.0 s
+
++ Property Property "unfairA"
+  Estimated probability: 0.5004535758909575
+  Runs used:             7379140
+  Run type:              MDP
+  Status:                Finished
+
+  + Error bounds
+    Statement: Adaptive: P(error > εp̂) < δ
+    ε:         0.001
+    δ:         0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

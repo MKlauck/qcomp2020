@@ -1,0 +1,18 @@
+Command:	~/storm/build/bin/storm --jani ftpp.2-2-true.jani --janiproperty Unavailability --sound --precision 5e-2  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	1800.7065534591675
+Return code:	None
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 21:28:25 2020
+Command line arguments: --jani ftpp.2-2-true.jani --janiproperty Unavailability --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.086s.
+
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+
+
+----------
+Computation aborted after 1800.7065534591675 seconds since the total time limit of 1800 seconds was exceeded.

@@ -1,0 +1,33 @@
+Command:	~/storm/build/bin/storm --prism wlan.4.prism --prop wlan.props cost_min --constants COL=0 --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	10.203178644180298
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 16:31:00 2020
+Command line arguments: --prism wlan.4.prism --prop wlan.props cost_min --constants COL=0 --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.015s.
+
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=true
+ WARN (DdPrismModelBuilder.cpp:1171): The reward model does not assign any non-zero rewards.
+Time for model construction: 0.873s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	345000 (2867 nodes)
+Transitions: 	762252 (14414 nodes)
+Choices: 	440206
+Reward Models:  cost
+Variables: 	rows: 13 meta variables (43 DD variables), columns: 13 meta variables (43 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (44 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "cost_min": R[exp]{"cost"}min=? [F ((s1 = 12) & (s2 = 12))] ...
+Result (for initial states): 7625 (approx. 7625)
+Time for model checking: 8.963s.
+

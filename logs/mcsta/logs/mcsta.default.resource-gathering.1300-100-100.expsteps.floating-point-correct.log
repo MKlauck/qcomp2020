@@ -1,0 +1,44 @@
+Command:	mcsta/modest mcsta resource-gathering.jani --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon
+Wallclock time:	170.51621913909912
+Return code:	0
+Output:
+
+
+
+
+resource-gathering.jani:model: info: resource-gathering is an MDP model.
+resource-gathering.jani: info: Need 16 bytes per state.
+resource-gathering.jani: info: Explored 958801 states for B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100.
+resource-gathering.jani:properties[1]: warning: Computing minimum expected reward in property "expsteps" without checking for zero-reward end components.
+
+Peak memory usage: 210 MB
+Analysis results for resource-gathering.jani
+Experiment B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100
+
++ State space exploration
+  State size:  16 bytes
+  States:      958801
+  Transitions: 3080401
+  Branches:    3325201
+  Rate:        93332 states/s
+  Time:        11.4 s
+
++ Property expsteps
+  Value:  1292.592592592597
+  Bounds: [1292.592592592597, infinity)
+  Time:   158.6 s
+
+  + Precomputations
+    Max. prob. 1 states:          958801
+    Time for max. prob. 1 states: 108.2 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  680
+    Time:        50.4 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

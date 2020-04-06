@@ -1,0 +1,20 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe eajs.5.jani --epsilon 1e-3 --props ExpUtil -E energy_capacity=250,B=11 --timeout 580
+Wallclock time:	580.4054434299469
+Return code:	0
+Output:
+
+
+
+
+eajs.5.jani:model: info: eajs.5 is an MDP model.
+eajs.5.jani: info: Need 21 bytes per state.
+
+Peak memory usage: 85 MB
+Analysis results for eajs.5.jani
+Experiment energy_capacity=250, B=11
+
++ Property ExpUtil
+  Value: 4
+  Time:  579.5 s
+
+

@@ -1,0 +1,52 @@
+Command:	~/storm/build/bin/storm --prism fms.prism --prop fms.props productivity --constants n=8 --prismcompat --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	120.10231924057007
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Tue Mar 17 15:40:03 2020
+Command line arguments: --prism fms.prism --prop fms.props productivity --constants n=8 --prismcompat --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.038s.
+
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Portfolio engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 98.693s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "productivity": R[exp]{"productivity"}=? [LRA] ...
+ WARN (LinearEquationSolver.cpp:140): The selected solver does not yield exact results.
+ WARN (LinearEquationSolver.cpp:140): The selected solver does not yield exact results.
+ERROR (GmmxxLinearEquationSolver.cpp:47): This linear equation solver does not support exact computations. Using unsound methods now...
+Result (for initial states): 116.658301256084413921599
+Time for model checking: 21.016s.
+
+
+############################## Notes ##############################
+Correctness of result is not checked because no reference result is available.

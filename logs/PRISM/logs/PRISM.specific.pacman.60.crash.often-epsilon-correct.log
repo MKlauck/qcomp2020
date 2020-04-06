@@ -1,0 +1,48 @@
+Command:	./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 pacman.nm pacman.props --property crash -const MAXSTEPS=60
+Wallclock time:	1800.1315925121307
+Return code:	None
+Output:
+PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 21:55:19 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 pacman.nm pacman.props --property crash -const MAXSTEPS=60
+
+Parsing model file "pacman.nm"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman 
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP 
+
+Parsing properties file "pacman.props"...
+
+1 property:
+(1) "crash": Pmin=? [ F "Crash" ]
+
+---------------------------------------------------------------------
+
+Model checking: "crash": Pmin=? [ F "Crash" ]
+Model constants: MAXSTEPS=60
+
+Building model...
+Model constants: MAXSTEPS=60
+
+Computing reachable states...
+
+Reachability (BFS): 183 iterations in 63.20 seconds (average 0.345355, setup 0.00)
+
+Time for model construction: 1680.076 seconds.
+
+Type:        MDP
+States:      38786521 (1 initial)
+Transitions: 53648196
+Choices:     48926255
+
+Transition matrix: 3640092 nodes (44 terminal), 53648196 minterms, vars: 35r/35c/9nd
+
+
+----------
+Computation aborted after 1800.1315925121307 seconds since the total time limit of 1800 seconds was exceeded.

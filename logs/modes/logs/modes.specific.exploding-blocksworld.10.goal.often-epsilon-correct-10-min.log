@@ -1,0 +1,18 @@
+Command:	modes/modest modes exploding-blocksworld.10.jani --props goal -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	2.3512842655181885
+Return code:	0
+Output:
+
+
+
+
+exploding-blocksworld.10.jani:model: info: jani_from_ppddl is an MDP model and will be simulated as an MDP.
+exploding-blocksworld.10.jani: info: Using default value of 0.95 for the confidence parameter.
+exploding-blocksworld.10.jani:model: error: Run length exceeded.
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+
+
+############################## Notes ##############################
+Unable to obtain tool result.

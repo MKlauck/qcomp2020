@@ -1,0 +1,40 @@
+Command:	modes/modest modes resource-gathering.jani --props expgold -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5507454872131
+Return code:	0
+Output:
+
+
+
+
+resource-gathering.jani:model: info: resource-gathering is an MDP model and will be simulated as an MDP.
+resource-gathering.jani: info: Using default value of 0.95 for the confidence parameter.
+resource-gathering.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 58 MB
+Analysis results for resource-gathering.jani
+Experiment B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property "expgold"
+  Estimated max. value:       0
+  Max. confidence interval:   [0, 0]
+  Runs used (best scheduler): 258460
+  Total runs used:            1258460
+  Schedulers sampled:         0
+  Best scheduler:             296478190
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Max. sample data
+    Mean: 0
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044
+
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+

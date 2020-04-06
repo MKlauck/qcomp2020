@@ -1,0 +1,41 @@
+Command:	mcsta/modest mcsta zeroconf-pta.jani --props incorrect -E T=200 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
+Wallclock time:	0.6294283866882324
+Return code:	0
+Output:
+
+
+
+
+zeroconf-pta.jani:model: info: zeroconf-pta is a PTA model.
+zeroconf-pta.jani:variables[2]: info: Expanding variable "s" into 3 locations in automaton "sender".
+zeroconf-pta.jani:variables[6]: info: Expanding variable "e" into 3 locations in automaton "environment".
+zeroconf-pta.jani: info: Need 16 bytes per state.
+zeroconf-pta.jani: info: Explored 498 states for T=200.
+
+Peak memory usage: 51 MB
+Analysis results for zeroconf-pta.jani
+Experiment T=200
+
++ State space exploration
+  State size:  16 bytes
+  States:      498
+  Transitions: 616
+  Branches:    641
+  Rate:        10826 states/s
+  Time:        0.1 s
+
++ Property incorrect
+  Probability: 0.0013015131411825561
+  Bounds:      [0.0013015131411825561, 1]
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 8.254380989889283E-07
+    Iterations:  26
+    Time:        0.0 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

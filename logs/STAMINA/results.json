@@ -1,0 +1,162 @@
+[
+	{
+		"benchmark-id": "cluster.128-2000-20.qos1",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"perl ./convert.pl cluster.props label qos1 T 2000",
+			"./stamina/stamina/bin/stamina cluster.prism newcluster.props -kappa 1e-9 -const N=128,T=2000,t=20"
+		],
+		"wallclock-time": 223.36865901947021,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.0011923795603399295",
+		"result-correct": false,
+		"absolute-error": 0.00011997692633992961,
+		"relative-error": 0.1118767546219302,
+		"notes": [
+			"The tool result '5498880147078249/4611686018427387904' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])' (approx. OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])) which means a relative error of '0.1118767546219302' which is larger than the goal precision '0.05'."
+		],
+		"log": "STAMINA.default.cluster.128-2000-20.qos1.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "majority.2100.change_state",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./stamina/stamina/bin/stamina majority.prism majority.props -const T=2100"
+		],
+		"wallclock-time": 898.7671537399292,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.054296350018928075",
+		"result-correct": true,
+		"absolute-error": 2.8430410719260113e-06,
+		"relative-error": 5.2358808882932805e-05,
+		"notes": [],
+		"log": "STAMINA.default.majority.2100.change_state.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "speed-ind.2100.change_state",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./stamina/stamina/bin/stamina speed-ind.prism speed-ind.props -const T=2100"
+		],
+		"wallclock-time": 3321.3579185009003,
+		"timeout": true,
+		"execution-error": false,
+		"result": "0.04229442089472426",
+		"result-correct": true,
+		"absolute-error": 7.698527573762881e-08,
+		"relative-error": 1.8202196407687631e-06,
+		"notes": [],
+		"log": "STAMINA.default.speed-ind.2100.change_state.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cluster.128-2000-20.qos1",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"perl ./convert.pl cluster.props label qos1 T 2000",
+			"./stamina/stamina/bin/stamina cluster.prism newcluster.props -kappa 1e-9 -const N=128,T=2000,t=20"
+		],
+		"wallclock-time": 215.83099675178528,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.0011923795603399295",
+		"result-correct": false,
+		"absolute-error": 0.00011997692633992961,
+		"relative-error": 0.1118767546219302,
+		"notes": [
+			"The tool result '5498880147078249/4611686018427387904' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])' (approx. OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])) which means a relative error of '0.1118767546219302' which is larger than the goal precision '0.001'."
+		],
+		"log": "STAMINA.default.cluster.128-2000-20.qos1.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "majority.2100.change_state",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./stamina/stamina/bin/stamina majority.prism majority.props -const T=2100"
+		],
+		"wallclock-time": 904.0696170330048,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.054296350018928075",
+		"result-correct": true,
+		"absolute-error": 2.8430410719260113e-06,
+		"relative-error": 5.2358808882932805e-05,
+		"notes": [],
+		"log": "STAMINA.default.majority.2100.change_state.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "speed-ind.2100.change_state",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./stamina/stamina/bin/stamina speed-ind.prism speed-ind.props -const T=2100"
+		],
+		"wallclock-time": 3348.3235778808594,
+		"timeout": true,
+		"execution-error": false,
+		"result": "0.04229442089472426",
+		"result-correct": true,
+		"absolute-error": 7.698527573762881e-08,
+		"relative-error": 1.8202196407687631e-06,
+		"notes": [],
+		"log": "STAMINA.default.speed-ind.2100.change_state.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "cluster.128-2000-20.qos1",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"perl ./convert.pl cluster.props label qos1 T 2000",
+			"./stamina/stamina/bin/stamina cluster.prism newcluster.props -kappa 1e-9 -const N=128,T=2000,t=20"
+		],
+		"wallclock-time": 224.8292214870453,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.0011923795603399295",
+		"result-correct": true,
+		"absolute-error": 0.00011997692633992961,
+		"relative-error": 0.1118767546219302,
+		"notes": [],
+		"log": "STAMINA.default.cluster.128-2000-20.qos1.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "majority.2100.change_state",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./stamina/stamina/bin/stamina majority.prism majority.props -const T=2100"
+		],
+		"wallclock-time": 880.5961079597473,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.054296350018928075",
+		"result-correct": true,
+		"absolute-error": 2.8430410719260113e-06,
+		"relative-error": 5.2358808882932805e-05,
+		"notes": [],
+		"log": "STAMINA.default.majority.2100.change_state.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "speed-ind.2100.change_state",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./stamina/stamina/bin/stamina speed-ind.prism speed-ind.props -const T=2100"
+		],
+		"wallclock-time": 3361.882650613785,
+		"timeout": false,
+		"execution-error": true,
+		"result": "0.04229442089472426",
+		"result-correct": true,
+		"absolute-error": 7.698527573762881e-08,
+		"relative-error": 1.8202196407687631e-06,
+		"notes": [],
+		"log": "STAMINA.default.speed-ind.2100.change_state.often-epsilon-correct-10-min.log"
+	}
+]

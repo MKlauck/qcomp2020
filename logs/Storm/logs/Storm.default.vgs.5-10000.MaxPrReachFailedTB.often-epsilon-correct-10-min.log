@@ -1,0 +1,31 @@
+Command:	~/storm/build/bin/storm-dft --dftfile vgs.5.dft --timebound 10000 --max --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 
+Wallclock time:	0.16647887229919434
+Return code:	0
+Output:
+Storm-dft 1.5.1
+
+Date: Thu Mar 19 02:25:11 2020
+Command line arguments: --dftfile vgs.5.dft --timebound 10000 --max --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	193
+Transitions: 	897
+Reward Models:  none
+State Labels: 	4 labels
+   * A0_0_dc -> 0 item(s)
+   * A0_0_failed -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.018s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.001s
+Total:		0.020s
+Result: [0.05990994823214243]
+

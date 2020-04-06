@@ -1,0 +1,8 @@
+Command:	./pet.sh reachability --precision 0.05 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=40,K=4
+Wallclock time:	1800.0985424518585
+Return code:	None
+Output:
+
+
+----------
+Computation aborted after 1800.0985424518585 seconds since the total time limit of 1800 seconds was exceeded.

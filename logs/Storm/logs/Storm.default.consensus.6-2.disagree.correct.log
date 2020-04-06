@@ -1,0 +1,54 @@
+Command:	~/storm/build/bin/storm --prism consensus.6.prism --prop consensus.props disagree --constants K=2 --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
+Wallclock time:	6.714429140090942
+Return code:	0
+Output:
+Storm 1.5.1
+
+Date: Wed Mar 18 04:40:20 2020
+Command line arguments: --prism consensus.6.prism --prop consensus.props disagree --constants K=2 --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Current working directory: /
+
+Time for model input parsing: 0.005s.
+
+Portfolio engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=true
+Time for model construction: 0.379s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	1258240 (218 nodes)
+Transitions: 	6236736 (7075 nodes)
+Choices: 	5008128
+Reward Models:  none
+Variables: 	rows: 13 meta variables (24 DD variables), columns: 13 meta variables (24 DD variables), nondeterminism: 6 meta variables (6 DD variables)
+Labels: 	6
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (25 nodes)
+   * agree
+   * all_coins_equal_0
+   * all_coins_equal_1
+   * finished
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 5.240s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5012
+Transitions: 	27185
+Choices: 	21741
+Reward Models:  none
+State Labels: 	6 labels
+   * (((((coin1 = coin2) & (coin2 = coin3)) & (coin3 = coin4)) & (coin4 = coin5)) & (coin5 = coin6)) -> 1121 item(s)
+   * ((((((pc1 = 3) & (pc2 = 3)) & (pc3 = 3)) & (pc4 = 3)) & (pc5 = 3)) & (pc6 = 3)) -> 1 item(s)
+   * finished -> 1 item(s)
+   * agree -> 1121 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "disagree": Pmax=? [F ("finished" & !("agree"))] ...
+Result (for initial states): 37101798760906709/102027593703751680 (approx. 0.3636447496)
+Time for model checking: 0.812s.
+

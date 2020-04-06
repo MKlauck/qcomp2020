@@ -1,0 +1,11 @@
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.05  crowds.jani
+Wallclock time:	72.05869269371033
+Return code:	0
+Output:
+Total time: 71.806 s.
+Property positive:
+point estimate: 0.11873604713053497,
+var: 3.9762363357866684,
+CI: [0.11715412960798006, 0.12031796465308987] = 0.11873604713053497 +/- 0.0015819175225549043
+
+

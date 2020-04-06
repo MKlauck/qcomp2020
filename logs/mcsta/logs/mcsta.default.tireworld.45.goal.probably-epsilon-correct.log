@@ -1,0 +1,40 @@
+Command:	mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
+Wallclock time:	624.9766108989716
+Return code:	0
+Output:
+
+
+
+
+tireworld.45.jani:model: info: jani_from_ppddl is an MDP model.
+tireworld.45.jani: info: Need 24 bytes per state.
+tireworld.45.jani: info: Explored 46137256 states.
+
+Peak memory usage: 7180 MB
+Analysis results for tireworld.45.jani
+
++ State space exploration
+  State size:  24 bytes
+  States:      46137256
+  Transitions: 105905930
+  Branches:    192413242
+  Rate:        104121 states/s
+  Time:        490.3 s
+
++ Property goal
+  Probability: 0.9362624566555023
+  Bounds:      [0.9359999542236328, 0.9365249590873719]
+  Time:        133.3 s
+
+  + Optimistic value iteration
+    Total iterations:  27
+    Verif. attempts:   2
+    Verif. iterations: 11
+    Final epsilon:     0.007634541262166772
+    Time:              130.5 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

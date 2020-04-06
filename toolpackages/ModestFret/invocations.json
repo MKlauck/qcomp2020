@@ -1,0 +1,498 @@
+[
+    {
+        "benchmark-id": "beb.4-8-7.LineSeized",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe beb.4-8.jani --epsilon 1e-3 -E N=7 --props LineSeized"
+        ]
+    },
+    {
+        "benchmark-id": "beb.5-16-15.LineSeized",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe beb.5-16.jani --epsilon 1e-3 -E N=15 --props LineSeized"
+        ]
+    },
+    {
+        "benchmark-id": "consensus.4-4.disagree",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.4.jani --epsilon 1e-3 -E K=4 --props disagree"
+        ]
+    },
+    {
+        "benchmark-id": "consensus.4-4.steps_min",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.4.jani --epsilon 1e-3 -E K=4 --props steps_min"
+        ]
+    },
+    {
+        "benchmark-id": "consensus.6-2.disagree",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.6.jani --epsilon 1e-3 -E K=2 --props disagree"
+        ]
+    },
+    {
+        "benchmark-id": "consensus.6-2.steps_min",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.6.jani --epsilon 1e-3 -E K=2 --props steps_min"
+        ]
+    },
+    {
+        "benchmark-id": "csma.3-4.time_max",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe csma.3-4.jani --epsilon 1e-3 --props time_max "
+        ]
+    },
+    {
+        "benchmark-id": "csma.4-2.time_max",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe csma.4-2.jani --epsilon 1e-3 --props time_max "
+        ]
+    },
+    {
+		"benchmark-id": "eajs.5-250-11.ExpUtil",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe eajs.5.jani --epsilon 1e-3 --props ExpUtil -E energy_capacity=250,B=11"
+		]
+    },
+    {
+		"benchmark-id": "eajs.6-300-13.ExpUtil",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe eajs.6.jani --epsilon 1e-3 --props ExpUtil -E energy_capacity=300,B=13"
+		]
+	},
+	{
+		"benchmark-id": "echoring.100.MaxOffline1",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe echoring.jani --epsilon 1e-3 -E ITERATIONS=100 --props MaxOffline1"
+		]
+	},
+	{
+		"benchmark-id": "elevators.b-11-9.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe elevators.b-11-9.jani --epsilon 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "exploding-blocksworld.10.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe exploding-blocksworld.10.jani --epsilon 1e-3"
+		]
+    },
+    {
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pacman.jani --epsilon 1e-3 --props crash -E MAXSTEPS=100"
+		]
+    },
+    {
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pacman.jani --epsilon 1e-3 --props crash -E MAXSTEPS=60"
+		]
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pnueli-zuck.5.jani --epsilon 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "pnueli-zuck.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pnueli-zuck.10.jani --epsilon 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "rabin.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe rabin.10.jani --epsilon 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "rectangle-tireworld.11.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe rectangle-tireworld.11.jani --epsilon 1e-3"
+		]
+    },
+	{
+		"benchmark-id": "resource-gathering.1300-100-100.expsteps",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe resource-gathering.jani --epsilon 1e-3 --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100"
+		]
+	},
+	{
+		"benchmark-id": "tireworld.45.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe tireworld.45.jani --epsilon 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "triangle-tireworld.441.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe triangle-tireworld.441.jani --epsilon 1e-3"
+		]
+    },
+    {
+		"benchmark-id": "wlan.4-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.4.jani --epsilon 1e-3 --props sent -E COL=0"
+		]
+    },
+    {
+		"benchmark-id": "wlan.4-0.cost_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.4.jani --epsilon 1e-3 --props cost_min -E COL=0"
+		]
+    },
+    {
+		"benchmark-id": "wlan.5-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.5.jani --epsilon 1e-3 --props sent -E COL=0"
+		]
+    },
+    {
+		"benchmark-id": "wlan.5-0.cost_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.5.jani --epsilon 1e-3 --props cost_min -E COL=0"
+		]
+    },
+    {
+		"benchmark-id": "wlan.6-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.6.jani --epsilon 1e-3 --props sent -E COL=0"
+		]
+    },
+    {
+		"benchmark-id": "wlan.6-0.cost_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.6.jani --epsilon 1e-3 --props cost_min -E COL=0"
+		]
+	},
+	{
+		"benchmark-id": "zenotravel.4-2-2.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe zenotravel.4-2-2.jani --epsilon 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe zeroconf.jani --epsilon 1e-3 -E N=1000,K=8,reset=false --props correct_max"
+		]
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe zeroconf.jani --epsilon 1e-3 -E N=1000,K=8,reset=false --props correct_min"
+		]
+    },
+    {
+        "benchmark-id": "beb.4-8-7.LineSeized",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe beb.4-8.jani --epsilon 1e-3 -E N=7 --props LineSeized --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "beb.5-16-15.LineSeized",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe beb.5-16.jani --epsilon 1e-3 -E N=15 --props LineSeized --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "consensus.4-4.disagree",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.4.jani --epsilon 1e-3 -E K=4 --props disagree --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "consensus.4-4.steps_min",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.4.jani --epsilon 1e-3 -E K=4 --props steps_min --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "consensus.6-2.disagree",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.6.jani --epsilon 1e-3 -E K=2 --props disagree --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "consensus.6-2.steps_min",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe consensus.6.jani --epsilon 1e-3 -E K=2 --props steps_min --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "csma.3-4.time_max",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe csma.3-4.jani --epsilon 1e-3 --props time_max  --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "csma.4-2.time_max",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe csma.4-2.jani --epsilon 1e-3 --props time_max  --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "eajs.5-250-11.ExpUtil",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe eajs.5.jani --epsilon 1e-3 --props ExpUtil -E energy_capacity=250,B=11 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "eajs.6-300-13.ExpUtil",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe eajs.6.jani --epsilon 1e-3 --props ExpUtil -E energy_capacity=300,B=13 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "echoring.100.MaxOffline1",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe echoring.jani --epsilon 1e-3 -E ITERATIONS=100 --props MaxOffline1 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "elevators.b-11-9.goal",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe elevators.b-11-9.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "exploding-blocksworld.10.goal",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe exploding-blocksworld.10.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "pacman.100.crash",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pacman.jani --epsilon 1e-3 --props crash -E MAXSTEPS=100 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "pacman.60.crash",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pacman.jani --epsilon 1e-3 --props crash -E MAXSTEPS=60 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "pnueli-zuck.5.live",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pnueli-zuck.5.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "pnueli-zuck.10.live",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe pnueli-zuck.10.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "rabin.10.live",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe rabin.10.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "rectangle-tireworld.11.goal",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe rectangle-tireworld.11.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "resource-gathering.1300-100-100.expsteps",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe resource-gathering.jani --epsilon 1e-3 --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "tireworld.45.goal",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe tireworld.45.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "triangle-tireworld.441.goal",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe triangle-tireworld.441.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "wlan.4-0.sent",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.4.jani --epsilon 1e-3 --props sent -E COL=0 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "wlan.4-0.cost_min",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.4.jani --epsilon 1e-3 --props cost_min -E COL=0 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "wlan.5-0.sent",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.5.jani --epsilon 1e-3 --props sent -E COL=0 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "wlan.5-0.cost_min",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.5.jani --epsilon 1e-3 --props cost_min -E COL=0 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "wlan.6-0.sent",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.6.jani --epsilon 1e-3 --props sent -E COL=0 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "wlan.6-0.cost_min",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.6.jani --epsilon 1e-3 --props cost_min -E COL=0 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "zenotravel.4-2-2.goal",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe zenotravel.4-2-2.jani --epsilon 1e-3 --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "zeroconf.1000-8-false.correct_max",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe zeroconf.jani --epsilon 1e-3 -E N=1000,K=8,reset=false --props correct_max --timeout 580"
+        ]
+    },
+    {
+        "benchmark-id": "zeroconf.1000-8-false.correct_min",
+        "invocation-id": "default",
+        "invocation-track-id": "often-epsilon-correct-10-min",
+        "commands": [
+            "mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe zeroconf.jani --epsilon 1e-3 -E N=1000,K=8,reset=false --props correct_min --timeout 580"
+        ]
+    }
+]

@@ -1,0 +1,48 @@
+Command:	mcsta/modest mcsta wlan.5.jani --props cost_min -E COL=0 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
+Wallclock time:	141.8048164844513
+Return code:	0
+Output:
+
+
+
+
+wlan.5.jani:model: info: wlan.5 is an MDP model.
+wlan.5.jani:variables[7]: info: Expanding variable "s1" into 12 locations in automaton "station1".
+wlan.5.jani:variables[12]: info: Expanding variable "s2" into 12 locations in automaton "station2".
+wlan.5.jani: info: Need 16 bytes per state.
+wlan.5.jani: info: Explored 1295218 states for COL=0.
+wlan.5.jani:properties[2]: warning: Computing minimum expected reward in property "cost_min" without checking for zero-reward end components.
+
+Peak memory usage: 240 MB
+Analysis results for wlan.5.jani
+Experiment COL=0
+
++ State space exploration
+  State size:  16 bytes
+  States:      1295218
+  Transitions: 1646074
+  Branches:    2929960
+  Rate:        184952 states/s
+  Time:        7.8 s
+
++ Property cost_min
+  Value:  7625.003390625
+  Bounds: [7625, 7625.00678125]
+  Time:   133.1 s
+
+  + Precomputations
+    Max. prob. 1 states:          1295218
+    Time for max. prob. 1 states: 104.2 s
+
+  + Optimistic value iteration
+    Total iterations:  526
+    Verif. attempts:   1
+    Verif. iterations: 2
+    Final epsilon:     1E-06
+    Time:              28.8 s
+
+Exported results to file "/out.txt".
+
+##############################Output to stderr##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+

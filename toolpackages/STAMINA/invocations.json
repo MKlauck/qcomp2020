@@ -1,0 +1,77 @@
+[
+	{
+		"benchmark-id":"cluster.128-2000-20.qos1",
+		"invocation-id":"default",
+		"invocation-track-id":"probably-epsilon-correct",
+		"commands":[
+		 "perl ./convert.pl cluster.props label qos1 T 2000",
+		   "./stamina/stamina/bin/stamina cluster.prism newcluster.props -kappa 1e-9 -const N=128,T=2000,t=20"
+		]
+	 },
+	{
+		"benchmark-id":"majority.2100.change_state",
+		"invocation-id":"default",
+		"invocation-track-id":"probably-epsilon-correct",
+		"commands":[
+		 "./stamina/stamina/bin/stamina majority.prism majority.props -const T=2100"
+		]
+	 },
+	{
+		"benchmark-id":"speed-ind.2100.change_state",
+		"invocation-id":"default",
+		"invocation-track-id":"probably-epsilon-correct",
+		"commands":[
+		 "./stamina/stamina/bin/stamina speed-ind.prism speed-ind.props -const T=2100"
+		]
+	 },
+    {
+        "benchmark-id":"cluster.128-2000-20.qos1",
+        "invocation-id":"default",
+        "invocation-track-id":"often-epsilon-correct",
+        "commands":[
+         "perl ./convert.pl cluster.props label qos1 T 2000",
+           "./stamina/stamina/bin/stamina cluster.prism newcluster.props -kappa 1e-9 -const N=128,T=2000,t=20"
+        ]
+     },
+    {
+        "benchmark-id":"majority.2100.change_state",
+        "invocation-id":"default",
+        "invocation-track-id":"often-epsilon-correct",
+        "commands":[
+         "./stamina/stamina/bin/stamina majority.prism majority.props -const T=2100"
+        ]
+     },
+    {
+        "benchmark-id":"speed-ind.2100.change_state",
+        "invocation-id":"default",
+        "invocation-track-id":"often-epsilon-correct",
+        "commands":[
+         "./stamina/stamina/bin/stamina speed-ind.prism speed-ind.props -const T=2100"
+        ]
+     },
+	  {
+        "benchmark-id":"cluster.128-2000-20.qos1",
+        "invocation-id":"default",
+        "invocation-track-id":"often-epsilon-correct-10-min",
+        "commands":[
+         "perl ./convert.pl cluster.props label qos1 T 2000",
+           "./stamina/stamina/bin/stamina cluster.prism newcluster.props -kappa 1e-9 -const N=128,T=2000,t=20"
+        ]
+     },
+    {
+        "benchmark-id":"majority.2100.change_state",
+        "invocation-id":"default",
+        "invocation-track-id":"often-epsilon-correct-10-min",
+        "commands":[
+         "./stamina/stamina/bin/stamina majority.prism majority.props -const T=2100"
+        ]
+     },
+    {
+        "benchmark-id":"speed-ind.2100.change_state",
+        "invocation-id":"default",
+        "invocation-track-id":"often-epsilon-correct-10-min",
+        "commands":[
+         "./stamina/stamina/bin/stamina speed-ind.prism speed-ind.props -const T=2100"
+        ]
+    }
+]

@@ -1,0 +1,23 @@
+Command:	mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe zeroconf.jani --epsilon 1e-3 -E N=1000,K=8,reset=false --props correct_min
+Wallclock time:	1.5410301685333252
+Return code:	0
+Output:
+
+
+
+
+zeroconf.jani:model: info: zeroconf is an MDP model.
+zeroconf.jani: info: Need 24 bytes per state.
+
+Peak memory usage: 53 MB
+Analysis results for zeroconf.jani
+Experiment N=1000, K=8, reset=False
+
++ Property correct_min
+  Probability: 1.53180217110498E-09
+  Time:        0.4 s
+
+
+
+############################## Notes ##############################
+The tool result '76590108555249/50000000000000000000000' is tagged as incorrect. The reference result is '322687697779/64024000322687697779' (approx. 5.040105212929839e-09) which means a relative error of '0.6960773423587847' which is larger than the goal precision '0.001'.
