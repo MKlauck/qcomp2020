@@ -18,14 +18,14 @@ def save_json(json_data, path : str):
     with open(path, 'w') as json_file:
         json.dump(json_data, json_file, ensure_ascii=False, indent='\t')
 
-def load_csv(path : str):
-    with open(path, 'r') as csv_file:
-        return list(csv.reader(csv_file, delimiter='\t'))
-
-def save_csv(csv_data, path : str):
-    with open(path, 'w') as csv_file:
-        writer = csv.writer(csv_file, delimiter='\t')
-        writer.writerows(csv_data)
+def load_csv(path : str, delim='\t'):
+	    with open(path, 'r') as csv_file:
+	        return list(csv.reader(csv_file, delimiter=delim))
+	
+def save_csv(csv_data, path : str, delim='\t'):
+	with open(path, 'w') as csv_file:
+	    writer = csv.writer(csv_file, delimiter=delim)
+	    writer.writerows(csv_data)
 
 def ensure_directory(path : str):
     if not os.path.exists(path):
@@ -172,7 +172,7 @@ def get_error(relative : bool, reference_value, result_value):
     else:
         return diff
 
-def is_result_correct(reference, result, track_id):
+def is_result_correct(settings, reference, result, track_id):
     if is_number_or_interval(reference) != is_number(result):
         return False
     if is_number_or_interval(reference):
@@ -210,7 +210,10 @@ class Progressbar(object):
     def print_progress(self, value):
         now = time.time()
         if now - self.last_time_printed >= self.delay or value == self.max_value or value == 0:
-            progress = (value * self.width) // self.max_value
+            if (self.max_value == 0):
+                progress = self.width
+            else:
+                progress = (value * self.width) // self.max_value
             sys.stdout.write("\r{}: [{}{}] {}/{} ".format(self.label, '#'*progress, ' '*(self.width-progress), value, self.max_value))
             sys.stdout.flush()
             self.last_time_printed = now
@@ -218,7 +221,11 @@ class Progressbar(object):
         return False
 
 class Settings(object):
-    def __init__(self):
+    def __init__(self, toolpackage_path = None):
+        if toolpackage_path is None:
+            self.path_to_tool = os.path.realpath(os.curdir)
+        else:
+            self.path_to_tool = toolpackage_path
         self.settings_filename = "settings.json"
         self.json_data = OrderedDict()
         if os.path.isfile(self.settings_filename):
@@ -228,6 +235,7 @@ class Settings(object):
 
     def set_defaults(self):
         set_an_option = False
+        # for tool execution
         if not "benchmarks-directory" in self.json_data:
             self.json_data["benchmarks-directory"] = os.path.realpath(os.path.join(sys.path[0], "../benchmarks/"))
             set_an_option = True
@@ -273,8 +281,21 @@ class Settings(object):
         if not "clean-up-dirs" in self.json_data:
             self.json_data["clean-up-dirs"] = [os.path.realpath(os.curdir), "/tmp/"]
             set_an_option = True
+        # for producing results table and plots
+        if not "logs-directory-name" in self.json_data:
+            self.json_data["logs-directory-name"] = "logs/"
+            set_an_option = True
+        if not "invocations-file-name" in self.json_data:
+            self.json_data["invocations-file-name"] = "invocations.json"
+            set_an_option = True
+        if not "toolscript-file-name" in self.json_data:
+            self.json_data["toolscript-file-name"] = "tool.py"
+            set_an_option = True
+        if not "results-file-name" in self.json_data:
+            self.json_data["results-file-name"] = "results.json"
         return set_an_option
 
+    # for tool execution
     def benchmark_dir(self):
         """ Retrieves the directory where the qcomp benchmarks lie. """
         return self.json_data["benchmarks-directory"]
@@ -338,6 +359,24 @@ class Settings(object):
     def save(self):
         save_json(self.json_data, self.settings_filename)
         print("Settings saved to {}.".format(os.path.realpath(self.settings_filename)))
+
+    # for producing results table and plots
+    def logs_dir_name(self):
+	        """ Retrieves the directory in which the tool logs are stored. """
+	        return os.path.join(self.path_to_tool, self.json_data["logs-directory-name"])
+	
+    def invocations_filename_name(self):
+        """ Retrieves the filename to which the tool invocations are stored (and read from). """
+        return os.path.join(self.path_to_tool, self.json_data["invocations-file-name"])
+
+    def toolscript_filename_name(self):
+        """ Retrieves the name of the tool specific script. """
+        return os.path.join(self.path_to_tool, self.json_data["toolscript-file-name"])
+
+    def results_filename_name(self):
+        """ Retrieves the filename to which the tool execution results are stored (and read from). """
+        return os.path.join(self.path_to_tool, self.json_data["results-file-name"])
+	
 
 settings = Settings()
 

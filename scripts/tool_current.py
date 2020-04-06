@@ -1,13 +1,26 @@
 from benchmark import Benchmark
 from invocation import Invocation
 from execution import Execution
+from utility import *
+from shutil import copyfile,move
+import sys, importlib
+import tmptool
 
-def get_name():
-    """ should return the name of the tool as listed on http://qcomp.org/competition/2020/"""
-    raise AssertionError("tmptool not initialized.")
+def load(settings):
+    try:
+        move(os.path.join(sys.path[0], "tmptool.py"), os.path.join(sys.path[0], "tmptool2.py"))
+        copyfile(settings.toolscript_filename_name(), os.path.join(sys.path[0], "tmptool.py"))
+        importlib.reload(sys.modules["tmptool"])
+    finally:
+        if os.path.exists(os.path.join(sys.path[0], "tmptool2.py")):
+            move(os.path.join(sys.path[0], "tmptool2.py"), os.path.join(sys.path[0], "tmptool.py"))
+    
+def get_name(settings):
+    """ should return the name of the tool as listed on http://qcomp.org/competition/2019/"""
+    load(settings)
+    return tmptool.get_name()
 
-
-def get_invocations(benchmark : Benchmark):
+def get_invocations(settings, benchmark : Benchmark):
     """
     Returns a list of invocations that invoke the tool for the given benchmark.
     It can be assumed that the current directory is the directory from which execute_invocations.py is executed.
@@ -18,11 +31,11 @@ def get_invocations(benchmark : Benchmark):
     If this benchmark is not supported, an empty list has to be returned.
     For testing purposes, the script also allows to return more than two invocations.
     """
-    raise AssertionError("tmptool not initialized.")
+    load(settings)
+    return tmptool.get_invocations(benchmark)
 
 
-
-def get_result(benchmark : Benchmark, execution : Execution):
+def get_result(settings, benchmark : Benchmark, execution : Execution):
     """
     Returns the result of the given execution on the given benchmark.
     This method is called after executing the commands of the associated invocation.
@@ -30,5 +43,5 @@ def get_result(benchmark : Benchmark, execution : Execution):
     read the result from a file that the tool has produced.
     The returned value should be either 'true', 'false', a decimal number, or a fraction.
     """
-    raise AssertionError("tmptool not initialized.")
-
+    load(settings)
+    return tmptool.get_result(benchmark, execution)

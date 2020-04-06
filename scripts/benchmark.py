@@ -6,13 +6,14 @@ class Benchmark(object):
         * an instantiation of file and open parameters
         * a single property
     """
-    def __init__(self, index_json, model_file_index, open_parameter_index, property_index):
+    def __init__(self, settings, index_json, model_file_index, open_parameter_index, property_index):
         """
         :param index_json: The json structure of the 'index.json' file of the model
         :param model_file_index: The index of the model file entry within the "files" entry in the json structure
         :param open_parameter_index: The index of the open parameter instantiation within the "open-parameter-values" entry of the file entry
         :param property_index: The index of the property within the "properties" entry of the json structure
         """
+        self.settings = settings
         self.index_json = index_json
         self.model_file_index = model_file_index
         self.open_parameter_index = open_parameter_index
@@ -211,7 +212,7 @@ class Benchmark(object):
         return self.get_property_type() == "steady-state-prob"
 
     def get_directory(self):
-        return os.path.realpath(os.path.join(settings.benchmark_dir(), "{}/{}".format(self.get_model_type(), self.get_model_short_name())))
+        return os.path.realpath(os.path.join(self.settings.benchmark_dir(), "{}/{}".format(self.get_model_type(), self.get_model_short_name())))
 
     def get_janifilename(self):
         return self.index_json["files"][self.model_file_index]["file"]
@@ -472,7 +473,7 @@ class Benchmark(object):
 
         self.get_max_num_states()
 
-def get_all_benchmarks(benchmark_directories):
+def get_all_benchmarks(settings, benchmark_directories):
     """ Creates a list of benchmark objects from the given benchmark directories. """
     dirname = os.path.curdir
     if os.path.isfile(benchmark_directories):
@@ -506,10 +507,10 @@ def get_all_benchmarks(benchmark_directories):
                 else:
                     open_parameter_indices = range(len(file_json["open-parameter-values"]))
                 for open_parameter_index in open_parameter_indices:
-                    benchmarks.append(Benchmark(index_json, model_file_index, open_parameter_index, property_index))
+                    benchmarks.append(Benchmark(settings, index_json, model_file_index, open_parameter_index, property_index))
     return benchmarks
 
-def get_benchmark_from_id(id):
+def get_benchmark_from_id(settings, id):
     """ Returns the benchmark object associated with the given identifier """
     id_info = id.split(".")
     short_name = id_info[0]
@@ -551,7 +552,7 @@ def get_benchmark_from_id(id):
                             if "open-parameter-values" in file_info:
                                 open_param_values = file_info["open-parameter-values"]
                             if len(open_param_values) == 0:
-                                return Benchmark(model_index_json, model_file_index, 0, property_index)
+                                return Benchmark(settings, model_index_json, model_file_index, 0, property_index)
                             for open_parameter_index in range(len(open_param_values)):
                                 correct_open_pars = True
                                 if "values" in open_param_values[open_parameter_index]:
@@ -561,7 +562,7 @@ def get_benchmark_from_id(id):
                                             correct_open_pars = False
                                             break
                                 if correct_open_pars:
-                                    return Benchmark(model_index_json, model_file_index, open_parameter_index, property_index)
+                                    return Benchmark(settings, model_index_json, model_file_index, open_parameter_index, property_index)
                     raise LookupError("Unable to find parameter definition '{}' for model '{}'.".format(parameter_definition, short_name))
             raise LookupError("Unable to find property '{}' for model '{}'.".format(property_name, short_name))
     raise LookupError("Unable to find benchmark with name '{}'.".format(short_name))
