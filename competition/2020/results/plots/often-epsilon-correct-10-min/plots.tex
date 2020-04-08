@@ -1,116 +1,153 @@
 \documentclass{article}
-\usepackage{pgfplots}
-\usepackage{pgfplotstable}
-\usepackage{tikz}
-\usepackage{xifthen}
-\newcommand{\tool}[1]{\textsc{#1}}
+    \usepackage{pgfplots}
+    \usepackage{pgfplotstable}
+    \usepackage{tikz}
+    \usepackage{xifthen}
+    \newcommand{\tool}[1]{\textsc{#1}}
 
-% Quantile plots
-\newlength{\quantileplotwidth}
-\newlength{\quantileplotheight}
-\setlength{\quantileplotwidth}{\linewidth}
-\setlength{\quantileplotheight}{9cm}
-\newcommand{\quantileplotlegendpos}{south east}
-\tikzset{tool/.code={%
-		\ifthenelse{\equal{#1}{mcsta}}{\tikzset{red, mark=x, mark options={thick}}}{}%
-		\ifthenelse{\equal{#1}{Storm}}{\tikzset{blue,mark=+, mark options={thick}}}{}%
-		\ifthenelse{\equal{#1}{ePMC}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
-		\ifthenelse{\equal{#1}{PRISM}}{\tikzset{orange, mark=asterisk}}{}%
-		\ifthenelse{\equal{#1}{PRISM-TUM}}{\tikzset{teal, mark=star}}{}%
-		\ifthenelse{\equal{#1}{modes}}{\tikzset{magenta, mark=square*,  mark size=1.5pt}}{}%
-		\ifthenelse{\equal{#1}{DFTRES}}{\tikzset{yellow,mark=diamond*}}{}%
-		\ifthenelse{\equal{#1}{probFD}}{\tikzset{gray, mark=pentagon*}}{}%
-		\ifthenelse{\equal{#1}{ModestFRETpiLRTDP}}{\tikzset{black, mark=triangle*}}{}%
-}}
-\newcommand{\quantileplot}[2]{%
-\begin{tikzpicture}
-	\begin{axis}[
-		width=\quantileplotwidth,
-		height=\quantileplotheight,
-		xmin=1,
-		ymax=2300,
-%		ymin=0.5,
-		ymin=1,
-		ymode=log,
-		axis x line=bottom,
-		axis y line=left,
-		ytick= {1, 6, 60, 600, 1200, 1800 },
-		yticklabels={$\le$1, 6, 60, 600, 1200, 1800},
-		xlabel=solved instances,
-		ylabel=time (in s),
-		yticklabel style={font=\scriptsize},
-		xticklabel style={rotate=290, anchor=west, font=\scriptsize},
-		ylabel style={yshift=-0cm},
-		legend pos=\quantileplotlegendpos,
-		legend style={font=\scriptsize},
-	]
-	\foreach \tool in {#2}{%
-		\edef\loopbody{
-			\noexpand\addplot[tool=\tool] table [x=n,y=\tool shifted, col sep=semicolon] {#1};
-		}
-		\loopbody
-	}
-	\draw[densely dotted] (axis cs: 0,1) -- (axis cs: 100,1);
-	\legend{#2}
-	\end{axis}
-\end{tikzpicture}%
-}
+    %Scatter plots
+    \newlength{\scatterplotsize}
+    \setlength{\scatterplotsize}{8cm}
+    \newcommand{\scatterplot}[2]{%
+    \begin{tikzpicture}
+        \begin{axis}[
+                width=\scatterplotsize,
+                height=\scatterplotsize,
+                axis equal image,
+                xmin=-0.04,
+                ymin=-0.04,
+                ymax=100000,
+                xmax=100000,  %10000000
+                xmode=log,
+                ymode=log,
+                axis x line=bottom,
+                axis y line=left,
+                xtick={1E-7, 1E-6, 1E-5, 1E-4,10,100,1000,10000},
+                xticklabels={1e-7, 1e-6, 1e-5, 1e-4,10,100,1000,10000},
+                extra x ticks = {80000}, %800000,8000000}
+                extra x tick labels = {n/a},
+                extra x tick style = {grid = major},
+                ytick={1E-7, 1E-6, 1E-5, 1E-4,10,100,1000,10000},
+                yticklabels={1e-7, 1e-6, 1e-5, 1e-4,10,100,1000,10000},
+                extra y ticks = {80000},
+                extra y tick labels = {n/a},
+                extra y tick style = {grid = major},
+                xlabel=#2,
+                xlabel style={yshift=-0.1cm},
+                ylabel=Other tools (best),
+                ylabel style={yshift=-0.2cm},
+                yticklabel style={font=\scriptsize},
+                xticklabel style={rotate=290,anchor=west,font=\scriptsize},
+                legend pos=north west,
+                legend columns=-1,
+                legend style={font=\scriptsize,yshift=0.8cm,xshift=1cm}
+            ]
+            \addplot[
+                scatter,
+                only marks,
+                scatter/classes={
+                    dtmc={mark=square,blue},
+                    mdp={mark=triangle,red},
+                    ctmc={mark=diamond,orange},
+                    ma={mark=pentagon,teal},
+                    pta={mark=o,green!70!black}
+                },
+                scatter src=explicit symbolic
+                ]%
+                table [col sep=semicolon,x=#2,y=other,meta=Type] {#1};
+            \legend{DTMC, MDP, CTMC, MA, PTA}
+            \addplot[no marks] coordinates {(1E-20,1E-20) (100000,100000)};
+            \addplot[no marks, densely dotted] coordinates {(1E-20,1E-19) (10000,100000)};
+        \end{axis}
+    \end{tikzpicture}
+    }
 
-%Scatter plots
-\newlength{\scatterplotsize}
-\setlength{\scatterplotsize}{8cm}
-\newcommand{\scatterplot}[2]{%
-  \begin{tikzpicture}
-	\begin{axis}[
-			width=\scatterplotsize,
-			height=\scatterplotsize,
-			axis equal image,
-			xmin=0.04,
-			ymin=0.04,
-			ymax=6000,
-			xmax=25000,
-			xmode=log,
-			ymode=log,
-			axis x line=bottom,
-			axis y line=left,
-			xtick={1,6,60,600,1200,1800},
-			xticklabels={1,6,60,600,1200,1800},
-			extra x ticks = {4000,8000,16000},
-			extra x tick labels = {TO,ERR,INC},
-			extra x tick style = {grid = major},
-			ytick={1,6,60,600,1200,1800},
-			yticklabels={1,6,60,600,1200,1800},
-			extra y ticks = {4000},
-			extra y tick labels = {n/a},
-			extra y tick style = {grid = major},
-			xlabel=#2,
-			xlabel style={yshift=0cm},
-			ylabel=Other tools (best),
-			ylabel style={yshift=-0.4cm},
-			yticklabel style={font=\scriptsize},
-			xticklabel style={rotate=290,anchor=west,font=\scriptsize},
-			legend pos=north west,
-			legend columns=-1,
-			legend style={font=\scriptsize,yshift=0.7cm,xshift=1cm}
-		]
-		\addplot[
-			scatter,
-			only marks,
-			scatter/classes={
-				dtmc={mark=square,blue},
-				mdp={mark=triangle,red},
-				ctmc={mark=diamond,orange},
-				ma={mark=pentagon,teal},
-				pta={mark=o,green!70!black}
-			},
-			scatter src=explicit symbolic
-			]%
-			table [col sep=semicolon,x=#2,y=other,meta=Type] {#1};
-		\legend{DTMC, MDP, CTMC, MA, PTA}
-		\addplot[no marks] coordinates {(0.01,0.01) (3600,3600) };
-		\addplot[no marks, densely dotted] coordinates {(0.01,0.1) (360,3600) };
-	\end{axis}
-\end{tikzpicture}
-}
+    \begin{document}
+            \begin{center}
+                Scatter Plot for Storm with default settings (n=96).
+                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, most precise on 70/96)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for Storm with specific settings (n=96).
+                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, most precise on 70/96)}
+            \end{center}
+                \pagebreak
 
-\begin{document}
+            \begin{center}
+                Scatter Plot for PRISM with default settings (n=0).
+                \scatterplot{scatterPRISM.csv}{PRISM}{\tool{PRISM}  (default, most precise on 0/0)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for PRISM with specific settings (n=0).
+                \scatterplot{scatterspecificPRISM.csv}{PRISM}{\tool{PRISM}  (specific, most precise on 0/0)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for PRISM-TUM with default settings (n=24).
+                \scatterplot{scatterPRISM-TUM.csv}{PRISM-TUM}{\tool{PRISM-TUM}  (default, most precise on 3/24)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for PRISM-TUM with specific settings (n=24).
+                \scatterplot{scatterspecificPRISM-TUM.csv}{PRISM-TUM}{\tool{PRISM-TUM}  (specific, most precise on 3/24)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for mcsta with default settings (n=69).
+                \scatterplot{scattermcsta.csv}{mcsta}{\tool{mcsta}  (default, most precise on 43/69)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for mcsta with specific settings (n=69).
+                \scatterplot{scatterspecificmcsta.csv}{mcsta}{\tool{mcsta}  (specific, most precise on 46/69)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for modes with default settings (n=88).
+                \scatterplot{scattermodes.csv}{modes}{\tool{modes}  (default, most precise on 13/88)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for modes with specific settings (n=88).
+                \scatterplot{scatterspecificmodes.csv}{modes}{\tool{modes}  (specific, most precise on 12/88)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for STAMINA with default settings (n=3).
+                \scatterplot{scatterSTAMINA.csv}{STAMINA}{\tool{STAMINA}  (default, most precise on 0/3)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for STAMINA with specific settings (n=3).
+                \scatterplot{scatterspecificSTAMINA.csv}{STAMINA}{\tool{STAMINA}  (specific, most precise on 0/3)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for DFTRES with default settings (n=12).
+                \scatterplot{scatterDFTRES.csv}{DFTRES}{\tool{DFTRES}  (default, most precise on 2/12)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for DFTRES with specific settings (n=12).
+                \scatterplot{scatterspecificDFTRES.csv}{DFTRES}{\tool{DFTRES}  (specific, most precise on 3/12)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for ModestFRETpiLRTDP with default settings (n=31).
+                \scatterplot{scatterModestFRETpiLRTDP.csv}{ModestFRETpiLRTDP}{\tool{ModestFRETpiLRTDP}  (default, most precise on 13/31)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for ModestFRETpiLRTDP with specific settings (n=31).
+                \scatterplot{scatterspecificModestFRETpiLRTDP.csv}{ModestFRETpiLRTDP}{\tool{ModestFRETpiLRTDP}  (specific, most precise on 12/31)}
+            \end{center}
+                \pagebreak
+\end{document}

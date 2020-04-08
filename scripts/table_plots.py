@@ -212,17 +212,21 @@ def get_result_str(toolname, benchmark_identifier):
                     else:
                         if "relative-error" in res:
                             res_str = "%.3f" % res["relative-error"]
+                            tool_times[benchmark_identifier][toolname].append(res["relative-error"])
                         else:
                             benchmark = get_benchmark_from_id(settings, res["benchmark-id"])
                             if benchmark.has_reference_result():   #result is a boolean value
                                 correct = is_result_correct(settings, benchmark.get_reference_result(), try_to_bool_or_number(res["result"]), "often-epsilon-correct")
                                 if(correct):
                                     res_str = "%.3f" % 0.000
+                                    tool_times[benchmark_identifier][toolname].append(0.000)
                                 else:
                                     res_str = "%.3f" % 1.000
+                                    tool_times[benchmark_identifier][toolname].append(1.000)
                             else:
                                 res_str = "%.3f" % 0.000
                                 print(res["benchmark-id"])      #check these results by hand, there is no reference result
+                                tool_times[benchmark_identifier][toolname].append(0.000)
                 supported_tools[benchmark_identifier][toolname].append(res_str)
                 logpage = create_log_page(toolname, benchmark_identifier, res)
                 results_str.append("<a href='{}' {}>{}</a>".format(logpage, link_attributes, res_str))
@@ -324,6 +328,42 @@ def create_scatter_plot_vs_all_csv(tool, default_times = True):
                 if len(supported_tools[id][compare_tool]) > 0 and supported_tools[id][compare_tool][results_index] not in {"TO", "ERR", "INC"}:
                     compare_value = min(tool_times[id][compare_tool][results_index], compare_value)
             row.append(compare_value)
+            row.append(max(1,compare_value))
+            result_csv.append(row)
+    return result_csv
+
+def create_scatter_plot_vs_all_csv_relative_error(tool, default_times = True):
+    result_csv = [["id", "Type", tool, tool + "shifted", "other", "othershifted"]]
+    results_index = 0 if default_times else -1
+    for id in benchmark_ids:
+        if len(supported_tools[id][tool]) > 0:
+            row = [id, get_benchmark_from_id(settings, id).get_model_type().lower()]
+            res_str = supported_tools[id][tool][results_index]
+            if res_str == "TO":
+                row.append(80000)
+                row.append(80000)
+            elif res_str == "ERR":
+                row.append(80000)   #80000
+                row.append(80000)
+            elif res_str == "INC":
+                row.append(80000) #800000
+                row.append(80000)
+            else:
+                if not (tool_times[id][tool][results_index] <= 0):
+                    row.append(tool_times[id][tool][results_index])
+                else:                   #if relative-error is 0.0 write 1e-10 into csv because of logscale in plots
+                    row.append(1E-20)
+                row.append(max(1, tool_times[id][tool][results_index]))
+            compare_value = 80000
+            for compare_tool in tools:
+                if compare_tool == tool:
+                    continue
+                if len(supported_tools[id][compare_tool]) > 0 and supported_tools[id][compare_tool][results_index] not in {"TO", "ERR", "INC"}:
+                    compare_value = min(tool_times[id][compare_tool][results_index], compare_value)
+            if compare_value <= 0:  #if relative-error is 0.0 write 1e-10 into csv because of logscale in plots
+                row.append(1E-20)
+            else:
+                row.append(compare_value)
             row.append(max(1,compare_value))
             result_csv.append(row)
     return result_csv
@@ -440,7 +480,6 @@ with open (os.path.join(output_dir, "table_" + track_id + ".html"), 'w') as tabl
             bestIndex.forEach(function(index){
                 $(table.cell(rowIdx, index).node()).addClass("bestDefault");
             });
-            console.log(bestIndex)
             if (bestSpecificIndex >= 0 && (bestIndex.length = 0 || (!bestIndex.includes(bestSpecificIndex) && bestSpecificValue < bestValue))) {
             $(table.cell(rowIdx, bestSpecificIndex).node()).addClass("bestSpecific");
             }
@@ -574,182 +613,272 @@ body {
 """)
 
 
+if(track_id != "often-epsilon-correct-10-min"):
+    # Generate plots
+    plot_dir = "competition/2020/results/plots/" + track_id
+    ensure_directory(plot_dir)
 
-# Generate plots
-plot_dir = "competition/2020/results/plots/" + track_id
-ensure_directory(plot_dir)
+    # Tool subsets for quantile plots
+    subsets = []
+    filenames = []
+    nums = []
 
-# Tool subsets for quantile plots
-subsets = []
-filenames = []
-nums = []
+    subsets.append(["ePMC", "mcsta", "Storm"])
+    filenames.append("janitools.csv")
+    nums.append(None)
 
-subsets.append(["ePMC", "mcsta", "Storm"])
-filenames.append("janitools.csv")
-nums.append(None)
+    subsets.append(["ePMC", "mcsta", "Storm", "PRISM"])
+    filenames.append("generalpurpose.csv")
+    nums.append(None)
 
-subsets.append(["ePMC", "mcsta", "Storm", "PRISM"])
-filenames.append("generalpurpose.csv")
-nums.append(None)
+    subsets.append(toolnames)
+    filenames.append("all.csv")
+    nums.append(0)   
 
-subsets.append(toolnames)
-filenames.append("all.csv")
-nums.append(0)   
+    with open (os.path.join(plot_dir, "plots.tex"), 'w') as plotfile:
+        plotfile.write(r"""\documentclass{article}
+    \usepackage{pgfplots}
+    \usepackage{pgfplotstable}
+    \usepackage{tikz}
+    \usepackage{xifthen}
+    \newcommand{\tool}[1]{\textsc{#1}}
 
-with open (os.path.join(plot_dir, "plots.tex"), 'w') as plotfile:
-    plotfile.write(r"""\documentclass{article}
-\usepackage{pgfplots}
-\usepackage{pgfplotstable}
-\usepackage{tikz}
-\usepackage{xifthen}
-\newcommand{\tool}[1]{\textsc{#1}}
+    % Quantile plots
+    \newlength{\quantileplotwidth}
+    \newlength{\quantileplotheight}
+    \setlength{\quantileplotwidth}{\linewidth}
+    \setlength{\quantileplotheight}{9cm}
+    \newcommand{\quantileplotlegendpos}{south east}
+    \tikzset{tool/.code={%
+            \ifthenelse{\equal{#1}{mcsta}}{\tikzset{red, mark=x, mark options={thick}}}{}%
+            \ifthenelse{\equal{#1}{Storm}}{\tikzset{blue,mark=+, mark options={thick}}}{}%
+            \ifthenelse{\equal{#1}{ePMC}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
+            \ifthenelse{\equal{#1}{PRISM}}{\tikzset{orange, mark=asterisk}}{}%
+            \ifthenelse{\equal{#1}{PRISM-TUM}}{\tikzset{teal, mark=star}}{}%
+            \ifthenelse{\equal{#1}{modes}}{\tikzset{magenta, mark=square*,  mark size=1.5pt}}{}%
+            \ifthenelse{\equal{#1}{DFTRES}}{\tikzset{yellow,mark=diamond*}}{}%
+            \ifthenelse{\equal{#1}{probFD}}{\tikzset{gray, mark=pentagon*}}{}%
+            \ifthenelse{\equal{#1}{ModestFRETpiLRTDP}}{\tikzset{black, mark=triangle*}}{}%
+    }}
+    \newcommand{\quantileplot}[2]{%
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=\quantileplotwidth,
+            height=\quantileplotheight,
+            xmin=1,
+            ymax=2300,
+    %		ymin=0.5,
+            ymin=1,
+            ymode=log,
+            axis x line=bottom,
+            axis y line=left,
+            ytick= {1, 6, 60, 600, 1200, 1800 },
+            yticklabels={$\le$1, 6, 60, 600, 1200, 1800},
+            xlabel=solved instances,
+            ylabel=time (in s),
+            yticklabel style={font=\scriptsize},
+            xticklabel style={rotate=290, anchor=west, font=\scriptsize},
+            ylabel style={yshift=-0cm},
+            legend pos=\quantileplotlegendpos,
+            legend style={font=\scriptsize},
+        ]
+        \foreach \tool in {#2}{%
+            \edef\loopbody{
+                \noexpand\addplot[tool=\tool] table [x=n,y=\tool shifted, col sep=semicolon] {#1};
+            }
+            \loopbody
+        }
+        \draw[densely dotted] (axis cs: 0,1) -- (axis cs: 100,1);
+        \legend{#2}
+        \end{axis}
+    \end{tikzpicture}%
+    }
 
-% Quantile plots
-\newlength{\quantileplotwidth}
-\newlength{\quantileplotheight}
-\setlength{\quantileplotwidth}{\linewidth}
-\setlength{\quantileplotheight}{9cm}
-\newcommand{\quantileplotlegendpos}{south east}
-\tikzset{tool/.code={%
-		\ifthenelse{\equal{#1}{mcsta}}{\tikzset{red, mark=x, mark options={thick}}}{}%
-		\ifthenelse{\equal{#1}{Storm}}{\tikzset{blue,mark=+, mark options={thick}}}{}%
-		\ifthenelse{\equal{#1}{ePMC}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
-		\ifthenelse{\equal{#1}{PRISM}}{\tikzset{orange, mark=asterisk}}{}%
-		\ifthenelse{\equal{#1}{PRISM-TUM}}{\tikzset{teal, mark=star}}{}%
-		\ifthenelse{\equal{#1}{modes}}{\tikzset{magenta, mark=square*,  mark size=1.5pt}}{}%
-		\ifthenelse{\equal{#1}{DFTRES}}{\tikzset{yellow,mark=diamond*}}{}%
-		\ifthenelse{\equal{#1}{probFD}}{\tikzset{gray, mark=pentagon*}}{}%
-		\ifthenelse{\equal{#1}{ModestFRETpiLRTDP}}{\tikzset{black, mark=triangle*}}{}%
-}}
-\newcommand{\quantileplot}[2]{%
-\begin{tikzpicture}
-	\begin{axis}[
-		width=\quantileplotwidth,
-		height=\quantileplotheight,
-		xmin=1,
-		ymax=2300,
-%		ymin=0.5,
-		ymin=1,
-		ymode=log,
-		axis x line=bottom,
-		axis y line=left,
-		ytick= {1, 6, 60, 600, 1200, 1800 },
-		yticklabels={$\le$1, 6, 60, 600, 1200, 1800},
-		xlabel=solved instances,
-		ylabel=time (in s),
-		yticklabel style={font=\scriptsize},
-		xticklabel style={rotate=290, anchor=west, font=\scriptsize},
-		ylabel style={yshift=-0cm},
-		legend pos=\quantileplotlegendpos,
-		legend style={font=\scriptsize},
-	]
-	\foreach \tool in {#2}{%
-		\edef\loopbody{
-			\noexpand\addplot[tool=\tool] table [x=n,y=\tool shifted, col sep=semicolon] {#1};
-		}
-		\loopbody
-	}
-	\draw[densely dotted] (axis cs: 0,1) -- (axis cs: 100,1);
-	\legend{#2}
-	\end{axis}
-\end{tikzpicture}%
-}
+    %Scatter plots
+    \newlength{\scatterplotsize}
+    \setlength{\scatterplotsize}{8cm}
+    \newcommand{\scatterplot}[2]{%
+    \begin{tikzpicture}
+        \begin{axis}[
+                width=\scatterplotsize,
+                height=\scatterplotsize,
+                axis equal image,
+                xmin=0.04,
+                ymin=0.04,
+                ymax=6000,
+                xmax=25000,
+                xmode=log,
+                ymode=log,
+                axis x line=bottom,
+                axis y line=left,
+                xtick={1,6,60,600,1200,1800},
+                xticklabels={1,6,60,600,1200,1800},
+                extra x ticks = {4000,8000,16000},
+                extra x tick labels = {TO,ERR,INC},
+                extra x tick style = {grid = major},
+                ytick={1,6,60,600,1200,1800},
+                yticklabels={1,6,60,600,1200,1800},
+                extra y ticks = {4000},
+                extra y tick labels = {n/a},
+                extra y tick style = {grid = major},
+                xlabel=#2,
+                xlabel style={yshift=0cm},
+                ylabel=Other tools (best),
+                ylabel style={yshift=-0.4cm},
+                yticklabel style={font=\scriptsize},
+                xticklabel style={rotate=290,anchor=west,font=\scriptsize},
+                legend pos=north west,
+                legend columns=-1,
+                legend style={font=\scriptsize,yshift=0.7cm,xshift=1cm}
+            ]
+            \addplot[
+                scatter,
+                only marks,
+                scatter/classes={
+                    dtmc={mark=square,blue},
+                    mdp={mark=triangle,red},
+                    ctmc={mark=diamond,orange},
+                    ma={mark=pentagon,teal},
+                    pta={mark=o,green!70!black}
+                },
+                scatter src=explicit symbolic
+                ]%
+                table [col sep=semicolon,x=#2,y=other,meta=Type] {#1};
+            \legend{DTMC, MDP, CTMC, MA, PTA}
+            \addplot[no marks] coordinates {(0.01,0.01) (3600,3600) };
+            \addplot[no marks, densely dotted] coordinates {(0.01,0.1) (360,3600) };
+        \end{axis}
+    \end{tikzpicture}
+    }
 
-%Scatter plots
-\newlength{\scatterplotsize}
-\setlength{\scatterplotsize}{8cm}
-\newcommand{\scatterplot}[2]{%
-  \begin{tikzpicture}
-	\begin{axis}[
-			width=\scatterplotsize,
-			height=\scatterplotsize,
-			axis equal image,
-			xmin=0.04,
-			ymin=0.04,
-			ymax=6000,
-			xmax=25000,
-			xmode=log,
-			ymode=log,
-			axis x line=bottom,
-			axis y line=left,
-			xtick={1,6,60,600,1200,1800},
-			xticklabels={1,6,60,600,1200,1800},
-			extra x ticks = {4000,8000,16000},
-			extra x tick labels = {TO,ERR,INC},
-			extra x tick style = {grid = major},
-			ytick={1,6,60,600,1200,1800},
-			yticklabels={1,6,60,600,1200,1800},
-			extra y ticks = {4000},
-			extra y tick labels = {n/a},
-			extra y tick style = {grid = major},
-			xlabel=#2,
-			xlabel style={yshift=0cm},
-			ylabel=Other tools (best),
-			ylabel style={yshift=-0.4cm},
-			yticklabel style={font=\scriptsize},
-			xticklabel style={rotate=290,anchor=west,font=\scriptsize},
-			legend pos=north west,
-			legend columns=-1,
-			legend style={font=\scriptsize,yshift=0.7cm,xshift=1cm}
-		]
-		\addplot[
-			scatter,
-			only marks,
-			scatter/classes={
-				dtmc={mark=square,blue},
-				mdp={mark=triangle,red},
-				ctmc={mark=diamond,orange},
-				ma={mark=pentagon,teal},
-				pta={mark=o,green!70!black}
-			},
-			scatter src=explicit symbolic
-			]%
-			table [col sep=semicolon,x=#2,y=other,meta=Type] {#1};
-		\legend{DTMC, MDP, CTMC, MA, PTA}
-		\addplot[no marks] coordinates {(0.01,0.01) (3600,3600) };
-		\addplot[no marks, densely dotted] coordinates {(0.01,0.1) (360,3600) };
-	\end{axis}
-\end{tikzpicture}
-}
+    \begin{document}""")
+        for subset, filename, n in zip(subsets, filenames, nums):
+            # only consider tools of the subsets that are considered
+            tool_subset = []
+            for tool in subset:
+                if tool in tools:
+                    tool_subset.append(tool)
+                else:
+                    print("Tool {} for quantile plot is not selected.".format(tool))
+            for default in [True, False]:
+                csv, cap = create_quantile_plot_csv(tool_subset, n, default)
+                save_csv(csv, os.path.join(plot_dir, ("" if default else "specific") + filename), delim=";")
+                subsetlist = ",".join(tool_subset)
+                cap += "Default configuration." if default else "Specific configuration."
+                plotfile.write(r"""
+            \begin{center}
+                """ + cap + r"""
+                \quantileplot{""" + ("" if default else "specific") + filename + "}{" + subsetlist + r"""}
+            \end{center}
+                    """)
+            plotfile.write("\pagebreak\n")
 
-\begin{document}""")
-    for subset, filename, n in zip(subsets, filenames, nums):
-        # only consider tools of the subsets that are considered
-        tool_subset = []
-        for tool in subset:
-            if tool in tools:
-                tool_subset.append(tool)
-            else:
-                print("Tool {} for quantile plot is not selected.".format(tool))
-        for default in [True, False]:
-            csv, cap = create_quantile_plot_csv(tool_subset, n, default)
-            save_csv(csv, os.path.join(plot_dir, ("" if default else "specific") + filename), delim=";")
-            subsetlist = ",".join(tool_subset)
-            cap += "Default configuration." if default else "Specific configuration."
-            plotfile.write(r"""
-        \begin{center}
-             """ + cap + r"""
-            \quantileplot{""" + ("" if default else "specific") + filename + "}{" + subsetlist + r"""}
-        \end{center}
+        for tool in toolnames:
+            for default in [True, False]:
+                csv = create_scatter_plot_vs_all_csv(tool, default)
+                filename = "scatter{}{}.csv".format("" if default else "specific", tool)
+                num_fastest = 0
+                for row in csv[1:]:
+                    if row[2] < row[4]:
+                        num_fastest += 1
+                save_csv(csv, os.path.join(plot_dir, filename), delim=";")
+                cap = "Scatter Plot for {} with {} settings (n={}).".format(tool, "default" if default else "specific", len(csv)-1)
+                plotfile.write(r"""
+            \begin{center}
+                """ + cap + r"""
+                \scatterplot{""" + filename + "}{" + tool + r"}{\tool{" + tool + "} " + (" ({}, fastest on {}/{})".format("default" if default else "specific", num_fastest, len(csv) - 1)) + r"""}
+            \end{center}
                 """)
-        plotfile.write("\pagebreak\n")
+            plotfile.write("\pagebreak\n")
 
-    for tool in toolnames:
-        for default in [True, False]:
-            csv = create_scatter_plot_vs_all_csv(tool, default)
-            filename = "scatter{}{}.csv".format("" if default else "specific", tool)
-            num_fastest = 0
-            for row in csv[1:]:
-                if row[2] < row[4]:
-                    num_fastest += 1
-            save_csv(csv, os.path.join(plot_dir, filename), delim=";")
-            cap = "Scatter Plot for {} with {} settings (n={}).".format(tool, "default" if default else "specific", len(csv)-1)
-            plotfile.write(r"""
-        \begin{center}
-            """ + cap + r"""
-            \scatterplot{""" + filename + "}{" + tool + r"}{\tool{" + tool + "} " + (" ({}, fastest on {}/{})".format("default" if default else "specific", num_fastest, len(csv) - 1)) + r"""}
-        \end{center}
-            """)
-        plotfile.write("\pagebreak\n")
+        plotfile.write("\end{document}\n")
+else:
+    plot_dir = "competition/2020/results/plots/" + track_id
+    ensure_directory(plot_dir)
 
-    plotfile.write("\end{document}\n")
+    with open (os.path.join(plot_dir, "plots.tex"), 'w') as plotfile:
+        plotfile.write(r"""\documentclass{article}
+    \usepackage{pgfplots}
+    \usepackage{pgfplotstable}
+    \usepackage{tikz}
+    \usepackage{xifthen}
+    \newcommand{\tool}[1]{\textsc{#1}}
+
+    %Scatter plots
+    \newlength{\scatterplotsize}
+    \setlength{\scatterplotsize}{8cm}
+    \newcommand{\scatterplot}[2]{%
+    \begin{tikzpicture}
+        \begin{axis}[
+                width=\scatterplotsize,
+                height=\scatterplotsize,
+                axis equal image,
+                xmin=-0.04,
+                ymin=-0.04,
+                ymax=100000,
+                xmax=100000,  %10000000
+                xmode=log,
+                ymode=log,
+                axis x line=bottom,
+                axis y line=left,
+                xtick={1E-7, 1E-6, 1E-5, 1E-4,10,100,1000,10000},
+                xticklabels={1e-7, 1e-6, 1e-5, 1e-4,10,100,1000,10000},
+                extra x ticks = {80000}, %800000,8000000}
+                extra x tick labels = {n/a},
+                extra x tick style = {grid = major},
+                ytick={1E-7, 1E-6, 1E-5, 1E-4,10,100,1000,10000},
+                yticklabels={1e-7, 1e-6, 1e-5, 1e-4,10,100,1000,10000},
+                extra y ticks = {80000},
+                extra y tick labels = {n/a},
+                extra y tick style = {grid = major},
+                xlabel=#2,
+                xlabel style={yshift=-0.1cm},
+                ylabel=Other tools (best),
+                ylabel style={yshift=-0.2cm},
+                yticklabel style={font=\scriptsize},
+                xticklabel style={rotate=290,anchor=west,font=\scriptsize},
+                legend pos=north west,
+                legend columns=-1,
+                legend style={font=\scriptsize,yshift=0.8cm,xshift=1cm}
+            ]
+            \addplot[
+                scatter,
+                only marks,
+                scatter/classes={
+                    dtmc={mark=square,blue},
+                    mdp={mark=triangle,red},
+                    ctmc={mark=diamond,orange},
+                    ma={mark=pentagon,teal},
+                    pta={mark=o,green!70!black}
+                },
+                scatter src=explicit symbolic
+                ]%
+                table [col sep=semicolon,x=#2,y=other,meta=Type] {#1};
+            \legend{DTMC, MDP, CTMC, MA, PTA}
+            \addplot[no marks] coordinates {(1E-20,1E-20) (100000,100000)};
+            \addplot[no marks, densely dotted] coordinates {(1E-20,1E-19) (10000,100000)};
+        \end{axis}
+    \end{tikzpicture}
+    }
+
+    \begin{document}""")
+        for tool in toolnames:
+            print(tool)
+            for default in [True, False]:
+                csv = create_scatter_plot_vs_all_csv_relative_error(tool, default)
+                filename = "scatter{}{}.csv".format("" if default else "specific", tool)
+                num_fastest = 0
+                for row in csv[1:]:
+                    if row[2] <= row[4]:
+                        num_fastest += 1
+                save_csv(csv, os.path.join(plot_dir, filename), delim=";")
+                cap = "Scatter Plot for {} with {} settings (n={}).".format(tool, "default" if default else "specific", len(csv)-1)
+                plotfile.write(r"""
+            \begin{center}
+                """ + cap + r"""
+                \scatterplot{""" + filename + "}{" + tool + r"}{\tool{" + tool + "} " + (" ({}, most precise on {}/{})".format("default" if default else "specific", num_fastest, len(csv) - 1)) + r"""}
+            \end{center}
+                """)
+            plotfile.write("\pagebreak\n")
+
+        plotfile.write("\end{document}\n")

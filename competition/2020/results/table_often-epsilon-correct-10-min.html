@@ -93,7 +93,6 @@
             bestIndex.forEach(function(index){
                 $(table.cell(rowIdx, index).node()).addClass("bestDefault");
             });
-            console.log(bestIndex)
             if (bestSpecificIndex >= 0 && (bestIndex.length = 0 || (!bestIndex.includes(bestSpecificIndex) && bestSpecificValue < bestValue))) {
             $(table.cell(rowIdx, bestSpecificIndex).node()).addClass("bestSpecific");
             }
