@@ -863,7 +863,6 @@ else:
 
     \begin{document}""")
         for tool in toolnames:
-            print(tool)
             for default in [True, False]:
                 csv = create_scatter_plot_vs_all_csv_relative_error(tool, default)
                 filename = "scatter{}{}.csv".format("" if default else "specific", tool)

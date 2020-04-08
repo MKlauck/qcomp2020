@@ -20,61 +20,84 @@
       $("#content").load("data.html");
     } );
 
-    function updateBest(table) {
+    function updateBest(table) 
+    {
       // Remove old best ones
       table.cells().every( function() {
         $(this.node()).removeClass("bestDefault");
         $(this.node()).removeClass("bestSpecific");
       });
-      table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
-          var bestValue = -1
-          var bestIndex = -1
-		  var bestSpecificValue = -1
-		  var bestSpecificIndex = -1
-          $.each( this.data(), function( index, value ){
-            if (index > 5 && table.column(index).visible()) {
-			  var text = $(value).text()
-			  var pos = text.indexOf("/")
-              if (pos === -1) {
-				  if (["TO", "ERR", "INC", ""].indexOf(text) < 0) {
-					var number = parseFloat(text);
-	                if (bestValue == -1 || bestValue > number) {
-	                  // New best value
-	                  bestValue = number;
-	                  bestIndex = index;
-	                }
-				  }
-			  } else {
-			  	first = text.slice(0, pos-1)
-				if (["TO", "ERR", "INC", ""].indexOf(first) < 0) {
-					var number = parseFloat(first);
-	                if (bestValue == -1 || bestValue > number) {
-	                  // New best value
-	                  bestValue = number;
-	                  bestIndex = index;
-	                }
-				}
-				second = text.slice(pos+2)
-				if (["TO", "ERR", "INC", ""].indexOf(second) < 0) {
-					var number = parseFloat(second);
-	                if (bestSpecificValue == -1 || bestSpecificValue > number) {
-	                  // New best value
-	                  bestSpecificValue = number;
-	                  bestSpecificIndex = index;
-	                }
-				}
-			  }
-            }
-          });
-          // Set new best
-          if (bestIndex >= 0) {
-            $(table.cell(rowIdx, bestIndex).node()).addClass("bestDefault");
-          }
-          if (bestSpecificIndex >= 0 && (bestIndex < 0 || (bestSpecificIndex != bestIndex && bestSpecificValue < bestValue))) {
+      table.rows().every( function ( rowIdx, tableLoop, rowLoop ) 
+      {
+            var bestValue = -1
+            var bestIndex = []
+            var bestSpecificValue = -1
+            var bestSpecificIndex = -1
+            $.each( this.data(), function( index, value )
+            {
+                if (index > 5 && table.column(index).visible()) 
+                {
+                    var text = $(value).text()
+                    var pos = text.indexOf("/")
+                    if (pos === -1) 
+                    {
+                        if (["TO", "ERR", "INC", ""].indexOf(text) < 0) 
+                        {
+                            var number = parseFloat(text);
+                            if (bestValue == -1 || bestValue > number) 
+                            {
+                                // New best value
+                                bestValue = number;
+                                bestIndex = [index];
+                            }
+                            if (bestValue == -1 || bestValue == number) 
+                            {
+                                // New best value
+                                bestIndex.push(index);
+                            }
+                        }
+                    } 
+                    else 
+                    {
+                        first = text.slice(0, pos-1)
+                        if (["TO", "ERR", "INC", ""].indexOf(first) < 0) 
+                        {
+                            var number = parseFloat(first);
+                            if (bestValue == -1 || bestValue > number) 
+                            {
+                                // New best value
+                                bestValue = number;
+                                bestIndex = [index];
+                            }
+                            if (bestValue == -1 || bestValue == number) 
+                            {
+                                // New best value
+                                bestIndex.push(index);
+                            }
+                        }
+                        second = text.slice(pos+2)
+                        if (["TO", "ERR", "INC", ""].indexOf(second) < 0) 
+                        {
+                            var number = parseFloat(second);
+                            if (bestSpecificValue == -1 || bestSpecificValue > number) 
+                            {
+                                // New best value
+                                bestSpecificValue = number;
+                                bestSpecificIndex = index;
+                            }
+                        }
+                    }
+                }
+            });
+            // Set new best
+            bestIndex.forEach(function(index){
+                $(table.cell(rowIdx, index).node()).addClass("bestDefault");
+            });
+            if (bestSpecificIndex >= 0 && (bestIndex.length = 0 || (!bestIndex.includes(bestSpecificIndex) && bestSpecificValue < bestValue))) {
             $(table.cell(rowIdx, bestSpecificIndex).node()).addClass("bestSpecific");
-          }
-      } );
-  }
+            }
+        });
+    }
   </script>
 
 </head>
