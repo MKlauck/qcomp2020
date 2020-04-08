@@ -436,7 +436,7 @@ class Benchmark(object):
 
     def check_validity(self):
         """ performs some simple sanity checks to find potential errors/inconsistencies within the meta data """
-        copy = get_benchmark_from_id(self.get_identifier())
+        copy = get_benchmark_from_id(self.settings, self.get_identifier())
         if self.get_identifier() != copy.get_identifier():
             raise AssertionError("Identifier of copied benchmark missmatches: {} vs {}".format(self.get_identifier(), copy.get_identifier()))
 

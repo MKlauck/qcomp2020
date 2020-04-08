@@ -33,7 +33,7 @@ if __name__ == "__main__":
             if not "commands" in invocation_json or len(invocation_json["commands"]) == 0 or (len(invocation_json["commands"]) == 1 and invocation_json["commands"][0] == ""):
                 continue
             benchmark_id = invocation_json["benchmark-id"]
-            benchmark = get_benchmark_from_id(benchmark_id)
+            benchmark = get_benchmark_from_id(settings,benchmark_id)
             #ensure that this benchmark is actually on the list of selected benchmarks.
             on_list = False
             for qcomp_benchmark in qcomp_benchmarks:
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     for invocation_json in invocations:
         invocation_number = invocation_number + 1
         progressbar.print_progress(invocation_number)
-        benchmark = get_benchmark_from_id(invocation_json["benchmark-id"])
+        benchmark = get_benchmark_from_id(settings,invocation_json["benchmark-id"])
         invocation = Invocation(invocation_json)
         # save the contents of the directories that are to be cleaned up.
         # All files that are created during the execution will be deleted later.

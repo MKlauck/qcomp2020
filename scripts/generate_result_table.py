@@ -15,7 +15,7 @@ if __name__ == "__main__":
         b_id = r["benchmark-id"]
         if not b_id in id_to_row:
             id_to_row[b_id] = len(table)
-            b = get_benchmark_from_id(r["benchmark-id"])
+            b = get_benchmark_from_id(settings,r["benchmark-id"])
             b.check_validity()
             table.append([b.get_model_short_name(), b.get_model_type().upper(), b.get_parameter_values_string(), b.get_property_name(), b.get_short_property_type()])
         table_row = table[id_to_row[b_id]]

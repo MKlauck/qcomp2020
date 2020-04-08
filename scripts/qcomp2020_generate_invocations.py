@@ -16,7 +16,7 @@ if __name__ == "__main__":
     invocations = []
     num_b = 0
     for benchmark_csv in benchmarks:
-        b = get_benchmark_from_id("{}.{}.{}".format(benchmark_csv[0], benchmark_csv[3], benchmark_csv[4]))
+        b = get_benchmark_from_id(settings,"{}.{}.{}".format(benchmark_csv[0], benchmark_csv[3], benchmark_csv[4]))
         num_b = num_b + 1
         progressbar.print_progress(num_b)
         b.check_validity()

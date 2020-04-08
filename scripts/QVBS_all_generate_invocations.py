@@ -8,7 +8,7 @@ This script creates a list of invocations that can then be executed via 'execute
 If a benchmark list has been created before, only benchmarks on this benchmark list are considered.
 """
 if __name__ == "__main__":
-    benchmarks = get_all_benchmarks(os.path.join(settings.benchmark_dir(), "index.json"))
+    benchmarks = get_all_benchmarks(settings,os.path.join(settings.benchmark_dir(), "index.json"))
     benchmark_list = None
     if os.path.isfile(settings.benchmark_list_filename()):
         benchmark_list = load_csv(settings.benchmark_list_filename())

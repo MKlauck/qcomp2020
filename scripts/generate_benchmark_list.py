@@ -6,7 +6,7 @@ import tool
 This script creates the list of benchmarks, for which the method 'is_benchmark_supported' in tool.py returns True.
 """
 if __name__ == "__main__":
-    benchmarks = get_all_benchmarks(os.path.join(settings.benchmark_dir(), "index.json"))
+    benchmarks = get_all_benchmarks(settings,os.path.join(settings.benchmark_dir(), "index.json"))
     benchmark_list = []
     progressbar = Progressbar(len(benchmarks), "Processing benchmarks")
     num_b = 0
