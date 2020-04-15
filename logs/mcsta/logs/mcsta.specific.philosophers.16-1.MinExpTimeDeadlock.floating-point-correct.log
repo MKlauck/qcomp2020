@@ -45,4 +45,4 @@ The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
 
 
 ############################## Notes ##############################
-The tool result '1078297345256119/100000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 10.782973448921704), ('upper', 10.782973451078297)])' (approx. OrderedDict([('lower', 10.782973448921704), ('upper', 10.782973451078297)])) which means a relative error of '1.3752174878464596e-10' which is larger than the goal precision '0.001'.
+The tool result '1078297345256119/100000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 10.782973448921704), ('upper', 10.782973451078297)])' (approx. OrderedDict([('lower', 10.782973448921704), ('upper', 10.782973451078297)])) which means a relative error of '1.3752174878464596e-10' which is larger than the goal precision '1e-14'.

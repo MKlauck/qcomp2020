@@ -48,4 +48,4 @@ The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
 
 
 ############################## Notes ##############################
-The tool result '3839999999999959/5000000000000' is tagged as incorrect. The reference result is '768' (approx. 768.0) which means a relative error of '1.0677083333333333e-14' which is larger than the goal precision '0.001'.
+The tool result '3839999999999959/5000000000000' is tagged as incorrect. The reference result is '768' (approx. 768.0) which means a relative error of '1.0677083333333333e-14' which is larger than the goal precision '1e-14'.

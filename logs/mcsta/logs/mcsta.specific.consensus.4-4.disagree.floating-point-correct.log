@@ -49,4 +49,4 @@ The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
 
 
 ############################## Notes ##############################
-The tool result '7803653199403013/50000000000000000' is tagged as incorrect. The reference result is '45666330762076479/292595849630842880' (approx. 0.15607306398806395) which means a relative error of '2.365387078431548e-14' which is larger than the goal precision '0.001'.
+The tool result '7803653199403013/50000000000000000' is tagged as incorrect. The reference result is '45666330762076479/292595849630842880' (approx. 0.15607306398806395) which means a relative error of '2.365387078431548e-14' which is larger than the goal precision '1e-14'.
