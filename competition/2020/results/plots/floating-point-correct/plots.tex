@@ -115,46 +115,57 @@
 
     \begin{document}
             \begin{center}
-                Quantile plot for 79 benchmarks: Storm(52/79).Default configuration.
-                \quantileplot{janitools.csv}{Storm}
+                Quantile plot for 67 benchmarks: mcsta(47/67), Storm(45/67).Default configuration.
+                \quantileplot{janitools.csv}{mcsta,Storm}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 79 benchmarks: Storm(52/79).Specific configuration.
-                \quantileplot{specificjanitools.csv}{Storm}
+                Quantile plot for 67 benchmarks: mcsta(48/67), Storm(45/67).Specific configuration.
+                \quantileplot{specificjanitools.csv}{mcsta,Storm}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 79 benchmarks: Storm(52/79).Default configuration.
-                \quantileplot{generalpurpose.csv}{Storm}
+                Quantile plot for 67 benchmarks: mcsta(47/67), Storm(45/67).Default configuration.
+                \quantileplot{generalpurpose.csv}{mcsta,Storm}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 79 benchmarks: Storm(52/79).Specific configuration.
-                \quantileplot{specificgeneralpurpose.csv}{Storm}
+                Quantile plot for 67 benchmarks: mcsta(48/67), Storm(45/67).Specific configuration.
+                \quantileplot{specificgeneralpurpose.csv}{mcsta,Storm}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 100 benchmarks: Storm(52/79).Default configuration.
-                \quantileplot{all.csv}{Storm}
+                Quantile plot for 100 benchmarks: Storm(52/79), mcsta(49/69).Default configuration.
+                \quantileplot{all.csv}{Storm,mcsta}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 100 benchmarks: Storm(52/79).Specific configuration.
-                \quantileplot{specificall.csv}{Storm}
+                Quantile plot for 100 benchmarks: Storm(52/79), mcsta(50/69).Specific configuration.
+                \quantileplot{specificall.csv}{Storm,mcsta}
             \end{center}
                     \pagebreak
 
             \begin{center}
                 Scatter Plot for Storm with default settings (n=79).
-                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 52/79)}
+                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 48/79)}
             \end{center}
                 
             \begin{center}
                 Scatter Plot for Storm with specific settings (n=79).
-                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 52/79)}
+                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 42/79)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for mcsta with default settings (n=69).
+                \scatterplot{scattermcsta.csv}{mcsta}{\tool{mcsta}  (default, fastest on 16/69)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for mcsta with specific settings (n=69).
+                \scatterplot{scatterspecificmcsta.csv}{mcsta}{\tool{mcsta}  (specific, fastest on 22/69)}
             \end{center}
                 \pagebreak
 \end{document}
