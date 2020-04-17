@@ -110,6 +110,9 @@ if __name__ == "__main__":
                                                                             invocation_json["invocation-track-id"]))
                 result = None
             if result is not None:
+                if invocation.track_id == "often-epsilon-correct-10-min" and execution.return_code == 130:  # if SIGINT signal is not handled properly and goes through to toplevel, but a result is delivered afterwards, it's no execution error
+                    execution.error = False
+                    tool_result["execution-error"] = execution.error
                 tool_result["result"] = str(result)  # convert to str to not lose precision
                 result = try_to_bool_or_number(result)
                 if benchmark.has_reference_result():

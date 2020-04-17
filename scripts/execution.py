@@ -71,12 +71,14 @@ class Execution(object):
         self.logs = None
         self.timeout = None
         self.error = None
+        self.return_code = None
 
     def run(self):
         self.error = False
         self.timeout = False
         self.wall_time = 0.0
         self.logs = []
+        self.return_code = None
         for command in self.invocation.commands:
             log, wall_time, return_code = execute_command_line(command, self.time_limit - self.wall_time, self.invocation.track_id == "often-epsilon-correct-10-min")
             self.wall_time = self.wall_time + wall_time
@@ -86,6 +88,7 @@ class Execution(object):
                 self.logs[-1] = self.logs[-1] + "\n" + "-"*10 + "\nComputation aborted after {} seconds since the total time limit of {} seconds was exceeded.\n".format(self.wall_time, self.time_limit)
                 break
             else:
+                self.return_code = return_code
                 self.error = self.error or return_code != 0
 
     def concatenate_logs(self):
