@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 04:40:16 2020
-Command line arguments: --prism consensus.4.prism --prop consensus.props steps_min --constants K=4 --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism consensus.4.prism --prop consensus.props steps_min --constants K=4 --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -49,13 +49,13 @@ Transitions: 	144352
 Choices: 	115840
 Reward Models:  steps
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * finished -> 64 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * finished -&gt; 64 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "steps_min": R[exp]{"steps"}min=? [F "finished"] ...
+Model checking property &quot;steps_min&quot;: R[exp]{&quot;steps&quot;}min=? [F &quot;finished&quot;] ...
 Result (for initial states): 768.0000000681277
 Time for model checking: 3.310s.	</pre>
 </div>

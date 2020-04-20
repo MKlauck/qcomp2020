@@ -34,14 +34,14 @@ Version: 2.0.beta3
 Date: Thu Mar 19 11:27:39 UTC 2020
 Hostname: 68eec9c801d9
 Memory limits: cudd=1g, java(heap)=8.9g
-Command line: prism crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams 'S:10000000;Av:10;e:0.001;d:0.05;p:0.05;post:64' -const 'TotalRuns=6,CrowdSize=20' -javamaxmem 10g
+Command line: prism crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams &#x27;S:10000000;Av:10;e:0.001;d:0.05;p:0.05;post:64&#x27; -const &#x27;TotalRuns=6,CrowdSize=20&#x27; -javamaxmem 10g
 
-Parsing the model file "crowds.prism"...
+Parsing the model file &quot;crowds.prism&quot;...
 
-Parsing properties file "crowds.props"...
+Parsing properties file &quot;crowds.props&quot;...
 
 1 property:
-(1) "positive": P=? [ F observe0>1 ]
+(1) &quot;positive&quot;: P=? [ F observe0&gt;1 ]
 
 Type:        DTMC
 Modules:     crowds 
@@ -49,7 +49,7 @@ Variables:   launch new runCount start run lastSeen good bad recordLast badObser
 
 ---------------------------------------------------------------------
 
-Model checking: "positive": P=? [ F observe0>1 ]
+Model checking: &quot;positive&quot;: P=? [ F observe0&gt;1 ]
 Model constants: TotalRuns=6,CrowdSize=20
 Starting heuristic: RTDP_ADJ
 IsMDP false Collapse false break false
@@ -59,9 +59,9 @@ HeuristicSG: Version try0
 Grey
 ======================================
 
-JSON: {"Trials":100000,"Precision":0.9191737490225356,"PartialTransDelta":3.557802189044531E-8,"Value":{"Upper":0.9354539704427147,"Lower":0.01628022142017921},"ActionsOfs0":{"Action0":"[0.016280285897726343;0.9354298528268091]"},"GlobalTimerSecs":473.853,"AvgConf":0.9330424177052558,"StateInfos":{"num00":51572,"num11":1530,"numStates":478848,"num01":424732,"avgDist":0.8885259721675441,"numWorking":1014,"numUnset":0,"numClose":53102}}
-JSON: {"Trials":200000,"Precision":0.8686794797655047,"PartialTransDelta":2.564499732779128E-8,"Value":{"Upper":0.8930069624986336,"Lower":0.024327482733128927},"ActionsOfs0":{"Action0":"[0.02432753486644694;0.8929765773054578]"},"GlobalTimerSecs":1058.52,"AvgConf":0.9175946149583049,"StateInfos":{"num00":77917,"num11":2060,"numStates":655654,"num01":567830,"avgDist":0.8773755566661463,"numWorking":7847,"numUnset":0,"numClose":79977}}
-JSON: {"Trials":300000,"Precision":0.8283351975989659,"PartialTransDelta":2.1283297719281818E-8,"Value":{"Upper":0.8584654253882354,"Lower":0.030130227789269517},"ActionsOfs0":{"Action0":"[0.03013044317160463;0.8584360887984896]"},"GlobalTimerSecs":1735.894,"AvgConf":0.9133996897347881,"StateInfos":{"num00":104062,"num11":2446,"numStates":780617,"num01":662846,"avgDist":0.862473877604696,"numWorking":11263,"numUnset":0,"numClose":106508}}
+JSON: {&quot;Trials&quot;:100000,&quot;Precision&quot;:0.9191737490225356,&quot;PartialTransDelta&quot;:3.557802189044531E-8,&quot;Value&quot;:{&quot;Upper&quot;:0.9354539704427147,&quot;Lower&quot;:0.01628022142017921},&quot;ActionsOfs0&quot;:{&quot;Action0&quot;:&quot;[0.016280285897726343;0.9354298528268091]&quot;},&quot;GlobalTimerSecs&quot;:473.853,&quot;AvgConf&quot;:0.9330424177052558,&quot;StateInfos&quot;:{&quot;num00&quot;:51572,&quot;num11&quot;:1530,&quot;numStates&quot;:478848,&quot;num01&quot;:424732,&quot;avgDist&quot;:0.8885259721675441,&quot;numWorking&quot;:1014,&quot;numUnset&quot;:0,&quot;numClose&quot;:53102}}
+JSON: {&quot;Trials&quot;:200000,&quot;Precision&quot;:0.8686794797655047,&quot;PartialTransDelta&quot;:2.564499732779128E-8,&quot;Value&quot;:{&quot;Upper&quot;:0.8930069624986336,&quot;Lower&quot;:0.024327482733128927},&quot;ActionsOfs0&quot;:{&quot;Action0&quot;:&quot;[0.02432753486644694;0.8929765773054578]&quot;},&quot;GlobalTimerSecs&quot;:1058.52,&quot;AvgConf&quot;:0.9175946149583049,&quot;StateInfos&quot;:{&quot;num00&quot;:77917,&quot;num11&quot;:2060,&quot;numStates&quot;:655654,&quot;num01&quot;:567830,&quot;avgDist&quot;:0.8773755566661463,&quot;numWorking&quot;:7847,&quot;numUnset&quot;:0,&quot;numClose&quot;:79977}}
+JSON: {&quot;Trials&quot;:300000,&quot;Precision&quot;:0.8283351975989659,&quot;PartialTransDelta&quot;:2.1283297719281818E-8,&quot;Value&quot;:{&quot;Upper&quot;:0.8584654253882354,&quot;Lower&quot;:0.030130227789269517},&quot;ActionsOfs0&quot;:{&quot;Action0&quot;:&quot;[0.03013044317160463;0.8584360887984896]&quot;},&quot;GlobalTimerSecs&quot;:1735.894,&quot;AvgConf&quot;:0.9133996897347881,&quot;StateInfos&quot;:{&quot;num00&quot;:104062,&quot;num11&quot;:2446,&quot;numStates&quot;:780617,&quot;num01&quot;:662846,&quot;avgDist&quot;:0.862473877604696,&quot;numWorking&quot;:11263,&quot;numUnset&quot;:0,&quot;numClose&quot;:106508}}
 
 
 ----------

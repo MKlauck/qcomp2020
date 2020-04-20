@@ -30,7 +30,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 16:46:28 2020
-Command line arguments: --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --exact --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
@@ -58,11 +58,11 @@ Transitions: 	24460016 (6308 nodes)
 Reward Models:  throughput
 Variables: 	rows: 16 meta variables (48 DD variables), columns: 16 meta variables (48 DD variables)
 Labels: 	2
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (49 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (49 nodes)
 -------------------------------------------------------------- 
 
-Model checking property "throughput": R[exp]{"throughput"}=? [LRA] ...
+Model checking property &quot;throughput&quot;: R[exp]{&quot;throughput&quot;}=? [LRA] ...
 
 
 ----------

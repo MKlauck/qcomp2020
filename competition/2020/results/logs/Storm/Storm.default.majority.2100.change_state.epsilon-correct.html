@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 17:25:29 2020
-Command line arguments: --prism majority.prism --prop majority.props change_state --constants T=2100 --prismcompat --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism majority.prism --prop majority.props change_state --constants T=2100 --prismcompat --sound --precision 1e-6 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
@@ -48,13 +48,13 @@ States: 	191250
 Transitions: 	1935450
 Reward Models:  none
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * ((EE > 40) & (CC < 20)) -> 2250 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * ((EE &gt; 40) &amp; (CC &lt; 20)) -&gt; 2250 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "change_state": P=? [true U<=2100 ((EE > 40) & (CC < 20))] ...
+Model checking property &quot;change_state&quot;: P=? [true U&lt;=2100 ((EE &gt; 40) &amp; (CC &lt; 20))] ...
 Result (for initial states): 0.05429919317
 Time for model checking: 63.258s.	</pre>
 </div>

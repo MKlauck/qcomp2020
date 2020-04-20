@@ -38,26 +38,26 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 wlan.6.prism wlan.props --property cost_min -const COL=0
 
-Parsing model file "wlan.6.prism"...
+Parsing model file &quot;wlan.6.prism&quot;...
 
 Type:        MDP
 Modules:     medium station1 station2 
 Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
 
-Parsing properties file "wlan.props"...
+Parsing properties file &quot;wlan.props&quot;...
 
 7 properties:
-(1) "collisions": Pmax=? [ F col=COL ]
-(2) "cost_max": R{"cost"}max=? [ F s1=12&s2=12 ]
-(3) "cost_min": R{"cost"}min=? [ F s1=12&s2=12 ]
-(4) "num_collisions": R{"collisions"}max=? [ F s1=12&s2=12 ]
-(5) "sent": P>=1 [ F s1=12&s2=12 ]
-(6) "time_max": R{"time"}max=? [ F s1=12&s2=12 ]
-(7) "time_min": R{"time"}min=? [ F s1=12&s2=12 ]
+(1) &quot;collisions&quot;: Pmax=? [ F col=COL ]
+(2) &quot;cost_max&quot;: R{&quot;cost&quot;}max=? [ F s1=12&amp;s2=12 ]
+(3) &quot;cost_min&quot;: R{&quot;cost&quot;}min=? [ F s1=12&amp;s2=12 ]
+(4) &quot;num_collisions&quot;: R{&quot;collisions&quot;}max=? [ F s1=12&amp;s2=12 ]
+(5) &quot;sent&quot;: P&gt;=1 [ F s1=12&amp;s2=12 ]
+(6) &quot;time_max&quot;: R{&quot;time&quot;}max=? [ F s1=12&amp;s2=12 ]
+(7) &quot;time_min&quot;: R{&quot;time&quot;}min=? [ F s1=12&amp;s2=12 ]
 
 ---------------------------------------------------------------------
 
-Model checking: "cost_min": R{"cost"}min=? [ F s1=12&s2=12 ]
+Model checking: &quot;cost_min&quot;: R{&quot;cost&quot;}min=? [ F s1=12&amp;s2=12 ]
 Model constants: COL=0
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
@@ -82,7 +82,7 @@ Prob0A: 3101 iterations in 75.30 seconds (average 0.024283, setup 0.00)
 
 Prob1E: 3102 iterations in 88.49 seconds (average 0.028527, setup 0.00)
 
-Warning: PRISM hasn't checked for zero-reward loops.
+Warning: PRISM hasn&#x27;t checked for zero-reward loops.
 Your minimum rewards may be too low...
 
 goal = 1, inf = 0, maybe = 5007547

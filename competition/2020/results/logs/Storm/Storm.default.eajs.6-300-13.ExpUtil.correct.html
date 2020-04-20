@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 06:16:27 2020
-Command line arguments: --prism eajs.6.prism --prop eajs.props ExpUtil --constants 'energy_capacity=300,B=13' --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism eajs.6.prism --prop eajs.props ExpUtil --constants &#x27;energy_capacity=300,B=13&#x27; --exact --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
 Time for model input parsing: 0.016s.
@@ -49,8 +49,8 @@ Choices: 	11882922
 Reward Models:  utilityLocal
 Variables: 	rows: 16 meta variables (50 DD variables), columns: 16 meta variables (50 DD variables), nondeterminism: 5 meta variables (5 DD variables)
 Labels: 	11
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (51 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (51 nodes)
    * emptyBattery
    * localFailure
    * noLocalFailure
@@ -71,13 +71,13 @@ Transitions: 	62388
 Choices: 	47173
 Reward Models:  utilityLocal
 State Labels: 	3 labels
-   * (battery_load = 0) -> 1 item(s)
-   * init -> 1 item(s)
-   * deadlock -> 0 item(s)
+   * (battery_load = 0) -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
+   * deadlock -&gt; 0 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "ExpUtil": R[exp]{"utilityLocal"}max=? [F (battery_load = 0)] ...
+Model checking property &quot;ExpUtil&quot;: R[exp]{&quot;utilityLocal&quot;}max=? [F (battery_load = 0)] ...
 Result (for initial states): 2102306774904922316278224079/174449211009120179071170507 (approx. 12.05111082)
 Time for model checking: 0.143s.	</pre>
 </div>

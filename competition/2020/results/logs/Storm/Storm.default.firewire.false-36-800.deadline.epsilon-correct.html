@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 09:11:47 2020
-Command line arguments: --prism firewire.false.prism --prop firewire.false.props deadline --constants 'delay=36,deadline=800' --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism firewire.false.prism --prop firewire.false.props deadline --constants &#x27;delay=36,deadline=800&#x27; --sound --precision 1e-6 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
 Time for model input parsing: 0.010s.
@@ -49,8 +49,8 @@ Choices: 	478752
 Reward Models:  time
 Variables: 	rows: 10 meta variables (56 DD variables), columns: 10 meta variables (56 DD variables), nondeterminism: 14 meta variables (14 DD variables)
 Labels: 	3
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (57 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (57 nodes)
    * done
 -------------------------------------------------------------- 
 
@@ -63,13 +63,13 @@ Transitions: 	54288
 Choices: 	54101
 Reward Models:  time
 State Labels: 	3 labels
-   * (((s1 = 8) & (s2 = 7)) | ((s1 = 7) & (s2 = 8))) -> 1 item(s)
-   * init -> 1 item(s)
-   * deadlock -> 0 item(s)
+   * (((s1 = 8) &amp; (s2 = 7)) | ((s1 = 7) &amp; (s2 = 8))) -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
+   * deadlock -&gt; 0 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "deadline": Pmin=? [true Urew{"time"}<=800 (((s1 = 8) & (s2 = 7)) | ((s1 = 7) & (s2 = 8)))] ...
+Model checking property &quot;deadline&quot;: Pmin=? [true Urew{&quot;time&quot;}&lt;=800 (((s1 = 8) &amp; (s2 = 7)) | ((s1 = 7) &amp; (s2 = 8)))] ...
 Result (for initial states): 0.939453125
 Time for model checking: 3.949s.	</pre>
 </div>

@@ -30,7 +30,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 05:44:04 2020
-Command line arguments: --prism csma.4-2.prism --prop csma.props time_max --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism csma.4-2.prism --prop csma.props time_max --exact floats &#x27;--general:precision&#x27; 1e-20 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -48,14 +48,14 @@ Choices: 	825504
 Reward Models:  time
 Variables: 	rows: 19 meta variables (54 DD variables), columns: 19 meta variables (54 DD variables), nondeterminism: 17 meta variables (17 DD variables)
 Labels: 	5
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (55 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (55 nodes)
    * all_delivered
    * collision_max_backoff
    * one_delivered
 -------------------------------------------------------------- 
 
-Model checking property "time_max": R[exp]{"time"}max=? [F "all_delivered"] ...
+Model checking property &quot;time_max&quot;: R[exp]{&quot;time&quot;}max=? [F &quot;all_delivered&quot;] ...
 
 
 ----------

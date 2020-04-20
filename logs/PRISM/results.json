@@ -5288,12 +5288,10 @@
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.10565798479400001",
-		"result-correct": false,
-		"absolute-error": 0.10458558216000001,
-		"relative-error": 97.52454800479352,
-		"notes": [
-			"The tool result '10565798479400001/100000000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])' (approx. OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])) which means a relative error of '97.52454800479352' which is larger than the goal precision '0.001'."
-		],
+		"result-correct": true,
+		"absolute-error": 4.79400002e-9,
+		"relative-error": 4.53728153e-8 ,
+		"notes": [],
 		"log": "PRISM.default.repudiation_malicious.20.eventually.often-epsilon-correct.log"
 	},
 	{
@@ -5307,12 +5305,10 @@
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.10565798479400001",
-		"result-correct": false,
-		"absolute-error": 0.10458558216000001,
-		"relative-error": 97.52454800479352,
-		"notes": [
-			"The tool result '10565798479400001/100000000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])' (approx. OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])) which means a relative error of '97.52454800479352' which is larger than the goal precision '0.001'."
-		],
+		"result-correct": true,
+		"absolute-error": 4.79400002e-9,
+		"relative-error": 4.53728153e-8,
+		"notes": [],
 		"log": "PRISM.specific.repudiation_malicious.20.eventually.often-epsilon-correct.log"
 	},
 	{

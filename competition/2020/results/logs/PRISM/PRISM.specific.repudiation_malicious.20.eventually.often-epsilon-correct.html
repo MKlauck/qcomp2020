@@ -24,8 +24,7 @@
 	<table style="margin-bottom: 0.75ex;">
 		<tr><td>Walltime:</td><td style="tt">1.4214060306549072s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Note(s):</td><td>The tool result '10565798479400001/100000000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])' (approx. OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])) which means a relative error of '97.52454800479352' which is larger than the goal precision '0.001'.</td></tr>
-		<tr><td>Relative Error:</td><td style="tt; color: red">97.52454800479352</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.53728153e-08</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -39,21 +38,21 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 repudiation_malicious.prism repudiation_malicious.props --property eventually -const T=20
 
-Parsing model file "repudiation_malicious.prism"...
+Parsing model file &quot;repudiation_malicious.prism&quot;...
 
 Type:        PTA
 Modules:     originator recipient 
 Variables:   o x r y 
 
-Parsing properties file "repudiation_malicious.props"...
+Parsing properties file &quot;repudiation_malicious.props&quot;...
 
 2 properties:
-(1) "deadline": Pmax=? [ F<T "gains_information" ]
-(2) "eventually": Pmax=? [ F "gains_information" ]
+(1) &quot;deadline&quot;: Pmax=? [ F&lt;T &quot;gains_information&quot; ]
+(2) &quot;eventually&quot;: Pmax=? [ F &quot;gains_information&quot; ]
 
 ---------------------------------------------------------------------
 
-Model checking: "eventually": Pmax=? [ F "gains_information" ]
+Model checking: &quot;eventually&quot;: Pmax=? [ F &quot;gains_information&quot; ]
 
 Building PTA...
 

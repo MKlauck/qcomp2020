@@ -36,35 +36,35 @@ Version: 4.5.dev
 Date: Sat Mar 14 13:57:29 UTC 2020
 Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
-Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 embedded.prism embedded.props --property up_time -const 'MAX_COUNT=8,T=12'
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 embedded.prism embedded.props --property up_time -const &#x27;MAX_COUNT=8,T=12&#x27;
 
-Parsing model file "embedded.prism"...
+Parsing model file &quot;embedded.prism&quot;...
 
 Type:        CTMC
 Modules:     sensors proci actuators proco procm bus 
 Variables:   s i a o m count comp reqi reqo 
 
-Parsing properties file "embedded.props"...
+Parsing properties file &quot;embedded.props&quot;...
 
 14 properties:
-(1) "actuators": P=? [ !"down" U "fail_actuators" ]
-(2) "actuators_T": P=? [ !"down" U<=(T*3600) "fail_sensors" ]
-(3) "danger_T": R{"danger"}=? [ C<=(T*3600) ]
-(4) "danger_time": R{"danger"}=? [ F "down" ]
-(5) "down_T": R{"down"}=? [ C<=(T*3600) ]
-(6) "failure_T": P=? [ F<=(T*3600) "down" ]
-(7) "io": P=? [ !"down" U "fail_io" ]
-(8) "io_T": P=? [ !"down" U<=(T*3600) "fail_io" ]
-(9) "main": P=? [ !"down" U "fail_main" ]
-(10) "main_T": P=? [ !"down" U<=(T*3600) "fail_main" ]
-(11) "sensors": P=? [ !"down" U "fail_sensors" ]
-(12) "sensors_T": P=? [ !"down" U<=(T*3600) "fail_sensors" ]
-(13) "up_T": R{"up"}=? [ C<=(T*3600) ]
-(14) "up_time": R{"up"}=? [ F "down" ]
+(1) &quot;actuators&quot;: P=? [ !&quot;down&quot; U &quot;fail_actuators&quot; ]
+(2) &quot;actuators_T&quot;: P=? [ !&quot;down&quot; U&lt;=(T*3600) &quot;fail_sensors&quot; ]
+(3) &quot;danger_T&quot;: R{&quot;danger&quot;}=? [ C&lt;=(T*3600) ]
+(4) &quot;danger_time&quot;: R{&quot;danger&quot;}=? [ F &quot;down&quot; ]
+(5) &quot;down_T&quot;: R{&quot;down&quot;}=? [ C&lt;=(T*3600) ]
+(6) &quot;failure_T&quot;: P=? [ F&lt;=(T*3600) &quot;down&quot; ]
+(7) &quot;io&quot;: P=? [ !&quot;down&quot; U &quot;fail_io&quot; ]
+(8) &quot;io_T&quot;: P=? [ !&quot;down&quot; U&lt;=(T*3600) &quot;fail_io&quot; ]
+(9) &quot;main&quot;: P=? [ !&quot;down&quot; U &quot;fail_main&quot; ]
+(10) &quot;main_T&quot;: P=? [ !&quot;down&quot; U&lt;=(T*3600) &quot;fail_main&quot; ]
+(11) &quot;sensors&quot;: P=? [ !&quot;down&quot; U &quot;fail_sensors&quot; ]
+(12) &quot;sensors_T&quot;: P=? [ !&quot;down&quot; U&lt;=(T*3600) &quot;fail_sensors&quot; ]
+(13) &quot;up_T&quot;: R{&quot;up&quot;}=? [ C&lt;=(T*3600) ]
+(14) &quot;up_time&quot;: R{&quot;up&quot;}=? [ F &quot;down&quot; ]
 
 ---------------------------------------------------------------------
 
-Model checking: "up_time": R{"up"}=? [ F "down" ]
+Model checking: &quot;up_time&quot;: R{&quot;up&quot;}=? [ F &quot;down&quot; ]
 Model constants: MAX_COUNT=8
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).

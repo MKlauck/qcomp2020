@@ -38,26 +38,26 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 zeroconf-pta.prism zeroconf-pta.props --property incorrect -const T=200
 
-Parsing model file "zeroconf-pta.prism"...
+Parsing model file &quot;zeroconf-pta.prism&quot;...
 
 Type:        PTA
 Modules:     sender environment 
 Variables:   s probes ip x e y 
 
-Parsing properties file "zeroconf-pta.props"...
+Parsing properties file &quot;zeroconf-pta.props&quot;...
 
 2 properties:
-(1) "deadline": Pmax=? [ F<=T s=2&ip=2 ]
-(2) "incorrect": Pmax=? [ F s=2&ip=2 ]
+(1) &quot;deadline&quot;: Pmax=? [ F&lt;=T s=2&amp;ip=2 ]
+(2) &quot;incorrect&quot;: Pmax=? [ F s=2&amp;ip=2 ]
 
 ---------------------------------------------------------------------
 
-Model checking: "incorrect": Pmax=? [ F s=2&ip=2 ]
+Model checking: &quot;incorrect&quot;: Pmax=? [ F s=2&amp;ip=2 ]
 
 Building PTA...
 
 PTA: 2 clocks, 23 locations, 26 transitions
-Target (s=2&ip=2) satisfied by 3 locations.
+Target (s=2&amp;ip=2) satisfied by 3 locations.
 
 Building initial STPG...
 

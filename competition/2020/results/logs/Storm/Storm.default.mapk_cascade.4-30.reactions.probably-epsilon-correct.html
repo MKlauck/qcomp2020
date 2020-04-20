@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 18:32:57 2020
-Command line arguments: --prism mapk_cascade.prism --prop mapk_cascade.props reactions --constants 'N=4,T=30' --prismcompat --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism mapk_cascade.prism --prop mapk_cascade.props reactions --constants &#x27;N=4,T=30&#x27; --prismcompat --sound --precision 5e-2 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
@@ -60,11 +60,11 @@ Transitions: 	910872 (111563 nodes)
 Reward Models:  reactions
 Variables: 	rows: 22 meta variables (58 DD variables), columns: 22 meta variables (58 DD variables)
 Labels: 	2
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (59 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (59 nodes)
 -------------------------------------------------------------- 
 
-Model checking property "reactions": R[exp]{"reactions"}=? [C<=30] ...
+Model checking property &quot;reactions&quot;: R[exp]{&quot;reactions&quot;}=? [C&lt;=30] ...
 Result (for initial states): 48.49105424
 Time for model checking: 236.588s.	</pre>
 </div>

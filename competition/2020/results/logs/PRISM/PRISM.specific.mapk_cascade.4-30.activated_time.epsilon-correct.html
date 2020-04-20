@@ -36,24 +36,24 @@ Version: 4.5.dev
 Date: Sat Mar 14 14:22:18 UTC 2020
 Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
-Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 mapk_cascade.prism mapk_cascade.props --property activated_time -const 'N=4,T=30'
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 mapk_cascade.prism mapk_cascade.props --property activated_time -const &#x27;N=4,T=30&#x27;
 
-Parsing model file "mapk_cascade.prism"...
+Parsing model file &quot;mapk_cascade.prism&quot;...
 
 Type:        CTMC
 Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
 Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
 
-Parsing properties file "mapk_cascade.props"...
+Parsing properties file &quot;mapk_cascade.props&quot;...
 
 3 properties:
-(1) "activated_T": R{"activated"}=? [ I=T ]
-(2) "activated_time": R{"time"}=? [ F kpp=N ]
-(3) "reactions": R{"reactions"}=? [ C<=T ]
+(1) &quot;activated_T&quot;: R{&quot;activated&quot;}=? [ I=T ]
+(2) &quot;activated_time&quot;: R{&quot;time&quot;}=? [ F kpp=N ]
+(3) &quot;reactions&quot;: R{&quot;reactions&quot;}=? [ C&lt;=T ]
 
 ---------------------------------------------------------------------
 
-Model checking: "activated_time": R{"time"}=? [ F kpp=N ]
+Model checking: &quot;activated_time&quot;: R{&quot;time&quot;}=? [ F kpp=N ]
 Model constants: N=4
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).

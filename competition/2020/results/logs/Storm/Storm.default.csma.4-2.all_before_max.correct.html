@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 05:43:03 2020
-Command line arguments: --prism csma.4-2.prism --prop csma.props all_before_max --exact --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism csma.4-2.prism --prop csma.props all_before_max --exact --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
 Time for model input parsing: 0.008s.
@@ -49,14 +49,14 @@ Choices: 	825504
 Reward Models:  none
 Variables: 	rows: 19 meta variables (54 DD variables), columns: 19 meta variables (54 DD variables), nondeterminism: 17 meta variables (17 DD variables)
 Labels: 	5
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (55 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (55 nodes)
    * all_delivered
    * collision_max_backoff
    * one_delivered
 -------------------------------------------------------------- 
 
-Model checking property "all_before_max": Pmax=? [!("collision_max_backoff") U "all_delivered"] ...
+Model checking property &quot;all_before_max&quot;: Pmax=? [!(&quot;collision_max_backoff&quot;) U &quot;all_delivered&quot;] ...
 Result (for initial states): 283699444885771093844545259966420317194574918841/365375409332725729550921208179070754913983135744 (approx. 0.7764601493)
 Time for model checking: 9.991s.	</pre>
 </div>

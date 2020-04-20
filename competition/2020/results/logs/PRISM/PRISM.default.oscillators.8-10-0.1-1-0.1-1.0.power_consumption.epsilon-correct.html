@@ -36,23 +36,23 @@ Version: 4.5.dev
 Date: Sat Mar 14 12:22:08 UTC 2020
 Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
-Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 oscillators.8-10-0.1-1.prism oscillators.props --property power_consumption -const 'mu=0.1,lambda=1.0'
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 oscillators.8-10-0.1-1.prism oscillators.props --property power_consumption -const &#x27;mu=0.1,lambda=1.0&#x27;
 
-Parsing model file "oscillators.8-10-0.1-1.prism"...
+Parsing model file &quot;oscillators.8-10-0.1-1.prism&quot;...
 
 Type:        DTMC
 Modules:     oscillator_population 
 Variables:   k_1 k_2 k_3 k_4 k_5 k_6 k_7 k_8 k_9 k_10 
 
-Parsing properties file "oscillators.props"...
+Parsing properties file &quot;oscillators.props&quot;...
 
 2 properties:
-(1) "time_to_synch": R{"time_to_synch"}=? [ F order_parameter>=lambda ]
-(2) "power_consumption": R{"power_consumption"}=? [ F order_parameter>=lambda ]
+(1) &quot;time_to_synch&quot;: R{&quot;time_to_synch&quot;}=? [ F order_parameter&gt;=lambda ]
+(2) &quot;power_consumption&quot;: R{&quot;power_consumption&quot;}=? [ F order_parameter&gt;=lambda ]
 
 ---------------------------------------------------------------------
 
-Model checking: "power_consumption": R{"power_consumption"}=? [ F order_parameter>=lambda ]
+Model checking: &quot;power_consumption&quot;: R{&quot;power_consumption&quot;}=? [ F order_parameter&gt;=lambda ]
 Model constants: mu=0.1,lambda=1
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).

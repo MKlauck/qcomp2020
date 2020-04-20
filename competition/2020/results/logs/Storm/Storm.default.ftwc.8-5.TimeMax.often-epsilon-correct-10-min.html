@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 23:40:12 2020
-Command line arguments: --jani ftwc.jani --janiproperty TimeMax --constants 'N=8,TIME_BOUND=5' --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --jani ftwc.jani --janiproperty TimeMax --constants &#x27;N=8,TIME_BOUND=5&#x27; --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -51,9 +51,9 @@ Markovian St.: 	4951
 Max. Rate.: 	2.0307
 Reward Models:  none
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1])) -> 1059 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * (((workstations_up[0] = 0) | switches_down[0]) &amp; ((workstations_up[1] = 0) | switches_down[1])) -&gt; 1059 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
@@ -68,13 +68,13 @@ Markovian St.: 	4951
 Max. Rate.: 	2.0307
 Reward Models:  none
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1])) -> 1059 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * (((workstations_up[0] = 0) | switches_down[0]) &amp; ((workstations_up[1] = 0) | switches_down[1])) -&gt; 1059 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "TimeMax": T[exp]max=? [F (((workstations_up[0] = 0) | switches_down[0]) & ((workstations_up[1] = 0) | switches_down[1]))] ...
+Model checking property &quot;TimeMax&quot;: T[exp]max=? [F (((workstations_up[0] = 0) | switches_down[0]) &amp; ((workstations_up[1] = 0) | switches_down[1]))] ...
 Result (for initial states): 1995676.377665207
 Time for model checking: 67.179s.	</pre>
 </div>

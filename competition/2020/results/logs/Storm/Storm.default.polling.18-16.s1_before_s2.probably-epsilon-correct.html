@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 00:41:57 2020
-Command line arguments: --prism polling.18.prism --prop polling.props s1_before_s2 --constants T=16 --prismcompat --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism polling.18.prism --prop polling.props s1_before_s2 --constants T=16 --prismcompat --sound --precision 5e-2 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
@@ -60,11 +60,11 @@ Transitions: 	68485120 (2743 nodes)
 Reward Models:  none
 Variables: 	rows: 20 meta variables (24 DD variables), columns: 20 meta variables (24 DD variables)
 Labels: 	2
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (25 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (25 nodes)
 -------------------------------------------------------------- 
 
-Model checking property "s1_before_s2": P=? [!(((s = 2) & (a = 1))) U ((s = 1) & (a = 1))] ...
+Model checking property &quot;s1_before_s2&quot;: P=? [!(((s = 2) &amp; (a = 1))) U ((s = 1) &amp; (a = 1))] ...
 Result (for initial states): 0.5378765689
 Time for model checking: 24.131s.	</pre>
 </div>

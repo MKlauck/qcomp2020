@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Thu Mar 19 02:24:08 2020
-Command line arguments: --prism stream.ma --prop stream.csl exp_buffertime --constants N=1000 --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism stream.ma --prop stream.csl exp_buffertime --constants N=1000 --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -51,9 +51,9 @@ Markovian St.: 	1001001
 Max. Rate.: 	8
 Reward Models:  buffering
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * done -> 1 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * done -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
@@ -68,13 +68,13 @@ Markovian St.: 	1001001
 Max. Rate.: 	8
 Reward Models:  buffering
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * done -> 1 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * done -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "exp_buffertime": R[exp]{"buffering"}min=? [F "done"] ...
+Model checking property &quot;exp_buffertime&quot;: R[exp]{&quot;buffering&quot;}min=? [F &quot;done&quot;] ...
 Result (for initial states): 8.919505572927161
 Time for model checking: 3.836s.	</pre>
 </div>

@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 05:42:37 2020
-Command line arguments: --prism csma.3-4.prism --prop csma.props time_max --sound --precision 5e-2 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism csma.3-4.prism --prop csma.props time_max --sound --precision 5e-2 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
 Time for model input parsing: 0.010s.
@@ -49,14 +49,14 @@ Choices: 	1471059
 Reward Models:  time
 Variables: 	rows: 15 meta variables (51 DD variables), columns: 15 meta variables (51 DD variables), nondeterminism: 13 meta variables (13 DD variables)
 Labels: 	5
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (52 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (52 nodes)
    * all_delivered
    * collision_max_backoff
    * one_delivered
 -------------------------------------------------------------- 
 
-Model checking property "time_max": R[exp]{"time"}max=? [F "all_delivered"] ...
+Model checking property &quot;time_max&quot;: R[exp]{&quot;time&quot;}max=? [F &quot;all_delivered&quot;] ...
 Result (for initial states): 116.8182957
 Time for model checking: 7.470s.	</pre>
 </div>

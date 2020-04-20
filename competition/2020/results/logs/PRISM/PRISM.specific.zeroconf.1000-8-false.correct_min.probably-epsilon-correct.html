@@ -36,23 +36,23 @@ Version: 4.5.dev
 Date: Sun Mar 15 03:27:29 UTC 2020
 Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
-Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 zeroconf.prism zeroconf.props --property correct_min -const 'N=1000,K=8,reset=false'
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 zeroconf.prism zeroconf.props --property correct_min -const &#x27;N=1000,K=8,reset=false&#x27;
 
-Parsing model file "zeroconf.prism"...
+Parsing model file &quot;zeroconf.prism&quot;...
 
 Type:        MDP
 Modules:     environment host0 
 Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
 
-Parsing properties file "zeroconf.props"...
+Parsing properties file &quot;zeroconf.props&quot;...
 
 2 properties:
-(1) "correct_max": Pmax=? [ F (l=4&ip=1) ]
-(2) "correct_min": Pmin=? [ F (l=4&ip=1) ]
+(1) &quot;correct_max&quot;: Pmax=? [ F (l=4&amp;ip=1) ]
+(2) &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
 
 ---------------------------------------------------------------------
 
-Model checking: "correct_min": Pmin=? [ F (l=4&ip=1) ]
+Model checking: &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
 Model constants: reset=false,N=1000,K=8
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).

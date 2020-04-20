@@ -36,29 +36,29 @@ Version: 4.5.dev
 Date: Sat Mar 14 12:42:27 UTC 2020
 Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
-Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 cluster.prism cluster.props --property qos1 -const 'N=128,T=2000,t=20'
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 cluster.prism cluster.props --property qos1 -const &#x27;N=128,T=2000,t=20&#x27;
 
-Parsing model file "cluster.prism"...
+Parsing model file &quot;cluster.prism&quot;...
 
 Type:        CTMC
 Modules:     Left Right Repairman Line ToLeft ToRight 
 Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
 
-Parsing properties file "cluster.props"...
+Parsing properties file &quot;cluster.props&quot;...
 
 8 properties:
-(1) "below_min": R{"time_not_min"}=? [ C<=T ]
-(2) "operational": R{"percent_op"}=? [ I=t ]
-(3) "premium_steady": S=? [ "premium" ]
-(4) "qos1": P=? [ F<=T !"minimum" ]
-(5) "qos2": P=? [ F[t,t] !"minimum" ]
-(6) "qos3": P=? [ "minimum" U<=t "premium" ]
-(7) "qos4": P=? [ !"minimum" U>=t "minimum" ]
-(8) "repairs": R{"num_repairs"}=? [ C<=T ]
+(1) &quot;below_min&quot;: R{&quot;time_not_min&quot;}=? [ C&lt;=T ]
+(2) &quot;operational&quot;: R{&quot;percent_op&quot;}=? [ I=t ]
+(3) &quot;premium_steady&quot;: S=? [ &quot;premium&quot; ]
+(4) &quot;qos1&quot;: P=? [ F&lt;=T !&quot;minimum&quot; ]
+(5) &quot;qos2&quot;: P=? [ F[t,t] !&quot;minimum&quot; ]
+(6) &quot;qos3&quot;: P=? [ &quot;minimum&quot; U&lt;=t &quot;premium&quot; ]
+(7) &quot;qos4&quot;: P=? [ !&quot;minimum&quot; U&gt;=t &quot;minimum&quot; ]
+(8) &quot;repairs&quot;: R{&quot;num_repairs&quot;}=? [ C&lt;=T ]
 
 ---------------------------------------------------------------------
 
-Model checking: "qos1": P=? [ F<=T !"minimum" ]
+Model checking: &quot;qos1&quot;: P=? [ F&lt;=T !&quot;minimum&quot; ]
 Model constants: N=128
 Property constants: T=2000
 

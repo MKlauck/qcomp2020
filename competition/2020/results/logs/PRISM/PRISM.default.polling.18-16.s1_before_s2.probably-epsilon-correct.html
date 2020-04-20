@@ -38,24 +38,24 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 polling.18.prism polling.props --property s1_before_s2 -const T=16
 
-Parsing model file "polling.18.prism"...
+Parsing model file &quot;polling.18.prism&quot;...
 
 Type:        CTMC
 Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 station15 station16 station17 station18 
 Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 
 
-Parsing properties file "polling.props"...
+Parsing properties file &quot;polling.props&quot;...
 
 5 properties:
-(1) "s1": S=? [ s1=1&!(s=1&a=1) ]
-(2) "s1_before_s2": P=? [ !(s=2&a=1) U (s=1&a=1) ]
-(3) "served": R{"served"}=? [ C<=T ]
-(4) "station1_polled": P=? [ F<=T (s=1&a=0) ]
-(5) "waiting": R{"waiting"}=? [ C<=T ]
+(1) &quot;s1&quot;: S=? [ s1=1&amp;!(s=1&amp;a=1) ]
+(2) &quot;s1_before_s2&quot;: P=? [ !(s=2&amp;a=1) U (s=1&amp;a=1) ]
+(3) &quot;served&quot;: R{&quot;served&quot;}=? [ C&lt;=T ]
+(4) &quot;station1_polled&quot;: P=? [ F&lt;=T (s=1&amp;a=0) ]
+(5) &quot;waiting&quot;: R{&quot;waiting&quot;}=? [ C&lt;=T ]
 
 ---------------------------------------------------------------------
 
-Model checking: "s1_before_s2": P=? [ !(s=2&a=1) U (s=1&a=1) ]
+Model checking: &quot;s1_before_s2&quot;: P=? [ !(s=2&amp;a=1) U (s=1&amp;a=1) ]
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
 

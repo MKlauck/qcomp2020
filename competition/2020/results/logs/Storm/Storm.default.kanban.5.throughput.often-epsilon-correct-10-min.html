@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 17:24:20 2020
-Command line arguments: --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -61,11 +61,11 @@ Transitions: 	24460016 (6308 nodes)
 Reward Models:  throughput
 Variables: 	rows: 16 meta variables (48 DD variables), columns: 16 meta variables (48 DD variables)
 Labels: 	2
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (49 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (49 nodes)
 -------------------------------------------------------------- 
 
-Model checking property "throughput": R[exp]{"throughput"}=? [LRA] ...
+Model checking property &quot;throughput&quot;: R[exp]{&quot;throughput&quot;}=? [LRA] ...
 Result (for initial states): 0.3071247592682531
 Time for model checking: 68.256s.	</pre>
 </div>

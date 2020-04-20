@@ -37,26 +37,26 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 wlan.5.prism wlan.props --property sent -const COL=0
 
-Parsing model file "wlan.5.prism"...
+Parsing model file &quot;wlan.5.prism&quot;...
 
 Type:        MDP
 Modules:     medium station1 station2 
 Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
 
-Parsing properties file "wlan.props"...
+Parsing properties file &quot;wlan.props&quot;...
 
 7 properties:
-(1) "collisions": Pmax=? [ F col=COL ]
-(2) "cost_max": R{"cost"}max=? [ F s1=12&s2=12 ]
-(3) "cost_min": R{"cost"}min=? [ F s1=12&s2=12 ]
-(4) "num_collisions": R{"collisions"}max=? [ F s1=12&s2=12 ]
-(5) "sent": P>=1 [ F s1=12&s2=12 ]
-(6) "time_max": R{"time"}max=? [ F s1=12&s2=12 ]
-(7) "time_min": R{"time"}min=? [ F s1=12&s2=12 ]
+(1) &quot;collisions&quot;: Pmax=? [ F col=COL ]
+(2) &quot;cost_max&quot;: R{&quot;cost&quot;}max=? [ F s1=12&amp;s2=12 ]
+(3) &quot;cost_min&quot;: R{&quot;cost&quot;}min=? [ F s1=12&amp;s2=12 ]
+(4) &quot;num_collisions&quot;: R{&quot;collisions&quot;}max=? [ F s1=12&amp;s2=12 ]
+(5) &quot;sent&quot;: P&gt;=1 [ F s1=12&amp;s2=12 ]
+(6) &quot;time_max&quot;: R{&quot;time&quot;}max=? [ F s1=12&amp;s2=12 ]
+(7) &quot;time_min&quot;: R{&quot;time&quot;}min=? [ F s1=12&amp;s2=12 ]
 
 ---------------------------------------------------------------------
 
-Model checking: "sent": P>=1 [ F s1=12&s2=12 ]
+Model checking: &quot;sent&quot;: P&gt;=1 [ F s1=12&amp;s2=12 ]
 Model constants: COL=0
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).

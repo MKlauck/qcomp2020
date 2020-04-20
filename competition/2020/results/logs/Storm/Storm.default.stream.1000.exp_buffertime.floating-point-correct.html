@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Thu Mar 19 02:23:29 2020
-Command line arguments: --prism stream.ma --prop stream.csl exp_buffertime --constants N=1000 --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism stream.ma --prop stream.csl exp_buffertime --constants N=1000 --exact floats &#x27;--general:precision&#x27; 1e-20 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -51,9 +51,9 @@ Markovian St.: 	1001001
 Max. Rate.: 	8
 Reward Models:  buffering
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * done -> 1 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * done -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
@@ -68,13 +68,13 @@ Markovian St.: 	1001001
 Max. Rate.: 	8
 Reward Models:  buffering
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * done -> 1 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * done -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "exp_buffertime": R[exp]{"buffering"}min=? [F "done"] ...
+Model checking property &quot;exp_buffertime&quot;: R[exp]{&quot;buffering&quot;}min=? [F &quot;done&quot;] ...
 Result (for initial states): 8.91950557292716084134554
 Time for model checking: 2.605s.	</pre>
 </div>

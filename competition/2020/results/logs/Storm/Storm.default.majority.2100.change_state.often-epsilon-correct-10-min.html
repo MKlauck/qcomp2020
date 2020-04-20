@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 17:28:10 2020
-Command line arguments: --prism majority.prism --prop majority.props change_state --constants T=2100 --prismcompat --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism majority.prism --prop majority.props change_state --constants T=2100 --prismcompat --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -49,13 +49,13 @@ States: 	191250
 Transitions: 	1935450
 Reward Models:  none
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * ((EE > 40) & (CC < 20)) -> 2250 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * ((EE &gt; 40) &amp; (CC &lt; 20)) -&gt; 2250 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "change_state": P=? [true U<=2100 ((EE > 40) & (CC < 20))] ...
+Model checking property &quot;change_state&quot;: P=? [true U&lt;=2100 ((EE &gt; 40) &amp; (CC &lt; 20))] ...
 Result (for initial states): 0.054299193165188
 Time for model checking: 31.507s.	</pre>
 </div>

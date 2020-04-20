@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 14:31:14 2020
-Command line arguments: --prism cluster.prism --prop cluster.props qos1 --constants 'N=128,T=2000,t=20' --prismcompat --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism cluster.prism --prop cluster.props qos1 --constants &#x27;N=128,T=2000,t=20&#x27; --prismcompat --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -62,13 +62,13 @@ States: 	597012
 Transitions: 	2908192
 Reward Models:  none
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * minimum -> 141117 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * minimum -&gt; 141117 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "qos1": P=? [true U<=2000 !("minimum")] ...
+Model checking property &quot;qos1&quot;: P=? [true U&lt;=2000 !(&quot;minimum&quot;)] ...
 Result (for initial states): 0.001072402533789138
 Time for model checking: 150.108s.	</pre>
 </div>

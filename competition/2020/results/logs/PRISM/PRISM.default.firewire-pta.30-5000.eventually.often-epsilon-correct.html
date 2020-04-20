@@ -36,29 +36,29 @@ Version: 4.5.dev
 Date: Sun Mar 15 03:29:34 UTC 2020
 Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
-Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 firewire-pta.prism firewire-pta.props --property eventually -const 'delay=30,T=5000'
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 firewire-pta.prism firewire-pta.props --property eventually -const &#x27;delay=30,T=5000&#x27;
 
-Parsing model file "firewire-pta.prism"...
+Parsing model file &quot;firewire-pta.prism&quot;...
 
 Type:        PTA
 Modules:     wire12 node1 wire21 node2 
 Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
 
-Parsing properties file "firewire-pta.props"...
+Parsing properties file &quot;firewire-pta.props&quot;...
 
 2 properties:
-(1) "deadline": Pmin=? [ F<=T "done" ]
-(2) "eventually": Pmin=? [ F "done" ]
+(1) &quot;deadline&quot;: Pmin=? [ F&lt;=T &quot;done&quot; ]
+(2) &quot;eventually&quot;: Pmin=? [ F &quot;done&quot; ]
 
 ---------------------------------------------------------------------
 
-Model checking: "eventually": Pmin=? [ F "done" ]
+Model checking: &quot;eventually&quot;: Pmin=? [ F &quot;done&quot; ]
 Model constants: delay=30
 
 Building PTA...
 
 PTA: 6 clocks, 65 locations, 127 transitions
-Target (s1=8&s2=7|s1=7&s2=8) satisfied by 4 locations.
+Target (s1=8&amp;s2=7|s1=7&amp;s2=8) satisfied by 4 locations.
 
 Building initial STPG...
 

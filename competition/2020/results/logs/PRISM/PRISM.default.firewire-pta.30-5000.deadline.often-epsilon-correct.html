@@ -36,30 +36,30 @@ Version: 4.5.dev
 Date: Sun Mar 15 03:29:19 UTC 2020
 Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
-Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 firewire-pta.prism firewire-pta.props --property deadline -const 'delay=30,T=5000'
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 firewire-pta.prism firewire-pta.props --property deadline -const &#x27;delay=30,T=5000&#x27;
 
-Parsing model file "firewire-pta.prism"...
+Parsing model file &quot;firewire-pta.prism&quot;...
 
 Type:        PTA
 Modules:     wire12 node1 wire21 node2 
 Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
 
-Parsing properties file "firewire-pta.props"...
+Parsing properties file &quot;firewire-pta.props&quot;...
 
 2 properties:
-(1) "deadline": Pmin=? [ F<=T "done" ]
-(2) "eventually": Pmin=? [ F "done" ]
+(1) &quot;deadline&quot;: Pmin=? [ F&lt;=T &quot;done&quot; ]
+(2) &quot;eventually&quot;: Pmin=? [ F &quot;done&quot; ]
 
 ---------------------------------------------------------------------
 
-Model checking: "deadline": Pmin=? [ F<=T "done" ]
+Model checking: &quot;deadline&quot;: Pmin=? [ F&lt;=T &quot;done&quot; ]
 Model constants: delay=30
 Property constants: T=5000
 
 Building PTA...
 
 PTA: 6 clocks, 65 locations, 127 transitions
-Target (s1=8&s2=7|s1=7&s2=8) satisfied by 4 locations.
+Target (s1=8&amp;s2=7|s1=7&amp;s2=8) satisfied by 4 locations.
 Modifying PTA to encode time bound from property...
 New PTA: 7 clocks, 66 locations, 135 transitions
 

@@ -38,24 +38,24 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 consensus.4.prism consensus.props --property steps_min -const K=4
 
-Parsing model file "consensus.4.prism"...
+Parsing model file &quot;consensus.4.prism&quot;...
 
 Type:        MDP
 Modules:     process1 process2 process3 process4 
 Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 
 
-Parsing properties file "consensus.props"...
+Parsing properties file &quot;consensus.props&quot;...
 
 5 properties:
-(1) "c1": P>=1 [ F "finished" ]
-(2) "c2": Pmin=? [ F "finished"&"all_coins_equal_1" ]
-(3) "disagree": Pmax=? [ F "finished"&!"agree" ]
-(4) "steps_max": R{"steps"}max=? [ F "finished" ]
-(5) "steps_min": R{"steps"}min=? [ F "finished" ]
+(1) &quot;c1&quot;: P&gt;=1 [ F &quot;finished&quot; ]
+(2) &quot;c2&quot;: Pmin=? [ F &quot;finished&quot;&amp;&quot;all_coins_equal_1&quot; ]
+(3) &quot;disagree&quot;: Pmax=? [ F &quot;finished&quot;&amp;!&quot;agree&quot; ]
+(4) &quot;steps_max&quot;: R{&quot;steps&quot;}max=? [ F &quot;finished&quot; ]
+(5) &quot;steps_min&quot;: R{&quot;steps&quot;}min=? [ F &quot;finished&quot; ]
 
 ---------------------------------------------------------------------
 
-Model checking: "steps_min": R{"steps"}min=? [ F "finished" ]
+Model checking: &quot;steps_min&quot;: R{&quot;steps&quot;}min=? [ F &quot;finished&quot; ]
 Model constants: K=4
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
@@ -80,7 +80,7 @@ Prob0A: 57 iterations in 0.17 seconds (average 0.002982, setup 0.00)
 
 Prob1E: 58 iterations in 0.08 seconds (average 0.001414, setup 0.00)
 
-Warning: PRISM hasn't checked for zero-reward loops.
+Warning: PRISM hasn&#x27;t checked for zero-reward loops.
 Your minimum rewards may be too low...
 
 goal = 64, inf = 0, maybe = 43072

@@ -38,24 +38,24 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 csma.3-4.prism csma.props --property time_max
 
-Parsing model file "csma.3-4.prism"...
+Parsing model file &quot;csma.3-4.prism&quot;...
 
 Type:        MDP
 Modules:     bus station1 station2 station3 
 Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 
 
-Parsing properties file "csma.props"...
+Parsing properties file &quot;csma.props&quot;...
 
 5 properties:
-(1) "all_before_max": Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
-(2) "all_before_min": Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
-(3) "some_before": Pmin=? [ F min_backoff_after_success<K ]
-(4) "time_max": R{"time"}max=? [ F "all_delivered" ]
-(5) "time_min": R{"time"}min=? [ F "all_delivered" ]
+(1) &quot;all_before_max&quot;: Pmax=? [ !&quot;collision_max_backoff&quot; U &quot;all_delivered&quot; ]
+(2) &quot;all_before_min&quot;: Pmin=? [ !&quot;collision_max_backoff&quot; U &quot;all_delivered&quot; ]
+(3) &quot;some_before&quot;: Pmin=? [ F min_backoff_after_success&lt;K ]
+(4) &quot;time_max&quot;: R{&quot;time&quot;}max=? [ F &quot;all_delivered&quot; ]
+(5) &quot;time_min&quot;: R{&quot;time&quot;}min=? [ F &quot;all_delivered&quot; ]
 
 ---------------------------------------------------------------------
 
-Model checking: "time_max": R{"time"}max=? [ F "all_delivered" ]
+Model checking: &quot;time_max&quot;: R{&quot;time&quot;}max=? [ F &quot;all_delivered&quot; ]
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
 

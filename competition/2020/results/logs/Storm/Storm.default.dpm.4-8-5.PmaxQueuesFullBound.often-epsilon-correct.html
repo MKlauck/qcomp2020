@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 18:43:41 2020
-Command line arguments: --jani dpm.jani --janiproperty PmaxQueuesFullBound --constants 'N=4,C=8,TIME_BOUND=5' '--timebounded:precision' 1e-3 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --jani dpm.jani --janiproperty PmaxQueuesFullBound --constants &#x27;N=4,C=8,TIME_BOUND=5&#x27; &#x27;--timebounded:precision&#x27; 1e-3 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
 Time for model input parsing: 0.005s.
@@ -50,9 +50,9 @@ Markovian St.: 	94730
 Max. Rate.: 	4.1
 Reward Models:  none
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * (((((((((((4 < 1) | (items1 = 8)) & ((4 < 2) | (items2 = 8))) & ((4 < 3) | (items3 = 8))) & ((4 < 4) | (items4 = 8))) & ((4 < 5) | (items5 = 8))) & ((4 < 6) | (items6 = 8))) & ((4 < 7) | (items7 = 8))) & ((4 < 8) | (items8 = 8))) & ((4 < 9) | (items9 = 8))) & ((4 < 10) | (items10 = 8))) -> 10 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * (((((((((((4 &lt; 1) | (items1 = 8)) &amp; ((4 &lt; 2) | (items2 = 8))) &amp; ((4 &lt; 3) | (items3 = 8))) &amp; ((4 &lt; 4) | (items4 = 8))) &amp; ((4 &lt; 5) | (items5 = 8))) &amp; ((4 &lt; 6) | (items6 = 8))) &amp; ((4 &lt; 7) | (items7 = 8))) &amp; ((4 &lt; 8) | (items8 = 8))) &amp; ((4 &lt; 9) | (items9 = 8))) &amp; ((4 &lt; 10) | (items10 = 8))) -&gt; 10 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
@@ -67,21 +67,21 @@ Markovian St.: 	94730
 Max. Rate.: 	4.1
 Reward Models:  none
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * (((((((((((4 < 1) | (items1 = 8)) & ((4 < 2) | (items2 = 8))) & ((4 < 3) | (items3 = 8))) & ((4 < 4) | (items4 = 8))) & ((4 < 5) | (items5 = 8))) & ((4 < 6) | (items6 = 8))) & ((4 < 7) | (items7 = 8))) & ((4 < 8) | (items8 = 8))) & ((4 < 9) | (items9 = 8))) & ((4 < 10) | (items10 = 8))) -> 10 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * (((((((((((4 &lt; 1) | (items1 = 8)) &amp; ((4 &lt; 2) | (items2 = 8))) &amp; ((4 &lt; 3) | (items3 = 8))) &amp; ((4 &lt; 4) | (items4 = 8))) &amp; ((4 &lt; 5) | (items5 = 8))) &amp; ((4 &lt; 6) | (items6 = 8))) &amp; ((4 &lt; 7) | (items7 = 8))) &amp; ((4 &lt; 8) | (items8 = 8))) &amp; ((4 &lt; 9) | (items9 = 8))) &amp; ((4 &lt; 10) | (items10 = 8))) -&gt; 10 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "PmaxQueuesFullBound": Pmax=? [true U<=5 (((((((((((4 < 1) | (items1 = 8)) & ((4 < 2) | (items2 = 8))) & ((4 < 3) | (items3 = 8))) & ((4 < 4) | (items4 = 8))) & ((4 < 5) | (items5 = 8))) & ((4 < 6) | (items6 = 8))) & ((4 < 7) | (items7 = 8))) & ((4 < 8) | (items8 = 8))) & ((4 < 9) | (items9 = 8))) & ((4 < 10) | (items10 = 8)))] ...
- WARN (numerical.cpp:130): Fox-Glynn: right = 627 >> lambda = 400, cannot bound the right tail. The results are unreliable.
-ERROR (numerical.cpp:222): Fox-Glynn: 627 > 600, underflow is possible.
- WARN (numerical.cpp:130): Fox-Glynn: right = 627 >> lambda = 400, cannot bound the right tail. The results are unreliable.
-ERROR (numerical.cpp:222): Fox-Glynn: 627 > 600, underflow is possible.
- WARN (numerical.cpp:130): Fox-Glynn: right = 627 >> lambda = 400, cannot bound the right tail. The results are unreliable.
-ERROR (numerical.cpp:222): Fox-Glynn: 627 > 600, underflow is possible.
- WARN (numerical.cpp:130): Fox-Glynn: right = 627 >> lambda = 400, cannot bound the right tail. The results are unreliable.
-ERROR (numerical.cpp:222): Fox-Glynn: 627 > 600, underflow is possible.
+Model checking property &quot;PmaxQueuesFullBound&quot;: Pmax=? [true U&lt;=5 (((((((((((4 &lt; 1) | (items1 = 8)) &amp; ((4 &lt; 2) | (items2 = 8))) &amp; ((4 &lt; 3) | (items3 = 8))) &amp; ((4 &lt; 4) | (items4 = 8))) &amp; ((4 &lt; 5) | (items5 = 8))) &amp; ((4 &lt; 6) | (items6 = 8))) &amp; ((4 &lt; 7) | (items7 = 8))) &amp; ((4 &lt; 8) | (items8 = 8))) &amp; ((4 &lt; 9) | (items9 = 8))) &amp; ((4 &lt; 10) | (items10 = 8)))] ...
+ WARN (numerical.cpp:130): Fox-Glynn: right = 627 &gt;&gt; lambda = 400, cannot bound the right tail. The results are unreliable.
+ERROR (numerical.cpp:222): Fox-Glynn: 627 &gt; 600, underflow is possible.
+ WARN (numerical.cpp:130): Fox-Glynn: right = 627 &gt;&gt; lambda = 400, cannot bound the right tail. The results are unreliable.
+ERROR (numerical.cpp:222): Fox-Glynn: 627 &gt; 600, underflow is possible.
+ WARN (numerical.cpp:130): Fox-Glynn: right = 627 &gt;&gt; lambda = 400, cannot bound the right tail. The results are unreliable.
+ERROR (numerical.cpp:222): Fox-Glynn: 627 &gt; 600, underflow is possible.
+ WARN (numerical.cpp:130): Fox-Glynn: right = 627 &gt;&gt; lambda = 400, cannot bound the right tail. The results are unreliable.
+ERROR (numerical.cpp:222): Fox-Glynn: 627 &gt; 600, underflow is possible.
 Result (for initial states): 2.232421354e-08
 Time for model checking: 44.212s.	</pre>
 </div>

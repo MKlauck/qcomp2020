@@ -4,6 +4,7 @@ from invocation import Invocation
 from collections import Counter
 import tool_current
 import sys
+import html
 
 # Gather tool packages
 if len(sys.argv) == 1:
@@ -155,7 +156,7 @@ def create_log_page(toolname, benchmark_identifier, result_json):
                 indention += 1
                 write_line(f, indention, '<div class="boxlabelo"><div class="boxlabelc">Log</div></div>')
                 f.write("\t" * indention + '<pre style="overflow:auto; padding-bottom: 1.5ex">')
-                f.write(log_str)
+                f.write(html.escape(log_str))
                 write_line(f, indention, '</pre>')
                 indention -= 1
                 write_line(f, indention, "</div>")
@@ -170,7 +171,7 @@ def create_log_page(toolname, benchmark_identifier, result_json):
                 pos_end = log.find("#############################", pos)
                 if pos_end < 0:
                     pos_end = len(log)
-                f.write(log[pos:pos_end].strip())
+                f.write(html.escape(log[pos:pos_end].strip()))
                 write_line(f, indention, '</pre>')
                 indention -= 1
                 write_line(f, indention, "</div>")
@@ -512,7 +513,7 @@ with open (os.path.join(output_dir, "table_" + track_id + ".html"), 'w') as tabl
         b = get_benchmark_from_id(settings, benchmark_id)
         write_line(tablefile, indention, '<tr>')
         indention += 1
-        write_line(tablefile, indention, '<td><a href="{}">{}</a></td>'.format(os.path.join(qcomp_root, "benchmarks/index.html#{}".format(b.get_model_short_name())), b.get_model_short_name()))
+        write_line(tablefile, indention, '<td><a href="{}">{}</a></td>'.format(os.path.join(qcomp_root, "benchmarks/index.html#{}".format(b.get_model_short_name())), b.get_model_short_name()))    #for website: "benchmarks/index.html#{}".format
         write_line(tablefile, indention, '<td>{}</td>'.format(b.get_model_type().upper()))
         write_line(tablefile, indention, '<td>{}</td>'.format(b.get_original_format()))
         write_line(tablefile, indention, '<td>{}</td>'.format(b.get_parameter_values_string()))

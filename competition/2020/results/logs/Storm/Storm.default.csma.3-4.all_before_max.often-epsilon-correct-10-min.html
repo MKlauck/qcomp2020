@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 05:11:55 2020
-Command line arguments: --prism csma.3-4.prism --prop csma.props all_before_max --signal-timeout 60 '--general:precision' 1e-12 '--gmm++:precision' 1e-12 '--native:precision' 1e-12 '--minmax:precision' 1e-12 '--timebounded:precision' 1e-6 '--lra:precision' 1e-12 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism csma.3-4.prism --prop csma.props all_before_max --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -50,14 +50,14 @@ Choices: 	1471059
 Reward Models:  none
 Variables: 	rows: 15 meta variables (51 DD variables), columns: 15 meta variables (51 DD variables), nondeterminism: 13 meta variables (13 DD variables)
 Labels: 	5
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (52 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (52 nodes)
    * all_delivered
    * collision_max_backoff
    * one_delivered
 -------------------------------------------------------------- 
 
-Model checking property "all_before_max": Pmax=? [!("collision_max_backoff") U "all_delivered"] ...
+Model checking property &quot;all_before_max&quot;: Pmax=? [!(&quot;collision_max_backoff&quot;) U &quot;all_delivered&quot;] ...
 Result (for initial states): 0.9324469288458123
 Time for model checking: 4.461s.	</pre>
 </div>

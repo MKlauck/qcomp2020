@@ -33,7 +33,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 14:06:41 2020
-Command line arguments: --prism cluster.prism --prop cluster.props premium_steady --constants 'N=128,T=2000,t=20' --prismcompat --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism cluster.prism --prop cluster.props premium_steady --constants &#x27;N=128,T=2000,t=20&#x27; --prismcompat --exact floats &#x27;--general:precision&#x27; 1e-20 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
@@ -63,13 +63,13 @@ States: 	597012
 Transitions: 	2908192
 Reward Models:  none
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * premium -> 27469 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * premium -&gt; 27469 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "premium_steady": LRA=? ["premium"] ...
+Model checking property &quot;premium_steady&quot;: LRA=? [&quot;premium&quot;] ...
  WARN (LinearEquationSolver.cpp:140): The selected solver does not yield exact results.
  WARN (LinearEquationSolver.cpp:140): The selected solver does not yield exact results.
 ERROR (GmmxxLinearEquationSolver.cpp:47): This linear equation solver does not support exact computations. Using unsound methods now...

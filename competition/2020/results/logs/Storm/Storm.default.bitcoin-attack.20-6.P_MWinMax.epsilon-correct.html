@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Wed Mar 18 17:44:30 2020
-Command line arguments: --jani bitcoin-attack.jani --janiproperty P_MWinMax --constants 'MALICIOUS=20,CD=6' --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --jani bitcoin-attack.jani --janiproperty P_MWinMax --constants &#x27;MALICIOUS=20,CD=6&#x27; --sound --precision 1e-6 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
 Time for model input parsing: 0.001s.
@@ -50,8 +50,8 @@ Choices: 	227
 Reward Models:  none
 Variables: 	rows: 4 meta variables (9 DD variables), columns: 4 meta variables (9 DD variables), nondeterminism: 5 meta variables (5 DD variables)
 Labels: 	2
-   * deadlock -> 0 state(s) (1 nodes)
-   * init -> 1 state(s) (10 nodes)
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (10 nodes)
 -------------------------------------------------------------- 
 
 Time for model preprocessing: 0.445s.
@@ -65,13 +65,13 @@ Markovian St.: 	37
 Max. Rate.: 	1
 Reward Models:  none
 State Labels: 	3 labels
-   * ((m_len >= 6) & (m_diff > 0)) -> 1 item(s)
-   * init -> 1 item(s)
-   * deadlock -> 0 item(s)
+   * ((m_len &gt;= 6) &amp; (m_diff &gt; 0)) -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
+   * deadlock -&gt; 0 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "P_MWinMax": Pmax=? [true U<=2880 ((m_len >= 6) & (m_diff > 0))] ...
+Model checking property &quot;P_MWinMax&quot;: Pmax=? [true U&lt;=2880 ((m_len &gt;= 6) &amp; (m_diff &gt; 0))] ...
 Result (for initial states): 0.5350595172
 Time for model checking: 20.001s.	</pre>
 </div>

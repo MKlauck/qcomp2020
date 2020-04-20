@@ -38,20 +38,20 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 majority.prism majority.props --property change_state -const T=2100
 
-Parsing model file "majority.prism"...
+Parsing model file &quot;majority.prism&quot;...
 
 Type:        CTMC
 Modules:     D_def Y_def Z_def CC_def XX_def EE_def 
 Variables:   D Y Z CC XX EE 
 
-Parsing properties file "majority.props"...
+Parsing properties file &quot;majority.props&quot;...
 
 1 property:
-(1) "change_state": P=? [ F<=T ((EE>40)&(CC<20)) ]
+(1) &quot;change_state&quot;: P=? [ F&lt;=T ((EE&gt;40)&amp;(CC&lt;20)) ]
 
 ---------------------------------------------------------------------
 
-Model checking: "change_state": P=? [ F<=T ((EE>40)&(CC<20)) ]
+Model checking: &quot;change_state&quot;: P=? [ F&lt;=T ((EE&gt;40)&amp;(CC&lt;20)) ]
 Property constants: T=2100
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).

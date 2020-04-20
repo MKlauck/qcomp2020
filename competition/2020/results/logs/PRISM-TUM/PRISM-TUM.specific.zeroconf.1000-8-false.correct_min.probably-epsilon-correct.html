@@ -37,15 +37,15 @@ Version: 2.0.beta3
 Date: Fri Mar 20 15:26:49 UTC 2020
 Hostname: 68eec9c801d9
 Memory limits: cudd=1g, java(heap)=8.9g
-Command line: prism zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams 'S:1000000;Av:10;e:0.05;d:0.05;p:0.05;post:64' -const 'N=1000,K=8,reset=false' -javamaxmem 10g
+Command line: prism zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams &#x27;S:1000000;Av:10;e:0.05;d:0.05;p:0.05;post:64&#x27; -const &#x27;N=1000,K=8,reset=false&#x27; -javamaxmem 10g
 
-Parsing the model file "zeroconf.prism"...
+Parsing the model file &quot;zeroconf.prism&quot;...
 
-Parsing properties file "zeroconf.props"...
+Parsing properties file &quot;zeroconf.props&quot;...
 
 2 properties:
-(1) "correct_max": Pmax=? [ F (l=4&ip=1) ]
-(2) "correct_min": Pmin=? [ F (l=4&ip=1) ]
+(1) &quot;correct_max&quot;: Pmax=? [ F (l=4&amp;ip=1) ]
+(2) &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
 
 Type:        MDP
 Modules:     environment host0 
@@ -53,7 +53,7 @@ Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess
 
 ---------------------------------------------------------------------
 
-Model checking: "correct_min": Pmin=? [ F (l=4&ip=1) ]
+Model checking: &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
 Model constants: reset=false,N=1000,K=8
 Starting heuristic: RTDP_ADJ
 IsMDP false Collapse false break false
@@ -63,7 +63,7 @@ HeuristicSG: Version try0
 Grey
 ======================================
 
-JSON: {"Trials":100000,"Precision":0.047811582089790416,"PartialTransDelta":2.631578947368421E-4,"Value":{"Upper":0.047811582089790416,"Lower":0},"ActionsOfs0":{"Action0":"[0.0;0.047811582089790416]"},"GlobalTimerSecs":17.903,"AvgConf":0.6168426707379404,"StateInfos":{"num00":224,"num11":0,"numStates":356,"num01":127,"avgDist":0.36399122321002064,"numWorking":5,"numUnset":0,"numClose":224}}
+JSON: {&quot;Trials&quot;:100000,&quot;Precision&quot;:0.047811582089790416,&quot;PartialTransDelta&quot;:2.631578947368421E-4,&quot;Value&quot;:{&quot;Upper&quot;:0.047811582089790416,&quot;Lower&quot;:0},&quot;ActionsOfs0&quot;:{&quot;Action0&quot;:&quot;[0.0;0.047811582089790416]&quot;},&quot;GlobalTimerSecs&quot;:17.903,&quot;AvgConf&quot;:0.6168426707379404,&quot;StateInfos&quot;:{&quot;num00&quot;:224,&quot;num11&quot;:0,&quot;numStates&quot;:356,&quot;num01&quot;:127,&quot;avgDist&quot;:0.36399122321002064,&quot;numWorking&quot;:5,&quot;numUnset&quot;:0,&quot;numClose&quot;:224}}
 
 Model checking completed in 17.991 secs.
 

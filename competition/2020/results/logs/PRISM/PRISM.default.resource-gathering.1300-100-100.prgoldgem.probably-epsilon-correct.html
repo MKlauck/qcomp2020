@@ -36,24 +36,24 @@ Version: 4.5.dev
 Date: Sat Mar 14 23:45:25 UTC 2020
 Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
-Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 resource-gathering.pm_fixed resource-gathering.prctl_fixed --property prgoldgem -const 'B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100'
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 resource-gathering.pm_fixed resource-gathering.prctl_fixed --property prgoldgem -const &#x27;B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100&#x27;
 
-Parsing model file "resource-gathering.pm_fixed"...
+Parsing model file &quot;resource-gathering.pm_fixed&quot;...
 
 Type:        MDP
 Modules:     robot goldcounter gemcounter 
 Variables:   gold gem attacked x y required_gold required_gem 
 
-Parsing properties file "resource-gathering.prctl_fixed"...
+Parsing properties file &quot;resource-gathering.prctl_fixed&quot;...
 
 3 properties:
-(1) "expgold": R{"rew_gold"}max=? [ C<=B ]
-(2) "expsteps": R{"time_reward"}min=? [ F "success" ]
-(3) "prgoldgem": Pmax=? [ F<=B "success" ]
+(1) &quot;expgold&quot;: R{&quot;rew_gold&quot;}max=? [ C&lt;=B ]
+(2) &quot;expsteps&quot;: R{&quot;time_reward&quot;}min=? [ F &quot;success&quot; ]
+(3) &quot;prgoldgem&quot;: Pmax=? [ F&lt;=B &quot;success&quot; ]
 
 ---------------------------------------------------------------------
 
-Model checking: "prgoldgem": Pmax=? [ F<=B "success" ]
+Model checking: &quot;prgoldgem&quot;: Pmax=? [ F&lt;=B &quot;success&quot; ]
 Model constants: GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100,B=1300
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).

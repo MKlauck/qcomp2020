@@ -38,21 +38,21 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 repudiation_malicious.prism repudiation_malicious.props --property deadline -const T=20
 
-Parsing model file "repudiation_malicious.prism"...
+Parsing model file &quot;repudiation_malicious.prism&quot;...
 
 Type:        PTA
 Modules:     originator recipient 
 Variables:   o x r y 
 
-Parsing properties file "repudiation_malicious.props"...
+Parsing properties file &quot;repudiation_malicious.props&quot;...
 
 2 properties:
-(1) "deadline": Pmax=? [ F<T "gains_information" ]
-(2) "eventually": Pmax=? [ F "gains_information" ]
+(1) &quot;deadline&quot;: Pmax=? [ F&lt;T &quot;gains_information&quot; ]
+(2) &quot;eventually&quot;: Pmax=? [ F &quot;gains_information&quot; ]
 
 ---------------------------------------------------------------------
 
-Model checking: "deadline": Pmax=? [ F<T "gains_information" ]
+Model checking: &quot;deadline&quot;: Pmax=? [ F&lt;T &quot;gains_information&quot; ]
 Property constants: T=20
 
 Building PTA...

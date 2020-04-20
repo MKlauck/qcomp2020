@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 14:33:50 2020
-Command line arguments: --prism cluster.prism --prop cluster.props below_min --constants 'N=64,T=2000,t=20' --prismcompat --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism cluster.prism --prop cluster.props below_min --constants &#x27;N=64,T=2000,t=20&#x27; --prismcompat --sound --precision 1e-6 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
@@ -61,12 +61,12 @@ States: 	151060
 Transitions: 	733216
 Reward Models:  time_not_min
 State Labels: 	2 labels
-   * deadlock -> 0 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "below_min": R[exp]{"time_not_min"}=? [C<=2000] ...
+Model checking property &quot;below_min&quot;: R[exp]{&quot;time_not_min&quot;}=? [C&lt;=2000] ...
 Result (for initial states): 0.00421944377
 Time for model checking: 930.520s.	</pre>
 </div>

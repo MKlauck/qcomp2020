@@ -32,7 +32,7 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
 
 Date: Tue Mar 17 18:28:44 2020
-Command line arguments: --prism mapk_cascade.prism --prop mapk_cascade.props activated_time --constants 'N=4,T=30' --prismcompat --sound --precision 1e-6 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
+Command line arguments: --prism mapk_cascade.prism --prop mapk_cascade.props activated_time --constants &#x27;N=4,T=30&#x27; --prismcompat --sound --precision 1e-6 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
 Current working directory: /
 
  WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
@@ -61,13 +61,13 @@ States: 	99535
 Transitions: 	901842
 Reward Models:  time
 State Labels: 	3 labels
-   * deadlock -> 0 item(s)
-   * (kpp = 4) -> 1461 item(s)
-   * init -> 1 item(s)
+   * deadlock -&gt; 0 item(s)
+   * (kpp = 4) -&gt; 1461 item(s)
+   * init -&gt; 1 item(s)
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "activated_time": R[exp]{"time"}=? [F (kpp = 4)] ...
+Model checking property &quot;activated_time&quot;: R[exp]{&quot;time&quot;}=? [F (kpp = 4)] ...
 Result (for initial states): 40.67650211
 Time for model checking: 2.885s.	</pre>
 </div>

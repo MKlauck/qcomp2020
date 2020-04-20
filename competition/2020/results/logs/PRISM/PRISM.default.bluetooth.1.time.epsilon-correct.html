@@ -38,20 +38,20 @@ Hostname: e72bdd194fc5
 Memory limits: cudd=4g, java(heap)=11g
 Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 bluetooth.prism bluetooth.props --property time -const mrec=1
 
-Parsing model file "bluetooth.prism"...
+Parsing model file &quot;bluetooth.prism&quot;...
 
 Type:        DTMC
 Modules:     receiver1 frequency1 sender_frequency replies 
 Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec 
 
-Parsing properties file "bluetooth.props"...
+Parsing properties file &quot;bluetooth.props&quot;...
 
 1 property:
-(1) "time": filter(max, R=? [ F rec=mrec ], "init")
+(1) &quot;time&quot;: filter(max, R=? [ F rec=mrec ], &quot;init&quot;)
 
 ---------------------------------------------------------------------
 
-Model checking: "time": filter(max, R=? [ F rec=mrec ], "init")
+Model checking: &quot;time&quot;: filter(max, R=? [ F rec=mrec ], &quot;init&quot;)
 Model constants: mrec=1
 
 Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
