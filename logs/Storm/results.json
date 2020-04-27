@@ -1829,16 +1829,10 @@
 		"commands": [
 			"~/storm/build/bin/storm --prism cluster.prism --prop cluster.props premium_steady --constants N=128,T=2000,t=20 --prismcompat --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
 		],
-		"wallclock-time": 34.610045433044434,
-		"timeout": false,
+		"wallclock-time": 1800.9591975212097,
+		"timeout": true,
 		"execution-error": false,
-		"result": "0.997937878672865652518453",
-		"result-correct": false,
-		"absolute-error": 1.2327340592754865e-08,
-		"relative-error": 1.2352813440523342e-08,
-		"notes": [
-			"The tool result '997937878672865652518453/1000000000000000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.9979378910002062), ('upper', 0.9979378911997938)])' (approx. OrderedDict([('lower', 0.9979378910002062), ('upper', 0.9979378911997938)])) which means a relative error of '1.2352813440523342e-08' which is larger than the goal precision '1e-14'."
-		],
+		"notes": [],
 		"log": "Storm.default.cluster.128-2000-20.premium_steady.floating-point-correct.log"
 	},
 	{
@@ -2273,13 +2267,10 @@
 		"commands": [
 			"~/storm/build/bin/storm --prism fms.prism --prop fms.props productivity --constants n=8 --prismcompat --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
 		],
-		"wallclock-time": 120.10231924057007,
-		"timeout": false,
+		"wallclock-time": 1800.1758012771606,
+		"timeout": true,
 		"execution-error": false,
-		"result": "116.658301256084413921599",
-		"notes": [
-			"Correctness of result is not checked because no reference result is available."
-		],
+		"notes": [],
 		"log": "Storm.default.fms.8.productivity.floating-point-correct.log"
 	},
 	{
@@ -2360,16 +2351,10 @@
 		"commands": [
 			"~/storm/build/bin/storm --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
 		],
-		"wallclock-time": 54.460373401641846,
-		"timeout": false,
+		"wallclock-time": 1800.297473192215,
+		"timeout": true,
 		"execution-error": false,
-		"result": "0.307124962917975197207454",
-		"result-correct": false,
-		"absolute-error": 2.0358726271485494e-07,
-		"relative-error": 6.628813097273992e-07,
-		"notes": [
-			"The tool result '153562481458987598603727/500000000000000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.3071247592692875), ('upper', 0.3071247593307125)])' (approx. OrderedDict([('lower', 0.3071247592692875), ('upper', 0.3071247593307125)])) which means a relative error of '6.628813097273992e-07' which is larger than the goal precision '1e-14'."
-		],
+		"notes": [],
 		"log": "Storm.default.kanban.5.throughput.floating-point-correct.log"
 	},
 	{

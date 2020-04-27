@@ -1,10 +1,10 @@
 Command:	~/storm/build/bin/storm --prism cluster.prism --prop cluster.props premium_steady --constants N=128,T=2000,t=20 --prismcompat --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4
-Wallclock time:	34.610045433044434
-Return code:	0
+Wallclock time:	1800.9591975212097
+Return code:	None
 Output:
 Storm 1.5.1
 
-Date: Tue Mar 17 14:06:41 2020
+Date: Mon Apr 27 08:33:39 2020
 Command line arguments: --prism cluster.prism --prop cluster.props premium_steady --constants 'N=128,T=2000,t=20' --prismcompat --exact floats '--general:precision' 1e-20 --engine portfolio --ddlib sylvan '--sylvan:maxmem' 6114 '--sylvan:threads' 4
 Current working directory: /
 
@@ -18,7 +18,7 @@ Current working directory: /
  WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
  WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
  WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
-Time for model input parsing: 0.035s.
+Time for model input parsing: 0.033s.
 
  WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
  WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
@@ -27,7 +27,7 @@ Portfolio engine picked the following settings:
 	engine=sparse	 bisimulation=false	 exact=false
  WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
  WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
-Time for model construction: 6.481s.
+Time for model construction: 6.500s.
 
 -------------------------------------------------------------- 
 Model type: 	CTMC (sparse)
@@ -42,12 +42,7 @@ Choice Labels: 	none
 -------------------------------------------------------------- 
 
 Model checking property "premium_steady": LRA=? ["premium"] ...
- WARN (LinearEquationSolver.cpp:140): The selected solver does not yield exact results.
- WARN (LinearEquationSolver.cpp:140): The selected solver does not yield exact results.
-ERROR (GmmxxLinearEquationSolver.cpp:47): This linear equation solver does not support exact computations. Using unsound methods now...
-Result (for initial states): 0.997937878672865652518453
-Time for model checking: 27.793s.
 
 
-############################## Notes ##############################
-The tool result '997937878672865652518453/1000000000000000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.9979378910002062), ('upper', 0.9979378911997938)])' (approx. OrderedDict([('lower', 0.9979378910002062), ('upper', 0.9979378911997938)])) which means a relative error of '1.2352813440523342e-08' which is larger than the goal precision '1e-14'.
+----------
+Computation aborted after 1800.9591975212097 seconds since the total time limit of 1800 seconds was exceeded.

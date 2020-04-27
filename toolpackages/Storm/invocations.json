@@ -866,9 +866,9 @@
 	{
 		"benchmark-id": "cluster.128-2000-20.premium_steady",
 		"invocation-id": "default",
-		"invocation-track-id": "correct",
+		"invocation-track-id": "floating-point-correct",
 		"commands": [
-			"~/storm/build/bin/storm --prism cluster.prism --prop cluster.props premium_steady --constants N=128,T=2000,t=20 --prismcompat --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
+			"~/storm/build/bin/storm --prism cluster.prism --prop cluster.props premium_steady --constants N=128,T=2000,t=20 --prismcompat --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
 		]
 	},
 	{
@@ -1074,9 +1074,9 @@
 	{
 		"benchmark-id": "fms.8.productivity",
 		"invocation-id": "default",
-		"invocation-track-id": "correct",
+		"invocation-track-id": "floating-point-correct",
 		"commands": [
-			"~/storm/build/bin/storm --prism fms.prism --prop fms.props productivity --constants n=8 --prismcompat --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
+			"~/storm/build/bin/storm --prism fms.prism --prop fms.props productivity --constants n=8 --prismcompat --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
 		]
 	},
 	{
@@ -1122,9 +1122,9 @@
 	{
 		"benchmark-id": "kanban.5.throughput",
 		"invocation-id": "default",
-		"invocation-track-id": "correct",
+		"invocation-track-id": "floating-point-correct",
 		"commands": [
-			"~/storm/build/bin/storm --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
+			"~/storm/build/bin/storm --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --exact floats --general:precision 1e-20  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4"
 		]
 	},
 	{
