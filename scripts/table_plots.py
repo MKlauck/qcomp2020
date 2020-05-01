@@ -624,11 +624,11 @@ if(track_id != "often-epsilon-correct-10-min"):
     filenames = []
     nums = []
 
-    subsets.append(["ePMC", "mcsta", "Storm"])
+    subsets.append(["ePMC", "mcsta", "Storm", "Storm-static"])
     filenames.append("janitools.csv")
     nums.append(None)
 
-    subsets.append(["ePMC", "mcsta", "Storm", "PRISM"])
+    subsets.append(["ePMC", "mcsta", "Storm", "Storm-static", "PRISM"])
     filenames.append("generalpurpose.csv")
     nums.append(None)
 
@@ -653,6 +653,7 @@ if(track_id != "often-epsilon-correct-10-min"):
     \tikzset{tool/.code={%
             \ifthenelse{\equal{#1}{mcsta}}{\tikzset{red, mark=x, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{Storm}}{\tikzset{blue,mark=+, mark options={thick}}}{}%
+            \ifthenelse{\equal{#1}{Storm-static}}{\tikzset{cyan,mark=+, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{ePMC}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{PRISM}}{\tikzset{orange, mark=asterisk}}{}%
             \ifthenelse{\equal{#1}{PRISM-TUM}}{\tikzset{teal, mark=star}}{}%

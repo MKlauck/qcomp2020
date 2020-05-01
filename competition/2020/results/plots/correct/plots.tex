@@ -14,6 +14,7 @@
     \tikzset{tool/.code={%
             \ifthenelse{\equal{#1}{mcsta}}{\tikzset{red, mark=x, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{Storm}}{\tikzset{blue,mark=+, mark options={thick}}}{}%
+            \ifthenelse{\equal{#1}{Storm-static}}{\tikzset{cyan,mark=+, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{ePMC}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{PRISM}}{\tikzset{orange, mark=asterisk}}{}%
             \ifthenelse{\equal{#1}{PRISM-TUM}}{\tikzset{teal, mark=star}}{}%
@@ -115,46 +116,57 @@
 
     \begin{document}
             \begin{center}
-                Quantile plot for 79 benchmarks: Storm(58/79).Default configuration.
-                \quantileplot{janitools.csv}{Storm}
+                Quantile plot for 79 benchmarks: Storm(58/79), Storm-static(44/79).Default configuration.
+                \quantileplot{janitools.csv}{Storm,Storm-static}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 79 benchmarks: Storm(58/79).Specific configuration.
-                \quantileplot{specificjanitools.csv}{Storm}
+                Quantile plot for 79 benchmarks: Storm(58/79), Storm-static(60/79).Specific configuration.
+                \quantileplot{specificjanitools.csv}{Storm,Storm-static}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 79 benchmarks: Storm(58/79).Default configuration.
-                \quantileplot{generalpurpose.csv}{Storm}
+                Quantile plot for 79 benchmarks: Storm(58/79), Storm-static(44/79).Default configuration.
+                \quantileplot{generalpurpose.csv}{Storm,Storm-static}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 79 benchmarks: Storm(58/79).Specific configuration.
-                \quantileplot{specificgeneralpurpose.csv}{Storm}
+                Quantile plot for 79 benchmarks: Storm(58/79), Storm-static(60/79).Specific configuration.
+                \quantileplot{specificgeneralpurpose.csv}{Storm,Storm-static}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 100 benchmarks: Storm(58/79).Default configuration.
-                \quantileplot{all.csv}{Storm}
+                Quantile plot for 100 benchmarks: Storm(58/79), Storm-static(44/79).Default configuration.
+                \quantileplot{all.csv}{Storm,Storm-static}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 100 benchmarks: Storm(58/79).Specific configuration.
-                \quantileplot{specificall.csv}{Storm}
+                Quantile plot for 100 benchmarks: Storm(58/79), Storm-static(60/79).Specific configuration.
+                \quantileplot{specificall.csv}{Storm,Storm-static}
             \end{center}
                     \pagebreak
 
             \begin{center}
                 Scatter Plot for Storm with default settings (n=79).
-                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 58/79)}
+                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 52/79)}
             \end{center}
                 
             \begin{center}
                 Scatter Plot for Storm with specific settings (n=79).
-                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 58/79)}
+                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 28/79)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for Storm-static with default settings (n=79).
+                \scatterplot{scatterStorm-static.csv}{Storm-static}{\tool{Storm-static}  (default, fastest on 6/79)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for Storm-static with specific settings (n=79).
+                \scatterplot{scatterspecificStorm-static.csv}{Storm-static}{\tool{Storm-static}  (specific, fastest on 32/79)}
             \end{center}
                 \pagebreak
 \end{document}

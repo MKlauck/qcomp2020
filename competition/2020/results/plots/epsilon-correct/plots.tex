@@ -14,6 +14,7 @@
     \tikzset{tool/.code={%
             \ifthenelse{\equal{#1}{mcsta}}{\tikzset{red, mark=x, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{Storm}}{\tikzset{blue,mark=+, mark options={thick}}}{}%
+            \ifthenelse{\equal{#1}{Storm-static}}{\tikzset{cyan,mark=+, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{ePMC}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{PRISM}}{\tikzset{orange, mark=asterisk}}{}%
             \ifthenelse{\equal{#1}{PRISM-TUM}}{\tikzset{teal, mark=star}}{}%
@@ -115,46 +116,68 @@
 
     \begin{document}
             \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(53/67), Storm(61/67).Default configuration.
-                \quantileplot{janitools.csv}{mcsta,Storm}
+                Quantile plot for 67 benchmarks: mcsta(53/67), Storm(61/67), Storm-static(53/67).Default configuration.
+                \quantileplot{janitools.csv}{mcsta,Storm,Storm-static}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(55/67), Storm(61/67).Specific configuration.
-                \quantileplot{specificjanitools.csv}{mcsta,Storm}
+                Quantile plot for 67 benchmarks: mcsta(55/67), Storm(61/67), Storm-static(61/67).Specific configuration.
+                \quantileplot{specificjanitools.csv}{mcsta,Storm,Storm-static}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 38 benchmarks: mcsta(32/38), Storm(38/38), PRISM(31/38).Default configuration.
-                \quantileplot{generalpurpose.csv}{mcsta,Storm,PRISM}
+                Quantile plot for 38 benchmarks: mcsta(32/38), Storm(38/38), Storm-static(32/38), PRISM(31/38).Default configuration.
+                \quantileplot{generalpurpose.csv}{mcsta,Storm,Storm-static,PRISM}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 38 benchmarks: mcsta(33/38), Storm(38/38), PRISM(33/38).Specific configuration.
-                \quantileplot{specificgeneralpurpose.csv}{mcsta,Storm,PRISM}
+                Quantile plot for 38 benchmarks: mcsta(33/38), Storm(38/38), Storm-static(38/38), PRISM(33/38).Specific configuration.
+                \quantileplot{specificgeneralpurpose.csv}{mcsta,Storm,Storm-static,PRISM}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 100 benchmarks: Storm(86/96), PRISM(45/52), PRISM-TUM(9/24), mcsta(54/69).Default configuration.
-                \quantileplot{all.csv}{Storm,PRISM,PRISM-TUM,mcsta}
+                Quantile plot for 100 benchmarks: Storm(86/96), Storm-static(77/96), mcsta(54/69), PRISM(45/52), PRISM-TUM(9/24).Default configuration.
+                \quantileplot{all.csv}{Storm,Storm-static,mcsta,PRISM,PRISM-TUM}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 100 benchmarks: Storm(86/96), PRISM(47/52), PRISM-TUM(9/24), mcsta(56/69).Specific configuration.
-                \quantileplot{specificall.csv}{Storm,PRISM,PRISM-TUM,mcsta}
+                Quantile plot for 100 benchmarks: Storm(86/96), Storm-static(86/96), mcsta(56/69), PRISM(47/52), PRISM-TUM(9/24).Specific configuration.
+                \quantileplot{specificall.csv}{Storm,Storm-static,mcsta,PRISM,PRISM-TUM}
             \end{center}
                     \pagebreak
 
             \begin{center}
                 Scatter Plot for Storm with default settings (n=96).
-                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 69/96)}
+                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 55/96)}
             \end{center}
                 
             \begin{center}
                 Scatter Plot for Storm with specific settings (n=96).
-                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 60/96)}
+                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 25/96)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for Storm-static with default settings (n=96).
+                \scatterplot{scatterStorm-static.csv}{Storm-static}{\tool{Storm-static}  (default, fastest on 14/96)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for Storm-static with specific settings (n=96).
+                \scatterplot{scatterspecificStorm-static.csv}{Storm-static}{\tool{Storm-static}  (specific, fastest on 40/96)}
+            \end{center}
+                \pagebreak
+
+            \begin{center}
+                Scatter Plot for mcsta with default settings (n=69).
+                \scatterplot{scattermcsta.csv}{mcsta}{\tool{mcsta}  (default, fastest on 6/69)}
+            \end{center}
+                
+            \begin{center}
+                Scatter Plot for mcsta with specific settings (n=69).
+                \scatterplot{scatterspecificmcsta.csv}{mcsta}{\tool{mcsta}  (specific, fastest on 11/69)}
             \end{center}
                 \pagebreak
 
@@ -165,7 +188,7 @@
                 
             \begin{center}
                 Scatter Plot for PRISM with specific settings (n=52).
-                \scatterplot{scatterspecificPRISM.csv}{PRISM}{\tool{PRISM}  (specific, fastest on 12/52)}
+                \scatterplot{scatterspecificPRISM.csv}{PRISM}{\tool{PRISM}  (specific, fastest on 9/52)}
             \end{center}
                 \pagebreak
 
@@ -177,17 +200,6 @@
             \begin{center}
                 Scatter Plot for PRISM-TUM with specific settings (n=24).
                 \scatterplot{scatterspecificPRISM-TUM.csv}{PRISM-TUM}{\tool{PRISM-TUM}  (specific, fastest on 4/24)}
-            \end{center}
-                \pagebreak
-
-            \begin{center}
-                Scatter Plot for mcsta with default settings (n=69).
-                \scatterplot{scattermcsta.csv}{mcsta}{\tool{mcsta}  (default, fastest on 6/69)}
-            \end{center}
-                
-            \begin{center}
-                Scatter Plot for mcsta with specific settings (n=69).
-                \scatterplot{scatterspecificmcsta.csv}{mcsta}{\tool{mcsta}  (specific, fastest on 13/69)}
             \end{center}
                 \pagebreak
 \end{document}

@@ -19,10 +19,10 @@ embedded.8-12.actuators;ctmc;80000;80000;5.319590641198873e-12;1
 embedded.8-12.up_time;ctmc;80000;80000;2.819483408667705e-12;1
 majority.2100.change_state;ctmc;0.008181453545672932;1;1e-20;1
 mapk_cascade.4-30.activated_time;ctmc;7.14386882650245e-05;1;1e-20;1
-mapk_cascade.4-30.reactions;ctmc;0.0004990042693441067;1;5.613668679756939e-09;1
+mapk_cascade.4-30.reactions;ctmc;0.0004990042693441067;1;5.613665173953735e-09;1
 philosophers.16-1.MaxPrReachDeadlockTB;ctmc;0.035348133579127486;1;1e-20;1
 philosophers.16-1.MaxPrReachDeadlock;ctmc;1e-20;1;1e-20;1
-philosophers.16-1.MinExpTimeDeadlock;ctmc;0.0003281834739500714;1;1.3752174878464596e-10;1
+philosophers.16-1.MinExpTimeDeadlock;ctmc;0.0003281834739500714;1;1.3683548167719424e-10;1
 philosophers.20-1.MaxPrReachDeadlockTB;ctmc;0.010574692565727057;1;80000;80000
 philosophers.20-1.MaxPrReachDeadlock;ctmc;1e-20;1;1e-20;1
 philosophers.20-1.MinExpTimeDeadlock;ctmc;0.00042332651866160105;1;80000;80000
