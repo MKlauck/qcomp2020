@@ -1,8 +1,8 @@
 Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani
-Wallclock time:	1800.271267414093
+Wallclock time:	1800.2677583694458
 Return code:	None
 Output:
 
 
 ----------
-Computation aborted after 1800.271267414093 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1800.2677583694458 seconds since the total time limit of 1800 seconds was exceeded.

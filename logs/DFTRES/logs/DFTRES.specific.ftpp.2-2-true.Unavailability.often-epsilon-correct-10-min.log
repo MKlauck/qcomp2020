@@ -1,12 +1,12 @@
 Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches ftpp.2-2-true.jani
-Wallclock time:	600.3063406944275
+Wallclock time:	600.3808765411377
 Return code:	130
 Output:
-Total time: 599.95 s.
+Total time: 599.962 s.
 Property Unavailability:
-point estimate: 1.761405234493443E-20,
-var: 2.0731861208594863E-40,
-CI: [1.7610464909938156E-20, 1.7617639779930707E-20] = 1.761405234493443E-20 +/- 3.5874349962755376E-24
+point estimate: 1.7613251056698624E-20,
+var: 2.0237591106130765E-40,
+CI: [1.760982152364756E-20, 1.7616680589749688E-20] = 1.7613251056698624E-20 +/- 3.429533051064054E-24
 
 
 

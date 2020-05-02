@@ -1,8 +1,8 @@
 Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.001  vgs.5.jani
-Wallclock time:	1800.0255649089813
+Wallclock time:	1800.0275473594666
 Return code:	None
 Output:
 
 
 ----------
-Computation aborted after 1800.0255649089813 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1800.0275473594666 seconds since the total time limit of 1800 seconds was exceeded.

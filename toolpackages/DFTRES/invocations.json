@@ -204,7 +204,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.05 --unsafe-scheduling cabinets.3-2-true.jani"
 		]
 	},
 	{
@@ -220,7 +220,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.001 --unsafe-scheduling cabinets.3-2-true.jani"
 		]
 	},
 	{
@@ -236,7 +236,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 1e-99 --unsafe-scheduling cabinets.3-2-true.jani"
 		]
 	},
 	{
@@ -316,7 +316,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-1-1.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.001 --unsafe-scheduling hecs.false-1-1.jani"
 		]
 	},
 	{
@@ -332,7 +332,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-1-1.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 1e-99 --unsafe-scheduling hecs.false-1-1.jani"
 		]
 	},
 	{
@@ -364,7 +364,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.001 --unsafe-scheduling hecs.false-2-2.jani"
 		]
 	},
 	{
@@ -380,7 +380,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 1e-99 --unsafe-scheduling hecs.false-2-2.jani"
 		]
 	},
 	{
@@ -412,7 +412,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.001 --unsafe-scheduling hecs.false-3-2.jani"
 		]
 	},
 	{
@@ -428,7 +428,7 @@
 		"invocation-id": "specific",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani"
+			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 1e-99 --unsafe-scheduling hecs.false-3-2.jani"
 		]
 	},
 	{

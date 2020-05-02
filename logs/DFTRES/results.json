@@ -6,7 +6,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.05  crowds.jani"
 		],
-		"wallclock-time": 13.622997045516968,
+		"wallclock-time": 13.35624074935913,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.08471724348447467",
@@ -23,7 +23,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.05 --unsafe-scheduling --fixed-batches crowds.jani"
 		],
-		"wallclock-time": 16.31352424621582,
+		"wallclock-time": 15.393566846847534,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.08602576613343352",
@@ -40,7 +40,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.001  crowds.jani"
 		],
-		"wallclock-time": 1800.104065656662,
+		"wallclock-time": 1800.1032474040985,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -53,7 +53,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 0.001 --unsafe-scheduling --fixed-batches crowds.jani"
 		],
-		"wallclock-time": 1800.1036636829376,
+		"wallclock-time": 1800.1157894134521,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -66,13 +66,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 1e-99  crowds.jani"
 		],
-		"wallclock-time": 600.3345265388489,
+		"wallclock-time": 600.4280896186829,
 		"timeout": false,
 		"execution-error": false,
-		"result": "0.08559931806069006",
+		"result": "0.08556414737259993",
 		"result-correct": true,
-		"absolute-error": 0.00046973637582038187,
-		"relative-error": 0.005457668599890183,
+		"absolute-error": 0.0005049070639105119,
+		"relative-error": 0.005866301973643278,
 		"notes": [],
 		"log": "DFTRES.default.crowds.5-20.positive.often-epsilon-correct-10-min.log"
 	},
@@ -83,13 +83,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 5 --def CrowdSize 20 --relErr 1e-99 --unsafe-scheduling --fixed-batches crowds.jani"
 		],
-		"wallclock-time": 600.3228652477264,
+		"wallclock-time": 600.3521358966827,
 		"timeout": false,
 		"execution-error": false,
-		"result": "0.08559692314246792",
+		"result": "0.08559801781368678",
 		"result-correct": true,
-		"absolute-error": 0.0004721312940425219,
-		"relative-error": 0.005485494143435647,
+		"absolute-error": 0.0004710366228236619,
+		"relative-error": 0.0054727756207793125,
 		"notes": [],
 		"log": "DFTRES.specific.crowds.5-20.positive.often-epsilon-correct-10-min.log"
 	},
@@ -100,7 +100,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.05  crowds.jani"
 		],
-		"wallclock-time": 72.05869269371033,
+		"wallclock-time": 73.24081659317017,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.11873604713053497",
@@ -117,7 +117,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.05 --unsafe-scheduling --fixed-batches crowds.jani"
 		],
-		"wallclock-time": 36.73474931716919,
+		"wallclock-time": 36.67453694343567,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.11925806112023303",
@@ -134,7 +134,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.001  crowds.jani"
 		],
-		"wallclock-time": 1800.1776056289673,
+		"wallclock-time": 1800.1760213375092,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -147,7 +147,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.001 --unsafe-scheduling --fixed-batches crowds.jani"
 		],
-		"wallclock-time": 1800.165902376175,
+		"wallclock-time": 1800.1482927799225,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -160,13 +160,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 1e-99  crowds.jani"
 		],
-		"wallclock-time": 600.4050216674805,
+		"wallclock-time": 600.3874888420105,
 		"timeout": false,
 		"execution-error": false,
-		"result": "0.12036177465890488",
+		"result": "0.12038974462214579",
 		"result-correct": true,
-		"absolute-error": 0.00011459622569337482,
-		"relative-error": 0.0009511925438320523,
+		"absolute-error": 8.662626245246481e-05,
+		"relative-error": 0.0007190311412637277,
 		"notes": [],
 		"log": "DFTRES.default.crowds.6-20.positive.often-epsilon-correct-10-min.log"
 	},
@@ -177,13 +177,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 1e-99 --unsafe-scheduling --fixed-batches crowds.jani"
 		],
-		"wallclock-time": 600.4300229549408,
+		"wallclock-time": 600.3972909450531,
 		"timeout": false,
 		"execution-error": false,
-		"result": "0.1204087582855947",
+		"result": "0.11989600968297184",
 		"result-correct": true,
-		"absolute-error": 6.761259900355482e-05,
-		"relative-error": 0.0005612104556861153,
+		"absolute-error": 0.0005803612016264148,
+		"relative-error": 0.0048172201516787925,
 		"notes": [],
 		"log": "DFTRES.specific.crowds.6-20.positive.often-epsilon-correct-10-min.log"
 	},
@@ -194,7 +194,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.05  haddad-monmege.jani"
 		],
-		"wallclock-time": 1800.0030868053436,
+		"wallclock-time": 1800.003096818924,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -207,7 +207,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.05 --unsafe-scheduling --fixed-batches haddad-monmege.jani"
 		],
-		"wallclock-time": 1800.0030064582825,
+		"wallclock-time": 1800.0030717849731,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -220,7 +220,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.001  haddad-monmege.jani"
 		],
-		"wallclock-time": 1800.0031549930573,
+		"wallclock-time": 1800.003207206726,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -233,7 +233,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 0.001 --unsafe-scheduling --fixed-batches haddad-monmege.jani"
 		],
-		"wallclock-time": 1800.0030634403229,
+		"wallclock-time": 1800.0028986930847,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -246,7 +246,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 1e-99  haddad-monmege.jani"
 		],
-		"wallclock-time": 600.1963603496552,
+		"wallclock-time": 600.2255861759186,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.0",
@@ -263,7 +263,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop target  --def N 100 --def p 0.7 --relErr 1e-99 --unsafe-scheduling --fixed-batches haddad-monmege.jani"
 		],
-		"wallclock-time": 600.1766040325165,
+		"wallclock-time": 600.2099606990814,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.0",
@@ -280,7 +280,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.05  cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 5.268000841140747,
+		"wallclock-time": 4.777324438095093,
 		"timeout": false,
 		"execution-error": false,
 		"result": "6.822710802082943E-8",
@@ -296,7 +296,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 3.5649993419647217,
+		"wallclock-time": 3.063542604446411,
 		"timeout": false,
 		"execution-error": false,
 		"result": "6.687837257894126E-8",
@@ -312,7 +312,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.001  cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 1800.0827765464783,
+		"wallclock-time": 1800.094096660614,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -325,7 +325,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 1212.1613109111786,
+		"wallclock-time": 1227.4379353523254,
 		"timeout": false,
 		"execution-error": false,
 		"result": "6.859954671970732E-8",
@@ -341,10 +341,10 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 1e-99  cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 600.3904330730438,
+		"wallclock-time": 600.3820667266846,
 		"timeout": false,
 		"execution-error": false,
-		"result": "6.85798235820082E-8",
+		"result": "6.858566888307077E-8",
 		"notes": [
 			"Correctness of result is not checked because no reference result is available."
 		],
@@ -357,10 +357,10 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 600.3951215744019,
+		"wallclock-time": 600.4324879646301,
 		"timeout": false,
 		"execution-error": false,
-		"result": "6.856880308523754E-8",
+		"result": "6.858192755679235E-8",
 		"notes": [
 			"Correctness of result is not checked because no reference result is available."
 		],
@@ -373,7 +373,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.05  cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 126.89976143836975,
+		"wallclock-time": 129.54247188568115,
 		"timeout": false,
 		"execution-error": false,
 		"result": "6.798710089302074E-8",
@@ -390,7 +390,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 145.7768063545227,
+		"wallclock-time": 149.19527053833008,
 		"timeout": false,
 		"execution-error": false,
 		"result": "6.74659888567048E-8",
@@ -407,7 +407,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.001  cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 1800.0850517749786,
+		"wallclock-time": 1800.0399496555328,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -420,7 +420,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 1800.0534410476685,
+		"wallclock-time": 1800.056936264038,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -433,10 +433,10 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 1e-99  cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 600.3813722133636,
+		"wallclock-time": 600.3535335063934,
 		"timeout": false,
 		"execution-error": false,
-		"result": "6.702855363539751E-8",
+		"result": "6.709414185495227E-8",
 		"result-correct": true,
 		"absolute-error": 0.0,
 		"relative-error": 0.0,
@@ -450,10 +450,10 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani"
 		],
-		"wallclock-time": 600.417219877243,
+		"wallclock-time": 600.3688368797302,
 		"timeout": false,
 		"execution-error": false,
-		"result": "6.698697384732845E-8",
+		"result": "6.690536398314723E-8",
 		"result-correct": true,
 		"absolute-error": 0.0,
 		"relative-error": 0.0,
@@ -467,7 +467,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.05  ftpp.2-2-true.jani"
 		],
-		"wallclock-time": 24.776935338974,
+		"wallclock-time": 24.300841331481934,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.762112450435784E-20",
@@ -483,7 +483,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches ftpp.2-2-true.jani"
 		],
-		"wallclock-time": 4.984069585800171,
+		"wallclock-time": 4.935238599777222,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.793797905320145E-20",
@@ -499,7 +499,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.001  ftpp.2-2-true.jani"
 		],
-		"wallclock-time": 45.34713387489319,
+		"wallclock-time": 44.971139907836914,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.7617374214103815E-20",
@@ -515,7 +515,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches ftpp.2-2-true.jani"
 		],
-		"wallclock-time": 28.200142860412598,
+		"wallclock-time": 27.091910362243652,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.7615094788505613E-20",
@@ -531,10 +531,10 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 1e-99  ftpp.2-2-true.jani"
 		],
-		"wallclock-time": 600.2659296989441,
+		"wallclock-time": 600.3182325363159,
 		"timeout": false,
 		"execution-error": false,
-		"result": "1.761399689770404E-20",
+		"result": "1.7613574872871944E-20",
 		"notes": [
 			"Correctness of result is not checked because no reference result is available."
 		],
@@ -547,10 +547,10 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches ftpp.2-2-true.jani"
 		],
-		"wallclock-time": 600.3063406944275,
+		"wallclock-time": 600.3808765411377,
 		"timeout": false,
 		"execution-error": false,
-		"result": "1.761405234493443E-20",
+		"result": "1.7613251056698624E-20",
 		"notes": [
 			"Correctness of result is not checked because no reference result is available."
 		],
@@ -563,7 +563,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.05  hecs.false-1-1.jani"
 		],
-		"wallclock-time": 4.577887296676636,
+		"wallclock-time": 4.759004354476929,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.1006257838934536E-4",
@@ -580,7 +580,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.05 --unsafe-scheduling --fixed-batches hecs.false-1-1.jani"
 		],
-		"wallclock-time": 1.237718105316162,
+		"wallclock-time": 1.2480437755584717,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0889072762785033E-4",
@@ -597,7 +597,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.001  hecs.false-1-1.jani"
 		],
-		"wallclock-time": 124.24011540412903,
+		"wallclock-time": 118.23268365859985,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0999636654423539E-4",
@@ -614,7 +614,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-1-1.jani"
 		],
-		"wallclock-time": 394.78051590919495,
+		"wallclock-time": 402.60322999954224,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0995708583139275E-4",
@@ -631,13 +631,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 1e-99  hecs.false-1-1.jani"
 		],
-		"wallclock-time": 600.3189473152161,
+		"wallclock-time": 600.342955827713,
 		"timeout": false,
 		"execution-error": false,
-		"result": "1.0995272876079205E-4",
+		"result": "1.0995257334515403E-4",
 		"result-correct": true,
-		"absolute-error": 4.112523920795494e-08,
-		"relative-error": 0.0003738867010510873,
+		"absolute-error": 4.128065484597494e-08,
+		"relative-error": 0.0003752996494329123,
 		"notes": [],
 		"log": "DFTRES.default.hecs.false-1-1.Unreliability.often-epsilon-correct-10-min.log"
 	},
@@ -648,13 +648,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-1-1.jani"
 		],
-		"wallclock-time": 600.3125960826874,
+		"wallclock-time": 600.2857065200806,
 		"timeout": false,
 		"execution-error": false,
-		"result": "1.0995225691071534E-4",
+		"result": "1.0995235635860985E-4",
 		"result-correct": true,
-		"absolute-error": 4.159708928466494e-08,
-		"relative-error": 0.0003781764868850303,
+		"absolute-error": 4.149764139015494e-08,
+		"relative-error": 0.0003772723646009798,
 		"notes": [],
 		"log": "DFTRES.specific.hecs.false-1-1.Unreliability.often-epsilon-correct-10-min.log"
 	},
@@ -665,7 +665,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.05  hecs.false-2-2.jani"
 		],
-		"wallclock-time": 6.955989599227905,
+		"wallclock-time": 7.154855728149414,
 		"timeout": false,
 		"execution-error": false,
 		"result": "2.205569606799616E-4",
@@ -682,7 +682,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.05 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani"
 		],
-		"wallclock-time": 2.1601192951202393,
+		"wallclock-time": 2.3022046089172363,
 		"timeout": false,
 		"execution-error": false,
 		"result": "2.2416222005863307E-4",
@@ -699,7 +699,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.001  hecs.false-2-2.jani"
 		],
-		"wallclock-time": 131.2821810245514,
+		"wallclock-time": 130.99408411979675,
 		"timeout": false,
 		"execution-error": false,
 		"result": "2.1998832026982299E-4",
@@ -716,7 +716,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani"
 		],
-		"wallclock-time": 258.26403999328613,
+		"wallclock-time": 263.10526418685913,
 		"timeout": false,
 		"execution-error": false,
 		"result": "2.2002458464921864E-4",
@@ -733,13 +733,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 1e-99  hecs.false-2-2.jani"
 		],
-		"wallclock-time": 600.4921998977661,
+		"wallclock-time": 600.3998062610626,
 		"timeout": false,
 		"execution-error": false,
-		"result": "2.1996922858119603E-4",
+		"result": "2.199639710499797E-4",
 		"result-correct": true,
-		"absolute-error": 6.480818803969659e-09,
-		"relative-error": 2.9461520190781842e-05,
+		"absolute-error": 1.1738350020299659e-08,
+		"relative-error": 5.336202825446899e-05,
 		"notes": [],
 		"log": "DFTRES.default.hecs.false-2-2.Unreliability.often-epsilon-correct-10-min.log"
 	},
@@ -750,13 +750,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani"
 		],
-		"wallclock-time": 600.300760269165,
+		"wallclock-time": 600.4063165187836,
 		"timeout": false,
 		"execution-error": false,
-		"result": "2.199727596856933E-4",
+		"result": "2.1996423803400118E-4",
 		"result-correct": true,
-		"absolute-error": 2.949714306699659e-09,
-		"relative-error": 1.3409272845375623e-05,
+		"absolute-error": 1.147136599881966e-08,
+		"relative-error": 5.2148330513894725e-05,
 		"notes": [],
 		"log": "DFTRES.specific.hecs.false-2-2.Unreliability.often-epsilon-correct-10-min.log"
 	},
@@ -767,7 +767,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.05  hecs.false-3-2.jani"
 		],
-		"wallclock-time": 380.3131067752838,
+		"wallclock-time": 382.9391417503357,
 		"timeout": false,
 		"execution-error": false,
 		"result": "3.6617545120892626E-8",
@@ -784,7 +784,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.05 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani"
 		],
-		"wallclock-time": 125.46026563644409,
+		"wallclock-time": 126.45423769950867,
 		"timeout": false,
 		"execution-error": false,
 		"result": "3.696636630345426E-8",
@@ -801,7 +801,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.001  hecs.false-3-2.jani"
 		],
-		"wallclock-time": 1800.2690052986145,
+		"wallclock-time": 1800.2670586109161,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -814,7 +814,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 0.001 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani"
 		],
-		"wallclock-time": 1800.271267414093,
+		"wallclock-time": 1800.2677583694458,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -827,13 +827,13 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 1e-99  hecs.false-3-2.jani"
 		],
-		"wallclock-time": 602.3116970062256,
+		"wallclock-time": 600.6174492835999,
 		"timeout": false,
 		"execution-error": false,
-		"result": "3.647026370850145E-8",
+		"result": "3.6485601492794916E-8",
 		"result-correct": true,
-		"absolute-error": 7.691548850145145e-11,
-		"relative-error": 0.002113449085159537,
+		"absolute-error": 9.225327279491746e-11,
+		"relative-error": 0.002534893800846265,
 		"notes": [],
 		"log": "DFTRES.default.hecs.false-3-2.Unreliability.often-epsilon-correct-10-min.log"
 	},
@@ -844,10 +844,10 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 3 --def k 2 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-3-2.jani"
 		],
-		"wallclock-time": 603.2810821533203,
+		"wallclock-time": 601.8213858604431,
 		"timeout": false,
 		"execution-error": false,
-		"result": "3.626925907175459E-8",
+		"result": "3.6266063245333014E-8",
 		"result-correct": true,
 		"absolute-error": 0.0,
 		"relative-error": 0.0,
@@ -861,7 +861,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 0.05  sms.3-true.jani"
 		],
-		"wallclock-time": 3.283508062362671,
+		"wallclock-time": 3.2233502864837646,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.02383491265217865",
@@ -878,7 +878,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches sms.3-true.jani"
 		],
-		"wallclock-time": 0.6864850521087646,
+		"wallclock-time": 0.6555180549621582,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.02383491265218248",
@@ -895,7 +895,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 0.001  sms.3-true.jani"
 		],
-		"wallclock-time": 2.961824417114258,
+		"wallclock-time": 3.094165086746216,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.02383491265217865",
@@ -912,7 +912,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches sms.3-true.jani"
 		],
-		"wallclock-time": 0.735368013381958,
+		"wallclock-time": 0.7102534770965576,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.02383491265218248",
@@ -929,10 +929,10 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 1e-99  sms.3-true.jani"
 		],
-		"wallclock-time": 600.3065133094788,
+		"wallclock-time": 600.2794959545135,
 		"timeout": false,
 		"execution-error": false,
-		"result": "0.023834911707271058",
+		"result": "0.023834912179793926",
 		"result-correct": true,
 		"absolute-error": 0.0,
 		"relative-error": 0.0,
@@ -946,7 +946,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def A 3 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches sms.3-true.jani"
 		],
-		"wallclock-time": 0.6557841300964355,
+		"wallclock-time": 0.7559669017791748,
 		"timeout": false,
 		"execution-error": false,
 		"result": "0.02383491265218248",
@@ -963,7 +963,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.05  sms.3-true.jani"
 		],
-		"wallclock-time": 3.327085256576538,
+		"wallclock-time": 3.1788086891174316,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0",
@@ -980,7 +980,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.05 --unsafe-scheduling --fixed-batches sms.3-true.jani"
 		],
-		"wallclock-time": 0.880587100982666,
+		"wallclock-time": 0.8879561424255371,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0",
@@ -997,7 +997,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.001  sms.3-true.jani"
 		],
-		"wallclock-time": 3.079716205596924,
+		"wallclock-time": 3.356400728225708,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0",
@@ -1014,7 +1014,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches sms.3-true.jani"
 		],
-		"wallclock-time": 0.8678011894226074,
+		"wallclock-time": 0.8616416454315186,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0",
@@ -1031,7 +1031,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 1e-99  sms.3-true.jani"
 		],
-		"wallclock-time": 3.190520763397217,
+		"wallclock-time": 3.1430447101593018,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0",
@@ -1048,7 +1048,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def A 3 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches sms.3-true.jani"
 		],
-		"wallclock-time": 0.8440699577331543,
+		"wallclock-time": 0.8438267707824707,
 		"timeout": false,
 		"execution-error": false,
 		"result": "1.0",
@@ -1065,7 +1065,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.05  vgs.5.jani"
 		],
-		"wallclock-time": 1800.0279896259308,
+		"wallclock-time": 1800.0234868526459,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -1078,7 +1078,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.05 --unsafe-scheduling --fixed-batches vgs.5.jani"
 		],
-		"wallclock-time": 1800.0334694385529,
+		"wallclock-time": 1800.0278367996216,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -1091,7 +1091,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.001  vgs.5.jani"
 		],
-		"wallclock-time": 1800.0255649089813,
+		"wallclock-time": 1800.0275473594666,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -1104,7 +1104,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 0.001 --unsafe-scheduling --fixed-batches vgs.5.jani"
 		],
-		"wallclock-time": 1800.0282022953033,
+		"wallclock-time": 1800.0310668945312,
 		"timeout": true,
 		"execution-error": false,
 		"notes": [],
@@ -1117,7 +1117,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 1e-99  vgs.5.jani"
 		],
-		"wallclock-time": 600.0548830032349,
+		"wallclock-time": 600.0570774078369,
 		"timeout": false,
 		"execution-error": true,
 		"notes": [],
@@ -1130,7 +1130,7 @@
 		"commands": [
 			"java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 1e-99 --unsafe-scheduling --fixed-batches vgs.5.jani"
 		],
-		"wallclock-time": 600.0420453548431,
+		"wallclock-time": 600.0407316684723,
 		"timeout": false,
 		"execution-error": true,
 		"notes": [],
