@@ -1,11 +1,11 @@
-Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 1e-99 --unsafe-scheduling --fixed-batches hecs.false-2-2.jani
-Wallclock time:	600.4063165187836
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 2 --def k 2 --relErr 1e-99 --unsafe-scheduling hecs.false-2-2.jani
+Wallclock time:	600.3858377933502
 Return code:	130
 Output:
-Total time: 599.944 s.
+Total time: 599.961 s.
 Property Unreliability:
-point estimate: 2.1996423803400118E-4,
-var: 2.900236388926327E-7,
-CI: [2.1981049790600454E-4, 2.2011797816199783E-4] = 2.1996423803400118E-4 +/- 1.5374012799664722E-7
+point estimate: 2.1997153227309033E-4,
+var: 7.447368102716673E-8,
+CI: [2.1989403305918987E-4, 2.200490314869908E-4] = 2.1997153227309033E-4 +/- 7.74992139004622E-8
 
 

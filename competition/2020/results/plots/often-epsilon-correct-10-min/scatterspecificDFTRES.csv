@@ -1,12 +1,12 @@
 id;Type;DFTRES;DFTRESshifted;other;othershifted
-crowds.5-20.positive;dtmc;0.0054727756207793125;1;9.515362669829673e-16;1
-crowds.6-20.positive;dtmc;0.0048172201516787925;1;1.2050697748760292e-15;1
+crowds.5-20.positive;dtmc;0.005845672745840738;1;9.515362669829673e-16;1
+crowds.6-20.positive;dtmc;0.0050310811328876295;1;1.2050697748760292e-15;1
 haddad-monmege.100-0.7.target;dtmc;1.0;1;1e-20;1
 cabinets.3-2-true.Unavailability;ma;1e-20;1;1e-20;1
 cabinets.3-2-true.Unreliability;ma;1e-20;1;1e-20;1
 ftpp.2-2-true.Unavailability;ma;1e-20;1;80000;80000
-hecs.false-1-1.Unreliability;ma;0.0003772723646009798;1;1e-20;1
-hecs.false-2-2.Unreliability;ma;5.2148330513894725e-05;1;1e-20;1
+hecs.false-1-1.Unreliability;ma;0.0003571128174210073;1;1e-20;1
+hecs.false-2-2.Unreliability;ma;1.8989037112611575e-05;1;1e-20;1
 hecs.false-3-2.Unreliability;ma;1e-20;1;1e-20;1
 sms.3-true.Unreliability;ma;1e-20;1;1e-20;1
 sms.3-true.Unavailability;ma;1e-20;1;1e-20;1

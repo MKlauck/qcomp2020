@@ -1,8 +1,8 @@
 Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 3 --def P 2 --def R True --relErr 0.05  cabinets.3-2-true.jani
-Wallclock time:	4.777324438095093
+Wallclock time:	5.286377906799316
 Return code:	0
 Output:
-Total time: 4.564 s.
+Total time: 5.067 s.
 Property Unavailability:
 point estimate: 6.822710802082943E-8,
 var: 2.254541842286065E-13,

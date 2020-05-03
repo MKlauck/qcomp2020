@@ -1,11 +1,11 @@
-Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 1e-99 --unsafe-scheduling --fixed-batches cabinets.3-2-true.jani
-Wallclock time:	600.3688368797302
+Command:	java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def N 3 --def P 2 --def R True --relErr 1e-99 --unsafe-scheduling cabinets.3-2-true.jani
+Wallclock time:	600.3963551521301
 Return code:	130
 Output:
-Total time: 599.943 s.
+Total time: 599.955 s.
 Property Unreliability:
-point estimate: 6.690536398314723E-8,
-var: 2.892840650440974E-12,
-CI: [6.552789288273996E-8, 6.828283508355451E-8] = 6.690536398314723E-8 +/- 1.3774711004072733E-9
+point estimate: 6.684677897597601E-8,
+var: 1.0538731214135307E-12,
+CI: [6.602029683847523E-8, 6.767326111347679E-8] = 6.684677897597601E-8 +/- 8.264821375007758E-10
 
 
