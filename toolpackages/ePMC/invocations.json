@@ -1,0 +1,490 @@
+[
+	{
+		"benchmark-id": "bluetooth.1.time",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files bluetooth.prism --model-input-type prism --property-input-files bluetooth.props --property-input-names time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const mrec=1"
+		]
+	},
+	{
+		"benchmark-id": "coupon.9-4-5.exp_draws",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files coupon.9-4.jani --model-input-type jani --property-input-names exp_draws --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const B=5"
+		]
+	},
+	{
+		"benchmark-id": "coupon.15-4-5.exp_draws",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files coupon.15-4.jani --model-input-type jani --property-input-names exp_draws --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const B=5"
+		]
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files crowds.prism --model-input-type prism --property-input-files crowds.props --property-input-names positive --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const TotalRuns=5,CrowdSize=20"
+		]
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files crowds.prism --model-input-type prism --property-input-files crowds.props --property-input-names positive --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const TotalRuns=6,CrowdSize=20"
+		]
+	},
+	{
+		"benchmark-id": "egl.10-2.messagesB",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files egl.prism --model-input-type prism --property-input-files egl.props --property-input-names messagesB --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=10,L=2"
+		]
+	},
+	{
+		"benchmark-id": "egl.10-2.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files egl.prism --model-input-type prism --property-input-files egl.props --property-input-names unfairA --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=10,L=2"
+		]
+	},
+	{
+		"benchmark-id": "egl.10-8.messagesB",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files egl.prism --model-input-type prism --property-input-files egl.props --property-input-names messagesB --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=10,L=8"
+		]
+	},
+	{
+		"benchmark-id": "egl.10-8.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files egl.prism --model-input-type prism --property-input-files egl.props --property-input-names unfairA --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=10,L=8"
+		]
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files haddad-monmege.pm --model-input-type prism --property-input-files haddad-monmege.prctl --property-input-names target --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=100,p=0.7"
+		]
+	},
+	{
+		"benchmark-id": "herman.15.steps",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files herman.15.prism --model-input-type prism --property-input-files herman.props --property-input-names steps --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "nand.40-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files nand.prism --model-input-type prism --property-input-files nand.props --property-input-names reliable --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=40,K=4"
+		]
+	},
+	{
+		"benchmark-id": "nand.60-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files nand.prism --model-input-type prism --property-input-files nand.props --property-input-names reliable --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=60,K=4"
+		]
+	},
+	{
+		"benchmark-id": "oscillators.8-10-0.1-1-0.1-1.0.power_consumption",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files oscillators.8-10-0.1-1.prism --model-input-type prism --property-input-files oscillators.props --property-input-names power_consumption --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const mu=0.1,lambda=1.0"
+		]
+	},
+	{
+		"benchmark-id": "oscillators.8-10-0.1-1-0.1-1.0.time_to_synch",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files oscillators.8-10-0.1-1.prism --model-input-type prism --property-input-files oscillators.props --property-input-names time_to_synch --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const mu=0.1,lambda=1.0"
+		]
+	},
+	{
+		"benchmark-id": "cluster.128-2000-20.premium_steady",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files cluster.prism --model-input-type prism --property-input-files cluster.props --property-input-names premium_steady --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=128,T=2000,t=20"
+		]
+	},
+	{
+		"benchmark-id": "cluster.128-2000-20.qos1",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files cluster.prism --model-input-type prism --property-input-files cluster.props --property-input-names qos1 --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=128,T=2000,t=20"
+		]
+	},
+	{
+		"benchmark-id": "embedded.8-12.actuators",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files embedded.prism --model-input-type prism --property-input-files embedded.props --property-input-names actuators --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const MAX_COUNT=8,T=12"
+		]
+	},
+	{
+		"benchmark-id": "embedded.8-12.up_time",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files embedded.prism --model-input-type prism --property-input-files embedded.props --property-input-names up_time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const MAX_COUNT=8,T=12"
+		]
+	},
+	{
+		"benchmark-id": "fms.8.productivity",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files fms.prism --model-input-type prism --property-input-files fms.props --property-input-names productivity --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const n=8"
+		]
+	},
+	{
+		"benchmark-id": "kanban.5.throughput",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files kanban.prism --model-input-type prism --property-input-files kanban.props --property-input-names throughput --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const t=5"
+		]
+	},
+	{
+		"benchmark-id": "majority.2100.change_state",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files majority.prism --model-input-type prism --property-input-files majority.props --property-input-names change_state --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const T=2100"
+		]
+	},
+	{
+		"benchmark-id": "mapk_cascade.4-30.activated_time",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files mapk_cascade.prism --model-input-type prism --property-input-files mapk_cascade.props --property-input-names activated_time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=4,T=30"
+		]
+	},
+	{
+		"benchmark-id": "philosophers.16-1.MaxPrReachDeadlockTB",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files philosophers.16.jani --model-input-type jani --property-input-names MaxPrReachDeadlockTB --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const TIME_BOUND=1"
+		]
+	},
+	{
+		"benchmark-id": "philosophers.16-1.MaxPrReachDeadlock",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files philosophers.16.jani --model-input-type jani --property-input-names MaxPrReachDeadlock --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const TIME_BOUND=1"
+		]
+	},
+	{
+		"benchmark-id": "philosophers.20-1.MaxPrReachDeadlockTB",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files philosophers.20.jani --model-input-type jani --property-input-names MaxPrReachDeadlockTB --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const TIME_BOUND=1"
+		]
+	},
+	{
+		"benchmark-id": "philosophers.20-1.MaxPrReachDeadlock",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files philosophers.20.jani --model-input-type jani --property-input-names MaxPrReachDeadlock --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const TIME_BOUND=1"
+		]
+	},
+	{
+		"benchmark-id": "polling.18-16.s1_before_s2",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files polling.18.prism --model-input-type prism --property-input-files polling.props --property-input-names s1_before_s2 --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const T=16"
+		]
+	},
+	{
+		"benchmark-id": "speed-ind.2100.change_state",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files speed-ind.prism --model-input-type prism --property-input-files speed-ind.props --property-input-names change_state --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const T=2100"
+		]
+	},
+	{
+		"benchmark-id": "beb.4-8-7.LineSeized",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files beb.4-8.jani --model-input-type jani --property-input-names LineSeized --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=7"
+		]
+	},
+	{
+		"benchmark-id": "beb.5-16-15.LineSeized",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files beb.5-16.jani --model-input-type jani --property-input-names LineSeized --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=15"
+		]
+	},
+	{
+		"benchmark-id": "consensus.4-4.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.4.prism --model-input-type prism --property-input-files consensus.props --property-input-names disagree --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const K=4"
+		]
+	},
+	{
+		"benchmark-id": "consensus.4-4.steps_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.4.prism --model-input-type prism --property-input-files consensus.props --property-input-names steps_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const K=4"
+		]
+	},
+	{
+		"benchmark-id": "consensus.6-2.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.6.prism --model-input-type prism --property-input-files consensus.props --property-input-names disagree --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const K=2"
+		]
+	},
+	{
+		"benchmark-id": "consensus.6-2.steps_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.6.prism --model-input-type prism --property-input-files consensus.props --property-input-names steps_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const K=2"
+		]
+	},
+	{
+		"benchmark-id": "csma.3-4.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files csma.3-4.prism --model-input-type prism --property-input-files csma.props --property-input-names all_before_max --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "csma.3-4.time_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files csma.3-4.prism --model-input-type prism --property-input-files csma.props --property-input-names time_max --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "csma.4-2.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files csma.4-2.prism --model-input-type prism --property-input-files csma.props --property-input-names all_before_max --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "csma.4-2.time_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files csma.4-2.prism --model-input-type prism --property-input-files csma.props --property-input-names time_max --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "eajs.5-250-11.ExpUtil",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files eajs.5.prism --model-input-type prism --property-input-files eajs.props --property-input-names ExpUtil --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const energy_capacity=250,B=11"
+		]
+	},
+	{
+		"benchmark-id": "eajs.6-300-13.ExpUtil",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files eajs.6.prism --model-input-type prism --property-input-files eajs.props --property-input-names ExpUtil --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const energy_capacity=300,B=13"
+		]
+	},
+	{
+		"benchmark-id": "echoring.100.MaxOffline1",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files echoring.jani --model-input-type jani --property-input-names MaxOffline1 --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const ITERATIONS=100"
+		]
+	},
+	{
+		"benchmark-id": "elevators.b-11-9.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files elevators.b-11-9.jani --model-input-type jani --property-input-names goal --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "exploding-blocksworld.10.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files exploding-blocksworld.10.jani --model-input-type jani --property-input-names goal --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files pacman.nm --model-input-type prism --property-input-files pacman.props --property-input-names crash --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const MAXSTEPS=100"
+		]
+	},
+	{
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files pacman.nm --model-input-type prism --property-input-files pacman.props --property-input-names crash --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const MAXSTEPS=60"
+		]
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files pnueli-zuck.5.prism --model-input-type prism --property-input-files pnueli-zuck.props --property-input-names live --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "pnueli-zuck.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files pnueli-zuck.10.prism --model-input-type prism --property-input-files pnueli-zuck.props --property-input-names live --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "rabin.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files rabin.10.prism --model-input-type prism --property-input-files rabin.10.props --property-input-names live --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "rectangle-tireworld.11.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files rectangle-tireworld.11.jani --model-input-type jani --property-input-names goal --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "tireworld.45.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files tireworld.45.jani --model-input-type jani --property-input-names goal --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "triangle-tireworld.441.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files triangle-tireworld.441.jani --model-input-type jani --property-input-names goal --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "wlan.4-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.4.prism --model-input-type prism --property-input-files wlan.props --property-input-names sent --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const COL=0"
+		]
+	},
+	{
+		"benchmark-id": "wlan.4-0.cost_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.4.prism --model-input-type prism --property-input-files wlan.props --property-input-names cost_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const COL=0"
+		]
+	},
+	{
+		"benchmark-id": "wlan.5-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.5.prism --model-input-type prism --property-input-files wlan.props --property-input-names sent --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const COL=0"
+		]
+	},
+	{
+		"benchmark-id": "wlan.5-0.cost_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.5.prism --model-input-type prism --property-input-files wlan.props --property-input-names cost_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const COL=0"
+		]
+	},
+	{
+		"benchmark-id": "wlan.6-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.6.prism --model-input-type prism --property-input-files wlan.props --property-input-names sent --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const COL=0"
+		]
+	},
+	{
+		"benchmark-id": "wlan.6-0.cost_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.6.prism --model-input-type prism --property-input-files wlan.props --property-input-names cost_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const COL=0"
+		]
+	},
+	{
+		"benchmark-id": "zenotravel.4-2-2.goal",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files zenotravel.4-2-2.jani --model-input-type jani --property-input-names goal --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3"
+		]
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files zeroconf.prism --model-input-type prism --property-input-files zeroconf.props --property-input-names correct_max --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=1000,K=8,reset=false"
+		]
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files zeroconf.prism --model-input-type prism --property-input-files zeroconf.props --property-input-names correct_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=1000,K=8,reset=false"
+		]
+	}
+]
