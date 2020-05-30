@@ -1,5 +1,5 @@
-Command:	modes/modest modes beb.4-8.jani --props LineSeized -E N=7 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5392751693726
+Command:	modes/modest modes --unsafe --max-run-length 0 beb.4-8.jani --props LineSeized -E N=7 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5492029190063
 Return code:	0
 Output:
 
@@ -9,7 +9,7 @@ Output:
 beb.4-8.jani:model: info: beb-4-8 is an MDP model and will be simulated as an MDP.
 beb.4-8.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 64 MB
+Peak memory usage: 62 MB
 Analysis results for beb.4-8.jani
 Experiment N=7
 Status:          Finished
@@ -18,9 +18,9 @@ Simulation time: 599.4 s
 + Property Property "LineSeized"
   Estimated max. probability: 1
   Runs used (best scheduler): 300
-  Total runs used:            43724810
-  Schedulers sampled:         43000
-  Best scheduler:             1502710515
+  Total runs used:            47925150
+  Schedulers sampled:         47000
+  Best scheduler:             2014162325
   Run type:                   MDP
   Status:                     Finished
 
@@ -32,5 +32,5 @@ Simulation time: 599.4 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

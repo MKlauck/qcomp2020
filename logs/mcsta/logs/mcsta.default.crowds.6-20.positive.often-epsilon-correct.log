@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
-Wallclock time:	88.88459753990173
+Command:	mcsta/modest mcsta crowds.jani -E TotalRuns=6,CrowdSize=20 --props positive -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1
+Wallclock time:	37.32885766029358
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ crowds.jani: info: Need 40 bytes per state.
 crowds.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
 crowds.jani: info: Explored 10291282 states for TotalRuns=6, CrowdSize=20.
 
-Peak memory usage: 1606 MB
+Peak memory usage: 3439 MB
 Analysis results for crowds.jani
 Experiment TotalRuns=6, CrowdSize=20
 
@@ -20,21 +20,34 @@ Experiment TotalRuns=6, CrowdSize=20
   States:      10291282
   Transitions: 10291282
   Branches:    37068802
-  Rate:        216563 states/s
-  Time:        54.9 s
+  Rate:        398115 states/s
+  Time:        27.2 s
 
 + Property positive
   Probability: 0.1204761609299478
   Bounds:      [0.1204761609299478, 1]
-  Time:        33.3 s
+  Time:        9.5 s
+
+  + Precomputations
+    Min. prob. 0 states:          8587502
+    Time for min. prob. 0 states: 2.4 s
+    Min. prob. 1 states:          21252
+    Time for min. prob. 1 states: 0.4 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 1275122
+    Transitions:      1275122
+    Branches:         10200962
+    Time:             1.3 s
 
   + Value iteration
     Final error: 8.778542281008603E-07
     Iterations:  63
-    Time:        32.9 s
+    Time:        5.4 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

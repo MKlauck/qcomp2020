@@ -1,5 +1,5 @@
-Command:	modes/modest modes csma.4-2.jani --props time_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.548267364502
+Command:	modes/modest modes --unsafe --max-run-length 0 csma.4-2.jani --props time_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5561532974243
 Return code:	0
 Output:
 
@@ -8,28 +8,28 @@ Output:
 
 csma.4-2.jani:model: info: csma.4-2 is an MDP model and will be simulated as an MDP.
 csma.4-2.jani: info: Using default value of 0.95 for the confidence parameter.
-csma.4-2.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+csma.4-2.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
-Peak memory usage: 58 MB
+Peak memory usage: 60 MB
 Analysis results for csma.4-2.jani
 Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "time_max"
-  Estimated max. value:       134.92000000000002
-  Max. confidence interval:   [132.61621857901494, 137.2237814209851]
+  Estimated max. value:       135.8
+  Max. confidence interval:   [133.81294650198703, 137.787053498013]
   Runs used (best scheduler): 50
-  Total runs used:            3966250
-  Schedulers sampled:         3000
-  Best scheduler:             997145218
+  Total runs used:            4018350
+  Schedulers sampled:         4000
+  Best scheduler:             756097654
   Run type:                   MDP
   Status:                     Finished
 
   + Max. sample data
-    Mean:     134.92000000000002
-    Variance: 53.05469387755101
-    Skewness: 1.0016293800875218
-    Kurtosis: 4.429644107544289
+    Mean:     135.8
+    Variance: 39.46938775510202
+    Skewness: 1.1950941169301312
+    Kurtosis: 5.713408028540605
 
   + Error bounds
     Scheduler sampling: The result is a lower bound for the true max. value.
@@ -38,5 +38,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

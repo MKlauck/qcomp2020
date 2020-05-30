@@ -1,5 +1,5 @@
-Command:	modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	26.813102960586548
+Command:	modes/modest modes --unsafe --max-run-length 0 majority.jani --props change_state -E T=2100 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	25.797722339630127
 Return code:	0
 Output:
 
@@ -15,15 +15,15 @@ majority.jani:variables[4]: info: Expanding variable "XX" into 5 locations in au
 majority.jani:variables[5]: info: Expanding variable "EE" into 16 locations in automaton "EE_def".
 majority.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 61 MB
+Peak memory usage: 60 MB
 Analysis results for majority.jani
 Experiment T=2100
 Status:          Finished
-Simulation time: 25.6 s
+Simulation time: 24.6 s
 
 + Property Property "change_state"
-  Estimated probability: 0.05407461064831583
-  Runs used:             55220
+  Estimated probability: 0.05371336090631181
+  Runs used:             55610
   Run type:              MA
   Status:                Finished
 
@@ -34,5 +34,5 @@ Simulation time: 25.6 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal -N 2147483647</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal -N 2147483647</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5504157543182s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.5500705242157s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.0003832794700104853</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0006656756780649468</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -32,24 +32,24 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">egl.jani:model: info: egl is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
 egl.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 60 MB
+Peak memory usage: 59 MB
 Analysis results for egl.jani
 Experiment N=10, L=8
 Status:          Cancelled
 Simulation time: 599.4 s
 
 + Property Property &quot;messagesB&quot;
-  Estimated value:     4.067709512963097
-  Confidence interval: [4.061646507999292, 4.073772517926901]
-  Runs used:           2340070
+  Estimated value:     4.066560366777028
+  Confidence interval: [4.060534936814666, 4.07258579673939]
+  Runs used:           2364380
   Run type:            MDP
   Status:              Cancelled
 
   + Sample data
-    Mean:     4.067709512963097
-    Variance: 22.39280583872504
-    Skewness: 3.8368005468984063
-    Kurtosis: 59.844871624681865
+    Mean:     4.066560366777028
+    Variance: 22.34586550161455
+    Skewness: 3.8137725657948587
+    Kurtosis: 59.51777378461558
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -57,7 +57,7 @@ Simulation time: 599.4 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

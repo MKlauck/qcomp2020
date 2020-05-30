@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --unsafe --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1 -S Disk --store-compress None
-Wallclock time:	734.5955059528351
+Command:	mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --unsafe --es -S Hybrid --store-compress None --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	595.4239778518677
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ tireworld.45.jani:model: info: jani_from_ppddl is an MDP model.
 tireworld.45.jani: info: Need 24 bytes per state.
 tireworld.45.jani: info: Explored 46137256 states.
 
-Peak memory usage: 6601 MB
+Peak memory usage: 8778 MB
 Analysis results for tireworld.45.jani
 
 + State space exploration
@@ -18,27 +18,34 @@ Analysis results for tireworld.45.jani
   States:      46137256
   Transitions: 105905930
   Branches:    192413242
-  Rate:        223844 states/s
-  Time:        247.7 s
+  Rate:        246407 states/s
+  Time:        233.7 s
 
 + Property goal
   Probability: 0.9359999999999999
   Bounds:      [0.9359999999999999, 0.9359999999999999]
-  Time:        485.5 s
+  Time:        360.4 s
 
   + Precomputations
     Max. prob. 0 states:          8912896
-    Time for max. prob. 0 states: 8.7 s
+    Time for max. prob. 0 states: 8.8 s
     Max. prob. 1 states:          14364611
-    Time for max. prob. 1 states: 233.1 s
+    Time for max. prob. 1 states: 194.9 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 20860903
+    Transitions:      42516442
+    Branches:         82403256
+    Time:             18.7 s
 
   + Value iteration
     Final error: 0
-    Iterations:  77
-    Time:        242.3 s
+    Iterations:  75
+    Time:        137.1 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

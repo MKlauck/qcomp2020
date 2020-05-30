@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta pnueli-zuck.10.jani --props live -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	1800.209941625595
+Command:	mcsta/modest mcsta pnueli-zuck.10.jani --props live -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	1801.480976819992
 Return code:	None
 Output:
 
@@ -20,8 +20,8 @@ pnueli-zuck.10.jani:variables[9]: info: Expanding variable "p9" into 16 location
 pnueli-zuck.10.jani: info: Need 24 bytes per state.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ----------
-Computation aborted after 1800.209941625595 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1801.480976819992 seconds since the total time limit of 1800 seconds was exceeded.

@@ -1,5 +1,5 @@
-Command:	modes/modest modes resource-gathering.jani --props expgold -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.548483133316
+Command:	modes/modest modes --unsafe --max-run-length 0 resource-gathering.jani --props expgold -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5478398799896
 Return code:	0
 Output:
 
@@ -8,7 +8,7 @@ Output:
 
 resource-gathering.jani:model: info: resource-gathering is an MDP model and will be simulated as an MDP.
 resource-gathering.jani: info: Using default value of 0.95 for the confidence parameter.
-resource-gathering.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+resource-gathering.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 58 MB
 Analysis results for resource-gathering.jani
@@ -17,17 +17,17 @@ Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "expgold"
-  Estimated max. value:       1
-  Max. confidence interval:   [1, 1]
-  Runs used (best scheduler): 50
-  Total runs used:            1120050
-  Schedulers sampled:         1000
-  Best scheduler:             1420531108
+  Estimated max. value:       0
+  Max. confidence interval:   [0, 0]
+  Runs used (best scheduler): 171140
+  Total runs used:            1171140
+  Schedulers sampled:         0
+  Best scheduler:             2087811719
   Run type:                   MDP
   Status:                     Finished
 
   + Max. sample data
-    Mean: 1
+    Mean: 0
 
   + Error bounds
     Scheduler sampling: The result is a lower bound for the true max. value.
@@ -36,5 +36,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon
-Wallclock time:	1800.216061115265
+Command:	mcsta/modest mcsta philosophers.20.jani -E TIME_BOUND=1 --props MinExpTimeDeadlock -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --epsilon 0 --absolute-epsilon
+Wallclock time:	1801.52783370018
 Return code:	None
 Output:
 
@@ -8,10 +8,11 @@ Output:
 
 philosophers.20.jani:model: info: Philosophers20 is a CTMC model.
 philosophers.20.jani: info: Need 88 bytes per state.
+philosophers.20.jani: info: Explored 45239074 states for TIME_BOUND=1.0.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ----------
-Computation aborted after 1800.216061115265 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1801.52783370018 seconds since the total time limit of 1800 seconds was exceeded.

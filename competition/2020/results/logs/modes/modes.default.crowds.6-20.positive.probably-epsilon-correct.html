@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --width 5e-2 --relative-width</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --width 5e-2 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">1.824244737625122s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">1.6924643516540527s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.019620462491751933</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.02299035184876395</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -32,15 +32,15 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">crowds.jani:model: info: crowds is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
 crowds.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 59 MB
+Peak memory usage: 57 MB
 Analysis results for crowds.jani
 Experiment TotalRuns=6, CrowdSize=20
 Status:          Finished
-Simulation time: 0.8 s
+Simulation time: 0.7 s
 
 + Property Property &quot;positive&quot;
-  Estimated probability: 0.1181125687685146
-  Runs used:             23630
+  Estimated probability: 0.11770657672849916
+  Runs used:             23720
   Run type:              MDP
   Status:                Finished
 
@@ -51,7 +51,7 @@ Simulation time: 0.8 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

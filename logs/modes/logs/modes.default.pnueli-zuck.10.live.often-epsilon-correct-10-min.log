@@ -1,5 +1,5 @@
-Command:	modes/modest modes pnueli-zuck.10.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5530803203583
+Command:	modes/modest modes --unsafe --max-run-length 0 pnueli-zuck.10.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5471065044403
 Return code:	0
 Output:
 
@@ -19,17 +19,17 @@ pnueli-zuck.10.jani:variables[8]: info: Expanding variable "p8" into 16 location
 pnueli-zuck.10.jani:variables[9]: info: Expanding variable "p9" into 16 locations in automaton "process9".
 pnueli-zuck.10.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 327 MB
+Peak memory usage: 324 MB
 Analysis results for pnueli-zuck.10.jani
 Status:          Finished
-Simulation time: 336.0 s
+Simulation time: 335.3 s
 
 + Property Property "live"
   Estimated max. probability: 1
   Runs used (best scheduler): 250
-  Total runs used:            34241050
-  Schedulers sampled:         34000
-  Best scheduler:             1122558792
+  Total runs used:            35521650
+  Schedulers sampled:         35000
+  Best scheduler:             164617082
   Run type:                   MDP
   Status:                     Finished
 
@@ -41,5 +41,5 @@ Simulation time: 336.0 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

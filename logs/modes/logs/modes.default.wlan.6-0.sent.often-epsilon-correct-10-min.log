@@ -1,5 +1,5 @@
-Command:	modes/modest modes wlan.6.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.549970626831
+Command:	modes/modest modes --unsafe --max-run-length 0 wlan.6.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5518934726715
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ wlan.6.jani:variables[7]: info: Expanding variable "s1" into 12 locations in aut
 wlan.6.jani:variables[12]: info: Expanding variable "s2" into 12 locations in automaton "station2".
 wlan.6.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 80 MB
+Peak memory usage: 67 MB
 Analysis results for wlan.6.jani
 Experiment COL=0
 Status:          Finished
@@ -21,9 +21,9 @@ Simulation time: 599.2 s
   Decision:                   undecided
   Estimated min. probability: 1
   Runs used (best scheduler): 250
-  Total runs used:            11498250
-  Schedulers sampled:         11000
-  Best scheduler:             846673793
+  Total runs used:            20293650
+  Schedulers sampled:         20000
+  Best scheduler:             1649573494
   Run type:                   MDP
   Status:                     Finished
 
@@ -35,5 +35,5 @@ Simulation time: 599.2 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

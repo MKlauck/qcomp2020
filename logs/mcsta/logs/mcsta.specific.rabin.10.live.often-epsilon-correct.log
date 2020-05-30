@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta rabin.10.jani --props live -O out.txt Minimal --unsafe --no-partial-results --width 1e-3 --relative-width -S Disk --store-compress None
-Wallclock time:	1800.5685193538666
+Command:	mcsta/modest mcsta rabin.10.jani --props live -O out.txt Minimal --unsafe --es -S Hybrid --store-compress None --no-partial-results
+Wallclock time:	1801.4425764083862
 Return code:	None
 Output:
 
@@ -10,8 +10,8 @@ rabin.10.jani:model: info: rabin.10 is an MDP model.
 rabin.10.jani: info: Need 56 bytes per state.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ----------
-Computation aborted after 1800.5685193538666 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1801.4425764083862 seconds since the total time limit of 1800 seconds was exceeded.

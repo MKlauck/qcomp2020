@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
-Wallclock time:	17.62909770011902
+Command:	mcsta/modest mcsta nand.jani -E N=40,K=4 --props reliable -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width --p0 --p1
+Wallclock time:	7.21002197265625
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ nand.jani:model: info: nand is a DTMC model.
 nand.jani: info: Need 16 bytes per state.
 nand.jani: info: Explored 3999522 states for N=40, K=4.
 
-Peak memory usage: 450 MB
+Peak memory usage: 1014 MB
 Analysis results for nand.jani
 Experiment N=40, K=4
 
@@ -19,23 +19,36 @@ Experiment N=40, K=4
   States:      3999522
   Transitions: 3999522
   Branches:    6288542
-  Rate:        291532 states/s
-  Time:        15.5 s
+  Rate:        813242 states/s
+  Time:        5.3 s
 
 + Property reliable
   Probability: 0.6186822208151973
   Bounds:      [0.6186822208151973, 0.6186822208151973]
-  Time:        0.9 s
+  Time:        1.4 s
+
+  + Precomputations
+    Min. prob. 0 states:          375263
+    Time for min. prob. 0 states: 0.2 s
+    Min. prob. 1 states:          141
+    Time for min. prob. 1 states: 0.2 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 2075250
+    Transitions:      2075250
+    Branches:         4150498
+    Time:             0.7 s
 
   + Optimistic value iteration
     Total iterations:  3
     Verif. attempts:   1
     Verif. iterations: 1
     Final epsilon:     0.05
-    Time:              0.6 s
+    Time:              0.3 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

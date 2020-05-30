@@ -1,5 +1,5 @@
-Command:	modes/modest modes coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	1.2022759914398193
+Command:	modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	1.182654857635498
 Return code:	0
 Output:
 
@@ -8,26 +8,26 @@ Output:
 
 coupon.15-4.jani:model: info: coupon.15-4 is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
 coupon.15-4.jani: info: Using default value of 0.95 for the confidence parameter.
-coupon.15-4.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+coupon.15-4.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
-Peak memory usage: 57 MB
+Peak memory usage: 58 MB
 Analysis results for coupon.15-4.jani
 Experiment B=5
 Status:          Finished
-Simulation time: 0.2 s
+Simulation time: 0.1 s
 
 + Property Property "exp_draws"
-  Estimated value:     12.876470588235296
-  Confidence interval: [12.23657126158066, 13.516369914889932]
-  Runs used:           170
+  Estimated value:     12.674999999999999
+  Confidence interval: [12.058980552896767, 13.291019447103231]
+  Runs used:           160
   Run type:            MDP
   Status:              Finished
 
   + Sample data
-    Mean:     12.876470588235296
-    Variance: 18.12074486599374
-    Skewness: 1.4890381680646283
-    Kurtosis: 7.007057026015844
+    Mean:     12.674999999999999
+    Variance: 15.805660377358487
+    Skewness: 0.9124360257293844
+    Kurtosis: 3.3338689010779645
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -35,5 +35,5 @@ Simulation time: 0.2 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

@@ -1,6 +1,6 @@
-Command:	mcsta/modest mcsta rabin.10.jani --props live -O out.txt Minimal --epsilon 0
-Wallclock time:	600.3843152523041
-Return code:	0
+Command:	mcsta/modest mcsta rabin.10.jani --props live -O out.txt Minimal --unsafe --es -S Memory --epsilon 0
+Wallclock time:	621.4784727096558
+Return code:	-9
 Output:
 
 
@@ -10,8 +10,5 @@ rabin.10.jani:model: info: rabin.10 is an MDP model.
 rabin.10.jani: info: Need 56 bytes per state.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
-
-############################## Notes ##############################
-Unable to obtain tool result.

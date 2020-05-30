@@ -1,5 +1,5 @@
-Command:	modes/modest modes firewire.false.jani --props deadline -E delay=36,deadline=800 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5436305999756
+Command:	modes/modest modes --unsafe --max-run-length 0 firewire.false.jani --props deadline -E delay=36,deadline=800 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5474762916565
 Return code:	0
 Output:
 
@@ -16,14 +16,14 @@ Peak memory usage: 59 MB
 Analysis results for firewire.false.jani
 Experiment delay=36, deadline=800
 Status:          Finished
-Simulation time: 599.4 s
+Simulation time: 599.5 s
 
 + Property Property "deadline"
-  Estimated min. probability: 0.9918367346938776
-  Runs used (best scheduler): 490
-  Total runs used:            5785040
+  Estimated min. probability: 0.9686274509803922
+  Runs used (best scheduler): 1020
+  Total runs used:            5880050
   Schedulers sampled:         5000
-  Best scheduler:             1152419735
+  Best scheduler:             1570667008
   Run type:                   MDP
   Status:                     Finished
 
@@ -35,5 +35,5 @@ Simulation time: 599.4 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

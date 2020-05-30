@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta zeroconf-pta.jani --props incorrect -E T=200 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
-Wallclock time:	0.6313817501068115
+Command:	mcsta/modest mcsta zeroconf-pta.jani -E T=200 --props incorrect -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width
+Wallclock time:	0.5756180286407471
 Return code:	0
 Output:
 
@@ -12,7 +12,7 @@ zeroconf-pta.jani:variables[6]: info: Expanding variable "e" into 3 locations in
 zeroconf-pta.jani: info: Need 16 bytes per state.
 zeroconf-pta.jani: info: Explored 498 states for T=200.
 
-Peak memory usage: 51 MB
+Peak memory usage: 50 MB
 Analysis results for zeroconf-pta.jani
 Experiment T=200
 
@@ -21,23 +21,30 @@ Experiment T=200
   States:      498
   Transitions: 616
   Branches:    641
-  Rate:        10596 states/s
-  Time:        0.1 s
-
-+ Property incorrect
-  Probability: 0.0013093366112461818
-  Bounds:      [0.001298260733217528, 0.0013204124892748357]
+  Rate:        11857 states/s
   Time:        0.0 s
 
++ Property incorrect
+  Probability: 0.001312822756496644
+  Bounds:      [0.0012813361966634706, 0.0013443093163298175]
+  Time:        0.0 s
+
+  + Essential states
+    Iterations:       3
+    Essential states: 48
+    Transitions:      86
+    Branches:         111
+    Time:             0.0 s
+
   + Optimistic value iteration
-    Total iterations:  12
+    Total iterations:  6
     Verif. attempts:   1
-    Verif. iterations: 4
+    Verif. iterations: 1
     Final epsilon:     0.05
     Time:              0.0 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

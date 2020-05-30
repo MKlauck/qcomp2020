@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5438995361328s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.5524790287018s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.8582508020076028</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.7464062026035225</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -38,7 +38,7 @@ eajs.6.jani:variables[22]: info: Expanding variable &quot;loc_4&quot; into 3 loc
 eajs.6.jani:variables[23]: info: Expanding variable &quot;loc_6&quot; into 3 locations in automaton &quot;Process_6&quot;.
 eajs.6.jani:variables[26]: info: Expanding variable &quot;loc_5&quot; into 3 locations in automaton &quot;Process_5&quot;.
 eajs.6.jani: info: Using default value of 0.95 for the confidence parameter.
-eajs.6.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+eajs.6.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 61 MB
 Analysis results for eajs.6.jani
@@ -47,20 +47,20 @@ Status:          Finished
 Simulation time: 599.4 s
 
 + Property Property &quot;ExpUtil&quot;
-  Estimated max. value:       1.7082352941176469
-  Max. confidence interval:   [1.6740873120201702, 1.7423832762151235]
-  Runs used (best scheduler): 5100
-  Total runs used:            5572420
+  Estimated max. value:       3.0560869565217392
+  Max. confidence interval:   [2.995008723320875, 3.1171651897226034]
+  Runs used (best scheduler): 2300
+  Total runs used:            5752340
   Schedulers sampled:         5000
-  Best scheduler:             1544264648
+  Best scheduler:             1708818022
   Run type:                   MDP
   Status:                     Finished
 
   + Max. sample data
-    Mean:     1.7082352941176469
-    Variance: 1.5481180854377405
-    Skewness: 0.6327476730183286
-    Kurtosis: 3.1333047673812593
+    Mean:     3.0560869565217392
+    Variance: 1.7154261777332311
+    Skewness: 0.48894613075385024
+    Kurtosis: 2.9667526758788894
 
   + Error bounds
     Scheduler sampling: The result is a lower bound for the true max. value.
@@ -69,7 +69,7 @@ Simulation time: 599.4 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

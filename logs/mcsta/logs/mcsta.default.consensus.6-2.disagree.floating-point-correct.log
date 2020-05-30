@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta consensus.6.jani --props disagree -E K=2 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1
-Wallclock time:	387.5285198688507
+Command:	mcsta/modest mcsta consensus.6.jani -E K=2 --props disagree -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	342.58429980278015
 Return code:	0
 Output:
 
@@ -16,7 +16,7 @@ consensus.6.jani:variables[16]: info: Expanding variable "pc6" into 4 locations 
 consensus.6.jani: info: Need 24 bytes per state.
 consensus.6.jani: info: Explored 1258240 states for K=2.
 
-Peak memory usage: 280 MB
+Peak memory usage: 716 MB
 Analysis results for consensus.6.jani
 Experiment K=2
 
@@ -25,27 +25,34 @@ Experiment K=2
   States:      1258240
   Transitions: 5008128
   Branches:    6236736
-  Rate:        73892 states/s
-  Time:        18.5 s
+  Rate:        233223 states/s
+  Time:        5.7 s
 
 + Property disagree
   Probability: 0.36364474956290294
   Bounds:      [0.36364474956290294, 0.36364474956290294]
-  Time:        368.4 s
+  Time:        336.3 s
 
   + Precomputations
     Max. prob. 0 states:          27270
     Time for max. prob. 0 states: 0.7 s
     Max. prob. 1 states:          583956
-    Time for max. prob. 1 states: 237.7 s
+    Time for max. prob. 1 states: 214.5 s
+
+  + Essential states
+    Iterations:       3
+    Essential states: 646200
+    Transitions:      2996414
+    Branches:         3755966
+    Time:             0.5 s
 
   + Value iteration
     Final error: 0
     Iterations:  1956
-    Time:        130.0 s
+    Time:        120.5 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta wlan-large.jani --props P_max -E K=2 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1
-Wallclock time:	244.01624870300293
+Command:	mcsta/modest mcsta wlan-large.jani -E K=2 --props P_max -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	59.76944828033447
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ wlan-large.jani:model: info: wlan-large is an STA model.
 wlan-large.jani: info: Need 16 bytes per state.
 wlan-large.jani: info: Explored 761958 states for K=2.
 
-Peak memory usage: 150 MB
+Peak memory usage: 267 MB
 Analysis results for wlan-large.jani
 Experiment K=2
 
@@ -19,27 +19,34 @@ Experiment K=2
   States:      761958
   Transitions: 1505953
   Branches:    1507007
-  Rate:        49420 states/s
-  Time:        15.8 s
+  Rate:        230826 states/s
+  Time:        3.4 s
 
 + Property P_max
   Probability: 0.0625
   Bounds:      [0.0625, 0.0625]
-  Time:        226.6 s
+  Time:        55.4 s
 
   + Precomputations
     Max. prob. 0 states:          597791
     Time for max. prob. 0 states: 1.2 s
     Max. prob. 1 states:          79420
-    Time for max. prob. 1 states: 225.3 s
+    Time for max. prob. 1 states: 54.0 s
+
+  + Essential states
+    Iterations:       3
+    Essential states: 46539
+    Transitions:      108535
+    Branches:         109375
+    Time:             0.1 s
 
   + Value iteration
     Final error: 0
     Iterations:  3
-    Time:        0.1 s
+    Time:        0.0 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

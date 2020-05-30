@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta zenotravel.4-2-2.jani --props goal -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	44.48257112503052
+Command:	mcsta/modest mcsta zenotravel.4-2-2.jani --props goal -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	36.19031739234924
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ zenotravel.4-2-2.jani:model: info: jani_from_ppddl is an MDP model.
 zenotravel.4-2-2.jani: info: Need 16 bytes per state.
 zenotravel.4-2-2.jani: info: Explored 459900 states.
 
-Peak memory usage: 172 MB
+Peak memory usage: 455 MB
 Analysis results for zenotravel.4-2-2.jani
 
 + State space exploration
@@ -18,23 +18,30 @@ Analysis results for zenotravel.4-2-2.jani
   States:      459900
   Transitions: 2976444
   Branches:    3818556
-  Rate:        28201 states/s
-  Time:        17.2 s
+  Rate:        53094 states/s
+  Time:        8.8 s
 
 + Property goal
   Probability: 0.9999999999999774
   Bounds:      [0.9999999999999548, 1]
-  Time:        26.3 s
+  Time:        26.7 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 457777
+    Transitions:      2974321
+    Branches:         3816433
+    Time:             0.3 s
 
   + Optimistic value iteration
     Total iterations:  504
     Verif. attempts:   4
     Verif. iterations: 45
     Final epsilon:     1.5505289218293568E-08
-    Time:              26.2 s
+    Time:              26.4 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

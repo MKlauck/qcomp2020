@@ -1,5 +1,5 @@
-Command:	modes/modest modes resource-gathering.jani --props prgoldgem -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5566539764404
+Command:	modes/modest modes --unsafe --max-run-length 0 resource-gathering.jani --props prgoldgem -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5496809482574
 Return code:	0
 Output:
 
@@ -17,10 +17,10 @@ Simulation time: 599.5 s
 
 + Property Property "prgoldgem"
   Estimated max. probability: 0
-  Runs used (best scheduler): 118480
-  Total runs used:            1118480
+  Runs used (best scheduler): 155100
+  Total runs used:            1155100
   Schedulers sampled:         0
-  Best scheduler:             746808629
+  Best scheduler:             2006595713
   Run type:                   MDP
   Status:                     Finished
 
@@ -30,5 +30,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

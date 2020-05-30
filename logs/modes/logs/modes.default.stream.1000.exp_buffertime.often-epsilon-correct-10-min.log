@@ -1,5 +1,5 @@
-Command:	modes/modest modes stream.jani --props exp_buffertime -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5406453609467
+Command:	modes/modest modes --unsafe --max-run-length 0 stream.jani --props exp_buffertime -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.554586648941
 Return code:	0
 Output:
 
@@ -9,29 +9,29 @@ Output:
 stream.jani:model: info: stream is an MA model and will be simulated as an MA.
 stream.jani:variables[5]: info: Expanding variable "s" into 4 locations in automaton "streamingclient".
 stream.jani: info: Using default value of 0.95 for the confidence parameter.
-stream.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+stream.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
-Peak memory usage: 57 MB
+Peak memory usage: 59 MB
 Analysis results for stream.jani
 Experiment N=1000
 Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "exp_buffertime"
-  Estimated min. value:       9.177761665292698
-  Min. confidence interval:   [8.994255166994417, 9.361268163590978]
-  Runs used (best scheduler): 5390
-  Total runs used:            1082390
+  Estimated min. value:       9.225355527325453
+  Min. confidence interval:   [9.04095845770346, 9.409752596947445]
+  Runs used (best scheduler): 5210
+  Total runs used:            1121210
   Schedulers sampled:         1000
-  Best scheduler:             833392050
+  Best scheduler:             187263615
   Run type:                   MA
   Status:                     Finished
 
   + Min. sample data
-    Mean:     9.177761665292698
-    Variance: 47.24931092026856
-    Skewness: 1.0000144066747652
-    Kurtosis: 3.821560077591883
+    Mean:     9.225355527325453
+    Variance: 46.115781359271864
+    Skewness: 1.065907576526885
+    Kurtosis: 4.184579211005687
 
   + Error bounds
     Scheduler sampling: The result is an upper bound for the true min. value.
@@ -40,5 +40,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

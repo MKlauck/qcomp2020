@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta wlan.4.jani --props cost_min -E COL=0 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	20.094835996627808
+Command:	mcsta/modest mcsta wlan.4.jani -E COL=0 --props cost_min -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	15.006984233856201
 Return code:	0
 Output:
 
@@ -13,7 +13,7 @@ wlan.4.jani: info: Need 16 bytes per state.
 wlan.4.jani: info: Explored 345000 states for COL=0.
 wlan.4.jani:properties[2]: warning: Computing minimum expected reward in property "cost_min" without checking for zero-reward end components.
 
-Peak memory usage: 110 MB
+Peak memory usage: 181 MB
 Analysis results for wlan.4.jani
 Experiment COL=0
 
@@ -22,27 +22,34 @@ Experiment COL=0
   States:      345000
   Transitions: 440206
   Branches:    762252
-  Rate:        194257 states/s
-  Time:        2.0 s
+  Rate:        379956 states/s
+  Time:        1.0 s
 
 + Property cost_min
-  Value:  7625.003390625
-  Bounds: [7625, 7625.00678125]
-  Time:   17.2 s
+  Value:  7625
+  Bounds: [7625, 7625]
+  Time:   13.3 s
 
   + Precomputations
     Max. prob. 1 states:          345000
-    Time for max. prob. 1 states: 13.6 s
+    Time for max. prob. 1 states: 13.2 s
+
+  + Essential states
+    Iterations:       14
+    Essential states: 6151
+    Transitions:      10499
+    Branches:         81553
+    Time:             0.1 s
 
   + Optimistic value iteration
-    Total iterations:  270
+    Total iterations:  9
     Verif. attempts:   1
-    Verif. iterations: 2
+    Verif. iterations: 1
     Final epsilon:     1E-06
-    Time:              3.6 s
+    Time:              0.0 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

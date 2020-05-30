@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta csma.4-2.jani --props time_max -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	9.28608512878418
+Command:	mcsta/modest mcsta csma.4-2.jani --props time_max -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	4.455019235610962
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ csma.4-2.jani:model: info: csma.4-2 is an MDP model.
 csma.4-2.jani: info: Need 24 bytes per state.
 csma.4-2.jani: info: Explored 761962 states.
 
-Peak memory usage: 149 MB
+Peak memory usage: 280 MB
 Analysis results for csma.4-2.jani
 
 + State space exploration
@@ -18,13 +18,13 @@ Analysis results for csma.4-2.jani
   States:      761962
   Transitions: 825504
   Branches:    1327068
-  Rate:        167207 states/s
-  Time:        5.0 s
+  Rate:        274383 states/s
+  Time:        2.9 s
 
 + Property time_max
-  Value:  142.21225104496114
-  Bounds: [142.2121685761438, 142.21233351377845]
-  Time:   3.5 s
+  Value:  142.21217244593257
+  Bounds: [142.21216803187855, 142.21217685998658]
+  Time:   1.0 s
 
   + Precomputations
     Min. prob. 0 states:          0
@@ -32,15 +32,22 @@ Analysis results for csma.4-2.jani
     Min. prob. 1 states:          761962
     Time for min. prob. 1 states: 0.0 s
 
+  + Essential states
+    Iterations:       8
+    Essential states: 159781
+    Transitions:      220934
+    Branches:         688718
+    Time:             0.3 s
+
   + Optimistic value iteration
-    Total iterations:  102
-    Verif. attempts:   2
-    Verif. iterations: 19
-    Final epsilon:     1.6880704141826733E-07
-    Time:              3.1 s
+    Total iterations:  43
+    Verif. attempts:   1
+    Verif. iterations: 10
+    Final epsilon:     1E-06
+    Time:              0.4 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

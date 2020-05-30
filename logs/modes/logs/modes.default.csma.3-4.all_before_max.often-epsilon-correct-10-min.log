@@ -1,5 +1,5 @@
-Command:	modes/modest modes csma.3-4.jani --props all_before_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.547492980957
+Command:	modes/modest modes --unsafe --max-run-length 0 csma.3-4.jani --props all_before_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5495908260345
 Return code:	0
 Output:
 
@@ -15,11 +15,11 @@ Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "all_before_max"
-  Estimated max. probability: 0.9230414746543779
-  Runs used (best scheduler): 2170
-  Total runs used:            7897310
+  Estimated max. probability: 0.9237209302325582
+  Runs used (best scheduler): 2150
+  Total runs used:            7947700
   Schedulers sampled:         7000
-  Best scheduler:             1560485860
+  Best scheduler:             1861717377
   Run type:                   MDP
   Status:                     Finished
 
@@ -31,5 +31,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

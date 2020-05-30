@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta stream.jani --props pr_underrun -E N=1000 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	4.423710823059082
+Command:	mcsta/modest mcsta stream.jani -E N=1000 --props pr_underrun -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	1.4287035465240479
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ stream.jani:variables[5]: info: Expanding variable "s" into 4 locations in autom
 stream.jani: info: Need 8 bytes per state.
 stream.jani: info: Explored 503501 states for N=1000.
 
-Peak memory usage: 100 MB
+Peak memory usage: 205 MB
 Analysis results for stream.jani
 Experiment N=1000
 
@@ -20,13 +20,20 @@ Experiment N=1000
   States:      503501
   Transitions: 504500
   Branches:    1004999
-  Rate:        153273 states/s
-  Time:        3.6 s
+  Rate:        760576 states/s
+  Time:        0.7 s
 
 + Property pr_underrun
   Probability: 0.27123157288019745
   Bounds:      [0.27123157288019745, 0.27123157288019745]
   Time:        0.2 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 502501
+    Transitions:      503500
+    Branches:         1003999
+    Time:             0.1 s
 
   + Optimistic value iteration
     Total iterations:  5
@@ -38,5 +45,5 @@ Experiment N=1000
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

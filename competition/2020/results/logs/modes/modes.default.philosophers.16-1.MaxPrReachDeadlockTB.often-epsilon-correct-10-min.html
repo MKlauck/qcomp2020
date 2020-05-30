@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.543936252594s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.545756816864s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.035348133579127486</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.018975262211539286</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -32,15 +32,15 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">philosophers.16.jani:model: info: Philosophers16 is a CTMC model and will be simulated as an MA.
 philosophers.16.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 65 MB
+Peak memory usage: 60 MB
 Analysis results for philosophers.16.jani
 Experiment TIME_BOUND=1.0
 Status:          Cancelled (1% done)
 Simulation time: 599.5 s
 
 + Property Property &quot;MaxPrReachDeadlockTB&quot;
-  Estimated probability: 7.17314960278848E-05
-  Runs used:             22876980
+  Estimated probability: 6.796763973315777E-05
+  Runs used:             23467050
   Run type:              MA
   Status:                Cancelled (1% done)
 
@@ -49,7 +49,7 @@ Simulation time: 599.5 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

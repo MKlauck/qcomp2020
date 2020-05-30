@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	54.405839681625366
+Command:	mcsta/modest mcsta embedded.jani -E MAX_COUNT=8,T=12 --props actuators -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width --p0 --p1
+Wallclock time:	17.554176330566406
 Return code:	0
 Output:
 
@@ -19,23 +19,36 @@ Experiment MAX_COUNT=8, T=12.0
   States:      5820
   Transitions: 5820
   Branches:    16788
-  Rate:        48500 states/s
+  Rate:        85588 states/s
   Time:        0.1 s
 
 + Property actuators
   Probability: 0.10530370932920669
   Bounds:      [0.10530361780229393, 0.10530380085611944]
-  Time:        53.7 s
+  Time:        17.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          4512
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          180
+    Time for min. prob. 1 states: 0.0 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 1130
+    Transitions:      1130
+    Branches:         7386
+    Time:             0.0 s
 
   + Optimistic value iteration
     Total iterations:  269666
     Verif. attempts:   13
     Verif. iterations: 31526
     Final epsilon:     3.922519137516E-11
-    Time:              53.7 s
+    Time:              16.9 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

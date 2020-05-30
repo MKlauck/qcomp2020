@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta stream.jani --props exp_buffertime -E N=1000 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
-Wallclock time:	167.53620839118958
+Command:	mcsta/modest mcsta stream.jani -E N=1000 --props exp_buffertime -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width
+Wallclock time:	154.1444354057312
 Return code:	0
 Output:
 
@@ -12,7 +12,7 @@ stream.jani: info: Need 8 bytes per state.
 stream.jani: info: Explored 1502501 states for N=1000.
 stream.jani:properties[0]: warning: Computing minimum expected reward in property "exp_buffertime" without checking for zero-reward end components.
 
-Peak memory usage: 231 MB
+Peak memory usage: 593 MB
 Analysis results for stream.jani
 Experiment N=1000
 
@@ -21,27 +21,34 @@ Experiment N=1000
   States:      1502501
   Transitions: 2002001
   Branches:    3001001
-  Rate:        183837 states/s
-  Time:        9.1 s
+  Rate:        706727 states/s
+  Time:        2.3 s
 
 + Property exp_buffertime
   Value:  8.945854194181932
   Bounds: [8.753333846345534, 9.13837454201833]
-  Time:   157.9 s
+  Time:   151.3 s
 
   + Precomputations
     Max. prob. 1 states:          1502501
-    Time for max. prob. 1 states: 151.1 s
+    Time for max. prob. 1 states: 144.2 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 1500502
+    Transitions:      2000002
+    Branches:         2999002
+    Time:             0.4 s
 
   + Optimistic value iteration
     Total iterations:  89
     Verif. attempts:   3
     Verif. iterations: 32
     Final epsilon:     0.004303224789836192
-    Time:              6.6 s
+    Time:              6.7 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

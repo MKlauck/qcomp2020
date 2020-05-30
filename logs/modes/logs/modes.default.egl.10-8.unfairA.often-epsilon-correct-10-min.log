@@ -1,5 +1,5 @@
-Command:	modes/modest modes egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.5492413043976
+Command:	modes/modest modes --unsafe --max-run-length 0 egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.551029920578
 Return code:	0
 Output:
 
@@ -16,8 +16,8 @@ Status:          Cancelled
 Simulation time: 599.4 s
 
 + Property Property "unfairA"
-  Estimated probability: 0.5005613362541074
-  Runs used:             3140720
+  Estimated probability: 0.5002923190101339
+  Runs used:             3085670
   Run type:              MDP
   Status:                Cancelled
 
@@ -26,5 +26,5 @@ Simulation time: 599.4 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

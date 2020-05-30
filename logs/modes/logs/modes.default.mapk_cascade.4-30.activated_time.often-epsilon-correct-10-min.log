@@ -1,5 +1,5 @@
-Command:	modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.5507113933563
+Command:	modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5566582679749
 Return code:	0
 Output:
 
@@ -16,17 +16,17 @@ Status:          Cancelled
 Simulation time: 599.5 s
 
 + Property Property "activated_time"
-  Estimated value:     40.673597119915115
-  Confidence interval: [40.6254617272593, 40.72173251257093]
-  Runs used:           959380
+  Estimated value:     40.66642696730568
+  Confidence interval: [40.61761401261944, 40.71523992199192]
+  Runs used:           932500
   Run type:            MA
   Status:              Cancelled
 
   + Sample data
-    Mean:     40.673597119915115
-    Variance: 578.6600713179561
-    Skewness: 1.8216731255481264
-    Kurtosis: 8.21859241941763
+    Mean:     40.66642696730568
+    Variance: 578.3927648607486
+    Skewness: 1.8227057750213063
+    Kurtosis: 8.223808679850979
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -34,5 +34,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

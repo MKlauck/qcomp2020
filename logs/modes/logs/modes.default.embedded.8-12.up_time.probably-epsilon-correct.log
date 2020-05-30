@@ -1,5 +1,5 @@
-Command:	modes/modest modes embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	1.2052156925201416
+Command:	modes/modest modes --unsafe --max-run-length 0 embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	19.1947078704834
 Return code:	0
 Output:
 
@@ -8,12 +8,32 @@ Output:
 
 embedded.jani:model: info: embedded is a CTMC model and will be simulated as an MA.
 embedded.jani: info: Using default value of 0.95 for the confidence parameter.
-embedded.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
-embedded.jani:model: error: Run length exceeded.
+embedded.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 58 MB
+Analysis results for embedded.jani
+Experiment MAX_COUNT=8, T=12.0
+Status:          Finished
+Simulation time: 18.2 s
+
++ Property Property "up_time"
+  Estimated value:     470.77124419800754
+  Confidence interval: [447.2379641325147, 494.30452426350035]
+  Runs used:           800
+  Run type:            MA
+  Status:              Finished
+
+  + Sample data
+    Mean:     470.77124419800754
+    Variance: 115334.36571700135
+    Skewness: 1.1891174404458718
+    Kurtosis: 4.468825200849768
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044
+
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
-
-############################## Notes ##############################
-Unable to obtain tool result.

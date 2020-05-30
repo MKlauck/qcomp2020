@@ -17,21 +17,21 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes resource-gathering.jani --props expgold -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 resource-gathering.jani --props expgold -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.548483133316s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.5478398799896s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.9931170954837871</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.0</td></tr>
 	</table>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
 	<pre style="overflow:auto; padding-bottom: 1.5ex">resource-gathering.jani:model: info: resource-gathering is an MDP model and will be simulated as an MDP.
 resource-gathering.jani: info: Using default value of 0.95 for the confidence parameter.
-resource-gathering.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+resource-gathering.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 58 MB
 Analysis results for resource-gathering.jani
@@ -40,17 +40,17 @@ Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property &quot;expgold&quot;
-  Estimated max. value:       1
-  Max. confidence interval:   [1, 1]
-  Runs used (best scheduler): 50
-  Total runs used:            1120050
-  Schedulers sampled:         1000
-  Best scheduler:             1420531108
+  Estimated max. value:       0
+  Max. confidence interval:   [0, 0]
+  Runs used (best scheduler): 171140
+  Total runs used:            1171140
+  Schedulers sampled:         0
+  Best scheduler:             2087811719
   Run type:                   MDP
   Status:                     Finished
 
   + Max. sample data
-    Mean: 1
+    Mean: 0
 
   + Error bounds
     Scheduler sampling: The result is a lower bound for the true max. value.
@@ -59,7 +59,7 @@ Simulation time: 599.5 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

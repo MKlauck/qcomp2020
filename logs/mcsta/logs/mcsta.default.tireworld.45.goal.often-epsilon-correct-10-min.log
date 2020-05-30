@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --epsilon 0
-Wallclock time:	604.2948424816132
+Command:	mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --unsafe --es -S Memory --epsilon 0
+Wallclock time:	586.1597287654877
 Return code:	0
 Output:
 
@@ -9,9 +9,8 @@ Output:
 tireworld.45.jani:model: info: jani_from_ppddl is an MDP model.
 tireworld.45.jani: info: Need 24 bytes per state.
 tireworld.45.jani: info: Explored 46137256 states.
-tireworld.45.jani: warning: Value iteration for property "goal" was aborted before convergence.
 
-Peak memory usage: 6828 MB
+Peak memory usage: 11651 MB
 Analysis results for tireworld.45.jani
 
 + State space exploration
@@ -19,22 +18,28 @@ Analysis results for tireworld.45.jani
   States:      46137256
   Transitions: 105905930
   Branches:    192413242
-  Rate:        103259 states/s
-  Time:        494.9 s
+  Rate:        271058 states/s
+  Time:        195.1 s
 
 + Property goal
-  Probability: 0.9359993591308594
-  Bounds:      [0.9359993591308594, 1]
-  Time:        108.0 s
+  Probability: 0.9359999999999999
+  Bounds:      [0.9359999999999999, 0.9359999999999999]
+  Time:        389.7 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 42729387
+    Transitions:      102498061
+    Branches:         189005373
+    Time:             37.7 s
 
   + Value iteration
-    Status:      Cancelled
-    Final error: 0.001876027274649549
-    Iterations:  22
-    Time:        106.5 s
+    Final error: 0
+    Iterations:  79
+    Time:        351.4 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

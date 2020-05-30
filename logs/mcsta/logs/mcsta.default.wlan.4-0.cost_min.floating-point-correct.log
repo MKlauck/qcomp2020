@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta wlan.4.jani --props cost_min -E COL=0 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon
-Wallclock time:	20.45556616783142
+Command:	mcsta/modest mcsta wlan.4.jani -E COL=0 --props cost_min -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --epsilon 0 --absolute-epsilon
+Wallclock time:	14.709834575653076
 Return code:	0
 Output:
 
@@ -13,7 +13,7 @@ wlan.4.jani: info: Need 16 bytes per state.
 wlan.4.jani: info: Explored 345000 states for COL=0.
 wlan.4.jani:properties[2]: warning: Computing minimum expected reward in property "cost_min" without checking for zero-reward end components.
 
-Peak memory usage: 107 MB
+Peak memory usage: 181 MB
 Analysis results for wlan.4.jani
 Experiment COL=0
 
@@ -22,25 +22,32 @@ Experiment COL=0
   States:      345000
   Transitions: 440206
   Branches:    762252
-  Rate:        194915 states/s
-  Time:        2.0 s
+  Rate:        382908 states/s
+  Time:        0.9 s
 
 + Property cost_min
   Value:  7625
   Bounds: [7625, infinity)
-  Time:   17.6 s
+  Time:   13.1 s
 
   + Precomputations
     Max. prob. 1 states:          345000
-    Time for max. prob. 1 states: 13.6 s
+    Time for max. prob. 1 states: 12.9 s
+
+  + Essential states
+    Iterations:       14
+    Essential states: 6151
+    Transitions:      10499
+    Branches:         81553
+    Time:             0.1 s
 
   + Value iteration
     Final error: 0
-    Iterations:  268
-    Time:        3.9 s
+    Iterations:  8
+    Time:        0.0 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

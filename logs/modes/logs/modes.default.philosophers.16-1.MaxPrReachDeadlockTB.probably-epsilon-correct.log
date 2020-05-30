@@ -1,5 +1,5 @@
-Command:	modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	1218.2626254558563
+Command:	modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	1146.796303987503
 Return code:	0
 Output:
 
@@ -9,15 +9,15 @@ Output:
 philosophers.16.jani:model: info: Philosophers16 is a CTMC model and will be simulated as an MA.
 philosophers.16.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 65 MB
+Peak memory usage: 60 MB
 Analysis results for philosophers.16.jani
 Experiment TIME_BOUND=1.0
 Status:          Finished
-Simulation time: 1217.2 s
+Simulation time: 1145.7 s
 
 + Property Property "MaxPrReachDeadlockTB"
-  Estimated probability: 6.73800844057979E-05
-  Runs used:             46764560
+  Estimated probability: 6.965614050600731E-05
+  Runs used:             45236500
   Run type:              MA
   Status:                Finished
 
@@ -28,5 +28,5 @@ Simulation time: 1217.2 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

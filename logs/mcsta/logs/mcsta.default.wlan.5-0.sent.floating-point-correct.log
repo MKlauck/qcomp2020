@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta wlan.5.jani --props sent -E COL=0 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1
-Wallclock time:	30.093029260635376
+Command:	mcsta/modest mcsta wlan.5.jani -E COL=0 --props sent -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	25.009660720825195
 Return code:	0
 Output:
 
@@ -12,7 +12,7 @@ wlan.5.jani:variables[12]: info: Expanding variable "s2" into 12 locations in au
 wlan.5.jani: info: Need 16 bytes per state.
 wlan.5.jani: info: Explored 1295218 states for COL=0.
 
-Peak memory usage: 198 MB
+Peak memory usage: 400 MB
 Analysis results for wlan.5.jani
 Experiment COL=0
 
@@ -21,22 +21,22 @@ Experiment COL=0
   States:      1295218
   Transitions: 1646074
   Branches:    2929960
-  Rate:        186389 states/s
-  Time:        7.7 s
+  Rate:        416335 states/s
+  Time:        3.3 s
 
 + Property sent
   Result:      True
-  Time:        21.3 s
+  Time:        21.0 s
   Probability: 1
 
   + Precomputations
     Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 21.2 s
+    Time for min. prob. 0 states: 20.9 s
     Min. prob. 1 states:          1295218
     Time for min. prob. 1 states: 0.1 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

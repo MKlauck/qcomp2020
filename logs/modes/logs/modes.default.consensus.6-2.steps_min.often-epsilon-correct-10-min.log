@@ -1,5 +1,5 @@
-Command:	modes/modest modes consensus.6.jani --props steps_min -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5498843193054
+Command:	modes/modest modes --unsafe --max-run-length 0 consensus.6.jani --props steps_min -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5445983409882
 Return code:	0
 Output:
 
@@ -14,7 +14,7 @@ consensus.6.jani:variables[12]: info: Expanding variable "pc4" into 4 locations 
 consensus.6.jani:variables[14]: info: Expanding variable "pc5" into 4 locations in automaton "process5".
 consensus.6.jani:variables[16]: info: Expanding variable "pc6" into 4 locations in automaton "process6".
 consensus.6.jani: info: Using default value of 0.95 for the confidence parameter.
-consensus.6.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+consensus.6.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 59 MB
 Analysis results for consensus.6.jani
@@ -23,20 +23,20 @@ Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "steps_min"
-  Estimated min. value:       520.9292527821913
-  Min. confidence interval:   [510.5125982937623, 531.3459072706203]
-  Runs used (best scheduler): 6290
-  Total runs used:            1261290
+  Estimated min. value:       520.3991843393151
+  Min. confidence interval:   [509.99648495202564, 530.8018837266045]
+  Runs used (best scheduler): 6130
+  Total runs used:            1294130
   Schedulers sampled:         1000
-  Best scheduler:             1673309019
+  Best scheduler:             429328836
   Run type:                   MDP
   Status:                     Finished
 
   + Min. sample data
-    Mean:     520.9292527821913
-    Variance: 177668.72340872794
-    Skewness: 1.8813844955233405
-    Kurtosis: 8.14621889288712
+    Mean:     520.3991843393151
+    Variance: 172685.7056935752
+    Skewness: 1.8634858638410479
+    Kurtosis: 8.174441629508395
 
   + Error bounds
     Scheduler sampling: The result is an upper bound for the true min. value.
@@ -45,5 +45,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

@@ -1,5 +1,5 @@
-Command:	modes/modest modes coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 1e-3 --relative-width
-Wallclock time:	198.69415974617004
+Command:	modes/modest modes --unsafe --max-run-length 0 coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 1e-3 --relative-width
+Wallclock time:	179.95943593978882
 Return code:	0
 Output:
 
@@ -13,11 +13,11 @@ Peak memory usage: 57 MB
 Analysis results for coupon.9-4.jani
 Experiment B=5
 Status:          Finished
-Simulation time: 197.7 s
+Simulation time: 178.9 s
 
 + Property Property "collect_all_bounded"
-  Estimated probability: 0.35850651054565474
-  Runs used:             13223930
+  Estimated probability: 0.35856231733218763
+  Runs used:             13220720
   Run type:              MDP
   Status:                Finished
 
@@ -28,5 +28,5 @@ Simulation time: 197.7 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

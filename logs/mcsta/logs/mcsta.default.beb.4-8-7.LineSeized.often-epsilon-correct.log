@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta beb.4-8.jani --props LineSeized -E N=7 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
-Wallclock time:	115.20865488052368
+Command:	mcsta/modest mcsta beb.4-8.jani -E N=7 --props LineSeized -O out.txt Minimal --unsafe --es -S Memory --no-partial-results
+Wallclock time:	46.398547887802124
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ beb.4-8.jani:model: info: beb-4-8 is an MDP model.
 beb.4-8.jani: info: Need 24 bytes per state.
 beb.4-8.jani: info: Explored 19401892 states for N=7.
 
-Peak memory usage: 2146 MB
+Peak memory usage: 5267 MB
 Analysis results for beb.4-8.jani
 Experiment N=7
 
@@ -19,21 +19,28 @@ Experiment N=7
   States:      19401892
   Transitions: 20164086
   Branches:    34723782
-  Rate:        230637 states/s
-  Time:        92.6 s
+  Rate:        491374 states/s
+  Time:        41.2 s
 
 + Property LineSeized
-  Probability: 0.9998854980586982
-  Bounds:      [0.9998854980586982, 1]
-  Time:        21.7 s
+  Probability: 0.999885498452205
+  Bounds:      [0.999885498452205, 0.999885498452205]
+  Time:        4.4 s
+
+  + Essential states
+    Iterations:       5
+    Essential states: 2024223
+    Transitions:      2414456
+    Branches:         16974152
+    Time:             4.0 s
 
   + Value iteration
-    Final error: 4.710021898426645E-07
-    Iterations:  26
-    Time:        21.1 s
+    Final error: 0
+    Iterations:  2
+    Time:        0.3 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

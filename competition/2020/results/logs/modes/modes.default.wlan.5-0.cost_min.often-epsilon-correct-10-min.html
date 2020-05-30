@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes wlan.5.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 wlan.5.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5435173511505s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.5439715385437s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.0746229508196716</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0036721311475408523</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -33,29 +33,29 @@
 wlan.5.jani:variables[7]: info: Expanding variable &quot;s1&quot; into 12 locations in automaton &quot;station1&quot;.
 wlan.5.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 12 locations in automaton &quot;station2&quot;.
 wlan.5.jani: info: Using default value of 0.95 for the confidence parameter.
-wlan.5.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+wlan.5.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
-Peak memory usage: 72 MB
+Peak memory usage: 64 MB
 Analysis results for wlan.5.jani
 Experiment COL=0
 Status:          Finished
 Simulation time: 599.3 s
 
 + Property Property &quot;cost_min&quot;
-  Estimated min. value:       8193.999999999996
-  Min. confidence interval:   [8116.352450385517, 8271.647549614476]
+  Estimated min. value:       7652.999999999999
+  Min. confidence interval:   [7581.815311651409, 7724.18468834859]
   Runs used (best scheduler): 50
-  Total runs used:            15533990
-  Schedulers sampled:         15000
-  Best scheduler:             1740864106
+  Total runs used:            20624950
+  Schedulers sampled:         20000
+  Best scheduler:             695641672
   Run type:                   MDP
   Status:                     Finished
 
   + Min. sample data
-    Mean:     8193.999999999996
-    Variance: 60269.38775510198
-    Skewness: 0.27367043440169386
-    Kurtosis: 1.898284427644189
+    Mean:     7652.999999999999
+    Variance: 50654.08163265304
+    Skewness: -0.15771006198995322
+    Kurtosis: 1.7737296607067867
 
   + Error bounds
     Scheduler sampling: The result is an upper bound for the true min. value.
@@ -64,7 +64,7 @@ Simulation time: 599.3 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

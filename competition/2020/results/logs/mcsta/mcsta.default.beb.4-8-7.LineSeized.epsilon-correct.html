@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta beb.4-8.jani --props LineSeized -E N=7 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta beb.4-8.jani -E N=7 --props LineSeized -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">120.5811173915863s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">46.59911608695984s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">2.012323942782e-09</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.85791589995175e-17</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -33,7 +33,7 @@
 beb.4-8.jani: info: Need 24 bytes per state.
 beb.4-8.jani: info: Explored 19401892 states for N=7.
 
-Peak memory usage: 2294 MB
+Peak memory usage: 5267 MB
 Analysis results for beb.4-8.jani
 Experiment N=7
 
@@ -42,26 +42,33 @@ Experiment N=7
   States:      19401892
   Transitions: 20164086
   Branches:    34723782
-  Rate:        230539 states/s
-  Time:        92.8 s
+  Rate:        489699 states/s
+  Time:        41.3 s
 
 + Property LineSeized
-  Probability: 0.9998855004642985
-  Bounds:      [0.9998854984522032, 0.9998855024763937]
-  Time:        26.9 s
+  Probability: 0.999885498452205
+  Bounds:      [0.999885498452205, 0.999885498452205]
+  Time:        4.4 s
+
+  + Essential states
+    Iterations:       5
+    Essential states: 2024223
+    Transitions:      2414456
+    Branches:         16974152
+    Time:             3.9 s
 
   + Optimistic value iteration
-    Total iterations:  34
+    Total iterations:  3
     Verif. attempts:   1
-    Verif. iterations: 8
+    Verif. iterations: 1
     Final epsilon:     1E-06
-    Time:              25.7 s
+    Time:              0.5 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

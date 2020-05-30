@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
-Wallclock time:	73.72167086601257
+Command:	mcsta/modest mcsta crowds.jani -E TotalRuns=6,CrowdSize=20 --props positive -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width --p0 --p1
+Wallclock time:	34.61443734169006
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ crowds.jani: info: Need 40 bytes per state.
 crowds.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
 crowds.jani: info: Explored 10291282 states for TotalRuns=6, CrowdSize=20.
 
-Peak memory usage: 1684 MB
+Peak memory usage: 3438 MB
 Analysis results for crowds.jani
 Experiment TotalRuns=6, CrowdSize=20
 
@@ -20,23 +20,36 @@ Experiment TotalRuns=6, CrowdSize=20
   States:      10291282
   Transitions: 10291282
   Branches:    37068802
-  Rate:        215800 states/s
-  Time:        55.0 s
+  Rate:        395895 states/s
+  Time:        27.3 s
 
 + Property positive
   Probability: 0.12239151218950753
   Bounds:      [0.11947382041613554, 0.1253092039628795]
-  Time:        15.0 s
+  Time:        6.6 s
+
+  + Precomputations
+    Min. prob. 0 states:          8587502
+    Time for min. prob. 0 states: 2.5 s
+    Min. prob. 1 states:          21252
+    Time for min. prob. 1 states: 0.4 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 1275122
+    Transitions:      1275122
+    Branches:         10200962
+    Time:             1.3 s
 
   + Optimistic value iteration
     Total iterations:  29
     Verif. attempts:   2
     Verif. iterations: 9
     Final epsilon:     0.013026946067679426
-    Time:              14.3 s
+    Time:              2.5 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

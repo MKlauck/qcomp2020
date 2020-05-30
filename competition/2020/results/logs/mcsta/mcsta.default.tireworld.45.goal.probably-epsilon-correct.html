@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">624.9766108989716s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">359.56964921951294s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 		<tr><td>Relative Error:</td><td style="tt">0.0002804024097134688</td></tr>
 	</table>
@@ -33,7 +33,7 @@
 tireworld.45.jani: info: Need 24 bytes per state.
 tireworld.45.jani: info: Explored 46137256 states.
 
-Peak memory usage: 7180 MB
+Peak memory usage: 11651 MB
 Analysis results for tireworld.45.jani
 
 + State space exploration
@@ -41,26 +41,33 @@ Analysis results for tireworld.45.jani
   States:      46137256
   Transitions: 105905930
   Branches:    192413242
-  Rate:        104121 states/s
-  Time:        490.3 s
+  Rate:        275728 states/s
+  Time:        196.1 s
 
 + Property goal
   Probability: 0.9362624566555023
   Bounds:      [0.9359999542236328, 0.9365249590873719]
-  Time:        133.3 s
+  Time:        162.1 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 42729387
+    Transitions:      102498061
+    Branches:         189005373
+    Time:             38.2 s
 
   + Optimistic value iteration
     Total iterations:  27
     Verif. attempts:   2
     Verif. iterations: 11
-    Final epsilon:     0.007634541262166772
-    Time:              130.5 s
+    Final epsilon:     0.0069702422979112935
+    Time:              123.5 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

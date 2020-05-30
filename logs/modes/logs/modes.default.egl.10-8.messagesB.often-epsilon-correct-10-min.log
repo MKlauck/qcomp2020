@@ -1,5 +1,5 @@
-Command:	modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.5504157543182
+Command:	modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5500705242157
 Return code:	0
 Output:
 
@@ -9,24 +9,24 @@ Output:
 egl.jani:model: info: egl is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
 egl.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 60 MB
+Peak memory usage: 59 MB
 Analysis results for egl.jani
 Experiment N=10, L=8
 Status:          Cancelled
 Simulation time: 599.4 s
 
 + Property Property "messagesB"
-  Estimated value:     4.067709512963097
-  Confidence interval: [4.061646507999292, 4.073772517926901]
-  Runs used:           2340070
+  Estimated value:     4.066560366777028
+  Confidence interval: [4.060534936814666, 4.07258579673939]
+  Runs used:           2364380
   Run type:            MDP
   Status:              Cancelled
 
   + Sample data
-    Mean:     4.067709512963097
-    Variance: 22.39280583872504
-    Skewness: 3.8368005468984063
-    Kurtosis: 59.844871624681865
+    Mean:     4.066560366777028
+    Variance: 22.34586550161455
+    Skewness: 3.8137725657948587
+    Kurtosis: 59.51777378461558
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -34,5 +34,5 @@ Simulation time: 599.4 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

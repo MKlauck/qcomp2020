@@ -17,21 +17,21 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">1.1719343662261963s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">1.1572401523590088s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.04303699887987283</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.016699981606206032</td></tr>
 	</table>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
 	<pre style="overflow:auto; padding-bottom: 1.5ex">coupon.9-4.jani:model: info: coupon.9-4 is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
 coupon.9-4.jani: info: Using default value of 0.95 for the confidence parameter.
-coupon.9-4.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+coupon.9-4.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 58 MB
 Analysis results for coupon.9-4.jani
@@ -40,17 +40,17 @@ Status:          Finished
 Simulation time: 0.1 s
 
 + Property Property &quot;exp_draws&quot;
-  Estimated value:     6.450000000000001
-  Confidence interval: [6.127886589040866, 6.772113410959136]
-  Runs used:           120
+  Estimated value:     6.852631578947369
+  Confidence interval: [6.521680669492283, 7.183582488402455]
+  Runs used:           190
   Run type:            MDP
   Status:              Finished
 
   + Sample data
-    Mean:     6.450000000000001
-    Variance: 3.2411764705882344
-    Skewness: 0.6194913020289274
-    Kurtosis: 3.2857742462599795
+    Mean:     6.852631578947369
+    Variance: 5.417321080478976
+    Skewness: 1.1230508339577316
+    Kurtosis: 5.297357893397081
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -58,7 +58,7 @@ Simulation time: 0.1 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

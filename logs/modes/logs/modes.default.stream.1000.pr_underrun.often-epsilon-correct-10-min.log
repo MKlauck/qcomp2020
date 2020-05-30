@@ -1,5 +1,5 @@
-Command:	modes/modest modes stream.jani --props pr_underrun -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5438041687012
+Command:	modes/modest modes --unsafe --max-run-length 0 stream.jani --props pr_underrun -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5468337535858
 Return code:	0
 Output:
 
@@ -17,11 +17,11 @@ Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "pr_underrun"
-  Estimated min. probability: 0.7916129032258065
-  Runs used (best scheduler): 6200
-  Total runs used:            13513770
+  Estimated min. probability: 0.7515337423312883
+  Runs used (best scheduler): 6520
+  Total runs used:            13704160
   Schedulers sampled:         13000
-  Best scheduler:             1978031052
+  Best scheduler:             1625127306
   Run type:                   MA
   Status:                     Finished
 
@@ -33,5 +33,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

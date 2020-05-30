@@ -1,5 +1,5 @@
-Command:	modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.5471932888031
+Command:	modes/modest modes --unsafe --max-run-length 0 majority.jani --props change_state -E T=2100 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5458920001984
 Return code:	0
 Output:
 
@@ -22,8 +22,8 @@ Status:          Cancelled
 Simulation time: 599.4 s
 
 + Property Property "change_state"
-  Estimated probability: 0.05474343958722421
-  Runs used:             1263640
+  Estimated probability: 0.054458692358142796
+  Runs used:             1326510
   Run type:              MA
   Status:                Cancelled
 
@@ -32,5 +32,5 @@ Simulation time: 599.4 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

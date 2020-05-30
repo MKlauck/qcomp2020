@@ -1,5 +1,5 @@
-Command:	modes/modest modes readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5466148853302
+Command:	modes/modest modes --unsafe --max-run-length 0 readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5459091663361
 Return code:	0
 Output:
 
@@ -8,7 +8,7 @@ Output:
 
 readers-writers.40.jani:model: info: ReadersWriters is an MA model and will be simulated as an MA.
 readers-writers.40.jani: info: Using default value of 0.95 for the confidence parameter.
-readers-writers.40.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+readers-writers.40.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 59 MB
 Analysis results for readers-writers.40.jani
@@ -16,20 +16,20 @@ Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "exp_time_many_requests"
-  Estimated min. value:       3.728660263236718
-  Min. confidence interval:   [3.654111915814273, 3.8032086106591625]
-  Runs used (best scheduler): 2280
-  Total runs used:            4334290
+  Estimated min. value:       3.6858570750576436
+  Min. confidence interval:   [3.6122507777639745, 3.7594633723513127]
+  Runs used (best scheduler): 2140
+  Total runs used:            4651920
   Schedulers sampled:         4000
-  Best scheduler:             1737949378
+  Best scheduler:             1755574558
   Run type:                   MA
   Status:                     Finished
 
   + Min. sample data
-    Mean:     3.728660263236718
-    Variance: 2.5332739288368256
-    Skewness: 1.610615670563986
-    Kurtosis: 7.525781932328862
+    Mean:     3.6858570750576436
+    Variance: 2.3180082739508783
+    Skewness: 1.6222562721740736
+    Kurtosis: 7.20593106292233
 
   + Error bounds
     Scheduler sampling: The result is an upper bound for the true min. value.
@@ -38,5 +38,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

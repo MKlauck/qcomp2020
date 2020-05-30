@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1
-Wallclock time:	1800.0049617290497
+Command:	mcsta/modest mcsta haddad-monmege.jani -E N=100,p=0.7 --props target -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	1800.016061782837
 Return code:	None
 Output:
 
@@ -11,8 +11,8 @@ haddad-monmege.jani: info: Need 2 bytes per state.
 haddad-monmege.jani: info: Explored 201 states for N=100, p=0.7.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ----------
-Computation aborted after 1800.0049617290497 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1800.016061782837 seconds since the total time limit of 1800 seconds was exceeded.

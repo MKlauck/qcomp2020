@@ -1,5 +1,5 @@
-Command:	modes/modest modes dpm.jani --props PmaxQueuesFullBound -E N=4,C=8,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5563299655914
+Command:	modes/modest modes --unsafe --max-run-length 0 dpm.jani --props PmaxQueuesFullBound -E N=4,C=8,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5450556278229
 Return code:	0
 Output:
 
@@ -16,11 +16,11 @@ Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "PmaxQueuesFullBound"
-  Estimated max. probability: 2.2273887742278644E-08
-  Runs used (best scheduler): 44895620
-  Total runs used:            45895620
+  Estimated max. probability: 0
+  Runs used (best scheduler): 44785780
+  Total runs used:            45785780
   Schedulers sampled:         0
-  Best scheduler:             1006239932
+  Best scheduler:             34872493
   Run type:                   MA
   Status:                     Finished
 
@@ -30,5 +30,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

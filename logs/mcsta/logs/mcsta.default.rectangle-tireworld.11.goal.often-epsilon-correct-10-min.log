@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta rectangle-tireworld.11.jani --props goal -O out.txt Minimal --epsilon 0
-Wallclock time:	8.394712209701538
+Command:	mcsta/modest mcsta rectangle-tireworld.11.jani --props goal -O out.txt Minimal --unsafe --es -S Memory --epsilon 0
+Wallclock time:	7.51795506477356
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ rectangle-tireworld.11.jani:variables[2]: info: Expanding variable "var2" into 1
 rectangle-tireworld.11.jani: info: Need 4 bytes per state.
 rectangle-tireworld.11.jani: info: Explored 242 states.
 
-Peak memory usage: 369 MB
+Peak memory usage: 362 MB
 Analysis results for rectangle-tireworld.11.jani
 
 + State space exploration
@@ -19,13 +19,20 @@ Analysis results for rectangle-tireworld.11.jani
   States:      242
   Transitions: 15367
   Branches:    16084
-  Rate:        645 states/s
-  Time:        0.4 s
+  Rate:        896 states/s
+  Time:        0.3 s
 
 + Property goal
   Probability: 1
   Bounds:      [1, 1]
   Time:        0.0 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 242
+    Transitions:      15367
+    Branches:         16084
+    Time:             0.0 s
 
   + Value iteration
     Final error: 0
@@ -35,5 +42,5 @@ Analysis results for rectangle-tireworld.11.jani
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

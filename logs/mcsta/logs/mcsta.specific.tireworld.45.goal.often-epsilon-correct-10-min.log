@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --unsafe --epsilon 0 -S Disk --store-compress None
-Wallclock time:	602.2941579818726
+Command:	mcsta/modest mcsta tireworld.45.jani --props goal -O out.txt Minimal --unsafe --es -S Hybrid --store-compress None --epsilon 0
+Wallclock time:	604.9893543720245
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ tireworld.45.jani: info: Need 24 bytes per state.
 tireworld.45.jani: info: Explored 46137256 states.
 tireworld.45.jani: warning: Value iteration for property "goal" was aborted before convergence.
 
-Peak memory usage: 6601 MB
+Peak memory usage: 11221 MB
 Analysis results for tireworld.45.jani
 
 + State space exploration
@@ -19,22 +19,29 @@ Analysis results for tireworld.45.jani
   States:      46137256
   Transitions: 105905930
   Branches:    192413242
-  Rate:        220616 states/s
-  Time:        250.2 s
+  Rate:        249098 states/s
+  Time:        231.5 s
 
 + Property goal
   Probability: 0.9359999999999999
   Bounds:      [0.9359999999999999, 1]
-  Time:        350.6 s
+  Time:        372.0 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 42729387
+    Transitions:      102498061
+    Branches:         189005373
+    Time:             41.8 s
 
   + Value iteration
     Status:      Cancelled
-    Final error: 1.2990401296450582E-15
-    Iterations:  74
-    Time:        349.2 s
+    Final error: 3.374933688959827E-15
+    Iterations:  71
+    Time:        328.3 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

@@ -677,7 +677,7 @@
 		"commands": [
 			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files eajs.5.prism --model-input-type prism --property-input-files eajs.props --property-input-names ExpUtil --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const energy_capacity=250,B=11"
 		],
-		"wallclock-time": 37.475218296051025,
+		"wallclock-time": 236.22482538223267,
 		"timeout": false,
 		"execution-error": true,
 		"notes": [],
@@ -690,7 +690,7 @@
 		"commands": [
 			"java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files eajs.6.prism --model-input-type prism --property-input-files eajs.props --property-input-names ExpUtil --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const energy_capacity=300,B=13"
 		],
-		"wallclock-time": 245.9944725036621,
+		"wallclock-time": 268.66719222068787,
 		"timeout": false,
 		"execution-error": true,
 		"notes": [],

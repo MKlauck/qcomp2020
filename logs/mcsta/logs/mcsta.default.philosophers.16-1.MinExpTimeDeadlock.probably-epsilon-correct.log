@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
-Wallclock time:	56.59297823905945
+Command:	mcsta/modest mcsta philosophers.16.jani -E TIME_BOUND=1 --props MinExpTimeDeadlock -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width --p0 --p1
+Wallclock time:	21.593319416046143
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ philosophers.16.jani:model: info: Philosophers16 is a CTMC model.
 philosophers.16.jani: info: Need 72 bytes per state.
 philosophers.16.jani: info: Explored 1331714 states for TIME_BOUND=1.0.
 
-Peak memory usage: 552 MB
+Peak memory usage: 1799 MB
 Analysis results for philosophers.16.jani
 Experiment TIME_BOUND=1.0
 
@@ -19,29 +19,36 @@ Experiment TIME_BOUND=1.0
   States:      1331714
   Transitions: 1331714
   Branches:    13774113
-  Rate:        30196 states/s
-  Time:        48.3 s
+  Rate:        102274 states/s
+  Time:        13.6 s
 
 + Property MinExpTimeDeadlock
   Value:  10.89106393770496
   Bounds: [10.779978417381775, 11.002149458028144]
-  Time:   6.3 s
+  Time:   7.3 s
 
   + Precomputations
     Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 0.8 s
+    Time for min. prob. 0 states: 0.6 s
     Min. prob. 1 states:          1331714
-    Time for min. prob. 1 states: 0.3 s
+    Time for min. prob. 1 states: 0.2 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 1331715
+    Transitions:      1331715
+    Branches:         13774114
+    Time:             0.9 s
 
   + Optimistic value iteration
     Total iterations:  43
     Verif. attempts:   2
     Verif. iterations: 17
     Final epsilon:     0.010102482676802586
-    Time:              5.2 s
+    Time:              5.7 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

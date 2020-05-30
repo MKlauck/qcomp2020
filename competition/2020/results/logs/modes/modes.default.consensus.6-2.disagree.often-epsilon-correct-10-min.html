@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes consensus.6.jani --props disagree -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 consensus.6.jani --props disagree -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5485770702362s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.5451469421387s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.8937646331613194</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.8994616048037516</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -38,28 +38,30 @@ consensus.6.jani:variables[14]: info: Expanding variable &quot;pc5&quot; into 4 
 consensus.6.jani:variables[16]: info: Expanding variable &quot;pc6&quot; into 4 locations in automaton &quot;process6&quot;.
 consensus.6.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 58 MB
+Peak memory usage: 59 MB
 Analysis results for consensus.6.jani
 Experiment K=2
 Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property &quot;disagree&quot;
-  Estimated max. probability: 0.038631933368775476
-  Runs used (best scheduler): 112860
-  Total runs used:            2776730
+  Estimated max. probability: 0.03656025954259623
+  Runs used (best scheduler): 499340
+  Total runs used:            2753980
   Schedulers sampled:         1000
-  Best scheduler:             952846484
+  Best scheduler:             1923886081
   Run type:                   MDP
   Status:                     Finished
 
   + Error bounds
     Scheduler sampling: The result is a lower bound for the true max. probability.
-    Statement:          Aborted: no error bounds	</pre>
+    Statement:          Adaptive: P(error &gt; εp̂) &lt; δ
+    ε:                  0.02
+    δ:                  0.050000000000000044	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

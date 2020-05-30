@@ -1,5 +1,5 @@
-Command:	modes/modest modes eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5438995361328
+Command:	modes/modest modes --unsafe --max-run-length 0 eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5524790287018
 Return code:	0
 Output:
 
@@ -15,7 +15,7 @@ eajs.6.jani:variables[22]: info: Expanding variable "loc_4" into 3 locations in 
 eajs.6.jani:variables[23]: info: Expanding variable "loc_6" into 3 locations in automaton "Process_6".
 eajs.6.jani:variables[26]: info: Expanding variable "loc_5" into 3 locations in automaton "Process_5".
 eajs.6.jani: info: Using default value of 0.95 for the confidence parameter.
-eajs.6.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+eajs.6.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 61 MB
 Analysis results for eajs.6.jani
@@ -24,20 +24,20 @@ Status:          Finished
 Simulation time: 599.4 s
 
 + Property Property "ExpUtil"
-  Estimated max. value:       1.7082352941176469
-  Max. confidence interval:   [1.6740873120201702, 1.7423832762151235]
-  Runs used (best scheduler): 5100
-  Total runs used:            5572420
+  Estimated max. value:       3.0560869565217392
+  Max. confidence interval:   [2.995008723320875, 3.1171651897226034]
+  Runs used (best scheduler): 2300
+  Total runs used:            5752340
   Schedulers sampled:         5000
-  Best scheduler:             1544264648
+  Best scheduler:             1708818022
   Run type:                   MDP
   Status:                     Finished
 
   + Max. sample data
-    Mean:     1.7082352941176469
-    Variance: 1.5481180854377405
-    Skewness: 0.6327476730183286
-    Kurtosis: 3.1333047673812593
+    Mean:     3.0560869565217392
+    Variance: 1.7154261777332311
+    Skewness: 0.48894613075385024
+    Kurtosis: 2.9667526758788894
 
   + Error bounds
     Scheduler sampling: The result is a lower bound for the true max. value.
@@ -46,5 +46,5 @@ Simulation time: 599.4 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

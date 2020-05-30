@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal -N 2147483647</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal -N 2147483647</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5580930709839s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.555742263794s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.005907590015656802</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.012088505379549308</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -32,24 +32,24 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">cluster.jani:model: info: cluster is a CTMC model and will be simulated as an MA.
 cluster.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 58 MB
+Peak memory usage: 59 MB
 Analysis results for cluster.jani
 Experiment N=64, T=2000.0, t=20.0
 Status:          Cancelled
 Simulation time: 599.5 s
 
 + Property Property &quot;below_min&quot;
-  Estimated value:     0.0041945171255219635
-  Confidence interval: [0.003627445628311451, 0.004761588622732476]
-  Runs used:           422300
+  Estimated value:     0.0042704504375035
+  Confidence interval: [0.0037049482232829794, 0.00483595265172402]
+  Runs used:           416240
   Run type:            MA
   Status:              Cancelled
 
   + Sample data
-    Mean:     0.0041945171255219635
-    Variance: 0.035350905051389846
-    Skewness: 79.38832210038963
-    Kurtosis: 10393.548991929612
+    Mean:     0.0042704504375035
+    Variance: 0.03465103812330199
+    Skewness: 75.5896975105489
+    Kurtosis: 8861.298575493942
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -57,7 +57,7 @@ Simulation time: 599.5 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

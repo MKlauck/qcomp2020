@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta firewire-pta.jani --props eventually -E delay=30,T=5000 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
-Wallclock time:	46.6937370300293
+Command:	mcsta/modest mcsta firewire-pta.jani -E delay=30,T=5000 --props eventually -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width
+Wallclock time:	16.953611850738525
 Return code:	0
 Output:
 
@@ -14,7 +14,7 @@ firewire-pta.jani:variables[11]: info: Expanding variable "s2" into 9 locations 
 firewire-pta.jani: info: Need 24 bytes per state.
 firewire-pta.jani: info: Explored 4432272 states for delay=30, T=5000.
 
-Peak memory usage: 553 MB
+Peak memory usage: 1131 MB
 Analysis results for firewire-pta.jani
 Experiment delay=30, T=5000
 
@@ -23,23 +23,30 @@ Experiment delay=30, T=5000
   States:      4432272
   Transitions: 5529800
   Branches:    5533832
-  Rate:        236073 states/s
-  Time:        20.3 s
+  Rate:        364946 states/s
+  Time:        12.5 s
 
 + Property eventually
-  Probability: 0.9921875
-  Bounds:      [0.984375, 1]
-  Time:        24.9 s
+  Probability: 0.984375
+  Bounds:      [0.96875, 1]
+  Time:        3.8 s
+
+  + Essential states
+    Iterations:       32
+    Essential states: 492859
+    Transitions:      1005203
+    Branches:         1009235
+    Time:             3.3 s
 
   + Optimistic value iteration
-    Total iterations:  162
+    Total iterations:  21
     Verif. attempts:   1
     Verif. iterations: 1
     Final epsilon:     0.05
-    Time:              24.6 s
+    Time:              0.5 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

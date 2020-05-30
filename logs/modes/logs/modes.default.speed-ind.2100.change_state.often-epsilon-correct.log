@@ -1,5 +1,5 @@
-Command:	modes/modest modes speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --width 1e-3 --relative-width
-Wallclock time:	1800.0043485164642
+Command:	modes/modest modes --unsafe --max-run-length 0 speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --width 1e-3 --relative-width
+Wallclock time:	1800.0043849945068
 Return code:	None
 Output:
 
@@ -18,8 +18,8 @@ speed-ind.jani:variables[7]: info: Expanding variable "XX" into 4 locations in a
 speed-ind.jani: info: Using default value of 0.95 for the confidence parameter.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
 ----------
-Computation aborted after 1800.0043485164642 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1800.0043849945068 seconds since the total time limit of 1800 seconds was exceeded.

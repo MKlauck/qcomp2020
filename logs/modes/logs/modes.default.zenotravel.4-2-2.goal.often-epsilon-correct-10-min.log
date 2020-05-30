@@ -1,5 +1,5 @@
-Command:	modes/modest modes zenotravel.4-2-2.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	1.6122348308563232
+Command:	modes/modest modes --unsafe --max-run-length 0 zenotravel.4-2-2.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	601.0395913124084
 Return code:	0
 Output:
 
@@ -8,10 +8,9 @@ Output:
 
 zenotravel.4-2-2.jani:model: info: jani_from_ppddl is an MDP model and will be simulated as an MDP.
 zenotravel.4-2-2.jani: info: Using default value of 0.95 for the confidence parameter.
-zenotravel.4-2-2.jani:model: error: Run length exceeded.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
 ############################## Notes ##############################

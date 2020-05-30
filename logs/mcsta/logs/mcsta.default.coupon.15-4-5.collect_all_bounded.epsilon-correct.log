@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg IntervalIteration
-Wallclock time:	1801.9799242019653
+Command:	mcsta/modest mcsta coupon.15-4.jani -E B=5 --props collect_all_bounded -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg IntervalIteration --width 1e-6 --relative-width
+Wallclock time:	1802.165537595749
 Return code:	None
 Output:
 
@@ -11,8 +11,8 @@ coupon.15-4.jani: info: Need 24 bytes per state.
 coupon.15-4.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ----------
-Computation aborted after 1801.9799242019653 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1802.165537595749 seconds since the total time limit of 1800 seconds was exceeded.

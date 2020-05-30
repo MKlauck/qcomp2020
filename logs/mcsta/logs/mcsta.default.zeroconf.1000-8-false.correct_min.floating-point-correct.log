@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta zeroconf.jani --props correct_min -E N=1000,K=8,reset=false -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1
-Wallclock time:	24.080203771591187
+Command:	mcsta/modest mcsta zeroconf.jani -E N=1000,K=8,reset=false --props correct_min -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	18.091585874557495
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ zeroconf.jani:variables[21]: info: Expanding variable "l" into 5 locations in au
 zeroconf.jani: info: Need 24 bytes per state.
 zeroconf.jani: info: Explored 1868787 states for N=1000, K=8, reset=False.
 
-Peak memory usage: 272 MB
+Peak memory usage: 674 MB
 Analysis results for zeroconf.jani
 Experiment N=1000, K=8, reset=False
 
@@ -20,8 +20,8 @@ Experiment N=1000, K=8, reset=False
   States:      1868787
   Transitions: 3430379
   Branches:    4224736
-  Rate:        188500 states/s
-  Time:        11.0 s
+  Rate:        388602 states/s
+  Time:        5.1 s
 
 + Property correct_min
   Probability: 5.040105212929842E-09
@@ -34,13 +34,20 @@ Experiment N=1000, K=8, reset=False
     Min. prob. 1 states:          16392
     Time for min. prob. 1 states: 0.4 s
 
+  + Essential states
+    Iterations:       37
+    Essential states: 886904
+    Transitions:      1919005
+    Branches:         2463875
+    Time:             4.1 s
+
   + Value iteration
     Final error: 0
-    Iterations:  98
-    Time:        10.0 s
+    Iterations:  94
+    Time:        6.0 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

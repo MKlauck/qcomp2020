@@ -1,6 +1,6 @@
-Command:	modes/modest modes embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 1e-3 --relative-width
-Wallclock time:	1.2101960182189941
-Return code:	0
+Command:	modes/modest modes --unsafe --max-run-length 0 embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 1e-3 --relative-width
+Wallclock time:	1800.0042967796326
+Return code:	None
 Output:
 
 
@@ -8,11 +8,10 @@ Output:
 
 embedded.jani:model: info: embedded is a CTMC model and will be simulated as an MA.
 embedded.jani: info: Using default value of 0.95 for the confidence parameter.
-embedded.jani:model: error: Run length exceeded.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
-############################## Notes ##############################
-Unable to obtain tool result.
+----------
+Computation aborted after 1800.0042967796326 seconds since the total time limit of 1800 seconds was exceeded.

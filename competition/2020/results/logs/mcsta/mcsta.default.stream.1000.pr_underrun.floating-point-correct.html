@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta stream.jani --props pr_underrun -E N=1000 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta stream.jani -E N=1000 --props pr_underrun -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">4.469900369644165s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">1.5008697509765625s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 		<tr><td>Relative Error:</td><td style="tt">1.207691470804388e-16</td></tr>
 	</table>
@@ -34,7 +34,7 @@ stream.jani:variables[5]: info: Expanding variable &quot;s&quot; into 4 location
 stream.jani: info: Need 8 bytes per state.
 stream.jani: info: Explored 503501 states for N=1000.
 
-Peak memory usage: 97 MB
+Peak memory usage: 202 MB
 Analysis results for stream.jani
 Experiment N=1000
 
@@ -43,8 +43,8 @@ Experiment N=1000
   States:      503501
   Transitions: 504500
   Branches:    1004999
-  Rate:        150930 states/s
-  Time:        3.7 s
+  Rate:        709156 states/s
+  Time:        0.8 s
 
 + Property pr_underrun
   Probability: 0.27123157288019745
@@ -57,6 +57,13 @@ Experiment N=1000
     Min. prob. 1 states:          999
     Time for min. prob. 1 states: 0.0 s
 
+  + Essential states
+    Iterations:       2
+    Essential states: 501500
+    Transitions:      502499
+    Branches:         1002998
+    Time:             0.1 s
+
   + Value iteration
     Final error: 0
     Iterations:  3
@@ -66,7 +73,7 @@ Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

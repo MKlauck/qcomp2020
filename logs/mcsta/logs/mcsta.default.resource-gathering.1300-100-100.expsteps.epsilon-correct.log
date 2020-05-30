@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta resource-gathering.jani --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	164.516131401062
+Command:	mcsta/modest mcsta resource-gathering.jani -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 --props expsteps -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	153.74606847763062
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ resource-gathering.jani: info: Need 16 bytes per state.
 resource-gathering.jani: info: Explored 958801 states for B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100.
 resource-gathering.jani:properties[1]: warning: Computing minimum expected reward in property "expsteps" without checking for zero-reward end components.
 
-Peak memory usage: 217 MB
+Peak memory usage: 503 MB
 Analysis results for resource-gathering.jani
 Experiment B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100
 
@@ -20,27 +20,34 @@ Experiment B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100
   States:      958801
   Transitions: 3080401
   Branches:    3325201
-  Rate:        95110 states/s
-  Time:        11.2 s
+  Rate:        247050 states/s
+  Time:        4.1 s
 
 + Property expsteps
   Value:  1292.5934985749386
   Bounds: [1292.5925925923289, 1292.5944045575484]
-  Time:   152.8 s
+  Time:   149.1 s
 
   + Precomputations
     Max. prob. 1 states:          958801
-    Time for max. prob. 1 states: 108.3 s
+    Time for max. prob. 1 states: 102.8 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 958801
+    Transitions:      3080401
+    Branches:         3325201
+    Time:             0.1 s
 
   + Optimistic value iteration
     Total iterations:  667
     Verif. attempts:   1
     Verif. iterations: 10
     Final epsilon:     1E-06
-    Time:              44.4 s
+    Time:              46.2 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

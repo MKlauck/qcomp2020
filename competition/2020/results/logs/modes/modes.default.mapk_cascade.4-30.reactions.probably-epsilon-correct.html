@@ -17,21 +17,21 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --width 5e-2 --relative-width</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --width 5e-2 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">1.3415541648864746s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">1.3278398513793945s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.017215094035252253</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.02117132775301521</td></tr>
 	</table>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
 	<pre style="overflow:auto; padding-bottom: 1.5ex">mapk_cascade.jani:model: info: mapk_cascade is a CTMC model and will be simulated as an MA.
 mapk_cascade.jani: info: Using default value of 0.95 for the confidence parameter.
-mapk_cascade.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+mapk_cascade.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 58 MB
 Analysis results for mapk_cascade.jani
@@ -40,17 +40,17 @@ Status:          Finished
 Simulation time: 0.3 s
 
 + Property Property &quot;reactions&quot;
-  Estimated value:     47.65624999999999
-  Confidence interval: [45.30145418644888, 50.01104581355111]
-  Runs used:           160
+  Estimated value:     49.51764705882353
+  Confidence interval: [47.13134080080869, 51.90395331683837]
+  Runs used:           170
   Run type:            MA
   Status:              Finished
 
   + Sample data
-    Mean:     47.65624999999999
-    Variance: 230.95656446540886
-    Skewness: -0.35820726344707815
-    Kurtosis: 3.51900672651481
+    Mean:     49.51764705882353
+    Variance: 252.0026453184825
+    Skewness: -0.03507126042413946
+    Kurtosis: 2.8473158999036494
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -58,7 +58,7 @@ Simulation time: 0.3 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

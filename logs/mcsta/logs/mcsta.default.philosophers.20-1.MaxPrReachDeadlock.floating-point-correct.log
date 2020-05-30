@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1
-Wallclock time:	1800.3605043888092
+Command:	mcsta/modest mcsta philosophers.20.jani -E TIME_BOUND=1 --props MaxPrReachDeadlock -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	1801.1517045497894
 Return code:	None
 Output:
 
@@ -11,8 +11,8 @@ philosophers.20.jani: info: Need 88 bytes per state.
 philosophers.20.jani: info: Explored 45239074 states for TIME_BOUND=1.0.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ----------
-Computation aborted after 1800.3605043888092 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1801.1517045497894 seconds since the total time limit of 1800 seconds was exceeded.

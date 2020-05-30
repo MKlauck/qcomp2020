@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5503170490265s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.551456451416s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.00042332651866160105</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.471960214381414e-05</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -32,24 +32,24 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">philosophers.20.jani:model: info: Philosophers20 is a CTMC model and will be simulated as an MA.
 philosophers.20.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 68 MB
+Peak memory usage: 60 MB
 Analysis results for philosophers.20.jani
 Experiment TIME_BOUND=1.0
 Status:          Cancelled
-Simulation time: 599.4 s
+Simulation time: 599.5 s
 
 + Property Property &quot;MinExpTimeDeadlock&quot;
-  Estimated value:     11.768561107082878
-  Confidence interval: [11.763037171557153, 11.774085042608602]
-  Runs used:           4473780
+  Estimated value:     11.763290477774891
+  Confidence interval: [11.757895705877925, 11.768685249671858]
+  Runs used:           4693210
   Run type:            MA
   Status:              Cancelled
 
   + Sample data
-    Mean:     11.768561107082878
-    Variance: 35.53658114834207
-    Skewness: 1.3722913138341215
-    Kurtosis: 6.167046893559079
+    Mean:     11.763290477774891
+    Variance: 35.55657970905145
+    Skewness: 1.377416749012206
+    Kurtosis: 6.191322796944205
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -57,7 +57,7 @@ Simulation time: 599.4 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

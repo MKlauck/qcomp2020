@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon
-Wallclock time:	72.46055364608765
+Command:	mcsta/modest mcsta philosophers.16.jani -E TIME_BOUND=1 --props MinExpTimeDeadlock -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --epsilon 0 --absolute-epsilon
+Wallclock time:	37.0132360458374
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ philosophers.16.jani:model: info: Philosophers16 is a CTMC model.
 philosophers.16.jani: info: Need 72 bytes per state.
 philosophers.16.jani: info: Explored 1331714 states for TIME_BOUND=1.0.
 
-Peak memory usage: 542 MB
+Peak memory usage: 1800 MB
 Analysis results for philosophers.16.jani
 Experiment TIME_BOUND=1.0
 
@@ -19,29 +19,36 @@ Experiment TIME_BOUND=1.0
   States:      1331714
   Transitions: 1331714
   Branches:    13774113
-  Rate:        30625 states/s
-  Time:        47.7 s
+  Rate:        100681 states/s
+  Time:        13.8 s
 
 + Property MinExpTimeDeadlock
   Value:  10.78297345256119
   Bounds: [10.78297345256119, 10.78297345256119]
-  Time:   22.8 s
+  Time:   22.6 s
 
   + Precomputations
     Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 0.8 s
+    Time for min. prob. 0 states: 0.6 s
     Min. prob. 1 states:          1331714
-    Time for min. prob. 1 states: 0.3 s
+    Time for min. prob. 1 states: 0.2 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 1331715
+    Transitions:      1331715
+    Branches:         13774114
+    Time:             0.9 s
 
   + Value iteration
     Final error: 0
     Iterations:  185
-    Time:        21.6 s
+    Time:        20.9 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ############################## Notes ##############################

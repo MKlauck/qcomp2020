@@ -1,5 +1,5 @@
-Command:	modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.547712802887
+Command:	modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.552728176117
 Return code:	0
 Output:
 
@@ -16,17 +16,17 @@ Status:          Cancelled
 Simulation time: 599.5 s
 
 + Property Property "reactions"
-  Estimated value:     48.51522484980726
-  Confidence interval: [48.488786548358846, 48.541663151255676]
-  Runs used:           1358240
+  Estimated value:     48.48343611925826
+  Confidence interval: [48.4564198971713, 48.510452341345214]
+  Runs used:           1292330
   Run type:            MA
   Status:              Cancelled
 
   + Sample data
-    Mean:     48.51522484980726
-    Variance: 247.14249934313753
-    Skewness: -0.07189939898863781
-    Kurtosis: 3.332147823467339
+    Mean:     48.48343611925826
+    Variance: 245.54239046989036
+    Skewness: -0.07616722506210252
+    Kurtosis: 3.326077651880013
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -34,5 +34,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

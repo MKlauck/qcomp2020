@@ -1,5 +1,5 @@
-Command:	modes/modest modes polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	3.9457359313964844
+Command:	modes/modest modes --unsafe --max-run-length 0 polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	7.9360878467559814
 Return code:	0
 Output:
 
@@ -27,24 +27,25 @@ polling.18.jani:variables[19]: info: Expanding variable "s16" into 2 locations i
 polling.18.jani:variables[20]: info: Expanding variable "s17" into 2 locations in automaton "station17".
 polling.18.jani:variables[21]: info: Expanding variable "s18" into 2 locations in automaton "station18".
 polling.18.jani: info: Using default value of 0.95 for the confidence parameter.
-polling.18.jani:model: error: Run length exceeded.
 
 Peak memory usage: 61 MB
 Analysis results for polling.18.jani
 Experiment T=16.0
-Status:          Error
-Simulation time: 2.8 s
+Status:          Finished
+Simulation time: 6.8 s
 
 + Property Property "s1_before_s2"
-  Estimated probability: 0.5445652173913044
-  Runs used:             920
+  Estimated probability: 0.5432727272727272
+  Runs used:             2750
   Run type:              MA
-  Status:                Error
+  Status:                Finished
 
   + Error bounds
-    Statement: Aborted: no error bounds
+    Statement: Adaptive: P(error > εp̂) < δ
+    ε:         0.05
+    δ:         0.050000000000000044
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

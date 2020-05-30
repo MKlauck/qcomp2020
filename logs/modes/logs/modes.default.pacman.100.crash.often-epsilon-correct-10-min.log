@@ -1,5 +1,5 @@
-Command:	modes/modest modes pacman.jani --props crash -E MAXSTEPS=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5552845001221
+Command:	modes/modest modes --unsafe --max-run-length 0 pacman.jani --props crash -E MAXSTEPS=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.552497625351
 Return code:	0
 Output:
 
@@ -19,9 +19,9 @@ Simulation time: 599.0 s
 + Property Property "crash"
   Estimated min. probability: 1
   Runs used (best scheduler): 250
-  Total runs used:            4813050
+  Total runs used:            4716050
   Schedulers sampled:         4000
-  Best scheduler:             1329524871
+  Best scheduler:             1500821107
   Run type:                   MDP
   Status:                     Finished
 
@@ -33,5 +33,5 @@ Simulation time: 599.0 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

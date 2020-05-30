@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta polling.18.jani -E T=16 --props s1_before_s2 -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">463.3379671573639s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">248.58886337280273s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">3.8855000974939815e-05</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.831965012409768e-05</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -51,9 +51,8 @@ polling.18.jani:variables[20]: info: Expanding variable &quot;s17&quot; into 2 l
 polling.18.jani:variables[21]: info: Expanding variable &quot;s18&quot; into 2 locations in automaton &quot;station18&quot;.
 polling.18.jani: info: Need 40 bytes per state.
 polling.18.jani: info: Explored 7077888 states for T=16.0.
-polling.18.jani: warning: Encountered a value greater than 1 during value iteration. The final result for property &quot;s1_before_s2&quot; is likely affected by floating-point errors.
 
-Peak memory usage: 1724 MB
+Peak memory usage: 5900 MB
 Analysis results for polling.18.jani
 Experiment T=16.0
 
@@ -62,24 +61,37 @@ Experiment T=16.0
   States:      7077888
   Transitions: 7077888
   Branches:    67371008
-  Rate:        35658 states/s
-  Time:        211.8 s
+  Rate:        64420 states/s
+  Time:        111.7 s
 
 + Property s1_before_s2
-  Probability: 0.5389863190184031
-  Bounds:      [0.5389863190184031, 1]
-  Time:        250.7 s
+  Probability: 0.5389866075763995
+  Bounds:      [0.5389866075763995, 1]
+  Time:        136.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          262144
+    Time for min. prob. 0 states: 5.4 s
+    Min. prob. 1 states:          3407872
+    Time for min. prob. 1 states: 10.5 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 3407874
+    Transitions:      3407874
+    Branches:         35258370
+    Time:             2.3 s
 
   + Value iteration
-    Final error: 9.911481067918133E-07
-    Iterations:  417
-    Time:        250.5 s
+    Final error: 9.774914037492707E-07
+    Iterations:  415
+    Time:        117.6 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

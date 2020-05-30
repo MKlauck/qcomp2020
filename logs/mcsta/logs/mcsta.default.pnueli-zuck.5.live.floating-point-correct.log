@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta pnueli-zuck.5.jani --props live -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1
-Wallclock time:	6.032178640365601
+Command:	mcsta/modest mcsta pnueli-zuck.5.jani --props live -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	3.161301851272583
 Return code:	0
 Output:
 
@@ -15,7 +15,7 @@ pnueli-zuck.5.jani:variables[4]: info: Expanding variable "p4" into 16 locations
 pnueli-zuck.5.jani: info: Need 16 bytes per state.
 pnueli-zuck.5.jani: info: Explored 307523 states.
 
-Peak memory usage: 116 MB
+Peak memory usage: 239 MB
 Analysis results for pnueli-zuck.5.jani
 
 + State space exploration
@@ -23,8 +23,8 @@ Analysis results for pnueli-zuck.5.jani
   States:      307523
   Transitions: 1753715
   Branches:    1886851
-  Rate:        77403 states/s
-  Time:        4.4 s
+  Rate:        191962 states/s
+  Time:        1.7 s
 
 + Property live
   Probability: 1
@@ -39,5 +39,5 @@ Analysis results for pnueli-zuck.5.jani
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

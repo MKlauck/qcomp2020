@@ -1,5 +1,5 @@
-Command:	modes/modest modes wlan-large.jani --props P_max -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks
-Wallclock time:	1.208601713180542
+Command:	modes/modest modes --unsafe --max-run-length 0 wlan-large.jani --props P_max -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks
+Wallclock time:	1.196899175643921
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ wlan-large.jani: info: Using default value of 0.95 for the confidence parameter.
 wlan-large.jani:model: error: Encountered temporal nondeterminism for tick.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
 ############################## Notes ##############################

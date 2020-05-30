@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta eajs.5.jani --props ExpUtil -E energy_capacity=250,B=11 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width
-Wallclock time:	27.617260932922363
+Command:	mcsta/modest mcsta eajs.5.jani -E energy_capacity=250,B=11 --props ExpUtil -O out.txt Minimal --unsafe --es -S Memory --no-partial-results
+Wallclock time:	17.623847723007202
 Return code:	0
 Output:
 
@@ -17,7 +17,7 @@ eajs.5.jani: info: Need 24 bytes per state.
 eajs.5.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
 eajs.5.jani: info: Explored 3049471 states for energy_capacity=250, B=11.
 
-Peak memory usage: 464 MB
+Peak memory usage: 1332 MB
 Analysis results for eajs.5.jani
 Experiment energy_capacity=250, B=11
 
@@ -26,13 +26,13 @@ Experiment energy_capacity=250, B=11
   States:      3049471
   Transitions: 4250853
   Branches:    6960278
-  Rate:        170552 states/s
-  Time:        19.8 s
+  Rate:        261465 states/s
+  Time:        12.1 s
 
 + Property ExpUtil
-  Value:  10.032940688434891
-  Bounds: [10.032940688434891, infinity)
-  Time:   6.2 s
+  Value:  10.032940688435431
+  Bounds: [10.032940688435431, infinity)
+  Time:   4.9 s
 
   + Precomputations
     Min. prob. 0 states:          0
@@ -40,13 +40,20 @@ Experiment energy_capacity=250, B=11
     Min. prob. 1 states:          3049471
     Time for min. prob. 1 states: 0.2 s
 
+  + Essential states
+    Iterations:       4
+    Essential states: 1432081
+    Transitions:      2633463
+    Branches:         5342888
+    Time:             1.1 s
+
   + Value iteration
-    Final error: 4.466131883374015E-08
-    Iterations:  22
-    Time:        4.0 s
+    Final error: 8.368421047965715E-07
+    Iterations:  16
+    Time:        1.6 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

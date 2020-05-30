@@ -1,5 +1,5 @@
-Command:	modes/modest modes haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal -N 2147483647
-Wallclock time:	1.112360954284668
+Command:	modes/modest modes --unsafe --max-run-length 0 haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal -N 2147483647
+Wallclock time:	601.0345516204834
 Return code:	0
 Output:
 
@@ -8,10 +8,9 @@ Output:
 
 haddad-monmege.jani:model: info: haddad-monmege is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
 haddad-monmege.jani: info: Using default value of 0.95 for the confidence parameter.
-haddad-monmege.jani:model: error: Run length exceeded.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
 ############################## Notes ##############################

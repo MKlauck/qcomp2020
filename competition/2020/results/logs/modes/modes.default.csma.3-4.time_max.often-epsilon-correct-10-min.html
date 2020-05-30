@@ -17,42 +17,42 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes csma.3-4.jani --props time_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 csma.3-4.jani --props time_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5413806438446s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.5431020259857s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.07035078354487259</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.02583719307004154</td></tr>
 	</table>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
 	<pre style="overflow:auto; padding-bottom: 1.5ex">csma.3-4.jani:model: info: csma.3-4 is an MDP model and will be simulated as an MDP.
 csma.3-4.jani: info: Using default value of 0.95 for the confidence parameter.
-csma.3-4.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+csma.3-4.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
-Peak memory usage: 59 MB
+Peak memory usage: 60 MB
 Analysis results for csma.3-4.jani
 Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property &quot;time_max&quot;
-  Estimated max. value:       108.60000000000001
-  Max. confidence interval:   [106.5220259344529, 110.67797406554712]
-  Runs used (best scheduler): 130
-  Total runs used:            7605540
+  Estimated max. value:       113.8
+  Max. confidence interval:   [111.53140993088965, 116.06859006911034]
+  Runs used (best scheduler): 80
+  Total runs used:            7673500
   Schedulers sampled:         7000
-  Best scheduler:             626639974
+  Best scheduler:             217239611
   Run type:                   MDP
   Status:                     Finished
 
   + Max. sample data
-    Mean:     108.60000000000001
-    Variance: 112.2263565891473
-    Skewness: 0.8281990982895171
-    Kurtosis: 4.355288223545201
+    Mean:     113.8
+    Variance: 82.31392405063292
+    Skewness: 0.17661028063087025
+    Kurtosis: 2.6808361899391833
 
   + Error bounds
     Scheduler sampling: The result is a lower bound for the true max. value.
@@ -61,7 +61,7 @@ Simulation time: 599.5 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

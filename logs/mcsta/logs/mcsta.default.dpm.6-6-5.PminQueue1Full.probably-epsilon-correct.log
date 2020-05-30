@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta dpm.jani --props PminQueue1Full -E N=6,C=6,TIME_BOUND=5 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
-Wallclock time:	56.114337682724
+Command:	mcsta/modest mcsta dpm.jani -E N=6,C=6,TIME_BOUND=5 --props PminQueue1Full -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width
+Wallclock time:	23.118725538253784
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ dpm.jani:model: info: dpm is an MA model.
 dpm.jani: info: Need 16 bytes per state.
 dpm.jani: info: Explored 9191028 states for N=6, C=6, TIME_BOUND=5.0.
 
-Peak memory usage: 1103 MB
+Peak memory usage: 2645 MB
 Analysis results for dpm.jani
 Experiment N=6, C=6, TIME_BOUND=5.0
 
@@ -19,23 +19,30 @@ Experiment N=6, C=6, TIME_BOUND=5.0
   States:      9191028
   Transitions: 10604874
   Branches:    17865498
-  Rate:        206257 states/s
-  Time:        48.9 s
+  Rate:        495767 states/s
+  Time:        19.4 s
 
 + Property PminQueue1Full
   Probability: 0.027236516404352807
   Bounds:      [0.026939326357817324, 0.02753370645088829]
-  Time:        4.7 s
+  Time:        3.1 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 2593081
+    Transitions:      4006927
+    Branches:         11267551
+    Time:             1.6 s
 
   + Optimistic value iteration
     Total iterations:  10
     Verif. attempts:   1
     Verif. iterations: 2
     Final epsilon:     0.05
-    Time:              4.1 s
+    Time:              1.5 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

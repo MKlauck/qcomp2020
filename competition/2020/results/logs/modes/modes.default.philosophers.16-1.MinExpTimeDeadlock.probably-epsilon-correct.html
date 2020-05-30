@@ -17,21 +17,21 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">1.3289940357208252s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">1.286550760269165s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.00749675575693638</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.02563345962648716</td></tr>
 	</table>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
 	<pre style="overflow:auto; padding-bottom: 1.5ex">philosophers.16.jani:model: info: Philosophers16 is a CTMC model and will be simulated as an MA.
 philosophers.16.jani: info: Using default value of 0.95 for the confidence parameter.
-philosophers.16.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+philosophers.16.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 60 MB
 Analysis results for philosophers.16.jani
@@ -40,17 +40,17 @@ Status:          Finished
 Simulation time: 0.2 s
 
 + Property Property &quot;MinExpTimeDeadlock&quot;
-  Estimated value:     10.86381076937456
-  Confidence interval: [10.324702459286282, 11.402919079462837]
-  Runs used:           460
+  Estimated value:     10.506568534365286
+  Confidence interval: [9.98143089892227, 11.031706169808302]
+  Runs used:           500
   Run type:            MA
   Status:              Finished
 
   + Sample data
-    Mean:     10.86381076937456
-    Variance: 34.80276125378648
-    Skewness: 1.3132809533350163
-    Kurtosis: 4.845285926885088
+    Mean:     10.506568534365286
+    Variance: 35.89385556772072
+    Skewness: 1.4874636495871596
+    Kurtosis: 6.263789375282964
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -58,7 +58,7 @@ Simulation time: 0.2 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

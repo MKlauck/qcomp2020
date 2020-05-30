@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan.5.jani --props sent -E COL=0 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan.5.jani -E COL=0 --props sent -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">30.093029260635376s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">25.009660720825195s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 	</table>
 </div>
@@ -34,7 +34,7 @@ wlan.5.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 12 locat
 wlan.5.jani: info: Need 16 bytes per state.
 wlan.5.jani: info: Explored 1295218 states for COL=0.
 
-Peak memory usage: 198 MB
+Peak memory usage: 400 MB
 Analysis results for wlan.5.jani
 Experiment COL=0
 
@@ -43,17 +43,17 @@ Experiment COL=0
   States:      1295218
   Transitions: 1646074
   Branches:    2929960
-  Rate:        186389 states/s
-  Time:        7.7 s
+  Rate:        416335 states/s
+  Time:        3.3 s
 
 + Property sent
   Result:      True
-  Time:        21.3 s
+  Time:        21.0 s
   Probability: 1
 
   + Precomputations
     Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 21.2 s
+    Time for min. prob. 0 states: 20.9 s
     Min. prob. 1 states:          1295218
     Time for min. prob. 1 states: 0.1 s
 
@@ -61,7 +61,7 @@ Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

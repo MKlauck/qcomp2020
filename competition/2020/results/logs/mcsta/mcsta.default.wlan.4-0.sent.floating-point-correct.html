@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan.4.jani --props sent -E COL=0 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan.4.jani -E COL=0 --props sent -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">5.60001540184021s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">4.457219123840332s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 	</table>
 </div>
@@ -34,7 +34,7 @@ wlan.4.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 12 locat
 wlan.4.jani: info: Need 16 bytes per state.
 wlan.4.jani: info: Explored 345000 states for COL=0.
 
-Peak memory usage: 98 MB
+Peak memory usage: 157 MB
 Analysis results for wlan.4.jani
 Experiment COL=0
 
@@ -43,8 +43,8 @@ Experiment COL=0
   States:      345000
   Transitions: 440206
   Branches:    762252
-  Rate:        198962 states/s
-  Time:        2.0 s
+  Rate:        388514 states/s
+  Time:        0.9 s
 
 + Property sent
   Result:      True
@@ -61,7 +61,7 @@ Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

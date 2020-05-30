@@ -21,10 +21,10 @@ def is_benchmark_supported(benchmark : Benchmark):
 	
 	short = benchmark.get_model_short_name()
 	prop = benchmark.get_property_name()
-	if(short == "bluetooth" # multiple initial states
+	if(short == "bluetooth"                                    # multiple initial states
 		or short == "cluster" and prop == "below_min"            # bounded expected-reward property
 		or short == "herman"                                     # multiple initial states
-		or short == "kanban" and prop == "throughput"            # something's wrong with our algorithm here, didn't manage to investigate before deadline, hope to fix for second round
+		or short == "kanban" and prop == "throughput"            # something's wrong with our algorithm here, didn't manage to investigate before deadline
 		or short == "mapk_cascade" and prop == "reactions"       # bounded expected-reward property
 		or short == "oscillators"                                # model file too large, cannot be parsed
 		or short == "repudiation_malicious"                      # open clock constraints
@@ -42,11 +42,61 @@ def add_invocations(invocations, track_id, default_cmd, specific_cmd):
 	default_inv.track_id = track_id
 	default_inv.add_command(default_cmd)
 	invocations.append(default_inv)
-	specific_inv = Invocation()
-	specific_inv.identifier = "specific"
-	specific_inv.track_id = track_id
-	specific_inv.add_command(specific_cmd)
-	invocations.append(specific_inv)
+	if default_cmd != specific_cmd:
+		specific_inv = Invocation()
+		specific_inv.identifier = "specific"
+		specific_inv.track_id = track_id
+		specific_inv.add_command(specific_cmd)
+		invocations.append(specific_inv)
+
+def tweak_memory(benchmark : Benchmark):
+	short = benchmark.get_model_short_name()
+	params = benchmark.get_parameter_values_string()
+	instance = short + "." + params
+	prop = benchmark.get_property_name()
+	full = short + "." + params + "." + prop
+	
+	tweak = ""
+	
+	if(instance == "beb.5-16-15"
+		or instance == "coupon.15-4-5"
+		or short == "egl"
+		or short == "exploding-blocksworld"
+		or short == "triangle-tireworld"
+		or instance == "philosophers.20-1"
+		or instance == "pnueli-zuck.10"
+		or short == "rabin"
+		or short == "tireworld"
+		or short == "ftpp"
+		or instance == "hecs.3-2"
+		):
+		tweak += " -S Hybrid --store-compress None"
+	else:
+		tweak += " -S Memory"
+	
+	return tweak
+
+def tweak(benchmark : Benchmark, specific_cmd):
+	short = benchmark.get_model_short_name()
+	params = benchmark.get_parameter_values_string()
+	instance = short + "." + params
+	prop = benchmark.get_property_name()
+	full = short + "." + params + "." + prop
+	
+	tweak = ""
+	
+	if(full == "elevators.b-11-9.goal"
+		or full == "rectangle-tireworld.11.goal"
+		or full == "zenotravel.4-2-2.goal"
+		or full == "firewire-pta.30-5000.eventually"
+		) and "--p1" not in specific_cmd:
+		tweak += " --p1"
+	elif(full == "firewire.false-36-800.deadline"
+		) and "--p0" not in specific_cmd:
+		tweak += " --p0"
+	
+	return specific_cmd + tweak
+		
 
 # Run with python3 qcomp2020_generate_invocations.py
 def get_invocations(benchmark : Benchmark):
@@ -69,113 +119,150 @@ def get_invocations(benchmark : Benchmark):
 
 	invocations = []
 
-	benchmark_settings = "--props " + benchmark.get_property_name()
+	benchmark_settings = ""
 	if benchmark.get_open_parameter_def_string() != "":
-		benchmark_settings += " -E " + benchmark.get_open_parameter_def_string()
+		benchmark_settings += "-E " + benchmark.get_open_parameter_def_string() + " "
+	benchmark_settings += "--props " + benchmark.get_property_name()
 
-	default_base = "mcsta/modest mcsta " + benchmark.get_janifilename() + " " + benchmark_settings + " -O out.txt Minimal"
-	specific_base = default_base + " --unsafe" # specific settings: only information about model type, property type and state space size via benchmark.get_num_states_tweak() may be used for tweaking
+	default_base = "mcsta/modest mcsta " + benchmark.get_janifilename() + " " + benchmark_settings + " -O out.txt Minimal --unsafe --es"
+	specific_base = default_base + tweak_memory(benchmark) # specific settings
+	default_base += " -S Memory"
 
 	#
 	# Track "floating-point-correct"
 	#
+	skip = False
 	precision = "0"
-	default_cmd  = default_base  + " --no-partial-results --epsilon 0 --absolute-epsilon"
-	specific_cmd = specific_base + " --no-partial-results --epsilon 0 --absolute-epsilon"
+	default_cmd  = default_base  + " --no-partial-results"
+	specific_cmd = specific_base + " --no-partial-results"
 	if prop_type == "S" or (benchmark.is_ma() or benchmark.is_ctmc()) and benchmark.is_time_bounded_probabilistic_reachability():
-		return []
-	if prop_type == "P":
-		default_cmd +=  " --p0 --p1"
-		specific_cmd += " --p0 --p1"
+		# long-run average or time-bounded on MA/CTMC: no fp-exact algorithm available
+		skip = True
+	elif prop_type == "P":
+		# probabilistic reachability: try value iteration until fp-fixpoint
+		default_cmd +=  " --p0 --p1 --epsilon 0 --absolute-epsilon"
+		specific_cmd += " --p0 --p1 --epsilon 0 --absolute-epsilon"
+	elif prop_type == "E":
+		# expected reward: try value iteration until fp-fixpoint
+		default_cmd +=  " --epsilon 0 --absolute-epsilon"
+		specific_cmd += " --epsilon 0 --absolute-epsilon"
 	elif prop_type == "Pb":
-		default_cmd +=  " --p0"
-		specific_cmd += " --p0"
-	if (size is None or size >= 100000000) and not benchmark.is_pta():
-		specific_cmd += " -S Disk --store-compress None"
-	elif benchmark.is_pta() or size < 50000000: # OOM with -S Memory:  "beb.5-16-15", "coupon.15-4-5", "egl", "exploding-blocksworld", "triangle-tireworld", "philosophers.20-1", "pnueli-zuck.10", "rabin", "tireworld", "ftpp", "hecs.3-2" # OOM with -S Memory
-		specific_cmd += " -S Memory"
-	else:
-		specific_cmd += " --store-compress None"
-	add_invocations(invocations, "floating-point-correct", default_cmd, specific_cmd)
+		# state elimination is fp-exact
+		default_cmd +=  " --reward-bounded-alg StateElimination"
+		if "-S Memory" in specific_cmd:
+			specific_cmd += " --reward-bounded-alg StateElimination"
+		else:
+			specific_cmd += " --epsilon 0 --absolute-epsilon"
+	if not skip:
+		add_invocations(invocations, "floating-point-correct", default_cmd, tweak(benchmark, specific_cmd))
 
 	#
 	# Track "epsilon-correct"
 	#
+	skip = False
 	precision = "1e-6"
-	default_cmd  = default_base  + " --no-partial-results --width $PRECISION --relative-width"
-	specific_cmd = specific_base + " --no-partial-results --width $PRECISION --relative-width"
+	default_cmd  = default_base  + " --no-partial-results"
+	specific_cmd = specific_base + " --no-partial-results"
 	if prop_type == "S":
-		# long-run average: default is the sound algorithm based on value iteration, nothing to configure
-		pass
+		# long-run average: default is the sound algorithm based on value iteration
+		default_cmd +=  " --width $PRECISION --relative-width"
+		specific_cmd += " --width $PRECISION --relative-width"
 	elif (benchmark.is_ma() or benchmark.is_ctmc()) and benchmark.is_time_bounded_probabilistic_reachability():
-		# time-bounded probability for CTMC and MA: default is sound Unif+, nothing to configure
-		pass
+		# time-bounded probability for CTMC and MA: default is sound Unif+
+		default_cmd +=  " --width $PRECISION --relative-width"
+		specific_cmd += " --width $PRECISION --relative-width"
+	elif benchmark.is_pta() and prop_type == "Pb":
+		# time-bounded reachability for PTA: state elimination recommended
+		default_cmd +=  " --reward-bounded-alg StateElimination"
+		if "-S Memory" in specific_cmd:
+			specific_cmd += " --reward-bounded-alg StateElimination"
+		else:
+			specific_cmd += " --alg IntervalIteration --width $PRECISION --relative-width"
 	elif prop_type == "Pb":
 		# reward-bounded probability: default is unsound VI, so need to change to II (SVI and OVI not yet implemented for this case)
-		default_cmd  += " --alg IntervalIteration"
-		specific_cmd += " --alg IntervalIteration"
+		default_cmd  += " --alg IntervalIteration --width $PRECISION --relative-width"
+		specific_cmd += " --alg IntervalIteration --width $PRECISION --relative-width"
 	else:
 		# unbounded probability or expected reward: default is unsound VI, so need to change to OVI
-		default_cmd  += " --alg OptimisticValueIteration --epsilon $PRECISION"
-		specific_cmd += " --alg OptimisticValueIteration --epsilon $PRECISION"
+		default_cmd  += " --alg OptimisticValueIteration --epsilon $PRECISION --width $PRECISION --relative-width"
+		specific_cmd += " --alg OptimisticValueIteration --epsilon $PRECISION --width $PRECISION --relative-width"
 		if prop_type == "P" and benchmark.is_dtmc() or benchmark.is_ctmc():
-			# tweaking for unbounded probabilities on DTMC and CTMC: use 0/1 preprocessing
+			# for unbounded probabilities on DTMC and CTMC: use 0/1 preprocessing
+			default_cmd += " --p0 --p1"
 			specific_cmd += " --p0 --p1"
-	if (size is None or size >= 100000000) and not benchmark.is_pta():
-		specific_cmd += " -S Disk --store-compress None"
-	elif benchmark.is_pta() or size < 50000000: # OOM with -S Memory:  "beb.5-16-15", "coupon.15-4-5", "egl", "exploding-blocksworld", "triangle-tireworld", "philosophers.20-1", "pnueli-zuck.10", "rabin", "tireworld", "ftpp", "hecs.3-2" # OOM with -S Memory
-		specific_cmd += " -S Memory"
-	else:
-		specific_cmd += " --store-compress None"
-	add_invocations(invocations, "epsilon-correct", default_cmd.replace("$PRECISION", precision), specific_cmd.replace("$PRECISION", precision))
+	if not skip:
+		add_invocations(invocations, "epsilon-correct", default_cmd.replace("$PRECISION", precision), tweak(benchmark, specific_cmd).replace("$PRECISION", precision))
 
 	#
 	# Track "probably-epsilon-correct"
 	#
+	skip = False
 	precision = "5e-2"
-	add_invocations(invocations, "probably-epsilon-correct", default_cmd.replace("$PRECISION", precision), specific_cmd.replace("$PRECISION", precision))
+	if not skip:
+		add_invocations(invocations, "probably-epsilon-correct", default_cmd.replace("$PRECISION", precision), tweak(benchmark, specific_cmd).replace("$PRECISION", precision))
 
 	#
 	# Track "often-epsilon-correct"
 	#
+	skip = False
 	precision = "1e-3"
-	default_cmd  = default_base  + " --no-partial-results --width $PRECISION --relative-width"
-	specific_cmd = specific_base + " --no-partial-results --width $PRECISION --relative-width"
-	if prop_type == "P" and benchmark.is_dtmc() or benchmark.is_ctmc():
-		# tweaking for unbounded probabilities on DTMC and CTMC: use 0/1 preprocessing
-		specific_cmd += " --p0 --p1"
-	if (size is None or size >= 100000000) and not benchmark.is_pta():
-		specific_cmd += " -S Disk --store-compress None"
-	elif benchmark.is_pta() or size < 50000000: # OOM with -S Memory:  "beb.5-16-15", "coupon.15-4-5", "egl", "exploding-blocksworld", "triangle-tireworld", "philosophers.20-1", "pnueli-zuck.10", "rabin", "tireworld", "ftpp", "hecs.3-2" # OOM with -S Memory
-		specific_cmd += " -S Memory"
+	default_cmd  = default_base  + " --no-partial-results"
+	specific_cmd = specific_base + " --no-partial-results"
+	if prop_type == "S":
+		# long-run average: default is the sound algorithm based on value iteration
+		default_cmd +=  " --width $PRECISION --relative-width"
+		specific_cmd += " --width $PRECISION --relative-width"
+	elif (benchmark.is_ma() or benchmark.is_ctmc()) and benchmark.is_time_bounded_probabilistic_reachability():
+		# time-bounded probability for CTMC and MA: default is sound Unif+
+		default_cmd +=  " --width $PRECISION --relative-width"
+		specific_cmd += " --width $PRECISION --relative-width"
+	elif benchmark.is_pta() and prop_type == "Pb":
+		# time-bounded reachability for PTA: state elimination recommended
+		default_cmd +=  " --reward-bounded-alg StateElimination"
+		if "-S Memory" in specific_cmd:
+			specific_cmd += " --reward-bounded-alg StateElimination"
+		else:
+			specific_cmd += " --alg IntervalIteration --width $PRECISION --relative-width"
+	elif prop_type == "Pb":
+		# reward-bounded probability: default is unsound VI, which is okay here
+		pass
 	else:
-		specific_cmd += " --store-compress None"
-	add_invocations(invocations, "often-epsilon-correct", default_cmd.replace("$PRECISION", precision), specific_cmd.replace("$PRECISION", precision))
+		# unbounded probability or expected reward: default is unsound VI, which is okay here
+		if prop_type == "P" and benchmark.is_dtmc() or benchmark.is_ctmc():
+			# for unbounded probabilities on DTMC and CTMC: use 0/1 preprocessing
+			default_cmd += " --p0 --p1"
+			specific_cmd += " --p0 --p1"
+	if not skip:
+		add_invocations(invocations, "often-epsilon-correct", default_cmd.replace("$PRECISION", precision), tweak(benchmark, specific_cmd).replace("$PRECISION", precision))
 
 	#
 	# Track "often-epsilon-correct-10-min"
 	#
+	skip = False
 	precision = "0" # so we just run for the full 10 minutes (or until we get an exact result)
 	default_cmd  = default_base
 	specific_cmd = specific_base
 	if prop_type == "S":
-		return []
+		skip = True
 	elif (benchmark.is_ma() or benchmark.is_ctmc()) and benchmark.is_time_bounded_probabilistic_reachability():
 		default_cmd += " --width 0"
 		specific_cmd += " --width 0"
+	elif prop_type == "Pb":
+		# reward-bounded reachability for DTMC, MDP, and PTA
+		default_cmd +=  " --reward-bounded-alg StateElimination"
+		if "-S Memory" in specific_cmd:
+			specific_cmd += " --reward-bounded-alg StateElimination"
+		else:
+			specific_cmd += " --epsilon 0"
 	else:
 		default_cmd += " --epsilon 0"
 		specific_cmd += " --epsilon 0"
 	if prop_type == "P" and benchmark.is_dtmc() or benchmark.is_ctmc():
-		# tweaking for unbounded probabilities on DTMC and CTMC: use 0/1 preprocessing
+		# for unbounded probabilities on DTMC and CTMC: use 0/1 preprocessing
+		default_cmd += " --p0 --p1"
 		specific_cmd += " --p0 --p1"
-	if (size is None or size >= 100000000) and not benchmark.is_pta():
-		specific_cmd += " -S Disk --store-compress None"
-	elif benchmark.is_pta() or size < 50000000: # OOM with -S Memory:  "beb.5-16-15", "coupon.15-4-5", "egl", "exploding-blocksworld", "triangle-tireworld", "philosophers.20-1", "pnueli-zuck.10", "rabin", "tireworld", "ftpp", "hecs.3-2" # OOM with -S Memory
-		specific_cmd += " -S Memory"
-	else:
-		specific_cmd += " --store-compress None"
-	add_invocations(invocations, "often-epsilon-correct-10-min", default_cmd, specific_cmd)
+	if not skip:
+		add_invocations(invocations, "often-epsilon-correct-10-min", default_cmd, tweak(benchmark, specific_cmd))
 	
 	#
 	# Done
@@ -201,10 +288,4 @@ def get_result(benchmark : Benchmark, execution : Execution):
 	pos = pos + len("\": ")
 	eol_pos = log.find("\n", pos)
 	result = log[pos:eol_pos]
-	#if(result == "Tru"):
-	#	return "True"
-	#elif(result == "Fals"):
-	#	return "False"
-	#else:
-	#	return result
 	return result

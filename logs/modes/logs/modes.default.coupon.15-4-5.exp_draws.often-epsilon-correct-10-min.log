@@ -1,5 +1,5 @@
-Command:	modes/modest modes coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.5410583019257
+Command:	modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.543459892273
 Return code:	0
 Output:
 
@@ -16,17 +16,17 @@ Status:          Cancelled (1% done)
 Simulation time: 599.5 s
 
 + Property Property "exp_draws"
-  Estimated value:     12.818473801057394
-  Confidence interval: [12.816115079773342, 12.820832522341446]
-  Runs used:           13256070
+  Estimated value:     12.817963195107565
+  Confidence interval: [12.815676495009122, 12.820249895206008]
+  Runs used:           14103560
   Run type:            MDP
   Status:              Cancelled (1% done)
 
   + Sample data
-    Mean:     12.818473801057394
-    Variance: 19.198701602328846
-    Skewness: 1.3176578185487084
-    Kurtosis: 6.007600498416255
+    Mean:     12.817963195107565
+    Variance: 19.19777906515296
+    Skewness: 1.3171563763710195
+    Kurtosis: 6.005376296681146
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -34,5 +34,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

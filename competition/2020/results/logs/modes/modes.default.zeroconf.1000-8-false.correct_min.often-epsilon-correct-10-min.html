@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes zeroconf.jani --props correct_min -E N=1000,K=8,reset=false -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 zeroconf.jani --props correct_min -E N=1000,K=8,reset=false -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5452239513397s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.5431981086731s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">10.408567011155807</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.844064363193606</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -33,18 +33,18 @@
 zeroconf.jani:variables[21]: info: Expanding variable &quot;l&quot; into 5 locations in automaton &quot;host0&quot;.
 zeroconf.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 58 MB
+Peak memory usage: 59 MB
 Analysis results for zeroconf.jani
 Experiment N=1000, K=8, reset=False
 Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property &quot;correct_min&quot;
-  Estimated min. probability: 5.750037806498578E-08
-  Runs used (best scheduler): 34782380
-  Total runs used:            35782380
+  Estimated min. probability: 2.94546992616296E-08
+  Runs used (best scheduler): 33950440
+  Total runs used:            34950440
   Schedulers sampled:         0
-  Best scheduler:             1852722059
+  Best scheduler:             1914750161
   Run type:                   MDP
   Status:                     Finished
 
@@ -54,7 +54,7 @@ Simulation time: 599.5 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
-Command:	modes/modest modes vgs.5.jani --props MaxPrReachFailedTB -E TIME_BOUND=10000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5992259979248
+Command:	modes/modest modes --unsafe --max-run-length 0 vgs.5.jani --props MaxPrReachFailedTB -E TIME_BOUND=10000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.6760919094086
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ vgs.5.jani:model: info: DftToGspnTransformation is an MA model and will be simul
 vgs.5.jani: info: Using default value of 0.95 for the confidence parameter.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
 ############################## Notes ##############################

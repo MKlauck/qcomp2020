@@ -1,5 +1,5 @@
-Command:	modes/modest modes nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.5504615306854
+Command:	modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5439720153809
 Return code:	0
 Output:
 
@@ -16,8 +16,8 @@ Status:          Cancelled
 Simulation time: 599.5 s
 
 + Property Property "reliable"
-  Estimated probability: 0.6186244138964417
-  Runs used:             2375860
+  Estimated probability: 0.6185011082796785
+  Runs used:             2652760
   Run type:              MDP
   Status:                Cancelled
 
@@ -26,5 +26,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

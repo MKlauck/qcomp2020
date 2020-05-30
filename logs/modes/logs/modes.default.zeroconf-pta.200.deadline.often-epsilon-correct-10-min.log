@@ -1,5 +1,5 @@
-Command:	modes/modest modes zeroconf-pta.jani --props deadline -E T=200 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks
-Wallclock time:	1.177396297454834
+Command:	modes/modest modes --unsafe --max-run-length 0 zeroconf-pta.jani --props deadline -E T=200 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks
+Wallclock time:	1.1814093589782715
 Return code:	0
 Output:
 
@@ -14,7 +14,7 @@ zeroconf-pta.jani:constants[1]: warning: Cannot determine whether the rewards us
 zeroconf-pta.jani:model: error: Encountered temporal nondeterminism for τ.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
 ############################## Notes ##############################

@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta firewire-pta.jani --props eventually -E delay=30,T=5000 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta firewire-pta.jani -E delay=30,T=5000 --props eventually -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">46.6937370300293s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">16.953611850738525s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.0078125</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.015625</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -37,7 +37,7 @@ firewire-pta.jani:variables[11]: info: Expanding variable &quot;s2&quot; into 9 
 firewire-pta.jani: info: Need 24 bytes per state.
 firewire-pta.jani: info: Explored 4432272 states for delay=30, T=5000.
 
-Peak memory usage: 553 MB
+Peak memory usage: 1131 MB
 Analysis results for firewire-pta.jani
 Experiment delay=30, T=5000
 
@@ -46,26 +46,33 @@ Experiment delay=30, T=5000
   States:      4432272
   Transitions: 5529800
   Branches:    5533832
-  Rate:        236073 states/s
-  Time:        20.3 s
+  Rate:        364946 states/s
+  Time:        12.5 s
 
 + Property eventually
-  Probability: 0.9921875
-  Bounds:      [0.984375, 1]
-  Time:        24.9 s
+  Probability: 0.984375
+  Bounds:      [0.96875, 1]
+  Time:        3.8 s
+
+  + Essential states
+    Iterations:       32
+    Essential states: 492859
+    Transitions:      1005203
+    Branches:         1009235
+    Time:             3.3 s
 
   + Optimistic value iteration
-    Total iterations:  162
+    Total iterations:  21
     Verif. attempts:   1
     Verif. iterations: 1
     Final epsilon:     0.05
-    Time:              24.6 s
+    Time:              0.5 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

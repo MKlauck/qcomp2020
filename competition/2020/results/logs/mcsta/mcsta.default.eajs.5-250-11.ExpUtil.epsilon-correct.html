@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta eajs.5.jani --props ExpUtil -E energy_capacity=250,B=11 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta eajs.5.jani -E energy_capacity=250,B=11 --props ExpUtil -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">27.419999361038208s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">17.638596296310425s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">5.231845606921608e-07</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.870980127809517e-07</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -40,7 +40,7 @@ eajs.5.jani: info: Need 24 bytes per state.
 eajs.5.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
 eajs.5.jani: info: Explored 3049471 states for energy_capacity=250, B=11.
 
-Peak memory usage: 487 MB
+Peak memory usage: 1332 MB
 Analysis results for eajs.5.jani
 Experiment energy_capacity=250, B=11
 
@@ -49,13 +49,13 @@ Experiment energy_capacity=250, B=11
   States:      3049471
   Transitions: 4250853
   Branches:    6960278
-  Rate:        168340 states/s
-  Time:        20.0 s
+  Rate:        263385 states/s
+  Time:        12.0 s
 
 + Property ExpUtil
-  Value:  10.032945937515112
-  Bounds: [10.032940688435431, 10.032951186594794]
-  Time:   6.8 s
+  Value:  10.032946578754986
+  Bounds: [10.032940688435431, 10.03295246907454]
+  Time:   5.0 s
 
   + Precomputations
     Min. prob. 0 states:          0
@@ -63,18 +63,25 @@ Experiment energy_capacity=250, B=11
     Min. prob. 1 states:          3049471
     Time for min. prob. 1 states: 0.2 s
 
+  + Essential states
+    Iterations:       4
+    Essential states: 1432081
+    Transitions:      2633463
+    Branches:         5342888
+    Time:             1.1 s
+
   + Optimistic value iteration
-    Total iterations:  27
+    Total iterations:  19
     Verif. attempts:   1
-    Verif. iterations: 5
+    Verif. iterations: 3
     Final epsilon:     1E-06
-    Time:              4.2 s
+    Time:              1.8 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

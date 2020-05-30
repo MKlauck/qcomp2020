@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal -N 2147483647</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal -N 2147483647</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.5490596294403s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.5518078804016s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.0003632982041750102</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0007131035208274982</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -32,15 +32,15 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">nand.jani:model: info: nand is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
 nand.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 57 MB
+Peak memory usage: 58 MB
 Analysis results for nand.jani
 Experiment N=60, K=4
 Status:          Cancelled
-Simulation time: 599.5 s
+Simulation time: 599.6 s
 
 + Property Property &quot;reliable&quot;
-  Estimated probability: 0.6869709435920243
-  Runs used:             1618920
+  Estimated probability: 0.6872111624094136
+  Runs used:             1756610
   Run type:              MDP
   Status:                Cancelled
 
@@ -49,7 +49,7 @@ Simulation time: 599.5 s
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
 </div>
 </body>
 </html>

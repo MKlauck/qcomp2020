@@ -4,15 +4,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "coupon.9-4-5.collect_all_bounded",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -20,15 +12,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "coupon.9-4-5.collect_all_bounded",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -36,15 +20,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "coupon.9-4-5.collect_all_bounded",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.9-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -52,15 +28,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "coupon.9-4-5.exp_draws",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -68,15 +36,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "coupon.9-4-5.exp_draws",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -84,15 +44,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "coupon.9-4-5.exp_draws",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -100,15 +52,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "coupon.15-4-5.collect_all_bounded",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -116,15 +60,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "coupon.15-4-5.collect_all_bounded",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -132,15 +68,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "coupon.15-4-5.collect_all_bounded",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props collect_all_bounded -E B=5 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -148,15 +76,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "coupon.15-4-5.exp_draws",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -164,15 +84,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "coupon.15-4-5.exp_draws",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -180,15 +92,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "coupon.15-4-5.exp_draws",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -196,15 +100,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "crowds.5-20.positive",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -212,15 +108,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "crowds.5-20.positive",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -228,15 +116,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "crowds.5-20.positive",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 crowds.jani --props positive -E TotalRuns=5,CrowdSize=20 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -244,15 +124,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "crowds.6-20.positive",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -260,15 +132,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "crowds.6-20.positive",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -276,15 +140,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "crowds.6-20.positive",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -292,15 +148,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-2.messagesB",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -308,15 +156,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-2.messagesB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -324,15 +164,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-2.messagesB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -340,15 +172,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-2.unfairA",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -356,15 +180,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-2.unfairA",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -372,15 +188,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-2.unfairA",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -388,15 +196,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-8.messagesB",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -404,15 +204,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-8.messagesB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -420,15 +212,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-8.messagesB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=8 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -436,15 +220,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-8.unfairA",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -452,15 +228,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-8.unfairA",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -468,15 +236,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "egl.10-8.unfairA",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -484,15 +244,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "haddad-monmege.100-0.7.exp_steps",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -500,15 +252,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "haddad-monmege.100-0.7.exp_steps",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -516,15 +260,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "haddad-monmege.100-0.7.exp_steps",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -532,15 +268,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "haddad-monmege.100-0.7.target",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -548,15 +276,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "haddad-monmege.100-0.7.target",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -564,15 +284,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "haddad-monmege.100-0.7.target",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -580,15 +292,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "nand.40-4.reliable",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -596,15 +300,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "nand.40-4.reliable",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -612,15 +308,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "nand.40-4.reliable",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=40,K=4 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -628,15 +316,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "nand.60-4.reliable",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -644,15 +324,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "nand.60-4.reliable",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -660,15 +332,31 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
-		"benchmark-id": "nand.60-4.reliable",
-		"invocation-id": "specific",
+		"benchmark-id": "cluster.128-2000-20.premium_steady",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props premium_steady -E N=128,T=2000,t=20 -O out.txt Minimal --width 5e-2 --relative-width"
+		]
+	},
+	{
+		"benchmark-id": "cluster.128-2000-20.premium_steady",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props premium_steady -E N=128,T=2000,t=20 -O out.txt Minimal --width 1e-3 --relative-width"
+		]
+	},
+	{
+		"benchmark-id": "cluster.128-2000-20.premium_steady",
+		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props premium_steady -E N=128,T=2000,t=20 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -676,15 +364,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "cluster.128-2000-20.qos1",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -692,15 +372,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "cluster.128-2000-20.qos1",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -708,15 +380,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "cluster.128-2000-20.qos1",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -724,15 +388,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "cluster.64-2000-20.below_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -740,15 +396,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "cluster.64-2000-20.below_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -756,15 +404,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "cluster.64-2000-20.below_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 cluster.jani --props below_min -E N=64,T=2000,t=20 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -772,15 +412,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "embedded.8-12.actuators",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -788,15 +420,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "embedded.8-12.actuators",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -804,15 +428,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "embedded.8-12.actuators",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 embedded.jani --props actuators -E MAX_COUNT=8,T=12 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -820,15 +436,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "embedded.8-12.up_time",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -836,15 +444,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "embedded.8-12.up_time",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -852,15 +452,55 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
-		"benchmark-id": "embedded.8-12.up_time",
-		"invocation-id": "specific",
+		"benchmark-id": "fms.8.productivity",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"modes/modest modes --unsafe --max-run-length 0 fms.jani --props productivity -E n=8 -O out.txt Minimal --width 5e-2 --relative-width"
+		]
+	},
+	{
+		"benchmark-id": "fms.8.productivity",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"modes/modest modes --unsafe --max-run-length 0 fms.jani --props productivity -E n=8 -O out.txt Minimal --width 1e-3 --relative-width"
+		]
+	},
+	{
+		"benchmark-id": "fms.8.productivity",
+		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 fms.jani --props productivity -E n=8 -O out.txt Minimal -N 2147483647"
+		]
+	},
+	{
+		"benchmark-id": "kanban.5.throughput",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"modes/modest modes --unsafe --max-run-length 0 kanban.jani --props throughput -E t=5 -O out.txt Minimal --width 5e-2 --relative-width"
+		]
+	},
+	{
+		"benchmark-id": "kanban.5.throughput",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"modes/modest modes --unsafe --max-run-length 0 kanban.jani --props throughput -E t=5 -O out.txt Minimal --width 1e-3 --relative-width"
+		]
+	},
+	{
+		"benchmark-id": "kanban.5.throughput",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"modes/modest modes --unsafe --max-run-length 0 kanban.jani --props throughput -E t=5 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -868,15 +508,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "majority.2100.change_state",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 majority.jani --props change_state -E T=2100 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -884,15 +516,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "majority.2100.change_state",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 majority.jani --props change_state -E T=2100 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -900,15 +524,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "majority.2100.change_state",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes majority.jani --props change_state -E T=2100 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 majority.jani --props change_state -E T=2100 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -916,15 +532,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "mapk_cascade.4-30.activated_time",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -932,15 +540,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "mapk_cascade.4-30.activated_time",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -948,15 +548,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "mapk_cascade.4-30.activated_time",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -964,15 +556,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "mapk_cascade.4-30.reactions",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -980,15 +564,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "mapk_cascade.4-30.reactions",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -996,15 +572,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "mapk_cascade.4-30.reactions",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props reactions -E N=4,T=30 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1012,15 +580,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MaxPrReachDeadlockTB",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -1028,15 +588,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MaxPrReachDeadlockTB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -1044,15 +596,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MaxPrReachDeadlockTB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1060,15 +604,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MaxPrReachDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -1076,15 +612,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MaxPrReachDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -1092,15 +620,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MaxPrReachDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1108,15 +628,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MinExpTimeDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -1124,15 +636,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MinExpTimeDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -1140,15 +644,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.16-1.MinExpTimeDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1156,15 +652,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MaxPrReachDeadlockTB",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -1172,15 +660,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MaxPrReachDeadlockTB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -1188,15 +668,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MaxPrReachDeadlockTB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1204,15 +676,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MaxPrReachDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -1220,15 +684,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MaxPrReachDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -1236,15 +692,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MaxPrReachDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1252,15 +700,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MinExpTimeDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -1268,15 +708,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MinExpTimeDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -1284,15 +716,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "philosophers.20-1.MinExpTimeDeadlock",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 philosophers.20.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1300,15 +724,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "polling.18-16.s1_before_s2",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -1316,15 +732,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "polling.18-16.s1_before_s2",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -1332,15 +740,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "polling.18-16.s1_before_s2",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1348,15 +748,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "probably-epsilon-correct",
 		"commands": [
-			"modes/modest modes speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --width 5e-2 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "speed-ind.2100.change_state",
-		"invocation-id": "specific",
-		"invocation-track-id": "probably-epsilon-correct",
-		"commands": [
-			"modes/modest modes speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --unsafe --width 5e-2 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --width 5e-2 --relative-width"
 		]
 	},
 	{
@@ -1364,15 +756,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct",
 		"commands": [
-			"modes/modest modes speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --width 1e-3 --relative-width"
-		]
-	},
-	{
-		"benchmark-id": "speed-ind.2100.change_state",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct",
-		"commands": [
-			"modes/modest modes speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --unsafe --width 1e-3 --relative-width"
+			"modes/modest modes --unsafe --max-run-length 0 speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --width 1e-3 --relative-width"
 		]
 	},
 	{
@@ -1380,15 +764,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal -N 2147483647"
-		]
-	},
-	{
-		"benchmark-id": "speed-ind.2100.change_state",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal --unsafe -N 2147483647"
+			"modes/modest modes --unsafe --max-run-length 0 speed-ind.jani --props change_state -E T=2100 -O out.txt Minimal -N 2147483647"
 		]
 	},
 	{
@@ -1396,15 +772,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes beb.4-8.jani --props LineSeized -E N=7 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "beb.4-8-7.LineSeized",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes beb.4-8.jani --props LineSeized -E N=7 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 beb.4-8.jani --props LineSeized -E N=7 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1412,15 +780,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes beb.5-16.jani --props LineSeized -E N=15 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "beb.5-16-15.LineSeized",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes beb.5-16.jani --props LineSeized -E N=15 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 beb.5-16.jani --props LineSeized -E N=15 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1428,15 +788,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes consensus.4.jani --props disagree -E K=4 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "consensus.4-4.disagree",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes consensus.4.jani --props disagree -E K=4 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 consensus.4.jani --props disagree -E K=4 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1444,15 +796,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes consensus.4.jani --props steps_min -E K=4 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "consensus.4-4.steps_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes consensus.4.jani --props steps_min -E K=4 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 consensus.4.jani --props steps_min -E K=4 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1460,15 +804,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes consensus.6.jani --props disagree -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "consensus.6-2.disagree",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes consensus.6.jani --props disagree -E K=2 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 consensus.6.jani --props disagree -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1476,15 +812,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes consensus.6.jani --props steps_min -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "consensus.6-2.steps_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes consensus.6.jani --props steps_min -E K=2 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 consensus.6.jani --props steps_min -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1492,15 +820,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes csma.3-4.jani --props all_before_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "csma.3-4.all_before_max",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes csma.3-4.jani --props all_before_max -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 csma.3-4.jani --props all_before_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1508,15 +828,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes csma.3-4.jani --props time_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "csma.3-4.time_max",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes csma.3-4.jani --props time_max -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 csma.3-4.jani --props time_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1524,15 +836,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes csma.4-2.jani --props all_before_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "csma.4-2.all_before_max",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes csma.4-2.jani --props all_before_max -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 csma.4-2.jani --props all_before_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1540,15 +844,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes csma.4-2.jani --props time_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "csma.4-2.time_max",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes csma.4-2.jani --props time_max -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 csma.4-2.jani --props time_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1556,15 +852,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes eajs.5.jani --props ExpUtil -E energy_capacity=250,B=11 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "eajs.5-250-11.ExpUtil",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes eajs.5.jani --props ExpUtil -E energy_capacity=250,B=11 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 eajs.5.jani --props ExpUtil -E energy_capacity=250,B=11 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1572,15 +860,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "eajs.6-300-13.ExpUtil",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1588,15 +868,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes echoring.jani --props MaxOffline1 -E ITERATIONS=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "echoring.100.MaxOffline1",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes echoring.jani --props MaxOffline1 -E ITERATIONS=100 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 echoring.jani --props MaxOffline1 -E ITERATIONS=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1604,15 +876,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes elevators.b-11-9.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "elevators.b-11-9.goal",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes elevators.b-11-9.jani --props goal -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 elevators.b-11-9.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1620,15 +884,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes exploding-blocksworld.10.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "exploding-blocksworld.10.goal",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes exploding-blocksworld.10.jani --props goal -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 exploding-blocksworld.10.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1636,15 +892,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes firewire.false.jani --props deadline -E delay=36,deadline=800 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "firewire.false-36-800.deadline",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes firewire.false.jani --props deadline -E delay=36,deadline=800 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 firewire.false.jani --props deadline -E delay=36,deadline=800 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1652,15 +900,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes pacman.jani --props crash -E MAXSTEPS=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "pacman.100.crash",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes pacman.jani --props crash -E MAXSTEPS=100 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 pacman.jani --props crash -E MAXSTEPS=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1668,15 +908,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes pacman.jani --props crash -E MAXSTEPS=60 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "pacman.60.crash",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes pacman.jani --props crash -E MAXSTEPS=60 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 pacman.jani --props crash -E MAXSTEPS=60 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1684,15 +916,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes pnueli-zuck.5.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "pnueli-zuck.5.live",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes pnueli-zuck.5.jani --props live -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 pnueli-zuck.5.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1700,15 +924,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes pnueli-zuck.10.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "pnueli-zuck.10.live",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes pnueli-zuck.10.jani --props live -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 pnueli-zuck.10.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1716,15 +932,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes rabin.10.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "rabin.10.live",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes rabin.10.jani --props live -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 rabin.10.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1732,15 +940,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes rectangle-tireworld.11.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "rectangle-tireworld.11.goal",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes rectangle-tireworld.11.jani --props goal -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 rectangle-tireworld.11.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1748,15 +948,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes resource-gathering.jani --props expgold -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "resource-gathering.1300-100-100.expgold",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes resource-gathering.jani --props expgold -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 resource-gathering.jani --props expgold -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1764,15 +956,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes resource-gathering.jani --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "resource-gathering.1300-100-100.expsteps",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes resource-gathering.jani --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 resource-gathering.jani --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1780,15 +964,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes resource-gathering.jani --props prgoldgem -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "resource-gathering.1300-100-100.prgoldgem",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes resource-gathering.jani --props prgoldgem -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 resource-gathering.jani --props prgoldgem -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1796,15 +972,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes tireworld.45.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "tireworld.45.goal",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes tireworld.45.jani --props goal -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 tireworld.45.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1812,15 +980,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes triangle-tireworld.441.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "triangle-tireworld.441.goal",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes triangle-tireworld.441.jani --props goal -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 triangle-tireworld.441.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1828,15 +988,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes wlan.4.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "wlan.4-0.sent",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes wlan.4.jani --props sent -E COL=0 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 wlan.4.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1844,15 +996,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes wlan.4.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "wlan.4-0.cost_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes wlan.4.jani --props cost_min -E COL=0 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 wlan.4.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1860,15 +1004,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes wlan.5.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "wlan.5-0.sent",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes wlan.5.jani --props sent -E COL=0 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 wlan.5.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1876,15 +1012,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes wlan.5.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "wlan.5-0.cost_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes wlan.5.jani --props cost_min -E COL=0 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 wlan.5.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1892,15 +1020,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes wlan.6.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "wlan.6-0.sent",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes wlan.6.jani --props sent -E COL=0 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 wlan.6.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1908,15 +1028,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes wlan.6.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "wlan.6-0.cost_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes wlan.6.jani --props cost_min -E COL=0 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 wlan.6.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1924,15 +1036,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes zenotravel.4-2-2.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "zenotravel.4-2-2.goal",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes zenotravel.4-2-2.jani --props goal -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 zenotravel.4-2-2.jani --props goal -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1940,15 +1044,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes zeroconf.jani --props correct_max -E N=1000,K=8,reset=false -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "zeroconf.1000-8-false.correct_max",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes zeroconf.jani --props correct_max -E N=1000,K=8,reset=false -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 zeroconf.jani --props correct_max -E N=1000,K=8,reset=false -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1956,15 +1052,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes zeroconf.jani --props correct_min -E N=1000,K=8,reset=false -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "zeroconf.1000-8-false.correct_min",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes zeroconf.jani --props correct_min -E N=1000,K=8,reset=false -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 zeroconf.jani --props correct_min -E N=1000,K=8,reset=false -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1972,15 +1060,15 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes bitcoin-attack.jani --props P_MWinMax -E MALICIOUS=20,CD=6 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 bitcoin-attack.jani --props P_MWinMax -E MALICIOUS=20,CD=6 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
-		"benchmark-id": "bitcoin-attack.20-6.P_MWinMax",
-		"invocation-id": "specific",
+		"benchmark-id": "cabinets.3-2-true.Unavailability",
+		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes bitcoin-attack.jani --props P_MWinMax -E MALICIOUS=20,CD=6 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 cabinets.3-2-true.jani --props Unavailability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -1988,15 +1076,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes cabinets.3-2-true.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "cabinets.3-2-true.Unreliability",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes cabinets.3-2-true.jani --props Unreliability -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 cabinets.3-2-true.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2004,15 +1084,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes dpm.jani --props PmaxQueuesFullBound -E N=4,C=8,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "dpm.4-8-5.PmaxQueuesFullBound",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes dpm.jani --props PmaxQueuesFullBound -E N=4,C=8,TIME_BOUND=5 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 dpm.jani --props PmaxQueuesFullBound -E N=4,C=8,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2020,15 +1092,15 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes dpm.jani --props PminQueue1Full -E N=6,C=6,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 dpm.jani --props PminQueue1Full -E N=6,C=6,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
-		"benchmark-id": "dpm.6-6-5.PminQueue1Full",
-		"invocation-id": "specific",
+		"benchmark-id": "ftpp.2-2-true.Unavailability",
+		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes dpm.jani --props PminQueue1Full -E N=6,C=6,TIME_BOUND=5 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 ftpp.2-2-true.jani --props Unavailability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2036,15 +1108,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes ftwc.jani --props TimeMax -E N=8,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "ftwc.8-5.TimeMax",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes ftwc.jani --props TimeMax -E N=8,TIME_BOUND=5 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 ftwc.jani --props TimeMax -E N=8,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2052,15 +1116,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes ftwc.jani --props TimeMin -E N=8,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "ftwc.8-5.TimeMin",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes ftwc.jani --props TimeMin -E N=8,TIME_BOUND=5 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 ftwc.jani --props TimeMin -E N=8,TIME_BOUND=5 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2068,15 +1124,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes hecs.false-1-1.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "hecs.false-1-1.Unreliability",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes hecs.false-1-1.jani --props Unreliability -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 hecs.false-1-1.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2084,15 +1132,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes hecs.false-2-2.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "hecs.false-2-2.Unreliability",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes hecs.false-2-2.jani --props Unreliability -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 hecs.false-2-2.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2100,15 +1140,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes hecs.false-3-2.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "hecs.false-3-2.Unreliability",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes hecs.false-3-2.jani --props Unreliability -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 hecs.false-3-2.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2116,15 +1148,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "readers-writers.40.exp_time_many_requests",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2132,15 +1156,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes readers-writers.40.jani --props prtb_many_requests -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "readers-writers.40.prtb_many_requests",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes readers-writers.40.jani --props prtb_many_requests -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 readers-writers.40.jani --props prtb_many_requests -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2148,15 +1164,15 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes sms.3-true.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 sms.3-true.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
-		"benchmark-id": "sms.3-true.Unreliability",
-		"invocation-id": "specific",
+		"benchmark-id": "sms.3-true.Unavailability",
+		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes sms.3-true.jani --props Unreliability -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 sms.3-true.jani --props Unavailability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2164,15 +1180,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes stream.jani --props exp_buffertime -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "stream.1000.exp_buffertime",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes stream.jani --props exp_buffertime -E N=1000 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 stream.jani --props exp_buffertime -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2180,15 +1188,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes stream.jani --props pr_underrun -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "stream.1000.pr_underrun",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes stream.jani --props pr_underrun -E N=1000 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 stream.jani --props pr_underrun -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2196,15 +1196,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes stream.jani --props pr_underrun_tb -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "stream.1000.pr_underrun_tb",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes stream.jani --props pr_underrun_tb -E N=1000 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 stream.jani --props pr_underrun_tb -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2212,15 +1204,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes vgs.5.jani --props MaxPrReachFailedTB -E TIME_BOUND=10000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "vgs.5-10000.MaxPrReachFailedTB",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes vgs.5.jani --props MaxPrReachFailedTB -E TIME_BOUND=10000 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 vgs.5.jani --props MaxPrReachFailedTB -E TIME_BOUND=10000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2228,15 +1212,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes vgs.5.jani --props MinExpTimeFailed -E TIME_BOUND=10000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		]
-	},
-	{
-		"benchmark-id": "vgs.5-10000.MinExpTimeFailed",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes vgs.5.jani --props MinExpTimeFailed -E TIME_BOUND=10000 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
+			"modes/modest modes --unsafe --max-run-length 0 vgs.5.jani --props MinExpTimeFailed -E TIME_BOUND=10000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		]
 	},
 	{
@@ -2244,15 +1220,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
-		]
-	},
-	{
-		"benchmark-id": "firewire-pta.30-5000.deadline",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
+			"modes/modest modes --unsafe --max-run-length 0 firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
 		]
 	},
 	{
@@ -2260,15 +1228,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes firewire-pta.jani --props eventually -E delay=30,T=5000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
-		]
-	},
-	{
-		"benchmark-id": "firewire-pta.30-5000.eventually",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes firewire-pta.jani --props eventually -E delay=30,T=5000 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
+			"modes/modest modes --unsafe --max-run-length 0 firewire-pta.jani --props eventually -E delay=30,T=5000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
 		]
 	},
 	{
@@ -2276,15 +1236,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes wlan-large.jani --props E_or -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
-		]
-	},
-	{
-		"benchmark-id": "wlan-large.2.E_or",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes wlan-large.jani --props E_or -E K=2 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
+			"modes/modest modes --unsafe --max-run-length 0 wlan-large.jani --props E_or -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
 		]
 	},
 	{
@@ -2292,15 +1244,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes wlan-large.jani --props P_max -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
-		]
-	},
-	{
-		"benchmark-id": "wlan-large.2.P_max",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes wlan-large.jani --props P_max -E K=2 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
+			"modes/modest modes --unsafe --max-run-length 0 wlan-large.jani --props P_max -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
 		]
 	},
 	{
@@ -2308,15 +1252,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes zeroconf-pta.jani --props deadline -E T=200 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
-		]
-	},
-	{
-		"benchmark-id": "zeroconf-pta.200.deadline",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes zeroconf-pta.jani --props deadline -E T=200 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
+			"modes/modest modes --unsafe --max-run-length 0 zeroconf-pta.jani --props deadline -E T=200 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
 		]
 	},
 	{
@@ -2324,15 +1260,7 @@
 		"invocation-id": "default",
 		"invocation-track-id": "often-epsilon-correct-10-min",
 		"commands": [
-			"modes/modest modes zeroconf-pta.jani --props incorrect -E T=200 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
-		]
-	},
-	{
-		"benchmark-id": "zeroconf-pta.200.incorrect",
-		"invocation-id": "specific",
-		"invocation-track-id": "often-epsilon-correct-10-min",
-		"commands": [
-			"modes/modest modes zeroconf-pta.jani --props incorrect -E T=200 -O out.txt Minimal --unsafe --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
+			"modes/modest modes --unsafe --max-run-length 0 zeroconf-pta.jani --props incorrect -E T=200 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks"
 		]
 	}
 ]

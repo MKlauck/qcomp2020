@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan-large.jani --props E_or -E K=2 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan-large.jani -E K=2 --props E_or -O out.txt Minimal --unsafe --es -S Memory --no-partial-results</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">122.8739504814148s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">20.75012493133545s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">2.6163523894074898e-09</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.812299213146977e-09</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -33,7 +33,7 @@
 wlan-large.jani: info: Need 16 bytes per state.
 wlan-large.jani: info: Explored 3189783 states for K=2.
 
-Peak memory usage: 443 MB
+Peak memory usage: 1039 MB
 Analysis results for wlan-large.jani
 Experiment K=2
 
@@ -42,30 +42,37 @@ Experiment K=2
   States:      3189783
   Transitions: 6045235
   Branches:    6065855
-  Rate:        49742 states/s
-  Time:        65.9 s
+  Rate:        219924 states/s
+  Time:        14.9 s
 
 + Property E_or
-  Value:  33692.4572531185
-  Bounds: [33692.4572531185, infinity)
-  Time:   55.3 s
+  Value:  33692.45724651657
+  Bounds: [33692.45724651657, infinity)
+  Time:   4.8 s
 
   + Precomputations
     Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 3.1 s
+    Time for min. prob. 0 states: 3.3 s
     Min. prob. 1 states:          3189783
     Time for min. prob. 1 states: 0.2 s
 
+  + Essential states
+    Iterations:       11
+    Essential states: 139882
+    Transitions:      326004
+    Branches:         346624
+    Time:             1.2 s
+
   + Value iteration
-    Final error: 9.500718702325807E-07
-    Iterations:  346
-    Time:        51.8 s
+    Final error: 9.904739938485326E-08
+    Iterations:  8
+    Time:        0.1 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

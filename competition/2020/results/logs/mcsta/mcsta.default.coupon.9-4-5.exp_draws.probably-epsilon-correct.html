@@ -17,14 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta coupon.9-4.jani --props exp_draws -E B=5 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta coupon.9-4.jani -E B=5 --props exp_draws -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">85.49340105056763s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">30.379965782165527s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Relative Error:</td><td style="tt">0.0022029610691086656</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.006088062844133443</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -34,7 +34,7 @@ coupon.9-4.jani: info: Need 16 bytes per state.
 coupon.9-4.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
 coupon.9-4.jani: info: Explored 21077063 states for B=5.
 
-Peak memory usage: 2266 MB
+Peak memory usage: 4922 MB
 Analysis results for coupon.9-4.jani
 Experiment B=5
 
@@ -43,32 +43,39 @@ Experiment B=5
   States:      21077063
   Transitions: 21077063
   Branches:    24429223
-  Rate:        441737 states/s
-  Time:        55.0 s
+  Rate:        1029857 states/s
+  Time:        22.2 s
 
 + Property exp_draws
-  Value:  6.75492060960495
-  Bounds: [6.685614496191558, 6.8242267230183415]
-  Time:   29.8 s
+  Value:  6.781106477208586
+  Bounds: [6.688056169187228, 6.8741567852299434]
+  Time:   7.4 s
 
   + Precomputations
     Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 2.6 s
+    Time for min. prob. 0 states: 2.7 s
     Min. prob. 1 states:          21077063
     Time for min. prob. 1 states: 0.9 s
 
+  + Essential states
+    Iterations:       4
+    Essential states: 414604
+    Transitions:      414604
+    Branches:         3731412
+    Time:             3.5 s
+
   + Optimistic value iteration
-    Total iterations:  32
-    Verif. attempts:   2
-    Verif. iterations: 11
-    Final epsilon:     0.012661105490809716
-    Time:              25.0 s
+    Total iterations:  11
+    Verif. attempts:   1
+    Verif. iterations: 3
+    Final epsilon:     0.05
+    Time:              0.3 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

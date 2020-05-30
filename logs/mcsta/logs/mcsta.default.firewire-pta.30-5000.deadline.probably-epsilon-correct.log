@@ -1,6 +1,6 @@
-Command:	mcsta/modest mcsta firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg IntervalIteration
-Wallclock time:	1800.0381197929382
-Return code:	None
+Command:	mcsta/modest mcsta firewire-pta.jani -E delay=30,T=5000 --props deadline -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --reward-bounded-alg StateElimination
+Wallclock time:	468.80231523513794
+Return code:	0
 Output:
 
 
@@ -14,9 +14,45 @@ firewire-pta.jani:variables[11]: info: Expanding variable "s2" into 9 locations 
 firewire-pta.jani: info: Need 24 bytes per state.
 firewire-pta.jani: info: Explored 4432272 states for delay=30, T=5000.
 
+Peak memory usage: 10614 MB
+Analysis results for firewire-pta.jani
+Experiment delay=30, T=5000
+
++ State space exploration
+  State size:  24 bytes
+  States:      4432272
+  Transitions: 5529800
+  Branches:    5533832
+  Rate:        335473 states/s
+  Time:        13.7 s
+
++ Property deadline
+  Probability: 0
+  Bounds:      [0, 0]
+  CDF:         { (0, 0), ..., (5000, 0) }
+  Time:        454.4 s
+
+  + Essential states
+    Iterations:       3
+    Essential states: 4410041
+    Transitions:      5507557
+    Branches:         5511589
+    Time:             1.2 s
+
+  + State elimination
+    States:      4213742
+    Transitions: 15792578
+    Branches:    43185494
+    Time:        93.0 s
+
+  + Value iteration
+    Time: 360.1 s
+
+Exported results to file "/out.txt".
+
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
-----------
-Computation aborted after 1800.0381197929382 seconds since the total time limit of 1800 seconds was exceeded.
+############################## Notes ##############################
+Correctness of result is not checked because no reference result is available.

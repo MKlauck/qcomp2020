@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta beb.5-16.jani --props LineSeized -E N=15 -O out.txt Minimal --unsafe --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1 -S Disk --store-compress None
-Wallclock time:	1800.7624299526215
+Command:	mcsta/modest mcsta beb.5-16.jani -E N=15 --props LineSeized -O out.txt Minimal --unsafe --es -S Hybrid --store-compress None --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	1801.5646159648895
 Return code:	None
 Output:
 
@@ -10,8 +10,8 @@ beb.5-16.jani:model: info: beb-5-16 is an MDP model.
 beb.5-16.jani: info: Need 24 bytes per state.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ----------
-Computation aborted after 1800.7624299526215 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1801.5646159648895 seconds since the total time limit of 1800 seconds was exceeded.

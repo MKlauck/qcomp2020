@@ -1,5 +1,5 @@
-Command:	modes/modest modes egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	1.553748369216919
+Command:	modes/modest modes --unsafe --max-run-length 0 egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	1.5322930812835693
 Return code:	0
 Output:
 
@@ -8,26 +8,26 @@ Output:
 
 egl.jani:model: info: egl is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
 egl.jani: info: Using default value of 0.95 for the confidence parameter.
-egl.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+egl.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
-Peak memory usage: 59 MB
+Peak memory usage: 60 MB
 Analysis results for egl.jani
 Experiment N=10, L=2
 Status:          Finished
 Simulation time: 0.4 s
 
 + Property Property "messagesB"
-  Estimated value:     4.074213836477993
-  Confidence interval: [3.8706145106275383, 4.277813162328448]
-  Runs used:           1590
+  Estimated value:     3.9458823529411786
+  Confidence interval: [3.7488436296266627, 4.1429210762556945]
+  Runs used:           1700
   Run type:            MDP
   Status:              Finished
 
   + Sample data
-    Mean:     4.074213836477993
-    Variance: 17.15748443505071
-    Skewness: 0.12218116851378674
-    Kurtosis: 1.197584878713
+    Mean:     3.9458823529411786
+    Variance: 17.18129557178965
+    Skewness: 0.19323002272933404
+    Kurtosis: 1.2429595963201583
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -35,5 +35,5 @@ Simulation time: 0.4 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

@@ -1,5 +1,5 @@
-Command:	modes/modest modes stream.jani --props pr_underrun_tb -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5480718612671
+Command:	modes/modest modes --unsafe --max-run-length 0 stream.jani --props pr_underrun_tb -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5466454029083
 Return code:	0
 Output:
 
@@ -10,18 +10,18 @@ stream.jani:model: info: stream is an MA model and will be simulated as an MA.
 stream.jani:variables[5]: info: Expanding variable "s" into 4 locations in automaton "streamingclient".
 stream.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 60 MB
+Peak memory usage: 59 MB
 Analysis results for stream.jani
 Experiment N=1000
 Status:          Finished
 Simulation time: 599.5 s
 
 + Property Property "pr_underrun_tb"
-  Estimated min. probability: 0.01893151698100226
-  Runs used (best scheduler): 1162770
-  Total runs used:            125360760
-  Schedulers sampled:         38000
-  Best scheduler:             847682201
+  Estimated min. probability: 0.018822402899963238
+  Runs used (best scheduler): 1169670
+  Total runs used:            121233360
+  Schedulers sampled:         37000
+  Best scheduler:             1877586013
   Run type:                   MA
   Status:                     Finished
 
@@ -33,5 +33,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

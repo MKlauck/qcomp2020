@@ -1,5 +1,5 @@
-Command:	modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width
-Wallclock time:	100.77719116210938
+Command:	modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width
+Wallclock time:	98.42154455184937
 Return code:	0
 Output:
 
@@ -8,26 +8,26 @@ Output:
 
 philosophers.16.jani:model: info: Philosophers16 is a CTMC model and will be simulated as an MA.
 philosophers.16.jani: info: Using default value of 0.95 for the confidence parameter.
-philosophers.16.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+philosophers.16.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
-Peak memory usage: 65 MB
+Peak memory usage: 60 MB
 Analysis results for philosophers.16.jani
 Experiment TIME_BOUND=1.0
 Status:          Finished
-Simulation time: 99.7 s
+Simulation time: 97.4 s
 
 + Property Property "MinExpTimeDeadlock"
-  Estimated value:     10.77866549084641
-  Confidence interval: [10.767886863768323, 10.789444117924498]
-  Runs used:           1137970
+  Estimated value:     10.7861128172396
+  Confidence interval: [10.775326733052955, 10.796898901426244]
+  Runs used:           1141030
   Run type:            MA
   Status:              Finished
 
   + Sample data
-    Mean:     10.77866549084641
-    Variance: 34.41608959732234
-    Skewness: 1.4188571141927513
-    Kurtosis: 6.341623472422864
+    Mean:     10.7861128172396
+    Variance: 34.55639999525959
+    Skewness: 1.4301603333761899
+    Kurtosis: 6.429863003774999
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -35,5 +35,5 @@ Simulation time: 99.7 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

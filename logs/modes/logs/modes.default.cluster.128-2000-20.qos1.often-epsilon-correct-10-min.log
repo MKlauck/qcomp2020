@@ -1,5 +1,5 @@
-Command:	modes/modest modes cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.5641133785248
+Command:	modes/modest modes --unsafe --max-run-length 0 cluster.jani --props qos1 -E N=128,T=2000,t=20 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5635876655579
 Return code:	0
 Output:
 
@@ -16,8 +16,8 @@ Status:          Cancelled
 Simulation time: 599.5 s
 
 + Property Property "qos1"
-  Estimated probability: 0.0010966907715147742
-  Runs used:             208810
+  Estimated probability: 0.001075374416891726
+  Runs used:             203650
   Run type:              MA
   Status:                Cancelled
 
@@ -26,5 +26,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

@@ -1,5 +1,5 @@
-Command:	modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	1.3289940357208252
+Command:	modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	1.286550760269165
 Return code:	0
 Output:
 
@@ -8,7 +8,7 @@ Output:
 
 philosophers.16.jani:model: info: Philosophers16 is a CTMC model and will be simulated as an MA.
 philosophers.16.jani: info: Using default value of 0.95 for the confidence parameter.
-philosophers.16.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+philosophers.16.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
 Peak memory usage: 60 MB
 Analysis results for philosophers.16.jani
@@ -17,17 +17,17 @@ Status:          Finished
 Simulation time: 0.2 s
 
 + Property Property "MinExpTimeDeadlock"
-  Estimated value:     10.86381076937456
-  Confidence interval: [10.324702459286282, 11.402919079462837]
-  Runs used:           460
+  Estimated value:     10.506568534365286
+  Confidence interval: [9.98143089892227, 11.031706169808302]
+  Runs used:           500
   Run type:            MA
   Status:              Finished
 
   + Sample data
-    Mean:     10.86381076937456
-    Variance: 34.80276125378648
-    Skewness: 1.3132809533350163
-    Kurtosis: 4.845285926885088
+    Mean:     10.506568534365286
+    Variance: 35.89385556772072
+    Skewness: 1.4874636495871596
+    Kurtosis: 6.263789375282964
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -35,5 +35,5 @@ Simulation time: 0.2 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

@@ -1,6 +1,6 @@
-Command:	mcsta/modest mcsta egl.jani --props unfairA -E N=10,L=8 -O out.txt Minimal --epsilon 0
-Wallclock time:	603.6102595329285
-Return code:	0
+Command:	mcsta/modest mcsta egl.jani -E N=10,L=8 --props unfairA -O out.txt Minimal --unsafe --es -S Memory --epsilon 0 --p0 --p1
+Wallclock time:	621.5272681713104
+Return code:	-9
 Output:
 
 
@@ -10,8 +10,5 @@ egl.jani:model: info: egl is a DTMC model.
 egl.jani: info: Need 88 bytes per state.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
-
-############################## Notes ##############################
-Unable to obtain tool result.

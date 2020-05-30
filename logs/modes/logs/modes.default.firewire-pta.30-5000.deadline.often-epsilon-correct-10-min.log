@@ -1,5 +1,5 @@
-Command:	modes/modest modes firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks
-Wallclock time:	1.2636046409606934
+Command:	modes/modest modes --unsafe --max-run-length 0 firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks
+Wallclock time:	1.2388052940368652
 Return code:	0
 Output:
 
@@ -16,7 +16,7 @@ firewire-pta.jani:constants[7]: warning: Cannot determine whether the rewards us
 firewire-pta.jani:model: error: Encountered temporal nondeterminism for snd_idle12.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
 ############################## Notes ##############################

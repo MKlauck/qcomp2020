@@ -1,5 +1,5 @@
-Command:	modes/modest modes pnueli-zuck.5.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5457916259766
+Command:	modes/modest modes --unsafe --max-run-length 0 pnueli-zuck.5.jani --props live -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	601.0460212230682
 Return code:	0
 Output:
 
@@ -17,14 +17,14 @@ pnueli-zuck.5.jani: info: Using default value of 0.95 for the confidence paramet
 Peak memory usage: 65 MB
 Analysis results for pnueli-zuck.5.jani
 Status:          Finished
-Simulation time: 599.3 s
+Simulation time: 599.8 s
 
 + Property Property "live"
   Estimated max. probability: 1
   Runs used (best scheduler): 250
-  Total runs used:            147954850
-  Schedulers sampled:         147000
-  Best scheduler:             463444271
+  Total runs used:            128073850
+  Schedulers sampled:         127000
+  Best scheduler:             1067652374
   Run type:                   MDP
   Status:                     Finished
 
@@ -36,5 +36,5 @@ Simulation time: 599.3 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

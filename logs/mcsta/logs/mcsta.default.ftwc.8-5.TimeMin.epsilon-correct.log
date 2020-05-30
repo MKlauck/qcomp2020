@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta ftwc.jani --props TimeMin -E N=8,TIME_BOUND=5 -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	375.91870379447937
+Command:	mcsta/modest mcsta ftwc.jani -E N=8,TIME_BOUND=5 --props TimeMin -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	232.88129138946533
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ ftwc.jani: info: Need at least 40 bytes per state.
 ftwc.jani: info: Explored 10299 states for N=8, TIME_BOUND=5.
 ftwc.jani:properties[3]: warning: Computing minimum expected reward in property "TimeMin" without checking for zero-reward end components.
 
-Peak memory usage: 56 MB
+Peak memory usage: 59 MB
 Analysis results for ftwc.jani
 Experiment N=8, TIME_BOUND=5
 
@@ -20,27 +20,34 @@ Experiment N=8, TIME_BOUND=5
   States:          10299
   Transitions:     12635
   Branches:        26983
-  Rate:            50985 states/s
-  Time:            0.2 s
+  Rate:            73564 states/s
+  Time:            0.1 s
 
 + Property TimeMin
-  Value:  1995337.8455534235
-  Bounds: [1995335.8854562673, 1995339.8056505797]
-  Time:   375.1 s
+  Value:  1995337.8452852038
+  Bounds: [1995335.885277953, 1995339.8052924545]
+  Time:   232.2 s
 
   + Precomputations
     Max. prob. 1 states:          10299
     Time for max. prob. 1 states: 0.0 s
 
+  + Essential states
+    Iterations:       3
+    Essential states: 5205
+    Transitions:      7541
+    Branches:         21889
+    Time:             0.0 s
+
   + Optimistic value iteration
-    Total iterations:  857221
+    Total iterations:  857218
     Verif. attempts:   15
-    Verif. iterations: 46722
-    Final epsilon:     3.033069489836149E-11
-    Time:              375.1 s
+    Verif. iterations: 46721
+    Final epsilon:     3.0333463193117323E-11
+    Time:              232.2 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

@@ -1,5 +1,5 @@
-Command:	modes/modest modes nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	1.7614624500274658
+Command:	modes/modest modes --unsafe --max-run-length 0 nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	1.7370505332946777
 Return code:	0
 Output:
 
@@ -13,11 +13,11 @@ Peak memory usage: 57 MB
 Analysis results for nand.jani
 Experiment N=60, K=4
 Status:          Finished
-Simulation time: 0.8 s
+Simulation time: 0.7 s
 
 + Property Property "reliable"
-  Estimated probability: 0.7107142857142857
-  Runs used:             1400
+  Estimated probability: 0.6852564102564103
+  Runs used:             1560
   Run type:              MDP
   Status:                Finished
 
@@ -28,5 +28,5 @@ Simulation time: 0.8 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

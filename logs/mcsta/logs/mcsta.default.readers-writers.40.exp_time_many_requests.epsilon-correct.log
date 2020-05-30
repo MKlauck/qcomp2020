@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	34.81006908416748
+Command:	mcsta/modest mcsta readers-writers.40.jani --props exp_time_many_requests -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	21.660690784454346
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ readers-writers.40.jani: info: Need 16 bytes per state.
 readers-writers.40.jani: info: Explored 1884366 states.
 readers-writers.40.jani:properties[1]: warning: Computing minimum expected reward in property "exp_time_many_requests" without checking for zero-reward end components.
 
-Peak memory usage: 283 MB
+Peak memory usage: 694 MB
 Analysis results for readers-writers.40.jani
 
 + State space exploration
@@ -19,27 +19,34 @@ Analysis results for readers-writers.40.jani
   States:      1884366
   Transitions: 1884366
   Branches:    3815040
-  Rate:        204135 states/s
-  Time:        10.4 s
+  Rate:        507368 states/s
+  Time:        3.9 s
 
 + Property exp_time_many_requests
-  Value:  3.729267964942766
-  Bounds: [3.729264706006584, 3.729271223878948]
-  Time:   23.4 s
+  Value:  3.7292679649428
+  Bounds: [3.729264706006614, 3.729271223878986]
+  Time:   17.2 s
 
   + Precomputations
     Max. prob. 1 states:          1884366
-    Time for max. prob. 1 states: 5.9 s
+    Time for max. prob. 1 states: 3.5 s
+
+  + Essential states
+    Iterations:       3
+    Essential states: 1347484
+    Transitions:      1347484
+    Branches:         3278158
+    Time:             0.6 s
 
   + Optimistic value iteration
     Total iterations:  212
     Verif. attempts:   3
     Verif. iterations: 15
     Final epsilon:     7.159802918821956E-08
-    Time:              17.3 s
+    Time:              13.0 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

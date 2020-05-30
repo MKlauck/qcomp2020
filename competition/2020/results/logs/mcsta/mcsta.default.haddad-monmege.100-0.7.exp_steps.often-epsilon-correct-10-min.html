@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta haddad-monmege.jani --props exp_steps -E N=100,p=0.7 -O out.txt Minimal --epsilon 0</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta haddad-monmege.jani -E N=100,p=0.7 --props exp_steps -O out.txt Minimal --unsafe --es -S Memory --epsilon 0</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">600.0394735336304s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">600.0342326164246s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 		<tr><td>Relative Error:</td><td style="tt">1.0</td></tr>
 	</table>
@@ -43,12 +43,12 @@ Experiment N=100, p=0.7
   States:      201
   Transitions: 201
   Branches:    400
-  Rate:        3526 states/s
-  Time:        0.1 s
+  Rate:        5289 states/s
+  Time:        0.0 s
 
 + Property exp_steps
-  Value:  232888172.1650406
-  Bounds: [232888172.1650406, infinity)
+  Value:  201776108.47411117
+  Bounds: [201776108.47411117, infinity)
   Time:   599.5 s
 
   + Precomputations
@@ -57,17 +57,24 @@ Experiment N=100, p=0.7
     Min. prob. 1 states:          201
     Time for min. prob. 1 states: 0.0 s
 
+  + Essential states
+    Iterations:       1
+    Essential states: 201
+    Transitions:      201
+    Branches:         400
+    Time:             0.0 s
+
   + Value iteration
     Status:      Cancelled
-    Final error: 1.2881719094573405E-08
-    Iterations:  77629391
+    Final error: 1.4867964485760529E-08
+    Iterations:  67258703
     Time:        599.5 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

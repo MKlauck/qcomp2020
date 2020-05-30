@@ -1,5 +1,5 @@
-Command:	modes/modest modes mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --width 5e-2 --relative-width
-Wallclock time:	1.6288795471191406
+Command:	modes/modest modes --unsafe --max-run-length 0 mapk_cascade.jani --props activated_time -E N=4,T=30 -O out.txt Minimal --width 5e-2 --relative-width
+Wallclock time:	1.6191112995147705
 Return code:	0
 Output:
 
@@ -8,26 +8,26 @@ Output:
 
 mapk_cascade.jani:model: info: mapk_cascade is a CTMC model and will be simulated as an MA.
 mapk_cascade.jani: info: Using default value of 0.95 for the confidence parameter.
-mapk_cascade.jani: warning: Using the Chow-Robbins method for fixed-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+mapk_cascade.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
 
-Peak memory usage: 58 MB
+Peak memory usage: 59 MB
 Analysis results for mapk_cascade.jani
 Experiment N=4, T=30.0
 Status:          Finished
 Simulation time: 0.6 s
 
 + Property Property "activated_time"
-  Estimated value:     41.39527501537663
-  Confidence interval: [39.334559758839404, 43.45599027191386]
-  Runs used:           580
+  Estimated value:     39.61269467732868
+  Confidence interval: [37.633943642637675, 41.59144571201969]
+  Runs used:           560
   Run type:            MA
   Status:              Finished
 
   + Sample data
-    Mean:     41.39527501537663
-    Variance: 641.1620138881567
-    Skewness: 2.0400961075642954
-    Kurtosis: 9.378281239644277
+    Mean:     39.61269467732868
+    Variance: 570.7871073017567
+    Skewness: 2.100012397486054
+    Kurtosis: 9.714680595830059
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -35,5 +35,5 @@ Simulation time: 0.6 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

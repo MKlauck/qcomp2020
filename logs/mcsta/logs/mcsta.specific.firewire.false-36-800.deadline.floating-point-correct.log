@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta firewire.false.jani --props deadline -E delay=36,deadline=800 -O out.txt Minimal --unsafe --no-partial-results --epsilon 0 --absolute-epsilon --p0 -S Memory
-Wallclock time:	24.981683492660522
+Command:	mcsta/modest mcsta firewire.false.jani -E delay=36,deadline=800 --props deadline -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --reward-bounded-alg StateElimination --p0
+Wallclock time:	17.133590936660767
 Return code:	0
 Output:
 
@@ -12,8 +12,9 @@ firewire.false.jani:variables[8]: info: Expanding variable "w21" into 10 locatio
 firewire.false.jani:variables[12]: info: Expanding variable "s2" into 9 locations in automaton "node2".
 firewire.false.jani: info: Need 16 bytes per state.
 firewire.false.jani: info: Explored 212268 states for delay=36, deadline=800.
+firewire.false.jani: info: Bounded value iteration for property "deadline" has converged at bound 37.
 
-Peak memory usage: 142 MB
+Peak memory usage: 1252 MB
 Analysis results for firewire.false.jani
 Experiment delay=36, deadline=800
 
@@ -22,26 +23,36 @@ Experiment delay=36, deadline=800
   States:      212268
   Transitions: 478752
   Branches:    481788
-  Rate:        239310 states/s
+  Rate:        235070 states/s
   Time:        0.9 s
 
 + Property deadline
-  Probability: 0.939453125
-  Bounds:      [0.939453125, 0.939453125]
-  CDF:         { (0, 0), ..., (202, 0), (203, 0.5), ..., (323, 0.5), (324, 0.625), ..., (405, 0.625), (406, 0.75), ..., (444, 0.75), (445, 0.78125), ..., (526, 0.78125), (527, 0.84375), ..., (565, 0.84375), (566, 0.8515625), ..., (608, 0.8515625), (609, 0.8828125), ..., (647, 0.8828125), (648, 0.90625), ..., (686, 0.90625), (687, 0.908203125), ..., (729, 0.908203125), (730, 0.931640625), ..., (768, 0.931640625), (769, 0.939453125), ..., (800, 0.939453125) }
-  Time:        23.5 s
+  Probability: 0
+  Bounds:      [0, 0]
+  CDF:         { (0, 0), ..., (37, 0) }
+  Time:        15.6 s
 
-  + Precomputations
-    Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 0.4 s
+  + Essential states
+    Iterations:       3
+    Essential states: 210809
+    Transitions:      477281
+    Branches:         480317
+    Time:             0.1 s
+
+  + State elimination
+    States:      195794
+    Transitions: 2418134
+    Branches:    7860282
+    Time:        15.0 s
 
   + Value iteration
-    Final error: 0
-    Iterations:  2374
-    Time:        23.1 s
+    Time: 0.4 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
+
+############################## Notes ##############################
+The tool result '0' is tagged as incorrect. The reference result is '481/512' (approx. 0.939453125) which means a relative error of '1.0' which is larger than the goal precision '1e-14'.

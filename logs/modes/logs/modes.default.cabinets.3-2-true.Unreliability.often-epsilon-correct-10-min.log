@@ -1,5 +1,5 @@
-Command:	modes/modest modes cabinets.3-2-true.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
-Wallclock time:	600.5494253635406
+Command:	modes/modest modes --unsafe --max-run-length 0 cabinets.3-2-true.jani --props Unreliability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000
+Wallclock time:	600.5460455417633
 Return code:	0
 Output:
 
@@ -15,11 +15,11 @@ Status:          Finished
 Simulation time: 599.4 s
 
 + Property Property "Unreliability"
-  Estimated max. probability: 2.995758305814797E-08
-  Runs used (best scheduler): 33380530
-  Total runs used:            34380530
+  Estimated max. probability: 1.530437337773642E-07
+  Runs used (best scheduler): 32670400
+  Total runs used:            33670400
   Schedulers sampled:         0
-  Best scheduler:             514099564
+  Best scheduler:             150853999
   Run type:                   MA
   Status:                     Finished
 
@@ -29,5 +29,5 @@ Simulation time: 599.4 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan.6.jani --props sent -E COL=0 -O out.txt Minimal --epsilon 0</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan.6.jani -E COL=0 --props sent -O out.txt Minimal --unsafe --es -S Memory --epsilon 0</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">199.30063223838806s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">172.9861135482788s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 	</table>
 </div>
@@ -34,7 +34,7 @@ wlan.6.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 12 locat
 wlan.6.jani: info: Need 16 bytes per state.
 wlan.6.jani: info: Explored 5007548 states for COL=0.
 
-Peak memory usage: 589 MB
+Peak memory usage: 1410 MB
 Analysis results for wlan.6.jani
 Experiment COL=0
 
@@ -43,17 +43,17 @@ Experiment COL=0
   States:      5007548
   Transitions: 6350470
   Branches:    11475748
-  Rate:        156515 states/s
-  Time:        34.6 s
+  Rate:        437340 states/s
+  Time:        12.0 s
 
 + Property sent
   Result:      True
-  Time:        163.6 s
+  Time:        160.1 s
   Probability: 1
 
   + Precomputations
     Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 163.3 s
+    Time for min. prob. 0 states: 159.8 s
     Min. prob. 1 states:          5007548
     Time for min. prob. 1 states: 0.3 s
 
@@ -61,7 +61,7 @@ Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

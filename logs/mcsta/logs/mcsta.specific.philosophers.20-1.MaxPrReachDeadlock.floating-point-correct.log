@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta philosophers.20.jani --props MaxPrReachDeadlock -E TIME_BOUND=1 -O out.txt Minimal --unsafe --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1 -S Disk --store-compress None
-Wallclock time:	1236.1005115509033
+Command:	mcsta/modest mcsta philosophers.20.jani -E TIME_BOUND=1 --props MaxPrReachDeadlock -O out.txt Minimal --unsafe --es -S Hybrid --store-compress None --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon
+Wallclock time:	1347.8552961349487
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ philosophers.20.jani:model: info: Philosophers20 is a CTMC model.
 philosophers.20.jani: info: Need 88 bytes per state.
 philosophers.20.jani: info: Explored 45239074 states for TIME_BOUND=1.0.
 
-Peak memory usage: 11510 MB
+Peak memory usage: 11568 MB
 Analysis results for philosophers.20.jani
 Experiment TIME_BOUND=1.0
 
@@ -19,21 +19,21 @@ Experiment TIME_BOUND=1.0
   States:      45239074
   Transitions: 45239074
   Branches:    584892921
-  Rate:        57350 states/s
-  Time:        944.3 s
+  Rate:        66524 states/s
+  Time:        841.9 s
 
 + Property MaxPrReachDeadlock
   Probability: 1
-  Time:        287.3 s
+  Time:        503.8 s
 
   + Precomputations
     Min. prob. 0 states:          0
-    Time for min. prob. 0 states: 265.8 s
+    Time for min. prob. 0 states: 430.9 s
     Min. prob. 1 states:          45239074
-    Time for min. prob. 1 states: 21.3 s
+    Time for min. prob. 1 states: 72.8 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

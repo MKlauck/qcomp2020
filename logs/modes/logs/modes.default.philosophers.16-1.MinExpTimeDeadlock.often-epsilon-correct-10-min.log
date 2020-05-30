@@ -1,5 +1,5 @@
-Command:	modes/modest modes philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647
-Wallclock time:	600.5492713451385
+Command:	modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647
+Wallclock time:	600.5537266731262
 Return code:	0
 Output:
 
@@ -9,24 +9,24 @@ Output:
 philosophers.16.jani:model: info: Philosophers16 is a CTMC model and will be simulated as an MA.
 philosophers.16.jani: info: Using default value of 0.95 for the confidence parameter.
 
-Peak memory usage: 65 MB
+Peak memory usage: 60 MB
 Analysis results for philosophers.16.jani
 Experiment TIME_BOUND=1.0
 Status:          Cancelled
 Simulation time: 599.5 s
 
 + Property Property "MinExpTimeDeadlock"
-  Estimated value:     10.779434655235725
-  Confidence interval: [10.775045503679907, 10.783823806791544]
-  Runs used:           6875200
+  Estimated value:     10.782105856389409
+  Confidence interval: [10.77782121775729, 10.786390495021527]
+  Runs used:           7221350
   Run type:            MA
   Status:              Cancelled
 
   + Sample data
-    Mean:     10.779434655235725
-    Variance: 34.478654425214735
-    Skewness: 1.4233858016549277
-    Kurtosis: 6.376232816879148
+    Mean:     10.782105856389409
+    Variance: 34.51044910842342
+    Skewness: 1.4255123709246458
+    Kurtosis: 6.397986321524787
 
   + Error bounds
     Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
@@ -34,5 +34,5 @@ Simulation time: 599.5 s
 
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 

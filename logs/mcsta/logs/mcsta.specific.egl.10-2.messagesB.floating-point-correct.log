@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta egl.jani --props messagesB -E N=10,L=2 -O out.txt Minimal --unsafe --no-partial-results --epsilon 0 --absolute-epsilon --store-compress None
-Wallclock time:	295.526837348938
+Command:	mcsta/modest mcsta egl.jani -E N=10,L=2 --props messagesB -O out.txt Minimal --unsafe --es -S Hybrid --store-compress None --no-partial-results --epsilon 0 --absolute-epsilon
+Wallclock time:	289.1626591682434
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ egl.jani:model: info: egl is a DTMC model.
 egl.jani: info: Need 88 bytes per state.
 egl.jani: info: Explored 66060286 states for N=10, L=2.
 
-Peak memory usage: 10313 MB
+Peak memory usage: 10567 MB
 Analysis results for egl.jani
 Experiment N=10, L=2
 
@@ -19,8 +19,8 @@ Experiment N=10, L=2
   States:      66060286
   Transitions: 66060286
   Branches:    67108861
-  Rate:        258190 states/s
-  Time:        277.3 s
+  Rate:        261212 states/s
+  Time:        271.0 s
 
 + Property messagesB
   Value:  4.010732650756836
@@ -33,13 +33,20 @@ Experiment N=10, L=2
     Min. prob. 1 states:          66060286
     Time for min. prob. 1 states: 2.9 s
 
+  + Essential states
+    Iterations:       2
+    Essential states: 3
+    Transitions:      3
+    Branches:         4
+    Time:             10.5 s
+
   + Value iteration
     Final error: 0
     Iterations:  2
-    Time:        6.2 s
+    Time:        0.0 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

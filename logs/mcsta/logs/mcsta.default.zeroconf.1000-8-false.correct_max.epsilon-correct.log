@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta zeroconf.jani --props correct_max -E N=1000,K=8,reset=false -O out.txt Minimal --no-partial-results --width 1e-6 --relative-width --alg OptimisticValueIteration --epsilon 1e-6
-Wallclock time:	20.131481170654297
+Command:	mcsta/modest mcsta zeroconf.jani -E N=1000,K=8,reset=false --props correct_max -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width
+Wallclock time:	13.372882604598999
 Return code:	0
 Output:
 
@@ -11,7 +11,7 @@ zeroconf.jani:variables[21]: info: Expanding variable "l" into 5 locations in au
 zeroconf.jani: info: Need 24 bytes per state.
 zeroconf.jani: info: Explored 1868787 states for N=1000, K=8, reset=False.
 
-Peak memory usage: 285 MB
+Peak memory usage: 710 MB
 Analysis results for zeroconf.jani
 Experiment N=1000, K=8, reset=False
 
@@ -20,23 +20,30 @@ Experiment N=1000, K=8, reset=False
   States:      1868787
   Transitions: 3430379
   Branches:    4224736
-  Rate:        190111 states/s
-  Time:        11.0 s
+  Rate:        394675 states/s
+  Time:        5.0 s
 
 + Property correct_max
-  Probability: 4.801413635072433E-08
-  Bounds:      [4.801413635072433E-08, 4.801413635072433E-08]
-  Time:        8.1 s
+  Probability: 4.8014136350724334E-08
+  Bounds:      [4.801413635072433E-08, 4.801413635072434E-08]
+  Time:        7.8 s
+
+  + Essential states
+    Iterations:       37
+    Essential states: 1312763
+    Transitions:      2800966
+    Branches:         3572836
+    Time:             4.8 s
 
   + Optimistic value iteration
-    Total iterations:  59
+    Total iterations:  32
     Verif. attempts:   1
-    Verif. iterations: 33
+    Verif. iterations: 12
     Final epsilon:     1E-06
-    Time:              7.9 s
+    Time:              3.0 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta nand.jani --props reliable -E N=60,K=4 -O out.txt Minimal --no-partial-results --epsilon 0 --absolute-epsilon --p0 --p1</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta nand.jani -E N=60,K=4 --props reliable -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">82.34877943992615s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">31.09599471092224s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 		<tr><td>Relative Error:</td><td style="tt">4.369369602175868e-15</td></tr>
 	</table>
@@ -33,7 +33,7 @@
 nand.jani: info: Need 16 bytes per state.
 nand.jani: info: Explored 18826082 states for N=60, K=4.
 
-Peak memory usage: 1871 MB
+Peak memory usage: 4540 MB
 Analysis results for nand.jani
 Experiment N=60, K=4
 
@@ -42,13 +42,13 @@ Experiment N=60, K=4
   States:      18826082
   Transitions: 18826082
   Branches:    29772212
-  Rate:        285326 states/s
-  Time:        74.1 s
+  Rate:        830953 states/s
+  Time:        24.2 s
 
 + Property reliable
   Probability: 0.6867214589192275
   Bounds:      [0.6867214589192275, 0.6867214589192275]
-  Time:        4.2 s
+  Time:        6.2 s
 
   + Precomputations
     Min. prob. 0 states:          1757695
@@ -56,16 +56,23 @@ Experiment N=60, K=4
     Min. prob. 1 states:          547
     Time for min. prob. 1 states: 0.8 s
 
+  + Essential states
+    Iterations:       2
+    Essential states: 9927037
+    Transitions:      9927037
+    Branches:         19854072
+    Time:             3.5 s
+
   + Value iteration
     Final error: 0
     Iterations:  2
-    Time:        1.8 s
+    Time:        0.9 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

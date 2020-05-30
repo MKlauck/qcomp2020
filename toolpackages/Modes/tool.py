@@ -22,34 +22,21 @@ def is_benchmark_supported(benchmark : Benchmark):
 	short = benchmark.get_model_short_name()
 	prop = benchmark.get_property_name()
 	prop_type = benchmark.get_short_property_type()
-	if(prop_type == "S"):
-		return False
 	if(short == "bluetooth"                                    # multiple initial states
-		#or short == "cluster" and prop == "below_min"            # bounded expected-reward property
 		or short == "herman"                                     # multiple initial states
-		#or short == "kanban" and prop == "throughput"            # something's wrong with our algorithm here, didn't manage to investigate before deadline, hope to fix for second round
-		#or short == "mapk_cascade" and prop == "reactions"       # bounded expected-reward property
 		or short == "oscillators"                                # model file too large, cannot be parsed
 		or short == "repudiation_malicious"                      # open clock constraints
-		#or short == "resource-gathering" and prop == "expgold"   # bounded expected-reward property
-		#or short == "resource-gathering" and prop == "prgoldgem" # unsupported property
-		#or short == "sms" and prop == "Unavailability"           # Zeno MA model: not supported for long-run average rewards
 		):
 		return False
 	
 	return True
 
-def add_invocations(invocations, track_id, default_cmd, specific_cmd):
+def add_invocations(invocations, track_id, default_cmd):
 	default_inv = Invocation()
 	default_inv.identifier = "default"
 	default_inv.track_id = track_id
 	default_inv.add_command(default_cmd)
 	invocations.append(default_inv)
-	specific_inv = Invocation()
-	specific_inv.identifier = "specific"
-	specific_inv.track_id = track_id
-	specific_inv.add_command(specific_cmd)
-	invocations.append(specific_inv)
 
 # Run with python3 qcomp2020_generate_invocations.py
 def get_invocations(benchmark : Benchmark):
@@ -76,38 +63,33 @@ def get_invocations(benchmark : Benchmark):
 	if benchmark.get_open_parameter_def_string() != "":
 		benchmark_settings += " -E " + benchmark.get_open_parameter_def_string()
 
-	default_base = "modes/modest modes " + benchmark.get_janifilename() + " " + benchmark_settings + " -O out.txt Minimal"
-	specific_base = default_base + " --unsafe" # specific settings: only information about model type, property type and state space size via benchmark.get_num_states_tweak() may be used for tweaking
+	default_base = "modes/modest modes --unsafe --max-run-length 0 " + benchmark.get_janifilename() + " " + benchmark_settings + " -O out.txt Minimal"
 
 	#
 	# Track "probably-epsilon-correct"
 	#
 	precision = "5e-2"
 	default_cmd  = default_base  + " --width $PRECISION --relative-width"
-	specific_cmd = specific_base + " --width $PRECISION --relative-width"
 	if benchmark.is_dtmc() or benchmark.is_ctmc():
-		add_invocations(invocations, "probably-epsilon-correct", default_cmd.replace("$PRECISION", precision), specific_cmd.replace("$PRECISION", precision))
+		add_invocations(invocations, "probably-epsilon-correct", default_cmd.replace("$PRECISION", precision))
 
 	#
 	# Track "often-epsilon-correct"
 	#
 	precision = "1e-3"
 	if benchmark.is_dtmc() or benchmark.is_ctmc():
-		add_invocations(invocations, "often-epsilon-correct", default_cmd.replace("$PRECISION", precision), specific_cmd.replace("$PRECISION", precision))
+		add_invocations(invocations, "often-epsilon-correct", default_cmd.replace("$PRECISION", precision))
 
 	#
 	# Track "often-epsilon-correct-10-min"
 	#
 	if benchmark.is_dtmc() or benchmark.is_ctmc():
 		default_cmd  = default_base  + " -N 2147483647"
-		specific_cmd = specific_base + " -N 2147483647"
 	else:
 		default_cmd  = default_base  + " --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
-		specific_cmd = specific_base + " --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000"
 		if benchmark.is_pta():
 			default_cmd  += " --digital-clocks"
-			specific_cmd += " --digital-clocks"
-	add_invocations(invocations, "often-epsilon-correct-10-min", default_cmd, specific_cmd)
+	add_invocations(invocations, "often-epsilon-correct-10-min", default_cmd)
 	
 	#
 	# Done
@@ -133,10 +115,4 @@ def get_result(benchmark : Benchmark, execution : Execution):
 	pos = pos + len("\": ")
 	eol_pos = log.find("\n", pos)
 	result = log[pos:eol_pos]
-	#if(result == "Tru"):
-	#	return "True"
-	#elif(result == "Fals"):
-	#	return "False"
-	#else:
-	#	return result
 	return result

@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta embedded.jani --props up_time -E MAX_COUNT=8,T=12 -O out.txt Minimal --no-partial-results --width 5e-2 --relative-width --alg OptimisticValueIteration --epsilon 5e-2
-Wallclock time:	12.342806100845337
+Command:	mcsta/modest mcsta embedded.jani -E MAX_COUNT=8,T=12 --props up_time -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width --p0 --p1
+Wallclock time:	10.14117980003357
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ embedded.jani:model: info: embedded is a CTMC model.
 embedded.jani: info: Need 16 bytes per state.
 embedded.jani: info: Explored 5820 states for MAX_COUNT=8, T=12.0.
 
-Peak memory usage: 53 MB
+Peak memory usage: 54 MB
 Analysis results for embedded.jani
 Experiment MAX_COUNT=8, T=12.0
 
@@ -19,13 +19,13 @@ Experiment MAX_COUNT=8, T=12.0
   States:      5820
   Transitions: 5820
   Branches:    16788
-  Rate:        48099 states/s
-  Time:        0.2 s
+  Rate:        84348 states/s
+  Time:        0.1 s
 
 + Property up_time
   Value:  472.26168182517654
   Bounds: [454.97477551564975, 489.54858813470327]
-  Time:   11.7 s
+  Time:   9.6 s
 
   + Precomputations
     Min. prob. 0 states:          0
@@ -33,15 +33,22 @@ Experiment MAX_COUNT=8, T=12.0
     Min. prob. 1 states:          5820
     Time for min. prob. 1 states: 0.0 s
 
+  + Essential states
+    Iterations:       1
+    Essential states: 2666
+    Transitions:      2666
+    Branches:         13634
+    Time:             0.0 s
+
   + Optimistic value iteration
     Total iterations:  61134
     Verif. attempts:   12
     Verif. iterations: 20517
     Final epsilon:     4.132842291174597E-06
-    Time:              11.6 s
+    Time:              9.5 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

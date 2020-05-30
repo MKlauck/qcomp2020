@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta haddad-monmege.jani --props target -E N=100,p=0.7 -O out.txt Minimal --epsilon 0
-Wallclock time:	600.0362594127655
+Command:	mcsta/modest mcsta haddad-monmege.jani -E N=100,p=0.7 --props target -O out.txt Minimal --unsafe --es -S Memory --epsilon 0 --p0 --p1
+Wallclock time:	600.0175030231476
 Return code:	0
 Output:
 
@@ -20,22 +20,35 @@ Experiment N=100, p=0.7
   States:      201
   Transitions: 201
   Branches:    400
-  Rate:        3466 states/s
-  Time:        0.1 s
+  Rate:        5289 states/s
+  Time:        0.0 s
 
 + Property target
-  Probability: 8.735972224654956E-23
-  Bounds:      [8.735972224654956E-23, 1]
+  Probability: 7.127651565702865E-23
+  Bounds:      [7.127651565702865E-23, 1]
   Time:        599.5 s
+
+  + Precomputations
+    Min. prob. 0 states:          1
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          1
+    Time for min. prob. 1 states: 0.0 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 201
+    Transitions:      201
+    Branches:         400
+    Time:             0.0 s
 
   + Value iteration
     Status:      Cancelled
-    Final error: 1.2642042183846132E-08
-    Iterations:  79101146
-    Time:        599.4 s
+    Final error: 1.5494658911807113E-08
+    Iterations:  64538370
+    Time:        599.5 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 

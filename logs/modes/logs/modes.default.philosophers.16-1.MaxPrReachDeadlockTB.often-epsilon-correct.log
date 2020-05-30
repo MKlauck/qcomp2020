@@ -1,5 +1,5 @@
-Command:	modes/modest modes philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width
-Wallclock time:	1800.004196882248
+Command:	modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MaxPrReachDeadlockTB -E TIME_BOUND=1 -O out.txt Minimal --width 1e-3 --relative-width
+Wallclock time:	1800.003609418869
 Return code:	None
 Output:
 
@@ -10,8 +10,8 @@ philosophers.16.jani:model: info: Philosophers16 is a CTMC model and will be sim
 philosophers.16.jani: info: Using default value of 0.95 for the confidence parameter.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.39-gc5bf1c138.
+The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.
 
 
 ----------
-Computation aborted after 1800.004196882248 seconds since the total time limit of 1800 seconds was exceeded.
+Computation aborted after 1800.003609418869 seconds since the total time limit of 1800 seconds was exceeded.

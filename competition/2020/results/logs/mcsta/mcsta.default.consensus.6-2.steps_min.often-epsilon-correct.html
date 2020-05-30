@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta consensus.6.jani --props steps_min -E K=2 -O out.txt Minimal --no-partial-results --width 1e-3 --relative-width</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta consensus.6.jani -E K=2 --props steps_min -O out.txt Minimal --unsafe --es -S Memory --no-partial-results</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">96.78110074996948s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">96.99260330200195s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 		<tr><td>Relative Error:</td><td style="tt">5.1073308583333335e-05</td></tr>
 	</table>
@@ -40,7 +40,7 @@ consensus.6.jani: info: Need 24 bytes per state.
 consensus.6.jani: info: Explored 1258240 states for K=2.
 consensus.6.jani:properties[4]: warning: Computing minimum expected reward in property &quot;steps_min&quot; without checking for zero-reward end components.
 
-Peak memory usage: 328 MB
+Peak memory usage: 883 MB
 Analysis results for consensus.6.jani
 Experiment K=2
 
@@ -49,28 +49,35 @@ Experiment K=2
   States:      1258240
   Transitions: 5008128
   Branches:    6236736
-  Rate:        42561 states/s
-  Time:        31.5 s
+  Rate:        87786 states/s
+  Time:        14.7 s
 
 + Property steps_min
   Value:  431.977936330692
   Bounds: [431.977936330692, infinity)
-  Time:   64.7 s
+  Time:   81.7 s
 
   + Precomputations
     Max. prob. 1 states:          1258240
-    Time for max. prob. 1 states: 5.6 s
+    Time for max. prob. 1 states: 5.5 s
+
+  + Essential states
+    Iterations:       4
+    Essential states: 1197403
+    Transitions:      4840489
+    Branches:         6069097
+    Time:             0.8 s
 
   + Value iteration
-    Final error: 9.975954657548069E-07
+    Final error: 9.97569067408668E-07
     Iterations:  576
-    Time:        59.0 s
+    Time:        75.2 s
 
 Exported results to file &quot;/out.txt&quot;.	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
 </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta vgs.5.jani --props MinExpTimeFailed -E TIME_BOUND=10000 -O out.txt Minimal --epsilon 0
-Wallclock time:	600.1530020236969
+Command:	mcsta/modest mcsta vgs.5.jani -E TIME_BOUND=10000 --props MinExpTimeFailed -O out.txt Minimal --unsafe --es -S Memory --epsilon 0
+Wallclock time:	600.2361357212067
 Return code:	0
 Output:
 
@@ -10,7 +10,7 @@ vgs.5.jani:model: info: DftToGspnTransformation is an MA model.
 vgs.5.jani: info: Need 152 bytes per state.
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
 
 ############################## Notes ##############################

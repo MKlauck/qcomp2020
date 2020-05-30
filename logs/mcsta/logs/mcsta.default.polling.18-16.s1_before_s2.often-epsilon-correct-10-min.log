@@ -1,5 +1,5 @@
-Command:	mcsta/modest mcsta polling.18.jani --props s1_before_s2 -E T=16 -O out.txt Minimal --epsilon 0
-Wallclock time:	600.6911873817444
+Command:	mcsta/modest mcsta polling.18.jani -E T=16 --props s1_before_s2 -O out.txt Minimal --unsafe --es -S Memory --epsilon 0 --p0 --p1
+Wallclock time:	538.0686228275299
 Return code:	0
 Output:
 
@@ -28,10 +28,8 @@ polling.18.jani:variables[20]: info: Expanding variable "s17" into 2 locations i
 polling.18.jani:variables[21]: info: Expanding variable "s18" into 2 locations in automaton "station18".
 polling.18.jani: info: Need 40 bytes per state.
 polling.18.jani: info: Explored 7077888 states for T=16.0.
-polling.18.jani: warning: Encountered a value greater than 1 during value iteration. The final result for property "s1_before_s2" is likely affected by floating-point errors.
-polling.18.jani: warning: Value iteration for property "s1_before_s2" was aborted before convergence.
 
-Peak memory usage: 1726 MB
+Peak memory usage: 5900 MB
 Analysis results for polling.18.jani
 Experiment T=16.0
 
@@ -40,22 +38,34 @@ Experiment T=16.0
   States:      7077888
   Transitions: 7077888
   Branches:    67371008
-  Rate:        35686 states/s
-  Time:        210.9 s
+  Rate:        64928 states/s
+  Time:        110.8 s
 
 + Property s1_before_s2
-  Probability: 0.5390072187897893
-  Bounds:      [0.5390072187897893, 1]
-  Time:        388.9 s
+  Probability: 0.5390072622099933
+  Bounds:      [0.5390072622099933, 0.5390072622099933]
+  Time:        426.4 s
+
+  + Precomputations
+    Min. prob. 0 states:          262144
+    Time for min. prob. 0 states: 5.6 s
+    Min. prob. 1 states:          3407872
+    Time for min. prob. 1 states: 10.8 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 3407874
+    Transitions:      3407874
+    Branches:         35258370
+    Time:             2.3 s
 
   + Value iteration
-    Status:      Cancelled
-    Final error: 2.0548035558942478E-09
-    Iterations:  668
-    Time:        388.7 s
+    Final error: 0
+    Iterations:  1434
+    Time:        407.6 s
 
 Exported results to file "/out.txt".
 
 ##############################Output to stderr##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.37-g70ec9956e.
+The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.
 
