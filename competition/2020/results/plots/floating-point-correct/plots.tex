@@ -116,24 +116,24 @@
 
     \begin{document}
             \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(44/67), Storm(45/67), Storm-static(34/67).Default configuration.
-                \quantileplot{janitools.csv}{mcsta,Storm,Storm-static}
+                Quantile plot for 67 benchmarks: mcsta(44/67), Storm-static(34/67).Default configuration.
+                \quantileplot{janitools.csv}{mcsta,Storm-static}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(46/67), Storm(45/67), Storm-static(44/67).Specific configuration.
-                \quantileplot{specificjanitools.csv}{mcsta,Storm,Storm-static}
+                Quantile plot for 67 benchmarks: mcsta(46/67), Storm-static(44/67).Specific configuration.
+                \quantileplot{specificjanitools.csv}{mcsta,Storm-static}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(44/67), Storm(45/67), Storm-static(34/67).Default configuration.
-                \quantileplot{generalpurpose.csv}{mcsta,Storm,Storm-static}
+                Quantile plot for 67 benchmarks: mcsta(44/67), Storm-static(34/67).Default configuration.
+                \quantileplot{generalpurpose.csv}{mcsta,Storm-static}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(46/67), Storm(45/67), Storm-static(44/67).Specific configuration.
-                \quantileplot{specificgeneralpurpose.csv}{mcsta,Storm,Storm-static}
+                Quantile plot for 67 benchmarks: mcsta(46/67), Storm-static(44/67).Specific configuration.
+                \quantileplot{specificgeneralpurpose.csv}{mcsta,Storm-static}
             \end{center}
                     \pagebreak
 
@@ -150,29 +150,29 @@
 
             \begin{center}
                 Scatter Plot for Storm with default settings (n=79).
-                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 36/79)}
+                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 41/79)}
             \end{center}
                 
             \begin{center}
                 Scatter Plot for Storm with specific settings (n=79).
-                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 11/79)}
+                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 41/79)}
             \end{center}
                 \pagebreak
 
             \begin{center}
                 Scatter Plot for Storm-static with default settings (n=79).
-                \scatterplot{scatterStorm-static.csv}{Storm-static}{\tool{Storm-static}  (default, fastest on 5/79)}
+                \scatterplot{scatterStorm-static.csv}{Storm-static}{\tool{Storm-static}  (default, fastest on 20/79)}
             \end{center}
                 
             \begin{center}
                 Scatter Plot for Storm-static with specific settings (n=79).
-                \scatterplot{scatterspecificStorm-static.csv}{Storm-static}{\tool{Storm-static}  (specific, fastest on 31/79)}
+                \scatterplot{scatterspecificStorm-static.csv}{Storm-static}{\tool{Storm-static}  (specific, fastest on 40/79)}
             \end{center}
                 \pagebreak
 
             \begin{center}
                 Scatter Plot for mcsta with default settings (n=69).
-                \scatterplot{scattermcsta.csv}{mcsta}{\tool{mcsta}  (default, fastest on 22/69)}
+                \scatterplot{scattermcsta.csv}{mcsta}{\tool{mcsta}  (default, fastest on 34/69)}
             \end{center}
                 
             \begin{center}
@@ -180,4 +180,15 @@
                 \scatterplot{scatterspecificmcsta.csv}{mcsta}{\tool{mcsta}  (specific, fastest on 22/69)}
             \end{center}
                 \pagebreak
+
+        \begin{center}
+            Scatter Plot for Storm vs. Storm-static with default settings (n=79).
+            \scatterplot{scatter_storm_vs_static.csv}{Storm}{\tool{Storm}  (default, fastest on 42/79)}
+        \end{center}
+            
+        \begin{center}
+            Scatter Plot for Storm vs. Storm-static with specific settings (n=79).
+            \scatterplot{scatter_storm_vs_staticspecific.csv}{Storm}{\tool{Storm}  (specific, fastest on 14/79)}
+        \end{center}
+            \pagebreak
 \end{document}

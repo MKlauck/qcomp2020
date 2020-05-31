@@ -324,7 +324,9 @@ def create_scatter_plot_vs_all_csv(tool, default_times = True):
                 row.append(max(1, tool_times[id][tool][results_index]))
             compare_value = 4000
             for compare_tool in tools:
-                if compare_tool == tool:
+                if compare_tool == tool or compare_tool == "Storm":         #do not compare with Storm
+                    continue
+                if tool =="Storm" and compare_tool == "Storm-static":       #do not compare Storm with Storm-static
                     continue
                 if len(supported_tools[id][compare_tool]) > 0 and supported_tools[id][compare_tool][results_index] not in {"TO", "ERR", "INC"}:
                     compare_value = min(tool_times[id][compare_tool][results_index], compare_value)
@@ -368,6 +370,36 @@ def create_scatter_plot_vs_all_csv_relative_error(tool, default_times = True):
             row.append(max(1,compare_value))
             result_csv.append(row)
     return result_csv
+
+
+def create_scatter_plot_storm_vs_storm_static(tool, default_times = True):
+    result_csv = [["id", "Type", tool, tool + "shifted", "other", "othershifted"]]
+    results_index = 0 if default_times else -1
+    for id in benchmark_ids:
+        if len(supported_tools[id][tool]) > 0:
+            row = [id, get_benchmark_from_id(settings, id).get_model_type().lower()]
+            res_str = supported_tools[id][tool][results_index]
+            if res_str == "TO":
+                row.append(4000)
+                row.append(4000)
+            elif res_str == "ERR":
+                row.append(8000)
+                row.append(8000)
+            elif res_str == "INC":
+                row.append(16000)
+                row.append(16000)
+            else:
+                row.append(tool_times[id][tool][results_index])
+                row.append(max(1, tool_times[id][tool][results_index]))
+            compare_value = 4000
+            for compare_tool in ["Storm-static"]:
+                if len(supported_tools[id][compare_tool]) > 0 and supported_tools[id][compare_tool][results_index] not in {"TO", "ERR", "INC"}:
+                    compare_value = min(tool_times[id][compare_tool][results_index], compare_value)
+            row.append(compare_value)
+            row.append(max(1,compare_value))
+            result_csv.append(row)
+    return result_csv
+
 
 def create_instances_plot(default_times = True):
     result_csv = [["tool", "solved", "accumulated", "average"]]
@@ -624,11 +656,11 @@ if(track_id != "often-epsilon-correct-10-min"):
     filenames = []
     nums = []
 
-    subsets.append(["ePMC", "mcsta", "Storm", "Storm-static"])
+    subsets.append(["ePMC", "mcsta", "Storm-static"])
     filenames.append("janitools.csv")
     nums.append(None)
 
-    subsets.append(["ePMC", "mcsta", "Storm", "Storm-static", "PRISM"])
+    subsets.append(["ePMC", "mcsta", "Storm-static", "PRISM"])
     filenames.append("generalpurpose.csv")
     nums.append(None)
 
@@ -792,6 +824,26 @@ if(track_id != "often-epsilon-correct-10-min"):
             \end{center}
                 """)
             plotfile.write("\pagebreak\n")
+
+
+        #scatter plot Storm vs Storm-static
+        tool = "Storm"
+        for default in [True, False]:
+            csv = create_scatter_plot_storm_vs_storm_static("Storm", default)
+            filename = "scatter_storm_vs_static{}.csv".format("" if default else "specific")
+            num_fastest = 0
+            for row in csv[1:]:
+                if row[2] < row[4]:
+                    num_fastest += 1
+            save_csv(csv, os.path.join(plot_dir, filename), delim=";")
+            cap = "Scatter Plot for {} vs. Storm-static with {} settings (n={}).".format(tool, "default" if default else "specific", len(csv)-1)
+            plotfile.write(r"""
+        \begin{center}
+            """ + cap + r"""
+            \scatterplot{""" + filename + "}{" + tool + r"}{\tool{" + tool + "} " + (" ({}, fastest on {}/{})".format("default" if default else "specific", num_fastest, len(csv) - 1)) + r"""}
+        \end{center}
+            """)
+        plotfile.write("\pagebreak\n")
 
         plotfile.write("\end{document}\n")
 else:
