@@ -2,6 +2,12 @@
     \usepackage{pgfplots}
     \usepackage{pgfplotstable}
     \usepackage{tikz}
+    \usepackage{xcolor}
+    \definecolor{color1}{RGB}{55,126,184}
+    \definecolor{color2}{RGB}{228,26,28}
+    \definecolor{color3}{RGB}{77,175,74}
+    \definecolor{color4}{RGB}{152,78,163}
+    \definecolor{color5}{RGB}{255,127,0}
     \usepackage{xifthen}
     \newcommand{\tool}[1]{\textsc{#1}}
 
@@ -15,9 +21,9 @@
             \ifthenelse{\equal{#1}{mcsta}}{\tikzset{red, mark=x, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{Storm}}{\tikzset{blue,mark=+, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{Storm-static}}{\tikzset{cyan,mark=+, mark options={thick}}}{}%
-            \ifthenelse{\equal{#1}{ePMC}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
+            \ifthenelse{\equal{#1}{ePMC-6}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{PRISM}}{\tikzset{orange, mark=asterisk}}{}%
-            \ifthenelse{\equal{#1}{PRISM-TUM}}{\tikzset{teal, mark=star}}{}%
+            \ifthenelse{\equal{#1}{PET}}{\tikzset{teal, mark=star}}{}%
             \ifthenelse{\equal{#1}{modes}}{\tikzset{magenta, mark=square*,  mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{DFTRES}}{\tikzset{yellow,mark=diamond*}}{}%
             \ifthenelse{\equal{#1}{probFD}}{\tikzset{gray, mark=pentagon*}}{}%
@@ -60,56 +66,77 @@
     %Scatter plots
     \newlength{\scatterplotsize}
     \setlength{\scatterplotsize}{8cm}
-    \newcommand{\scatterplot}[2]{%
+    \pgfplotsset{scatteraxisonevsall/.style={%
+            ymax=6000,
+            xmax=25000,
+            extra x ticks = {4000,8000,16000},
+            extra x tick labels = {TO,ERR,INC},
+            extra y ticks = {4000},
+            extra y tick labels = {n/a},
+        ylabel style={yshift=-5.1mm,xshift=-2.5mm},
+        legend columns=2,
+        legend pos=north east,
+        legend style={font=\scriptsize,anchor=north west,xshift=11.5mm}
+    }}
+    \newcommand{\scatterplot}[4]{\pgfplotsset{scatteraxis/.style={scatteraxisonevsall}}\scatterplota{#1}{#2shifted}{#3}{other}{best other}{#4}}
+    \newcommand{\scatterplotstorm}[4]{\pgfplotsset{scatteraxis/.style={scatteraxisonevsall}}\scatterplota{#1}{#2shifted}{#3}{other}{\tool{St.}-static}{#4}}
+    \pgfplotsset{scatteraxisonevsone/.style={%
+            ymax=35000,
+            xmax=35000,
+            extra x ticks = {4000,7200,12960,23328},
+            extra x tick labels = {TO,ERR,INC,n/s},
+            extra y ticks = {4000,7200,12960,23328},
+            extra y tick labels = {TO,ERR,INC,n/s},
+        ylabel style={yshift=-0.25cm},
+        legend columns=1,
+        legend pos=north east,
+        legend style={font=\scriptsize,anchor=north west,xshift=6.5mm}
+    }}
+    \newcommand{\scatterplottwo}[6]{{\setlength{\scatterplotsize}{0.435\linewidth}\pgfplotsset{scatteraxis/.style={scatteraxisonevsone}}\scatterplota{#1}{#2shifted}{#3}{#4shifted}{#5}{#6}}}
+    \newcommand{\scatterplota}[6]{%
     \begin{tikzpicture}
         \begin{axis}[
-                width=\scatterplotsize,
-                height=\scatterplotsize,
-                axis equal image,
-                xmin=0.04,
-                ymin=0.04,
-                ymax=6000,
-                xmax=25000,
-                xmode=log,
-                ymode=log,
-                axis x line=bottom,
-                axis y line=left,
-                xtick={1,6,60,600,1200,1800},
-                xticklabels={1,6,60,600,1200,1800},
-                extra x ticks = {4000,8000,16000},
-                extra x tick labels = {TO,ERR,INC},
-                extra x tick style = {grid = major},
-                ytick={1,6,60,600,1200,1800},
-                yticklabels={1,6,60,600,1200,1800},
-                extra y ticks = {4000},
-                extra y tick labels = {n/a},
-                extra y tick style = {grid = major},
-                xlabel=#2,
-                xlabel style={yshift=0cm},
-                ylabel=Other tools (best),
-                ylabel style={yshift=-0.4cm},
-                yticklabel style={font=\scriptsize},
-                xticklabel style={rotate=290,anchor=west,font=\scriptsize},
-                legend pos=north west,
-                legend columns=-1,
-                legend style={font=\scriptsize,yshift=0.7cm,xshift=1cm}
-            ]
-            \addplot[
-                scatter,
-                only marks,
-                scatter/classes={
-                    dtmc={mark=square,blue},
-                    mdp={mark=triangle,red},
-                    ctmc={mark=diamond,orange},
-                    ma={mark=pentagon,teal},
-                    pta={mark=o,green!70!black}
-                },
-                scatter src=explicit symbolic
-                ]%
-                table [col sep=semicolon,x=#2,y=other,meta=Type] {#1};
-            \legend{DTMC, MDP, CTMC, MA, PTA}
-            \addplot[no marks] coordinates {(0.01,0.01) (3600,3600) };
-            \addplot[no marks, densely dotted] coordinates {(0.01,0.1) (360,3600) };
+        scatteraxis,
+        width=\scatterplotsize,
+        height=\scatterplotsize,
+        axis equal image,
+        xmin=0.3,
+        ymin=0.3,
+        xmode=log,
+        ymode=log,
+        axis x line=bottom,
+        axis y line=left,
+        xtick={1,6,60,600,1800},
+        xticklabels={1,6,60,600,1800},
+        extra x tick style = {grid = major},
+        ytick={1,6,60,600,1800},
+        yticklabels={1,6,60,600,1800},
+        extra y tick style = {grid = major},
+        xlabel={#3},
+        xlabel style={yshift=-2mm,xshift=-2mm},
+        ylabel={#5},
+        yticklabel style={font=\tiny},
+        xticklabel style={rotate=90,anchor=east,font=\tiny},
+        legend cell align=left
+        ]
+        \addplot[
+        scatter,
+        only marks,
+        scatter/classes={
+            dtmc={mark=pentagon*,color4,mark size=1.5},
+            ctmc={mark=*,color5,mark size=1.33},
+            mdp={mark=triangle*,color2,mark size=1.75},
+            ma={mark=diamond*,color3,mark size=1.75},
+            pta={mark=square*,color1,mark size=1.25}
+        },
+        scatter src=explicit symbolic
+        ]%
+        table [col sep=semicolon,x=#2,y=#4,meta=Type] {#1};
+        \ifthenelse{\equal{#6}{legend}}{\legend{DTMC~${}$, CTMC, MDP, MA, PTA}}{}
+        \ifthenelse{\equal{#6}{legend-1}}{\legend{DTMC, CTMC, MDP, MA, PTA}}{}
+        \addplot[no marks] coordinates {(0.01,0.01) (3600,3600) };
+        \addplot[no marks, densely dotted] coordinates {(0.01,0.1) (360,3600) };
+        \addplot[no marks, densely dotted] coordinates {(0.1,0.01) (3600,360) };
         \end{axis}
     \end{tikzpicture}
     }
@@ -150,45 +177,45 @@
 
             \begin{center}
                 Scatter Plot for Storm with default settings (n=79).
-                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 41/79)}
+                \scatterplot{scatterStorm.csv}{Storm}{\tool{Storm}  (default, fastest on 41/79)}{legend}
             \end{center}
                 
             \begin{center}
                 Scatter Plot for Storm with specific settings (n=79).
-                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 41/79)}
+                \scatterplot{scatterspecificStorm.csv}{Storm}{\tool{Storm}  (specific, fastest on 41/79)}{legend}
             \end{center}
                 \pagebreak
 
             \begin{center}
                 Scatter Plot for Storm-static with default settings (n=79).
-                \scatterplot{scatterStorm-static.csv}{Storm-static}{\tool{Storm-static}  (default, fastest on 20/79)}
+                \scatterplot{scatterStorm-static.csv}{Storm-static}{\tool{Storm-static}  (default, fastest on 20/79)}{legend}
             \end{center}
                 
             \begin{center}
                 Scatter Plot for Storm-static with specific settings (n=79).
-                \scatterplot{scatterspecificStorm-static.csv}{Storm-static}{\tool{Storm-static}  (specific, fastest on 40/79)}
+                \scatterplot{scatterspecificStorm-static.csv}{Storm-static}{\tool{Storm-static}  (specific, fastest on 40/79)}{legend}
             \end{center}
                 \pagebreak
 
             \begin{center}
                 Scatter Plot for mcsta with default settings (n=69).
-                \scatterplot{scattermcsta.csv}{mcsta}{\tool{mcsta}  (default, fastest on 34/69)}
+                \scatterplot{scattermcsta.csv}{mcsta}{\tool{mcsta}  (default, fastest on 34/69)}{legend}
             \end{center}
                 
             \begin{center}
                 Scatter Plot for mcsta with specific settings (n=69).
-                \scatterplot{scatterspecificmcsta.csv}{mcsta}{\tool{mcsta}  (specific, fastest on 22/69)}
+                \scatterplot{scatterspecificmcsta.csv}{mcsta}{\tool{mcsta}  (specific, fastest on 22/69)}{legend}
             \end{center}
                 \pagebreak
 
         \begin{center}
             Scatter Plot for Storm vs. Storm-static with default settings (n=79).
-            \scatterplot{scatter_storm_vs_static.csv}{Storm}{\tool{Storm}  (default, fastest on 42/79)}
+            \scatterplotstorm{scatter_storm_vs_static.csv}{Storm}{\tool{Storm}  (default, fastest on 42/79)}{legend}
         \end{center}
             
         \begin{center}
             Scatter Plot for Storm vs. Storm-static with specific settings (n=79).
-            \scatterplot{scatter_storm_vs_staticspecific.csv}{Storm}{\tool{Storm}  (specific, fastest on 14/79)}
+            \scatterplotstorm{scatter_storm_vs_staticspecific.csv}{Storm}{\tool{Storm}  (specific, fastest on 14/79)}{legend}
         \end{center}
             \pagebreak
 \end{document}

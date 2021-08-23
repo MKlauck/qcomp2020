@@ -1,8 +1,0 @@
-Command:	./pet.sh reachability --precision 0.000001 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=8
-Wallclock time:	473.0859251022339
-Return code:	1
-Output:
-
-##############################Output to stderr##############################
-Exception in thread "main" java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
-

@@ -1,5 +1,0 @@
-Command:	./pet.sh reachability --precision 0.001 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=5,CrowdSize=20
-Wallclock time:	600.178863286972
-Return code:	130
-Output:
-

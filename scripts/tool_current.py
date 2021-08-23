@@ -16,7 +16,7 @@ def load(settings):
             move(os.path.join(sys.path[0], "tmptool2.py"), os.path.join(sys.path[0], "tmptool.py"))
     
 def get_name(settings):
-    """ should return the name of the tool as listed on http://qcomp.org/competition/2019/"""
+    """ should return the name of the tool as listed on http://qcomp.org/competition/2020/"""
     load(settings)
     return tmptool.get_name()
 

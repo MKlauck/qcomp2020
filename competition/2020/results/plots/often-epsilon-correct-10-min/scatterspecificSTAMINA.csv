@@ -1,4 +1,4 @@
-id;Type;STAMINA;STAMINAshifted;other;othershifted
-cluster.128-2000-20.qos1;ctmc;0.1118767546219302;1;1e-20;1
-majority.2100.change_state;ctmc;80000;80000;1e-20;1
-speed-ind.2100.change_state;ctmc;80000;80000;1e-20;1
+id;Type;STAMINA;STAMINAshifted;other;othershifted
+cluster.128-2000-20.qos1;ctmc;0.1118767546219302;1;1e-20;1
+majority.2100.change_state;ctmc;80000;80000;1e-20;1
+speed-ind.2100.change_state;ctmc;80000;80000;1e-20;1

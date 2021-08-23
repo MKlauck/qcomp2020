@@ -10,28 +10,34 @@ from fractions import *
 
 from collections import OrderedDict
 
-def load_json(path : str):
-    with open(path, 'r', encoding='utf-8-sig') as json_file:
+
+def load_json(path: str):
+    with open(path, "r", encoding="utf-8-sig") as json_file:
         return json.load(json_file, object_pairs_hook=OrderedDict)
 
-def save_json(json_data, path : str):
-    with open(path, 'w') as json_file:
-        json.dump(json_data, json_file, ensure_ascii=False, indent='\t')
 
-def load_csv(path : str, delim='\t'):
-	    with open(path, 'r') as csv_file:
-	        return list(csv.reader(csv_file, delimiter=delim))
-	
-def save_csv(csv_data, path : str, delim='\t'):
-	with open(path, 'w') as csv_file:
-	    writer = csv.writer(csv_file, delimiter=delim)
-	    writer.writerows(csv_data)
+def save_json(json_data, path: str):
+    with open(path, "w") as json_file:
+        json.dump(json_data, json_file, ensure_ascii=False, indent="\t")
 
-def ensure_directory(path : str):
+
+def load_csv(path: str, delim="\t"):
+    with open(path, "r") as csv_file:
+        return list(csv.reader(csv_file, delimiter=delim))
+
+
+def save_csv(csv_data, path: str, delim="\t"):
+    with open(path, "w", newline="") as csv_file:
+        writer = csv.writer(csv_file, delimiter=delim)
+        writer.writerows(csv_data)
+
+
+def ensure_directory(path: str):
     if not os.path.exists(path):
         os.makedirs(path)
 
-def is_valid_filename(name : str, invalid_chars = None):
+
+def is_valid_filename(name: str, invalid_chars=None):
     if invalid_chars is not None:
         for c in invalid_chars:
             if c in name:
@@ -39,13 +45,14 @@ def is_valid_filename(name : str, invalid_chars = None):
     try:
         if os.path.isfile(name):
             return True
-        open(name, 'a').close()
+        open(name, "a").close()
         os.remove(name)
     except IOError:
         return False
     return True
 
-def remove_directory_contents(directory, excluded = []):
+
+def remove_directory_contents(directory, excluded=[]):
     for name in os.listdir(directory):
         if name not in excluded:
             try:
@@ -54,11 +61,13 @@ def remove_directory_contents(directory, excluded = []):
             except Exception:
                 print("Unable to remove '{}'".format(path))
 
+
 def remove_file_or_dir(name):
     if os.path.isdir(name):
         shutil.rmtree(name)
     else:
         os.remove(name)
+
 
 def is_bool(expr):
     if isinstance(expr, bool):
@@ -67,6 +76,7 @@ def is_bool(expr):
         return expr.lower() in ["true", "false"]
     except:
         return False
+
 
 def is_inf(expr):
     try:
@@ -80,6 +90,7 @@ def is_inf(expr):
             return False
     return False
 
+
 def is_number(expr):
     if is_bool(expr):
         return False
@@ -91,6 +102,7 @@ def is_number(expr):
         return False
     return True
 
+
 def is_interval(expr):
     try:
         if is_number(expr["lower"]) and is_number(expr["upper"]):
@@ -99,8 +111,10 @@ def is_interval(expr):
         pass
     return False
 
+
 def is_number_or_interval(expr):
     return is_number(expr) or is_interval(expr)
+
 
 def try_to_number(expr):
     if is_number(expr):
@@ -113,9 +127,10 @@ def try_to_number(expr):
     except Exception:
         return expr
 
+
 def try_to_bool_or_number(expr):
     if is_bool(expr):
-        if (isinstance(expr, str)):
+        if isinstance(expr, str):
             if expr.lower() == "true":
                 return True
             elif expr.lower() == "false":
@@ -123,11 +138,13 @@ def try_to_bool_or_number(expr):
         return bool(expr)
     return try_to_number(expr)
 
+
 def get_decimal_representation(number):
     if is_number(number):
         return Decimal(number)
     else:
         return Decimal(number["num"]) / Decimal(number["den"])
+
 
 def try_to_float(expr):
     # expr might be too large for float
@@ -136,13 +153,16 @@ def try_to_float(expr):
     except Exception:
         return expr
 
+
 def get_absolute_error(reference_value, result_value):
     return get_error(False, reference_value, result_value)
+
 
 def get_relative_error(reference_value, result_value):
     return get_error(True, reference_value, result_value)
 
-def get_error(relative : bool, reference_value, result_value):
+
+def get_error(relative: bool, reference_value, result_value):
     result_value = try_to_number(result_value)
     if is_interval(reference_value):
         u = try_to_number(reference_value["upper"])
@@ -172,29 +192,46 @@ def get_error(relative : bool, reference_value, result_value):
     else:
         return diff
 
+
 def is_result_correct(settings, reference, result, track_id):
     if is_number_or_interval(reference) != is_number(result):
         return False
     if is_number_or_interval(reference):
-        if(track_id == "correct"):
-            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_correct()
-        if(track_id == "floating-point-correct"):
-            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_floating_point_correct()
-        if(track_id == "epsilon-correct"):
-            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_epsilon_correct()
-        if(track_id == "probably-epsilon-correct"):
-            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_probably_epsilon_correct()
-        if(track_id == "often-epsilon-correct"):
-            return get_error(settings.is_relative_precision(), reference, result) <= settings.goal_precision_often_epsilon_correct()
-        if(track_id == "often-epsilon-correct-10-min"):
+        if track_id == "correct":
+            return (
+                get_error(settings.is_relative_precision(), reference, result)
+                <= settings.goal_precision_correct()
+            )
+        if track_id == "floating-point-correct":
+            return (
+                get_error(settings.is_relative_precision(), reference, result)
+                <= settings.goal_precision_floating_point_correct()
+            )
+        if track_id == "epsilon-correct":
+            return (
+                get_error(settings.is_relative_precision(), reference, result)
+                <= settings.goal_precision_epsilon_correct()
+            )
+        if track_id == "probably-epsilon-correct":
+            return (
+                get_error(settings.is_relative_precision(), reference, result)
+                <= settings.goal_precision_probably_epsilon_correct()
+            )
+        if track_id == "often-epsilon-correct":
+            return (
+                get_error(settings.is_relative_precision(), reference, result)
+                <= settings.goal_precision_often_epsilon_correct()
+            )
+        if track_id == "often-epsilon-correct-10-min":
             return True
         else:
             return reference == result
     else:
-        if(track_id == "often-epsilon-correct-10-min"):
+        if track_id == "often-epsilon-correct-10-min":
             return True
         else:
             return reference == result
+
 
 class Progressbar(object):
     def __init__(self, max_value, label="Progress", width=50, delay=0.5):
@@ -209,19 +246,32 @@ class Progressbar(object):
 
     def print_progress(self, value):
         now = time.time()
-        if now - self.last_time_printed >= self.delay or value == self.max_value or value == 0:
-            if (self.max_value == 0):
+        if (
+            now - self.last_time_printed >= self.delay
+            or value == self.max_value
+            or value == 0
+        ):
+            if self.max_value == 0:
                 progress = self.width
             else:
                 progress = (value * self.width) // self.max_value
-            sys.stdout.write("\r{}: [{}{}] {}/{} ".format(self.label, '#'*progress, ' '*(self.width-progress), value, self.max_value))
+            sys.stdout.write(
+                "\r{}: [{}{}] {}/{} ".format(
+                    self.label,
+                    "#" * progress,
+                    " " * (self.width - progress),
+                    value,
+                    self.max_value,
+                )
+            )
             sys.stdout.flush()
             self.last_time_printed = now
             return True
         return False
 
+
 class Settings(object):
-    def __init__(self, toolpackage_path = None):
+    def __init__(self, toolpackage_path=None):
         if toolpackage_path is None:
             self.path_to_tool = os.path.realpath(os.curdir)
         else:
@@ -237,22 +287,34 @@ class Settings(object):
         set_an_option = False
         # for tool execution
         if not "benchmarks-directory" in self.json_data:
-            self.json_data["benchmarks-directory"] = os.path.realpath(os.path.join(sys.path[0], "../benchmarks/"))
+            self.json_data["benchmarks-directory"] = os.path.realpath(
+                os.path.join(sys.path[0], "../benchmarks/")
+            )
             set_an_option = True
         if not "logs-directory" in self.json_data:
-            self.json_data["logs-directory"] = os.path.join(os.path.realpath(os.curdir), "logs/")
+            self.json_data["logs-directory"] = os.path.join(
+                os.path.realpath(os.curdir), "logs/"
+            )
             set_an_option = True
         if not "invocations-file" in self.json_data:
-            self.json_data["invocations-file"] = os.path.join(os.path.realpath(os.curdir), "invocations.json")
+            self.json_data["invocations-file"] = os.path.join(
+                os.path.realpath(os.curdir), "invocations.json"
+            )
             set_an_option = True
         if not "results-file" in self.json_data:
-            self.json_data["results-file"] = os.path.join(os.path.realpath(os.curdir), "results.json")
+            self.json_data["results-file"] = os.path.join(
+                os.path.realpath(os.curdir), "results.json"
+            )
             set_an_option = True
         if not "results-table-file" in self.json_data:
-            self.json_data["results-table-file"] = os.path.join(os.path.realpath(os.curdir), "results.csv")
+            self.json_data["results-table-file"] = os.path.join(
+                os.path.realpath(os.curdir), "results.csv"
+            )
             set_an_option = True
         if not "benchmark-list-file" in self.json_data:
-            self.json_data["benchmark-list-file"] = os.path.join(os.path.realpath(os.curdir), "benchmarks.csv")
+            self.json_data["benchmark-list-file"] = os.path.join(
+                os.path.realpath(os.curdir), "benchmarks.csv"
+            )
             set_an_option = True
         if not "time-limit" in self.json_data:
             self.json_data["time-limit"] = 1800
@@ -264,16 +326,16 @@ class Settings(object):
             self.json_data["goal-precision-correct"] = 0
             set_an_option = True
         if not "goal-precision-floating-point-correct" in self.json_data:
-            self.json_data["goal-precision-floating-point-correct"] = 1E-14
+            self.json_data["goal-precision-floating-point-correct"] = 1e-14
             set_an_option = True
         if not "goal-precision-epsilon-correct" in self.json_data:
-            self.json_data["goal-precision-epsilon-correct"] = 1E-6
+            self.json_data["goal-precision-epsilon-correct"] = 1e-6
             set_an_option = True
         if not "goal-precision-probably-epsilon-correct" in self.json_data:
-            self.json_data["goal-precision-probably-epsilon-correct"] = 5E-2
+            self.json_data["goal-precision-probably-epsilon-correct"] = 5e-2
             set_an_option = True
         if not "goal-precision-often-epsilon-correct" in self.json_data:
-            self.json_data["goal-precision-often-epsilon-correct"] = 1E-3
+            self.json_data["goal-precision-often-epsilon-correct"] = 1e-3
             set_an_option = True
         if not "relative-precision" in self.json_data:
             self.json_data["relative-precision"] = True
@@ -362,9 +424,9 @@ class Settings(object):
 
     # for producing results table and plots
     def logs_dir_name(self):
-	        """ Retrieves the directory in which the tool logs are stored. """
-	        return os.path.join(self.path_to_tool, self.json_data["logs-directory-name"])
-	
+        """ Retrieves the directory in which the tool logs are stored. """
+        return os.path.join(self.path_to_tool, self.json_data["logs-directory-name"])
+
     def invocations_filename_name(self):
         """ Retrieves the filename to which the tool invocations are stored (and read from). """
         return os.path.join(self.path_to_tool, self.json_data["invocations-file-name"])
@@ -376,7 +438,6 @@ class Settings(object):
     def results_filename_name(self):
         """ Retrieves the filename to which the tool execution results are stored (and read from). """
         return os.path.join(self.path_to_tool, self.json_data["results-file-name"])
-	
+
 
 settings = Settings()
-

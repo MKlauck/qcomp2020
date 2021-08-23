@@ -1,8 +1,0 @@
-Command:	./pet.sh reachability --precision 0.001 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=5,CrowdSize=20
-Wallclock time:	1800.173184633255
-Return code:	None
-Output:
-
-
-----------
-Computation aborted after 1800.173184633255 seconds since the total time limit of 1800 seconds was exceeded.

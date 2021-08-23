@@ -1,6 +1,0 @@
-Command:	./pet.sh reachability --precision 0.001 --relative-error --only-result -m rabin.10.prism -p rabin.10.props --property live
-Wallclock time:	1.2377865314483643
-Return code:	0
-Output:
-1.000000000
-

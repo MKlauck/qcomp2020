@@ -1,0 +1,1896 @@
+[
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=5,CrowdSize=20"
+		],
+		"wallclock-time": 1800.1717467308044,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.crowds.5-20.positive.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=5,CrowdSize=20"
+		],
+		"wallclock-time": 1800.166315793991,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.crowds.5-20.positive.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const TotalRuns=5,CrowdSize=20"
+		],
+		"wallclock-time": 1800.1413531303406,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.crowds.5-20.positive.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=5,CrowdSize=20"
+		],
+		"wallclock-time": 1800.173184633255,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.crowds.5-20.positive.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const TotalRuns=5,CrowdSize=20"
+		],
+		"wallclock-time": 1800.1311569213867,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.crowds.5-20.positive.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=5,CrowdSize=20"
+		],
+		"wallclock-time": 600.178863286972,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.crowds.5-20.positive.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "crowds.5-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const TotalRuns=5,CrowdSize=20"
+		],
+		"wallclock-time": 600.1137523651123,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.crowds.5-20.positive.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=6,CrowdSize=20"
+		],
+		"wallclock-time": 1800.426703453064,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.crowds.6-20.positive.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=6,CrowdSize=20"
+		],
+		"wallclock-time": 1800.3688266277313,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.crowds.6-20.positive.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:10000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const TotalRuns=6,CrowdSize=20"
+		],
+		"wallclock-time": 1800.2031733989716,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.crowds.6-20.positive.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=6,CrowdSize=20"
+		],
+		"wallclock-time": 1800.4290504455566,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.crowds.6-20.positive.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:10000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const TotalRuns=6,CrowdSize=20"
+		],
+		"wallclock-time": 1800.1794917583466,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.crowds.6-20.positive.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m crowds.prism -p crowds.props --property positive --const TotalRuns=6,CrowdSize=20"
+		],
+		"wallclock-time": 600.341965675354,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.crowds.6-20.positive.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "crowds.6-20.positive",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:10000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const TotalRuns=6,CrowdSize=20"
+		],
+		"wallclock-time": 270.3823790550232,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.crowds.6-20.positive.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "egl.10-2.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=2"
+		],
+		"wallclock-time": 431.63016510009766,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.egl.10-2.unfairA.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "egl.10-2.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=2"
+		],
+		"wallclock-time": 431.95319390296936,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.egl.10-2.unfairA.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "egl.10-2.unfairA",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh egl.prism egl.props -prop unfairA -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:50000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const N=10,L=2"
+		],
+		"wallclock-time": 1800.4977579116821,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.egl.10-2.unfairA.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "egl.10-2.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=2"
+		],
+		"wallclock-time": 464.5274019241333,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.egl.10-2.unfairA.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "egl.10-2.unfairA",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh egl.prism egl.props -prop unfairA -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:50000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=10,L=2"
+		],
+		"wallclock-time": 1800.442393064499,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.egl.10-2.unfairA.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "egl.10-2.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=2"
+		],
+		"wallclock-time": 436.4487009048462,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.egl.10-2.unfairA.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "egl.10-2.unfairA",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh egl.prism egl.props -prop unfairA -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:50000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=10,L=2"
+		],
+		"wallclock-time": 611.5518980026245,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.egl.10-2.unfairA.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "egl.10-8.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=8"
+		],
+		"wallclock-time": 473.0859251022339,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.egl.10-8.unfairA.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "egl.10-8.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=8"
+		],
+		"wallclock-time": 435.4080250263214,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.egl.10-8.unfairA.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "egl.10-8.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=8"
+		],
+		"wallclock-time": 435.58000922203064,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.egl.10-8.unfairA.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "egl.10-8.unfairA",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=8"
+		],
+		"wallclock-time": 439.0712945461273,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.egl.10-8.unfairA.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./fix-syntax ./pet.sh reachability --precision 0.000001 --relative-error --only-result -m haddad-monmege.pm -p haddad-monmege.prctl --property target --const N=100,p=0.7"
+		],
+		"wallclock-time": 1800.0163733959198,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.haddad-monmege.100-0.7.target.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./fix-syntax ./pet.sh reachability --precision 0.05 --relative-error --only-result -m haddad-monmege.pm -p haddad-monmege.prctl --property target --const N=100,p=0.7"
+		],
+		"wallclock-time": 1800.018345117569,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.haddad-monmege.100-0.7.target.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./fix-syntax ./pet.sh reachability --precision 0.001 --relative-error --only-result -m haddad-monmege.pm -p haddad-monmege.prctl --property target --const N=100,p=0.7"
+		],
+		"wallclock-time": 1800.0141727924347,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.haddad-monmege.100-0.7.target.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "haddad-monmege.100-0.7.target",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./fix-syntax ./pet.sh reachability --precision 0.001 --relative-error --only-result -m haddad-monmege.pm -p haddad-monmege.prctl --property target --const N=100,p=0.7"
+		],
+		"wallclock-time": 600.0214183330536,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.haddad-monmege.100-0.7.target.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "nand.40-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=40,K=4"
+		],
+		"wallclock-time": 1800.23859500885,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.nand.40-4.reliable.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.40-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=40,K=4"
+		],
+		"wallclock-time": 1800.0985424518585,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.nand.40-4.reliable.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.40-4.reliable",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh nand.prism nand.props -prop reliable -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const N=40,K=4"
+		],
+		"wallclock-time": 1800.1923124790192,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.nand.40-4.reliable.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.40-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=40,K=4"
+		],
+		"wallclock-time": 1800.153198003769,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.nand.40-4.reliable.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.40-4.reliable",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh nand.prism nand.props -prop reliable -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=40,K=4"
+		],
+		"wallclock-time": 1800.1897983551025,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.nand.40-4.reliable.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.40-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=40,K=4"
+		],
+		"wallclock-time": 600.1608545780182,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.nand.40-4.reliable.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "nand.40-4.reliable",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh nand.prism nand.props -prop reliable -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=40,K=4"
+		],
+		"wallclock-time": 600.1374020576477,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.nand.40-4.reliable.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "nand.60-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=60,K=4"
+		],
+		"wallclock-time": 1800.3137810230255,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.nand.60-4.reliable.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.60-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=60,K=4"
+		],
+		"wallclock-time": 1800.1602399349213,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.nand.60-4.reliable.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.60-4.reliable",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh nand.prism nand.props -prop reliable -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:10000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const N=60,K=4"
+		],
+		"wallclock-time": 1800.2094962596893,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.nand.60-4.reliable.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.60-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=60,K=4"
+		],
+		"wallclock-time": 1800.232115983963,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.nand.60-4.reliable.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.60-4.reliable",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh nand.prism nand.props -prop reliable -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:10000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=60,K=4"
+		],
+		"wallclock-time": 1800.1892199516296,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.nand.60-4.reliable.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "nand.60-4.reliable",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m nand.prism -p nand.props --property reliable --const N=60,K=4"
+		],
+		"wallclock-time": 600.1599252223969,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.nand.60-4.reliable.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "nand.60-4.reliable",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh nand.prism nand.props -prop reliable -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:10000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=60,K=4"
+		],
+		"wallclock-time": 600.1738851070404,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.nand.60-4.reliable.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "embedded.8-12.actuators",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m embedded.prism -p embedded.props --property actuators --const MAX_COUNT=8,T=12"
+		],
+		"wallclock-time": 41.34941029548645,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.1053037023",
+		"result-correct": true,
+		"absolute-error": 4.650687180765816e-08,
+		"relative-error": 4.416453679350139e-07,
+		"notes": [],
+		"log": "PET.default.embedded.8-12.actuators.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "embedded.8-12.actuators",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m embedded.prism -p embedded.props --property actuators --const MAX_COUNT=8,T=12"
+		],
+		"wallclock-time": 87.15906119346619,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.1071478953",
+		"result-correct": true,
+		"absolute-error": 0.0018442395068718077,
+		"relative-error": 0.017513537331456608,
+		"notes": [],
+		"log": "PET.default.embedded.8-12.actuators.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "embedded.8-12.actuators",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m embedded.prism -p embedded.props --property actuators --const MAX_COUNT=8,T=12"
+		],
+		"wallclock-time": 37.3504204750061,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.1053471991",
+		"result-correct": true,
+		"absolute-error": 4.354330687180766e-05,
+		"relative-error": 0.0004135023285169665,
+		"notes": [],
+		"log": "PET.default.embedded.8-12.actuators.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "embedded.8-12.actuators",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m embedded.prism -p embedded.props --property actuators --const MAX_COUNT=8,T=12"
+		],
+		"wallclock-time": 33.216771602630615,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.1053469164",
+		"result-correct": true,
+		"absolute-error": 4.326060687180766e-05,
+		"relative-error": 0.00041081771136981473,
+		"notes": [],
+		"log": "PET.default.embedded.8-12.actuators.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "polling.18-16.s1_before_s2",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m polling.18.prism -p polling.props --property s1_before_s2 --const T=16"
+		],
+		"wallclock-time": 1800.194498538971,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.polling.18-16.s1_before_s2.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "polling.18-16.s1_before_s2",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m polling.18.prism -p polling.props --property s1_before_s2 --const T=16"
+		],
+		"wallclock-time": 1800.1912624835968,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.polling.18-16.s1_before_s2.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "polling.18-16.s1_before_s2",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m polling.18.prism -p polling.props --property s1_before_s2 --const T=16"
+		],
+		"wallclock-time": 1800.19975233078,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.polling.18-16.s1_before_s2.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "polling.18-16.s1_before_s2",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m polling.18.prism -p polling.props --property s1_before_s2 --const T=16"
+		],
+		"wallclock-time": 600.1220741271973,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.polling.18-16.s1_before_s2.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "consensus.4-4.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m consensus.4.prism -p consensus.props --property disagree --const K=4"
+		],
+		"wallclock-time": 1800.0268559455872,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.consensus.4-4.disagree.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.4-4.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m consensus.4.prism -p consensus.props --property disagree --const K=4"
+		],
+		"wallclock-time": 1800.0272963047028,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.consensus.4-4.disagree.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.4-4.disagree",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh consensus.4.prism consensus.props -prop disagree -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:999999,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const K=4"
+		],
+		"wallclock-time": 1800.1247107982635,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.consensus.4-4.disagree.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.4-4.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m consensus.4.prism -p consensus.props --property disagree --const K=4"
+		],
+		"wallclock-time": 1800.024341583252,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.consensus.4-4.disagree.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.4-4.disagree",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh consensus.4.prism consensus.props -prop disagree -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:999999,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const K=4"
+		],
+		"wallclock-time": 1800.122010231018,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.consensus.4-4.disagree.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.4-4.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m consensus.4.prism -p consensus.props --property disagree --const K=4"
+		],
+		"wallclock-time": 600.030332326889,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.consensus.4-4.disagree.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "consensus.4-4.disagree",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh consensus.4.prism consensus.props -prop disagree -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:999999,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const K=4"
+		],
+		"wallclock-time": 600.1472425460815,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.consensus.4-4.disagree.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "consensus.6-2.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m consensus.6.prism -p consensus.props --property disagree --const K=2"
+		],
+		"wallclock-time": 1800.2144792079926,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.consensus.6-2.disagree.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.6-2.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m consensus.6.prism -p consensus.props --property disagree --const K=2"
+		],
+		"wallclock-time": 1800.2059128284454,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.consensus.6-2.disagree.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.6-2.disagree",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh consensus.6.prism consensus.props -prop disagree -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const K=2"
+		],
+		"wallclock-time": 478.1997299194336,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.consensus.6-2.disagree.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.6-2.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m consensus.6.prism -p consensus.props --property disagree --const K=2"
+		],
+		"wallclock-time": 1800.2107961177826,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.consensus.6-2.disagree.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.6-2.disagree",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh consensus.6.prism consensus.props -prop disagree -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const K=2"
+		],
+		"wallclock-time": 523.2026553153992,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.consensus.6-2.disagree.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "consensus.6-2.disagree",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m consensus.6.prism -p consensus.props --property disagree --const K=2"
+		],
+		"wallclock-time": 600.5719017982483,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.consensus.6-2.disagree.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "consensus.6-2.disagree",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh consensus.6.prism consensus.props -prop disagree -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const K=2"
+		],
+		"wallclock-time": 376.6436219215393,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.consensus.6-2.disagree.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "csma.3-4.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m csma.3-4.prism -p csma.props --property all_before_max"
+		],
+		"wallclock-time": 59.041176319122314,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.9324473868",
+		"result-correct": true,
+		"absolute-error": 4.5795418763819744e-07,
+		"relative-error": 4.911316381352186e-07,
+		"notes": [],
+		"log": "PET.default.csma.3-4.all_before_max.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "csma.3-4.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m csma.3-4.prism -p csma.props --property all_before_max"
+		],
+		"wallclock-time": 51.73758888244629,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.9143255669",
+		"result-correct": true,
+		"absolute-error": 0.01812136194581236,
+		"relative-error": 0.01943420197462935,
+		"notes": [],
+		"log": "PET.default.csma.3-4.all_before_max.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "csma.3-4.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m csma.3-4.prism -p csma.props --property all_before_max"
+		],
+		"wallclock-time": 59.1930193901062,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.9324419599",
+		"result-correct": true,
+		"absolute-error": 4.968945812361802e-06,
+		"relative-error": 5.328931501240922e-06,
+		"notes": [],
+		"log": "PET.default.csma.3-4.all_before_max.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "csma.3-4.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m csma.3-4.prism -p csma.props --property all_before_max"
+		],
+		"wallclock-time": 64.60252380371094,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.9324236573",
+		"result-correct": true,
+		"absolute-error": 2.3271545812361804e-05,
+		"relative-error": 2.4957501700571253e-05,
+		"notes": [],
+		"log": "PET.default.csma.3-4.all_before_max.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "csma.4-2.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m csma.4-2.prism -p csma.props --property all_before_max"
+		],
+		"wallclock-time": 37.16520047187805,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.7764601493",
+		"result-correct": true,
+		"absolute-error": 1.2957249942276072e-11,
+		"relative-error": 1.6687591698995963e-11,
+		"notes": [],
+		"log": "PET.default.csma.4-2.all_before_max.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "csma.4-2.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m csma.4-2.prism -p csma.props --property all_before_max"
+		],
+		"wallclock-time": 37.218525409698486,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.7749354439",
+		"result-correct": true,
+		"absolute-error": 0.0015247054129572499,
+		"relative-error": 0.0019636621587165418,
+		"notes": [],
+		"log": "PET.default.csma.4-2.all_before_max.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "csma.4-2.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m csma.4-2.prism -p csma.props --property all_before_max"
+		],
+		"wallclock-time": 38.91295313835144,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.7766400671",
+		"result-correct": true,
+		"absolute-error": 0.00017991778704275007,
+		"relative-error": 0.00023171541669195575,
+		"notes": [],
+		"log": "PET.default.csma.4-2.all_before_max.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "csma.4-2.all_before_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m csma.4-2.prism -p csma.props --property all_before_max"
+		],
+		"wallclock-time": 36.971975564956665,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.7765794798",
+		"result-correct": true,
+		"absolute-error": 0.00011933048704275005,
+		"relative-error": 0.0001536852691646035,
+		"notes": [],
+		"log": "PET.default.csma.4-2.all_before_max.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=100"
+		],
+		"wallclock-time": 1434.6415033340454,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.pacman.100.crash.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=100"
+		],
+		"wallclock-time": 1459.225091934204,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.pacman.100.crash.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh pacman.nm pacman.props -prop crash -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:50000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const MAXSTEPS=100"
+		],
+		"wallclock-time": 663.4088761806488,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.pacman.100.crash.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=100"
+		],
+		"wallclock-time": 1378.5534210205078,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.pacman.100.crash.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh pacman.nm pacman.props -prop crash -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:50000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const MAXSTEPS=100"
+		],
+		"wallclock-time": 1800.4455676078796,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.pacman.100.crash.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=100"
+		],
+		"wallclock-time": 601.3075611591339,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.pacman.100.crash.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "pacman.100.crash",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh pacman.nm pacman.props -prop crash -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:50000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const MAXSTEPS=100"
+		],
+		"wallclock-time": 600.3967621326447,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.pacman.100.crash.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=60"
+		],
+		"wallclock-time": 248.33732914924622,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.5511077619",
+		"result-correct": true,
+		"absolute-error": 2.6483210032496045e-07,
+		"relative-error": 4.805452688159159e-07,
+		"notes": [],
+		"log": "PET.default.pacman.60.crash.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=60"
+		],
+		"wallclock-time": 110.676762342453,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.5648566737",
+		"result-correct": true,
+		"absolute-error": 0.013749176632100325,
+		"relative-error": 0.024948266364096198,
+		"notes": [],
+		"log": "PET.default.pacman.60.crash.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh pacman.nm pacman.props -prop crash -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:20000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const MAXSTEPS=60"
+		],
+		"wallclock-time": 1800.2622923851013,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.pacman.60.crash.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=60"
+		],
+		"wallclock-time": 199.12494730949402,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.5513809922",
+		"result-correct": true,
+		"absolute-error": 0.00027349513210032494,
+		"relative-error": 0.000496264582781803,
+		"notes": [],
+		"log": "PET.default.pacman.60.crash.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh pacman.nm pacman.props -prop crash -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:20000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const MAXSTEPS=60"
+		],
+		"wallclock-time": 1800.2395207881927,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.pacman.60.crash.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=60"
+		],
+		"wallclock-time": 194.71632480621338,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.5513811890",
+		"result-correct": true,
+		"absolute-error": 0.00027369193210032494,
+		"relative-error": 0.0004966216818977597,
+		"notes": [],
+		"log": "PET.default.pacman.60.crash.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "pacman.60.crash",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh pacman.nm pacman.props -prop crash -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:20000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const MAXSTEPS=60"
+		],
+		"wallclock-time": 600.1932611465454,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.pacman.60.crash.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m pnueli-zuck.5.prism -p pnueli-zuck.props --property live"
+		],
+		"wallclock-time": 0.7072618007659912,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.pnueli-zuck.5.live.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m pnueli-zuck.5.prism -p pnueli-zuck.props --property live"
+		],
+		"wallclock-time": 0.6389865875244141,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.pnueli-zuck.5.live.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh pnueli-zuck.5.prism pnueli-zuck.props -prop live -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:100000,Av:10,e:0.05,d:0.05,p:0.05,post:64"
+		],
+		"wallclock-time": 294.98741483688354,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.specific.pnueli-zuck.5.live.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m pnueli-zuck.5.prism -p pnueli-zuck.props --property live"
+		],
+		"wallclock-time": 0.6649792194366455,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.pnueli-zuck.5.live.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh pnueli-zuck.5.prism pnueli-zuck.props -prop live -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:100000,Av:10,e:0.001,d:0.05,p:0.05,post:64"
+		],
+		"wallclock-time": 1.7829954624176025,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.specific.pnueli-zuck.5.live.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m pnueli-zuck.5.prism -p pnueli-zuck.props --property live"
+		],
+		"wallclock-time": 0.6007368564605713,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.pnueli-zuck.5.live.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.5.live",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh pnueli-zuck.5.prism pnueli-zuck.props -prop live -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:100000,Av:10,e:0.001,d:0.05,p:0.05,post:64"
+		],
+		"wallclock-time": 1.80452561378479,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.0",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.specific.pnueli-zuck.5.live.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m pnueli-zuck.10.prism -p pnueli-zuck.props --property live"
+		],
+		"wallclock-time": 0.9578907489776611,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.pnueli-zuck.10.live.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m pnueli-zuck.10.prism -p pnueli-zuck.props --property live"
+		],
+		"wallclock-time": 0.8149840831756592,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.pnueli-zuck.10.live.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m pnueli-zuck.10.prism -p pnueli-zuck.props --property live"
+		],
+		"wallclock-time": 0.6351883411407471,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.pnueli-zuck.10.live.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "pnueli-zuck.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m pnueli-zuck.10.prism -p pnueli-zuck.props --property live"
+		],
+		"wallclock-time": 0.7831771373748779,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.pnueli-zuck.10.live.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "rabin.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m rabin.10.prism -p rabin.10.props --property live"
+		],
+		"wallclock-time": 1.2535321712493896,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.rabin.10.live.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "rabin.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m rabin.10.prism -p rabin.10.props --property live"
+		],
+		"wallclock-time": 0.9297399520874023,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.9843750000",
+		"result-correct": true,
+		"absolute-error": 0.015625,
+		"relative-error": 0.015625,
+		"notes": [],
+		"log": "PET.default.rabin.10.live.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "rabin.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m rabin.10.prism -p rabin.10.props --property live"
+		],
+		"wallclock-time": 1.2377865314483643,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.rabin.10.live.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "rabin.10.live",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m rabin.10.prism -p rabin.10.props --property live"
+		],
+		"wallclock-time": 1.4616200923919678,
+		"timeout": false,
+		"execution-error": false,
+		"result": "1.000000000",
+		"result-correct": true,
+		"absolute-error": 0.0,
+		"relative-error": 0.0,
+		"notes": [],
+		"log": "PET.default.rabin.10.live.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "resource-gathering.1300-100-100.prgoldgem",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./fix-syntax ./pet.sh reachability --precision 0.000001 --relative-error --only-result -m resource-gathering.pm -p resource-gathering.prctl --property prgoldgem --const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100"
+		],
+		"wallclock-time": 1800.0786333084106,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.resource-gathering.1300-100-100.prgoldgem.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "resource-gathering.1300-100-100.prgoldgem",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./fix-syntax ./pet.sh reachability --precision 0.05 --relative-error --only-result -m resource-gathering.pm -p resource-gathering.prctl --property prgoldgem --const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100"
+		],
+		"wallclock-time": 1800.068264245987,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.resource-gathering.1300-100-100.prgoldgem.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "resource-gathering.1300-100-100.prgoldgem",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./fix-syntax ./pet.sh reachability --precision 0.001 --relative-error --only-result -m resource-gathering.pm -p resource-gathering.prctl --property prgoldgem --const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100"
+		],
+		"wallclock-time": 1800.0668976306915,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.resource-gathering.1300-100-100.prgoldgem.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "resource-gathering.1300-100-100.prgoldgem",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./fix-syntax ./pet.sh reachability --precision 0.001 --relative-error --only-result -m resource-gathering.pm -p resource-gathering.prctl --property prgoldgem --const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100"
+		],
+		"wallclock-time": 600.055962562561,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.resource-gathering.1300-100-100.prgoldgem.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "wlan.4-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m wlan.4.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.0695922374725,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.4-0.sent.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.4-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m wlan.4.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.0718812942505,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.4-0.sent.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.4-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m wlan.4.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.0703995227814,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.4-0.sent.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.4-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m wlan.4.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 600.0954949855804,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.wlan.4-0.sent.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "wlan.5-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m wlan.5.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.1560366153717,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.5-0.sent.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.5-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m wlan.5.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.1517453193665,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.5-0.sent.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.5-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m wlan.5.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.1509692668915,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.5-0.sent.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.5-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m wlan.5.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 601.1421699523926,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.wlan.5-0.sent.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "wlan.6-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m wlan.6.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.3191714286804,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.6-0.sent.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.6-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m wlan.6.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.319922208786,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.6-0.sent.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.6-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m wlan.6.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 1800.323410987854,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.default.wlan.6-0.sent.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "wlan.6-0.sent",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m wlan.6.prism -p wlan.props --property sent --const COL=0"
+		],
+		"wallclock-time": 601.4760837554932,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.default.wlan.6-0.sent.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_max --const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 24.536492586135864,
+		"timeout": false,
+		"execution-error": false,
+		"result": "4.801416020e-08",
+		"result-correct": true,
+		"absolute-error": 2.3849275696661997e-14,
+		"relative-error": 4.96713624555328e-07,
+		"notes": [],
+		"log": "PET.default.zeroconf.1000-8-false.correct_max.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_max --const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 13.714107513427734,
+		"timeout": false,
+		"execution-error": false,
+		"result": "4.921343833e-08",
+		"result-correct": true,
+		"absolute-error": 1.1993019792756966e-09,
+		"relative-error": 0.024978101668126848,
+		"notes": [],
+		"log": "PET.default.zeroconf.1000-8-false.correct_max.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh zeroconf.prism zeroconf.props -prop correct_max -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 33.72512698173523,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.0",
+		"result-correct": false,
+		"absolute-error": 4.80141363507243e-08,
+		"relative-error": 1.0,
+		"notes": [
+			"The tool result '0' is tagged as incorrect. The reference result is '204392810629026880136859869044853643232139570253339605249616747925069429431708835626822535242827175026478539031800561588349023614450484995832774846002835469177135061861507348047754643745562828130746032126027305173906839741168733374545992511270087922234415828945357118271408276185301642866567599241759081502931536978823367096281239141564097570316773306531880179526524741020702721263081607229957686751399396603328477745344354571874994701456051076623820636613837877343737161701360161022233159734273797466349315083104593564570085383192724369771587424991411897558006954779774509831325843510065747273021810208924634712057909821543563828830967274089625880617757552389766636149339006214445189915879529013644692743425476255404209816162404818533882574366613894842886862174109802835205609832315302081/4256929857823915052700756989958152776568049052884134649211467604923339040905874178594338896517084907554508292780892772396818828905984885450089144966336425963078228853980215726284516717733191760705851629935674304208430327077705439913965388632007838290853680938474735425117264729027596732486675434999746467231391889910460425718699918469846183512749753468162660308300729997690438857378777759570745797470679752206930776922536684380894419859324595269962912450649319002657674224885905443775286828611652563404494142257464820895612245719546265664834263630934851469462823688466092261692037741383291525407627815966633088983332465733016838969109773442446582309378498609162304068140880817453327924601050231414996844488571062942944611285664988168054564961174982354809038325739616556701582662909609832315302081' (approx. 4.80141363507243e-08) which means a relative error of '1.0' which is larger than the goal precision '0.05'."
+		],
+		"log": "PET.specific.zeroconf.1000-8-false.correct_max.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_max --const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 43.49664902687073,
+		"timeout": false,
+		"execution-error": false,
+		"result": "4.803814259e-08",
+		"result-correct": true,
+		"absolute-error": 2.400623927569666e-11,
+		"relative-error": 0.0004999827363412426,
+		"notes": [],
+		"log": "PET.default.zeroconf.1000-8-false.correct_max.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh zeroconf.prism zeroconf.props -prop correct_max -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 1800.0178472995758,
+		"timeout": true,
+		"execution-error": false,
+		"notes": [],
+		"log": "PET.specific.zeroconf.1000-8-false.correct_max.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_max --const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 22.380946159362793,
+		"timeout": false,
+		"execution-error": false,
+		"result": "4.803813746e-08",
+		"result-correct": true,
+		"absolute-error": 2.4001109275696663e-11,
+		"relative-error": 0.000499875892807444,
+		"notes": [],
+		"log": "PET.default.zeroconf.1000-8-false.correct_max.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_max",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh zeroconf.prism zeroconf.props -prop correct_max -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 600.0237810611725,
+		"timeout": false,
+		"execution-error": true,
+		"notes": [],
+		"log": "PET.specific.zeroconf.1000-8-false.correct_max.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "default",
+		"invocation-track-id": "epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.000001 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_min --const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 5.798058032989502,
+		"timeout": false,
+		"execution-error": false,
+		"result": "5.040106633e-09",
+		"result-correct": true,
+		"absolute-error": 1.4200701603730517e-15,
+		"relative-error": 2.817540706749567e-07,
+		"notes": [],
+		"log": "PET.default.zeroconf.1000-8-false.correct_min.epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "default",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.05 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_min --const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 1.0402235984802246,
+		"timeout": false,
+		"execution-error": false,
+		"result": "4.964357877e-09",
+		"result-correct": true,
+		"absolute-error": 7.574733592983962e-11,
+		"relative-error": 0.015028919581979779,
+		"notes": [],
+		"log": "PET.default.zeroconf.1000-8-false.correct_min.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "specific",
+		"invocation-track-id": "probably-epsilon-correct",
+		"commands": [
+			"./smc.sh zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 18.756184101104736,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.0",
+		"result-correct": false,
+		"absolute-error": 5.040105212929839e-09,
+		"relative-error": 1.0,
+		"notes": [
+			"The tool result '0' is tagged as incorrect. The reference result is '322687697779/64024000322687697779' (approx. 5.040105212929839e-09) which means a relative error of '1.0' which is larger than the goal precision '0.05'."
+		],
+		"log": "PET.specific.zeroconf.1000-8-false.correct_min.probably-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_min --const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 1.2021286487579346,
+		"timeout": false,
+		"execution-error": false,
+		"result": "5.040754792e-09",
+		"result-correct": true,
+		"absolute-error": 6.49579070160373e-13,
+		"relative-error": 0.00012888204565530674,
+		"notes": [],
+		"log": "PET.default.zeroconf.1000-8-false.correct_min.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct",
+		"commands": [
+			"./smc.sh zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 79.18959665298462,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.0",
+		"result-correct": false,
+		"absolute-error": 5.040105212929839e-09,
+		"relative-error": 1.0,
+		"notes": [
+			"The tool result '0' is tagged as incorrect. The reference result is '322687697779/64024000322687697779' (approx. 5.040105212929839e-09) which means a relative error of '1.0' which is larger than the goal precision '0.001'."
+		],
+		"log": "PET.specific.zeroconf.1000-8-false.correct_min.often-epsilon-correct.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "default",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./pet.sh reachability --precision 0.001 --relative-error --only-result -m zeroconf.prism -p zeroconf.props --property correct_min --const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 2.276189088821411,
+		"timeout": false,
+		"execution-error": false,
+		"result": "5.042081903e-09",
+		"result-correct": true,
+		"absolute-error": 1.9766900701603732e-12,
+		"relative-error": 0.0003921922235054519,
+		"notes": [],
+		"log": "PET.default.zeroconf.1000-8-false.correct_min.often-epsilon-correct-10-min.log"
+	},
+	{
+		"benchmark-id": "zeroconf.1000-8-false.correct_min",
+		"invocation-id": "specific",
+		"invocation-track-id": "often-epsilon-correct-10-min",
+		"commands": [
+			"./smc.sh zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false"
+		],
+		"wallclock-time": 50.32856369018555,
+		"timeout": false,
+		"execution-error": false,
+		"result": "0.0",
+		"result-correct": true,
+		"absolute-error": 5.040105212929839e-09,
+		"relative-error": 1.0,
+		"notes": [],
+		"log": "PET.specific.zeroconf.1000-8-false.correct_min.often-epsilon-correct-10-min.log"
+	}
+]

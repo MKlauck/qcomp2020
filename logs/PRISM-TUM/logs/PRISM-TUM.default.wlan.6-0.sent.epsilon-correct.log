@@ -1,8 +1,0 @@
-Command:	./pet.sh reachability --precision 0.000001 --relative-error --only-result -m wlan.6.prism -p wlan.props --property sent --const COL=0
-Wallclock time:	1800.3191714286804
-Return code:	None
-Output:
-
-
-----------
-Computation aborted after 1800.3191714286804 seconds since the total time limit of 1800 seconds was exceeded.

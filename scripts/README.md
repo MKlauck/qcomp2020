@@ -24,15 +24,19 @@ The scripts only require Python 3.
 
 - `benchmark.py` provides access to the data associated with a benchmark (including the meta data as stored on qcomp.org).
 - `execute_invocations.py` executes a list of invocations (see below).
+- `execute_tool.py` executes the qcomp benchmarks for a given tool.
 - `execution.py` provides access to the data associated with an execution. 
 - `generate_benchmark_list.py` generates a list of benchmarks (see below).
 - `QVBS_all_generate_invocations.py` generates a list of invocations for all benchmarks available in the QVBS, this is not the script to generate invocations for one QComp iteration only (see below).
 - `generate_result_table.py` generates a table from the execution data (see below). 
 - `invocation.py` provides access to the data associated with an invocation.
+- `qcomp.py` executes all qcomp 2019 benchmarks on all tools.
 - `qcomp_2020_benchmarks.csv` contains the benchmarks for QComp 2020
 - `qcomp_2020_generate_invocations.py` generates a list of invocations for the QComp 2020 benchmarks.
-- `tool.py` implements methods specific for the tool that is to be benchmarked.
-   Users should replace the example implementations in this file with their own one. 
+- `table_plots.py` creates an interactive html table of the results as well as a `tex` document containing plots.  
+- `tool.py` implements methods specific for the tool that is to be benchmarked. For the archive it provides an interface to methods implemented in the `tool.py` of each toolpackage.
+   Users should replace the example implementations in this file with their own one if only one tool is benchmarked and qcomp.py is not used. 
+- `tmptool.py` placeholder for the `tool.py` of each toolpackage. 
 - `utility.py` provides various utility functions.
 
 Moreover, a file `settings.json` is created in the current working directory, whenever one of the python scripts is executed.
@@ -100,3 +104,12 @@ To create a .csv file that summarizes the execution results, simply run
 ```commandline
 python3 /path/to/qcomp/scripts/generate_result_table.py
 ```
+
+# Creating Interactive Result Tables and Runtime Quantile and Scatter Plots
+
+After producing results for several tools, they can be converted into a more human-readable representation (i.e., a table as in `qcomp.org/competition/2020/results/index.html` and plots as in the competition report) by typing
+```
+python3 path/to/this/archive/scripts/table_plots.py track-id path/to/toolpackageA/ path/to/toolpackageB/ path/to/toolpackageC/ ...
+```
+
+track-ids are: correct, floating-point-correct, epsilon-correct, probably-epsilon-correct, often-epsilon-correct, often-epsilon-correct-10-min

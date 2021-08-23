@@ -1,8 +1,0 @@
-Command:	./pet.sh reachability --precision 0.001 --relative-error --only-result -m polling.18.prism -p polling.props --property s1_before_s2 --const T=16
-Wallclock time:	1800.19975233078
-Return code:	None
-Output:
-
-
-----------
-Computation aborted after 1800.19975233078 seconds since the total time limit of 1800 seconds was exceeded.

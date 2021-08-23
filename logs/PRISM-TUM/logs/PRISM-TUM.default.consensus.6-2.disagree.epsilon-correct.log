@@ -1,8 +1,0 @@
-Command:	./pet.sh reachability --precision 0.000001 --relative-error --only-result -m consensus.6.prism -p consensus.props --property disagree --const K=2
-Wallclock time:	1800.2144792079926
-Return code:	None
-Output:
-
-
-----------
-Computation aborted after 1800.2144792079926 seconds since the total time limit of 1800 seconds was exceeded.

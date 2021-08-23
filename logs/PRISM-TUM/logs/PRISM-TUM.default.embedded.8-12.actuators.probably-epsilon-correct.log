@@ -1,6 +1,0 @@
-Command:	./pet.sh reachability --precision 0.05 --relative-error --only-result -m embedded.prism -p embedded.props --property actuators --const MAX_COUNT=8,T=12
-Wallclock time:	87.15906119346619
-Return code:	0
-Output:
-0.1071478953
-

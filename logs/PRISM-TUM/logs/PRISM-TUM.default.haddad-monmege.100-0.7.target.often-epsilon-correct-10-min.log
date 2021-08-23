@@ -1,5 +1,0 @@
-Command:	./fix-syntax ./pet.sh reachability --precision 0.001 --relative-error --only-result -m haddad-monmege.pm -p haddad-monmege.prctl --property target --const N=100,p=0.7
-Wallclock time:	600.0214183330536
-Return code:	130
-Output:
-

@@ -1,5 +1,0 @@
-Command:	./pet.sh reachability --precision 0.001 --relative-error --only-result -m consensus.4.prism -p consensus.props --property disagree --const K=4
-Wallclock time:	600.030332326889
-Return code:	130
-Output:
-

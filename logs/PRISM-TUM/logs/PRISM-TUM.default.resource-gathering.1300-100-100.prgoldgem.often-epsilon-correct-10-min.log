@@ -1,5 +1,0 @@
-Command:	./fix-syntax ./pet.sh reachability --precision 0.001 --relative-error --only-result -m resource-gathering.pm -p resource-gathering.prctl --property prgoldgem --const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100
-Wallclock time:	600.055962562561
-Return code:	130
-Output:
-
