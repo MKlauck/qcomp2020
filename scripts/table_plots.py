@@ -443,7 +443,9 @@ def get_result_str(toolname, benchmark_identifier):
     inv_counts[tool] += len(inv_ids)
 
 
-def create_quantile_plot_csv(tool_subset=tools, n=None, default_times=True):
+def create_quantile_plot_csv(
+    tool_subset=tools, n=None, m_types=None, default_times=True
+):
     """ :param n: A benchmark is only considered in the plot, if it is supported by at least n tools"""
     results_index = 0 if default_times else -1
     if n is None:
@@ -458,6 +460,12 @@ def create_quantile_plot_csv(tool_subset=tools, n=None, default_times=True):
     for tool in tool_subset:
         sorted_times[tool] = []
     for id in benchmark_ids:
+        if (
+            m_types is not None
+            and get_benchmark_from_id(settings, id).get_model_type().lower()
+            not in m_types
+        ):
+            continue
         num_supported_tools = 0
         is_supported_by_comp_tool = False
         for tool in tool_subset:
@@ -531,7 +539,7 @@ def create_scatter_plot_vs_all_csv(tool, default_times=True):
                 row.append(16000)
             else:
                 row.append(tool_times[id][tool][results_index])
-                row.append(max(1, tool_times[id][tool][results_index]))
+                row.append(max(0.3, tool_times[id][tool][results_index]))
             compare_value = 4000
             for compare_tool in tools:
                 if (
@@ -615,7 +623,7 @@ def create_scatter_plot_storm_vs_storm_static(tool, default_times=True):
                 row.append(16000)
             else:
                 row.append(tool_times[id][tool][results_index])
-                row.append(max(1, tool_times[id][tool][results_index]))
+                row.append(max(0.3, tool_times[id][tool][results_index]))
             compare_value = 4000
             for compare_tool in ["Storm-static"]:
                 if len(supported_tools[id][compare_tool]) > 0 and supported_tools[id][
@@ -925,17 +933,116 @@ if track_id != "often-epsilon-correct-10-min":
     filenames = []
     nums = []
 
-    subsets.append(["ePMC", "mcsta", "Storm-static"])
-    filenames.append("janitools.csv")
-    nums.append(None)
+    # subsets.append(["ePMC", "mcsta", "Storm-static"])
+    # filenames.append("janitools.csv")
+    # nums.append(None)
 
-    subsets.append(["ePMC", "mcsta", "Storm-static", "PRISM"])
-    filenames.append("generalpurpose.csv")
-    nums.append(None)
+    # subsets.append(["ePMC", "mcsta", "Storm-static", "PRISM"])
+    # filenames.append("generalpurpose.csv")
+    # nums.append(None)
 
-    subsets.append(toolnames)
-    filenames.append("all.csv")
-    nums.append(0)
+    # subsets.append(toolnames)
+    # filenames.append("all.csv")
+    # nums.append(0)
+
+    model_types = []
+    if track_id == "correct":
+        subsets.append(["Storm-static", "Storm"])
+        filenames.append("tools-all-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+    elif track_id == "floating-point-correct":
+        subsets.append(["mcsta", "Storm-static", "Storm"])
+        filenames.append("tools-all-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+    elif track_id == "epsilon-correct":
+        subsets.append(["mcsta", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["mcsta", "PRISM", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-prism-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["mcsta", "PET", "PRISM", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-pet-prism-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["mcsta", "PET", "PRISM", "Storm-static", "Storm"])
+        filenames.append("all.csv")
+        nums.append(0)
+        model_types.append(None)
+    elif track_id == "probably-epsilon-correct":
+        subsets.append(["mcsta", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["mcsta", "PRISM", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-prism-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["mcsta", "PET", "PRISM", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-pet-prism-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["mcsta", "modes", "PRISM", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-prism-storm-markov-chains.csv")
+        nums.append(0)
+        model_types.append(["dtmc", "ctmc"])
+        subsets.append(
+            [
+                "DFTRES",
+                "mcsta",
+                "modes",
+                "PET",
+                "PRISM",
+                "STAMINA",
+                "Storm-static",
+                "Storm",
+            ]
+        )
+        filenames.append("all.csv")
+        nums.append(0)
+        model_types.append(None)
+    elif track_id == "often-epsilon-correct":
+        subsets.append(["mcsta", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["ePMC", "mcsta", "Storm-static", "Storm"])
+        filenames.append("tools-epmc-mcsta-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["ePMC", "mcsta", "PRISM", "Storm-static", "Storm"])
+        filenames.append("tools-epmc-mcsta-prism-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["ePMC", "mcsta", "PET", "PRISM", "Storm-static", "Storm"])
+        filenames.append("tools-epmc-mcsta-pet-prism-storm-intersection.csv")
+        nums.append(None)
+        model_types.append(None)
+        subsets.append(["ePMC", "mcsta", "modes", "PRISM", "Storm-static", "Storm"])
+        filenames.append("tools-mcsta-prism-storm-markov-chains.csv")
+        nums.append(0)
+        model_types.append(["dtmc", "ctmc"])
+        subsets.append(
+            [
+                "DFTRES",
+                "ePMC",
+                "mcsta",
+                "modes",
+                "ModestFRETpiLRTDP",
+                "PET",
+                "PRISM",
+                "STAMINA",
+                "Storm-static",
+                "Storm",
+            ]
+        )
+        filenames.append("all.csv")
+        nums.append(0)
+        model_types.append(None)
 
     with open(os.path.join(plot_dir, "plots.tex"), "w") as plotfile:
         plotfile.write(
@@ -967,7 +1074,7 @@ if track_id != "often-epsilon-correct-10-min":
             \ifthenelse{\equal{#1}{PET}}{\tikzset{teal, mark=star}}{}%
             \ifthenelse{\equal{#1}{modes}}{\tikzset{magenta, mark=square*,  mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{DFTRES}}{\tikzset{yellow,mark=diamond*}}{}%
-            \ifthenelse{\equal{#1}{probFD}}{\tikzset{gray, mark=pentagon*}}{}%
+            \ifthenelse{\equal{#1}{STAMINA}}{\tikzset{gray, mark=pentagon*}}{}%
             \ifthenelse{\equal{#1}{ModestFRETpiLRTDP}}{\tikzset{black, mark=triangle*}}{}%
     }}
     \newcommand{\quantileplot}[2]{%
@@ -1084,7 +1191,7 @@ if track_id != "often-epsilon-correct-10-min":
 
     \begin{document}"""
         )
-        for subset, filename, n in zip(subsets, filenames, nums):
+        for subset, filename, n, m_types in zip(subsets, filenames, nums, model_types):
             # only consider tools of the subsets that are considered
             tool_subset = []
             for tool in subset:
@@ -1093,7 +1200,7 @@ if track_id != "often-epsilon-correct-10-min":
                 else:
                     print("Tool {} for quantile plot is not selected.".format(tool))
             for default in [True, False]:
-                csv, cap = create_quantile_plot_csv(tool_subset, n, default)
+                csv, cap = create_quantile_plot_csv(tool_subset, n, m_types, default)
                 save_csv(
                     csv,
                     os.path.join(plot_dir, ("" if default else "specific") + filename),
@@ -1103,6 +1210,7 @@ if track_id != "often-epsilon-correct-10-min":
                 cap += (
                     "Default configuration." if default else "Specific configuration."
                 )
+                cap += "" if m_types is None else " ".join(m_types)
                 plotfile.write(
                     r"""
             \begin{center}

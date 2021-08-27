@@ -21,12 +21,12 @@
             \ifthenelse{\equal{#1}{mcsta}}{\tikzset{red, mark=x, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{Storm}}{\tikzset{blue,mark=+, mark options={thick}}}{}%
             \ifthenelse{\equal{#1}{Storm-static}}{\tikzset{cyan,mark=+, mark options={thick}}}{}%
-            \ifthenelse{\equal{#1}{ePMC-6}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
+            \ifthenelse{\equal{#1}{ePMC}}{\tikzset{green!70!black, mark=*, mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{PRISM}}{\tikzset{orange, mark=asterisk}}{}%
             \ifthenelse{\equal{#1}{PET}}{\tikzset{teal, mark=star}}{}%
             \ifthenelse{\equal{#1}{modes}}{\tikzset{magenta, mark=square*,  mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{DFTRES}}{\tikzset{yellow,mark=diamond*}}{}%
-            \ifthenelse{\equal{#1}{probFD}}{\tikzset{gray, mark=pentagon*}}{}%
+            \ifthenelse{\equal{#1}{STAMINA}}{\tikzset{gray, mark=pentagon*}}{}%
             \ifthenelse{\equal{#1}{ModestFRETpiLRTDP}}{\tikzset{black, mark=triangle*}}{}%
     }}
     \newcommand{\quantileplot}[2]{%
@@ -143,35 +143,13 @@
 
     \begin{document}
             \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(44/67), Storm-static(34/67).Default configuration.
-                \quantileplot{janitools.csv}{mcsta,Storm-static}
+                Quantile plot for 67 benchmarks: mcsta(44/67), Storm-static(34/67), Storm(45/67).Default configuration.
+                \quantileplot{tools-all-intersection.csv}{mcsta,Storm-static,Storm}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(46/67), Storm-static(44/67).Specific configuration.
-                \quantileplot{specificjanitools.csv}{mcsta,Storm-static}
-            \end{center}
-                    \pagebreak
-
-            \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(44/67), Storm-static(34/67).Default configuration.
-                \quantileplot{generalpurpose.csv}{mcsta,Storm-static}
-            \end{center}
-                    
-            \begin{center}
-                Quantile plot for 67 benchmarks: mcsta(46/67), Storm-static(44/67).Specific configuration.
-                \quantileplot{specificgeneralpurpose.csv}{mcsta,Storm-static}
-            \end{center}
-                    \pagebreak
-
-            \begin{center}
-                Quantile plot for 100 benchmarks: Storm(51/79), Storm-static(39/79), mcsta(46/69).Default configuration.
-                \quantileplot{all.csv}{Storm,Storm-static,mcsta}
-            \end{center}
-                    
-            \begin{center}
-                Quantile plot for 100 benchmarks: Storm(51/79), Storm-static(50/79), mcsta(48/69).Specific configuration.
-                \quantileplot{specificall.csv}{Storm,Storm-static,mcsta}
+                Quantile plot for 67 benchmarks: mcsta(46/67), Storm-static(44/67), Storm(45/67).Specific configuration.
+                \quantileplot{specifictools-all-intersection.csv}{mcsta,Storm-static,Storm}
             \end{center}
                     \pagebreak
 

@@ -26,7 +26,7 @@
             \ifthenelse{\equal{#1}{PET}}{\tikzset{teal, mark=star}}{}%
             \ifthenelse{\equal{#1}{modes}}{\tikzset{magenta, mark=square*,  mark size=1.5pt}}{}%
             \ifthenelse{\equal{#1}{DFTRES}}{\tikzset{yellow,mark=diamond*}}{}%
-            \ifthenelse{\equal{#1}{probFD}}{\tikzset{gray, mark=pentagon*}}{}%
+            \ifthenelse{\equal{#1}{STAMINA}}{\tikzset{gray, mark=pentagon*}}{}%
             \ifthenelse{\equal{#1}{ModestFRETpiLRTDP}}{\tikzset{black, mark=triangle*}}{}%
     }}
     \newcommand{\quantileplot}[2]{%
@@ -143,35 +143,68 @@
 
     \begin{document}
             \begin{center}
-                Quantile plot for 56 benchmarks: ePMC(21/56), mcsta(40/56), Storm-static(44/56).Default configuration.
-                \quantileplot{janitools.csv}{ePMC,mcsta,Storm-static}
+                Quantile plot for 86 benchmarks: mcsta(60/86), Storm-static(68/86), Storm(76/86).Default configuration.
+                \quantileplot{tools-mcsta-storm-intersection.csv}{mcsta,Storm-static,Storm}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 56 benchmarks: ePMC(21/56), mcsta(41/56), Storm-static(51/56).Specific configuration.
-                \quantileplot{specificjanitools.csv}{ePMC,mcsta,Storm-static}
+                Quantile plot for 86 benchmarks: mcsta(61/86), Storm-static(76/86), Storm(76/86).Specific configuration.
+                \quantileplot{specifictools-mcsta-storm-intersection.csv}{mcsta,Storm-static,Storm}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 41 benchmarks: ePMC(18/41), mcsta(30/41), Storm-static(36/41), PRISM(38/41).Default configuration.
-                \quantileplot{generalpurpose.csv}{ePMC,mcsta,Storm-static,PRISM}
+                Quantile plot for 56 benchmarks: ePMC(29/56), mcsta(40/56), Storm-static(44/56), Storm(51/56).Default configuration.
+                \quantileplot{tools-epmc-mcsta-storm-intersection.csv}{ePMC,mcsta,Storm-static,Storm}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 41 benchmarks: ePMC(18/41), mcsta(31/41), Storm-static(41/41), PRISM(39/41).Specific configuration.
-                \quantileplot{specificgeneralpurpose.csv}{ePMC,mcsta,Storm-static,PRISM}
+                Quantile plot for 56 benchmarks: ePMC(29/56), mcsta(41/56), Storm-static(51/56), Storm(51/56).Specific configuration.
+                \quantileplot{specifictools-epmc-mcsta-storm-intersection.csv}{ePMC,mcsta,Storm-static,Storm}
             \end{center}
                     \pagebreak
 
             \begin{center}
-                Quantile plot for 100 benchmarks: Storm(86/96), Storm-static(77/96), mcsta(62/88), PRISM(54/58), PET(9/24), modes(19/32), DFTRES(5/12), STAMINA(1/3), ModestFRETpiLRTDP(11/31), ePMC(22/61).Default configuration.
-                \quantileplot{all.csv}{Storm,Storm-static,mcsta,PRISM,PET,modes,DFTRES,STAMINA,ModestFRETpiLRTDP,ePMC}
+                Quantile plot for 41 benchmarks: ePMC(26/41), mcsta(30/41), PRISM(38/41), Storm-static(36/41), Storm(41/41).Default configuration.
+                \quantileplot{tools-epmc-mcsta-prism-storm-intersection.csv}{ePMC,mcsta,PRISM,Storm-static,Storm}
             \end{center}
                     
             \begin{center}
-                Quantile plot for 100 benchmarks: Storm(86/96), Storm-static(86/96), mcsta(63/88), PRISM(56/58), PET(6/24), modes(19/32), DFTRES(6/12), STAMINA(1/3), ModestFRETpiLRTDP(11/31), ePMC(22/61).Specific configuration.
-                \quantileplot{specificall.csv}{Storm,Storm-static,mcsta,PRISM,PET,modes,DFTRES,STAMINA,ModestFRETpiLRTDP,ePMC}
+                Quantile plot for 41 benchmarks: ePMC(26/41), mcsta(31/41), PRISM(39/41), Storm-static(41/41), Storm(41/41).Specific configuration.
+                \quantileplot{specifictools-epmc-mcsta-prism-storm-intersection.csv}{ePMC,mcsta,PRISM,Storm-static,Storm}
+            \end{center}
+                    \pagebreak
+
+            \begin{center}
+                Quantile plot for 23 benchmarks: ePMC(15/23), mcsta(18/23), PET(9/23), PRISM(20/23), Storm-static(19/23), Storm(23/23).Default configuration.
+                \quantileplot{tools-epmc-mcsta-pet-prism-storm-intersection.csv}{ePMC,mcsta,PET,PRISM,Storm-static,Storm}
+            \end{center}
+                    
+            \begin{center}
+                Quantile plot for 23 benchmarks: ePMC(15/23), mcsta(19/23), PET(6/23), PRISM(21/23), Storm-static(23/23), Storm(23/23).Specific configuration.
+                \quantileplot{specifictools-epmc-mcsta-pet-prism-storm-intersection.csv}{ePMC,mcsta,PET,PRISM,Storm-static,Storm}
+            \end{center}
+                    \pagebreak
+
+            \begin{center}
+                Quantile plot for 36 benchmarks: ePMC(12/29), mcsta(15/29), modes(19/32), PRISM(24/26), Storm-static(26/36), Storm(33/36).Default configuration.dtmc ctmc
+                \quantileplot{tools-mcsta-prism-storm-markov-chains.csv}{ePMC,mcsta,modes,PRISM,Storm-static,Storm}
+            \end{center}
+                    
+            \begin{center}
+                Quantile plot for 36 benchmarks: ePMC(12/29), mcsta(16/29), modes(19/32), PRISM(26/26), Storm-static(33/36), Storm(33/36).Specific configuration.dtmc ctmc
+                \quantileplot{specifictools-mcsta-prism-storm-markov-chains.csv}{ePMC,mcsta,modes,PRISM,Storm-static,Storm}
+            \end{center}
+                    \pagebreak
+
+            \begin{center}
+                Quantile plot for 100 benchmarks: DFTRES(5/12), ePMC(31/61), mcsta(62/88), modes(19/32), ModestFRETpiLRTDP(11/31), PET(9/24), PRISM(54/58), STAMINA(1/3), Storm-static(77/96), Storm(86/96).Default configuration.
+                \quantileplot{all.csv}{DFTRES,ePMC,mcsta,modes,ModestFRETpiLRTDP,PET,PRISM,STAMINA,Storm-static,Storm}
+            \end{center}
+                    
+            \begin{center}
+                Quantile plot for 100 benchmarks: DFTRES(6/12), ePMC(31/61), mcsta(63/88), modes(19/32), ModestFRETpiLRTDP(11/31), PET(6/24), PRISM(56/58), STAMINA(1/3), Storm-static(86/96), Storm(86/96).Specific configuration.
+                \quantileplot{specificall.csv}{DFTRES,ePMC,mcsta,modes,ModestFRETpiLRTDP,PET,PRISM,STAMINA,Storm-static,Storm}
             \end{center}
                     \pagebreak
 
